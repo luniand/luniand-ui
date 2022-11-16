@@ -1,12 +1,12 @@
-import { Ref } from 'vue'
-import { isBrowser, noop } from '@hola-ui/utils'
+import { Ref } from "@vue/runtime-core"
+import { isBrowser, noop } from "@uisland-ui/utils"
 
 const classNames = {
-  light: 'hola-ui-light',
-  dark: 'hola-ui-dark',
+  light: "uisland-ui-light",
+  dark: "uisland-ui-dark",
 }
 
-export type ColorModeRef = Ref<'light' | 'dark'>
+export type ColorModeRef = Ref<"light" | "dark">
 
 /**
  * SSR: Graceful fallback for the `body` element
@@ -38,16 +38,16 @@ function getMediaQuery(query: string) {
 }
 
 export const queries = {
-  light: '(prefers-color-scheme: light)',
-  dark: '(prefers-color-scheme: dark)',
+  light: "(prefers-color-scheme: light)",
+  dark: "(prefers-color-scheme: dark)",
 }
 
 export const lightQuery = queries.light
 export const darkQuery = queries.dark
 
 export function getColorScheme(fallback?: ColorModeRef) {
-  const isDark = getMediaQuery(queries.dark) ?? fallback?.value === 'dark'
-  return isDark ? 'dark' : 'light'
+  const isDark = getMediaQuery(queries.dark) ?? fallback?.value === "dark"
+  return isDark ? "dark" : "light"
 }
 
 /**
@@ -55,14 +55,14 @@ export function getColorScheme(fallback?: ColorModeRef) {
  * once preference changes
  */
 export function addListener(fn: Function) {
-  if (!('matchMedia' in window)) {
+  if (!("matchMedia" in window)) {
     return noop
   }
 
   const mediaQueryList = window.matchMedia(queries.dark)
 
   const listener = () => {
-    fn(mediaQueryList.matches ? 'dark' : 'light')
+    fn(mediaQueryList.matches ? "dark" : "light")
   }
 
   listener()
@@ -76,12 +76,12 @@ export function addListener(fn: Function) {
 export const root = {
   get: () =>
     document.documentElement.style.getPropertyValue(
-      '--hola-ui-color-mode'
-    ) as ColorModeRef['value'],
+      "--uisland-ui-color-mode"
+    ) as ColorModeRef["value"],
   set: (mode: ColorModeRef) => {
     if (isBrowser) {
       document.documentElement.style.setProperty(
-        '--hola-ui-color-mode',
+        "--uisland-ui-color-mode",
         mode.value
       )
     }

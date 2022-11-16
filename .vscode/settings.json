@@ -5,6 +5,8 @@
     "clsx",
     "composables",
     "contenteditable",
+    "csstype",
+    "flexbox",
     "focusables",
     "hygen",
     "mergewith",

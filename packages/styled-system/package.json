@@ -1,0 +1,32 @@
+{
+  "name": "@uisland-ui/styled-system",
+  "version": "0.1.1-alpha.0",
+  "main": "dist/uisland-ui-styled-system.cjs.js",
+  "module": "dist/uisland-ui-styled-system.esm.js",
+  "description": "uisland UI Vue | Styled System module",
+  "repository": "https://github.com/rhp-island/uisland-ui/tree/master/packages/styled-system",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-styled-system.cjs.js",
+      "default": "./dist/uisland-ui-styled-system.esm.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@uisland-ui/utils": "^0.1.0-alpha.10",
+    "csstype": "^3.1.1"
+  },
+  "devDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
