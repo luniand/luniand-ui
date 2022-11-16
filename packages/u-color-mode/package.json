@@ -1,0 +1,38 @@
+{
+  "name": "@hola-ui/h-color-mode",
+  "version": "0.1.0-alpha.10",
+  "main": "dist/hola-ui-h-color-mode.cjs.js",
+  "module": "dist/hola-ui-h-color-mode.esm.js",
+  "author": "Albert Tran <trantoan.fox.97@gmail.com>",
+  "homepage": "https://github.com/rhp-island/hola-ui#readme",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/hola-ui-h-color-mode.cjs.js",
+      "default": "./dist/hola-ui-h-color-mode.esm.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/rhp-island/hola-ui/tree/master/packages/c-color-mode",
+  "bugs": {
+    "url": "https://github.com/rhp-island/hola-ui/issues"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@hola-ui/utils": "latest"
+  },
+  "devDependencies": {
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  }
+}

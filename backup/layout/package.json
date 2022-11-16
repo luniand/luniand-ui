@@ -1,0 +1,43 @@
+{
+  "name": "@uisland-ui/vue-layout",
+  "description": "Uisland UI Vue | Uisland ui layout components that give you massive speed component",
+  "version": "0.1.0-alpha.11",
+  "main": "dist/uisland-ui-vue-layout.cjs.js",
+  "module": "dist/uisland-ui-vue-layout.esm.js",
+  "author": "Albert Tran <trantoan.fox.97@gmail.com>",
+  "homepage": "https://github.com/uisland-ui/uisland-ui-vue-next#readme",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-vue-layout.cjs.js",
+      "default": "./dist/uisland-ui-vue-layout.esm.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/layout",
+  "bugs": {
+    "url": "https://github.com/uisland-ui/uisland-ui-vue-next/issues"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@uisland-ui/c-icon": "1.0.0-alpha.10",
+    "@uisland-ui/styled-system": "^2.2.2",
+    "@uisland-ui/utils": "^2.0.3",
+    "@uisland-ui/vue-system": "0.1.0-alpha.10",
+    "@uisland-ui/vue-utils": "0.1.0-alpha.10"
+  },
+  "devDependencies": {
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  }
+}

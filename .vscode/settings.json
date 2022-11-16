@@ -1,0 +1,19 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "cSpell.words": [
+    "camelcase",
+    "clsx",
+    "composables",
+    "contenteditable",
+    "focusables",
+    "hygen",
+    "mergewith",
+    "postbuild",
+    "preplaygound",
+    "SNAO",
+    "tabindex",
+    "Uisland",
+    "unusafe",
+    "vnode"
+  ]
+}

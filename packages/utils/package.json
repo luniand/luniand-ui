@@ -1,0 +1,39 @@
+{
+  "name": "@uisland-ui/utils",
+  "version": "0.1.0-alpha.10",
+  "main": "dist/uisland-ui-utils.cjs.js",
+  "module": "dist/uisland-ui-utils.esm.js",
+  "description": "Uisland UI Vue | Utils module",
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/utils",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-utils.cjs.js",
+      "default": "./dist/uisland-ui-utils.esm.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@types/lodash.camelcase": "^4.3.6",
+    "@types/lodash.memoize": "^4.1.6",
+    "@vue/runtime-core": "^3.2.45",
+    "css-box-model": "1.2.1",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.memoize": "^4.1.2",
+    "lodash.mergewith": "^4.6.2",
+    "object-assign": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/lodash.mergewith": "^4.6.6",
+    "@types/object-assign": "4.0.30"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

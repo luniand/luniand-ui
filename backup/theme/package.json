@@ -1,0 +1,39 @@
+{
+  "name": "@uisland-ui/vue-theme",
+  "version": "1.0.0-alpha.10",
+  "main": "dist/uisland-ui-vue-theme.cjs.js",
+  "module": "dist/uisland-ui-vue-theme.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-vue-theme.cjs.js",
+      "default": "./dist/uisland-ui-vue-theme.esm.js"
+    }
+  },
+  "description": "Uisland UI Vue | VueTheme module",
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/theme",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@uisland-ui/vue-anatomy": "0.0.0-alpha.0",
+    "@uisland-ui/vue-theme-tools": "0.1.0-alpha.10"
+  },
+  "peerDependencies": {
+    "@uisland-ui/utils": "^2.0.3",
+    "@uisland-ui/vue-system": "0.1.0-alpha.10",
+    "vue": "^3.2.29"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@uisland-ui/utils": "^2.0.3",
+    "@uisland-ui/vue-system": "0.1.0-alpha.10",
+    "vue": "^3.2.37"
+  }
+}

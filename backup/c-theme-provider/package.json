@@ -1,0 +1,34 @@
+{
+  "name": "@uisland-ui/c-theme-provider",
+  "version": "1.0.0-alpha.10",
+  "main": "dist/uisland-ui-c-theme-provider.cjs.js",
+  "module": "dist/uisland-ui-c-theme-provider.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-c-theme-provider.cjs.js",
+      "default": "./dist/uisland-ui-c-theme-provider.esm.js"
+    }
+  },
+  "description": "Uisland UI Vue | CThemeProvider component",
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/c-theme-provider",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@uisland-ui/vue-theme": "1.0.0-alpha.10"
+  },
+  "devDependencies": {
+    "vue": "^3.2.37"
+  },
+  "peerDependencies": {
+    "vue": "^3.1.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

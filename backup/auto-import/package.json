@@ -1,0 +1,38 @@
+{
+  "name": "@uisland-ui/vue-auto-import",
+  "version": "1.0.0-alpha.12",
+  "main": "dist/uisland-ui-vue-auto-import.cjs.js",
+  "module": "dist/uisland-ui-vue-auto-import.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-vue-auto-import.cjs.js",
+      "default": "./dist/uisland-ui-vue-auto-import.esm.js"
+    }
+  },
+  "description": "Uisland UI Vue | VueAutoImport module",
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/tooling/auto-import",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "lodash.kebabcase": "^4.1.1"
+  },
+  "peerDependencies": {
+    "@uisland-ui/vue-next": "1.0.0-alpha.13",
+    "unplugin-vue-components": "^0.14.0",
+    "vue": "^3.0.11"
+  },
+  "devDependencies": {
+    "@uisland-ui/vue-next": "1.0.0-alpha.13",
+    "unplugin-vue-components": "^0.14.0",
+    "vue": "^3.2.37"
+  }
+}
