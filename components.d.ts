@@ -1,12 +1,12 @@
 /**
- * Typescript support for @@uniland-ui/vue1.0.0-alpha.13 auto-imported
+ * Typescript support for @@uniland-ui/vue1.0.0-alpha.14 auto-imported
  * components using `unplugin-vue-components,`
  *
  * @see: https://github.com/antfu/unplugin-vue-components/#typescript
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-11-18T20:56:11.269Z
+ * This file was generated on 2022-11-18T21:41:57.108Z
  */
 
 import { UnilandProps, uniland } from "@uniland-ui/system"

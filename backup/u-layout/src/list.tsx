@@ -1,4 +1,4 @@
-import { CIcon } from "@uniland-ui/c-icon"
+import { CIcon } from "@uniland-ui/u-icon"
 import {
   HTMLUnilandProps,
   SystemProps,

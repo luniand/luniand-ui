@@ -142,7 +142,7 @@ export { uniland }
 // export * from "@uniland-ui/c-form-control"
 
 // I
-// export * from "@uniland-ui/c-icon"
+// export * from "@uniland-ui/u-icon"
 // export * from "@uniland-ui/c-input"
 
 // L

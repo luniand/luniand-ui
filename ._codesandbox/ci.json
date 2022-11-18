@@ -10,7 +10,7 @@
     "packages/c-color-mode",
     "packages/c-flex",
     "packages/c-focus-lock",
-    "packages/c-icon",
+    "packages/u-icon",
     "packages/c-modal",
     "packages/c-motion",
     "packages/c-popper",

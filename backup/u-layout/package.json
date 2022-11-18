@@ -1,9 +1,9 @@
 {
-  "name": "@uniland-ui/vue-layout",
+  "name": "@uniland-ui/u-layout",
   "description": "Uniland UI Vue | Uniland ui layout components that give you massive speed component",
   "version": "0.1.0-alpha.11",
-  "main": "dist/uniland-ui-vue-layout.cjs.js",
-  "module": "dist/uniland-ui-vue-layout.esm.js",
+  "main": "dist/uniland-ui-u-layout.cjs.js",
+  "module": "dist/uniland-ui-u-layout.esm.js",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
   "homepage": "https://github.com/uniland-ui/uniland-ui-vue-next#readme",
   "license": "MIT",
@@ -12,8 +12,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/uniland-ui-vue-layout.cjs.js",
-      "default": "./dist/uniland-ui-vue-layout.esm.js"
+      "require": "./dist/uniland-ui-u-layout.cjs.js",
+      "default": "./dist/uniland-ui-u-layout.esm.js"
     }
   },
   "publishConfig": {
@@ -28,10 +28,10 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@uniland-ui/c-icon": "1.0.0-alpha.10",
+    "@uniland-ui/u-icon": "1.0.0-alpha.10",
     "@uniland-ui/styled-system": "^2.2.2",
     "@uniland-ui/utils": "^2.0.3",
-    "@uniland-ui/vue-system": "0.1.0-alpha.10",
+    "@uniland-ui/system": "0.1.0-alpha.10",
     "@uniland-ui/vue-utils": "0.1.0-alpha.10"
   },
   "devDependencies": {

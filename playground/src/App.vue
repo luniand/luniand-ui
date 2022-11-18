@@ -14,7 +14,7 @@
           <!-- </transition> -->
         </router-view>
       </c-square>
-      <c-icon-button color="inherit" pos="absolute" @click="toggleColorMode" top="10" right="10" :aria-label="`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`" :icon="colorMode === 'light' ? 'moon' : 'sun'" />
+      <u-icon-button color="inherit" pos="absolute" @click="toggleColorMode" top="10" right="10" :aria-label="`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`" :icon="colorMode === 'light' ? 'moon' : 'sun'" />
     </c-center>
   </uniland.section>
 </template>
