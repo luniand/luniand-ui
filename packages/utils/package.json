@@ -1,9 +1,9 @@
 {
   "name": "@uisland-ui/utils",
-  "version": "0.1.0-alpha.10",
+  "version": "0.1.0-alpha.13",
   "main": "dist/uisland-ui-utils.cjs.js",
   "module": "dist/uisland-ui-utils.esm.js",
-  "description": "Uisland UI Vue | Utils module",
+  "description": "Uisland UI | Utils module",
   "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/utils",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",

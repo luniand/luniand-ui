@@ -1,0 +1,28 @@
+{
+  "name": "@uisland-ui/u-reset",
+  "version": "0.0.0-alpha.0",
+  "main": "dist/uisland-ui-u-reset.cjs.js",
+  "module": "dist/uisland-ui-u-reset.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-u-reset.cjs.js",
+      "default": "./dist/uisland-ui-u-reset.esm.js"
+    }
+  },
+  "description": "Uisland UI Vue | UReset module",
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next.git",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf ./dist && concurrently yarn:build:*",
+    "build:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps",
+    "watch": "concurrently yarn:watch:*",
+    "watch:esm": "cross-env BABEL_ENV=esm babel src --root-mode upward --extensions .ts,.tsx -d dist/esm --source-maps --watch",
+    "watch:cjs": "cross-env BABEL_ENV=cjs babel src --root-mode upward --extensions .ts,.tsx -d dist/cjs --source-maps --watch",
+    "watch:types": "cross-env tsc --emitDeclarationOnly --declaration --declarationDir dist/types --watch --incremental"
+  }
+}

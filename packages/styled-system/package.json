@@ -1,9 +1,9 @@
 {
   "name": "@uisland-ui/styled-system",
-  "version": "0.1.1-alpha.0",
+  "version": "0.1.1-alpha.1",
   "main": "dist/uisland-ui-styled-system.cjs.js",
   "module": "dist/uisland-ui-styled-system.esm.js",
-  "description": "uisland UI Vue | Styled System module",
+  "description": "uisland UI | Styled System module",
   "repository": "https://github.com/rhp-island/uisland-ui/tree/master/packages/styled-system",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",

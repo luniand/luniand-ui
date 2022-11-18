@@ -1,6 +1,6 @@
 {
   "name": "@uisland-ui/styled",
-  "version": "0.0.0-alpha.0",
+  "version": "0.0.0-alpha.1",
   "main": "dist/uisland-ui-styled.cjs.js",
   "module": "dist/uisland-ui-styled.esm.js",
   "files": [
@@ -12,7 +12,7 @@
       "default": "./dist/uisland-ui-styled.esm.js"
     }
   },
-  "description": "Uisland UI Vue | Styled module",
+  "description": "Uisland UI | Styled module",
   "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/styled",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",

@@ -1,5 +1,5 @@
 ---
-to: packages/<%=h.changeCase.paramCase(name)%>/src/index.tsx
+to: packages/<%=h.changeCase.paramCase(name)%>/src/index.ts
 ---
 const <%= h.changeCase.pascalCase(name) %> = () => {
   return {}

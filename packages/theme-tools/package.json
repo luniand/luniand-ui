@@ -1,0 +1,38 @@
+{
+  "name": "@uisland-ui/theme-tools",
+  "version": "0.1.0-alpha.10",
+  "main": "dist/uisland-ui-theme-tools.cjs.js",
+  "module": "dist/uisland-ui-theme-tools.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-theme-tools.cjs.js",
+      "default": "./dist/uisland-ui-theme-tools.esm.js"
+    }
+  },
+  "description": "Uisland UI | ThemeTools module",
+  "repository": "https://github.com/uisland-ui/uisland-ui-next/tree/master/packages/theme-tools",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@ctrl/tinycolor": "^3.4.1",
+    "@types/tinycolor2": "^1.4.2",
+    "@uisland-ui/system": "^0.1.0-alpha.11",
+    "@uisland-ui/utils": "^0.1.0-alpha.12",
+    "tinycolor2": "^1.4.2"
+  },
+  "devDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@uisland-ui/vue",
+  "version": "1.0.0-alpha.13",
+  "description": "Vue 3 compatible version of Uisland UI",
+  "main": "dist/uisland-ui-vue.cjs.js",
+  "module": "dist/uisland-ui-vue.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-vue.cjs.js",
+      "default": "./dist/uisland-ui-vue.esm.js"
+    }
+  },
+  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/core",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@emotion/cache": "^11.7.1",
+    "@emotion/serialize": "^1.0.2",
+    "@emotion/sheet": "^1.1.0",
+    "@emotion/utils": "^1.1.0",
+    "@uisland-ui/styled": "^0.0.0-alpha.1",
+    "@uisland-ui/styled-system": "^0.1.1-alpha.1",
+    "@uisland-ui/system": "^0.1.0-alpha.12",
+    "@uisland-ui/theme": "^1.0.0-alpha.12",
+    "@uisland-ui/theme-tools": "^0.1.0-alpha.10",
+    "@uisland-ui/u-color-mode": "^0.1.0-alpha.10",
+    "@uisland-ui/utils": "^0.1.0-alpha.13"
+  },
+  "devDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

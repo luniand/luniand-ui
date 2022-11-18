@@ -1,0 +1,42 @@
+{
+  "name": "@uisland-ui/system",
+  "version": "0.1.0-alpha.12",
+  "main": "dist/uisland-ui-system.cjs.js",
+  "module": "dist/uisland-ui-system.esm.js",
+  "description": "Uisland UI | System module",
+  "repository": "https://github.com/uisland-ui/uisland-ui-next/tree/master/packages/system",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/uisland-ui-system.cjs.js",
+      "default": "./dist/uisland-ui-system.esm.js"
+    }
+  },
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@emotion/css": "^11.7.1",
+    "@uisland-ui/styled": "^0.0.0-alpha.0",
+    "@uisland-ui/styled-system": "^0.1.1-alpha.0",
+    "@uisland-ui/u-color-mode": "^0.1.0-alpha.10",
+    "@uisland-ui/utils": "^0.1.0-alpha.10",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.memoize": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/lodash.memoize": "^4.1.6",
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "peerDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
