@@ -158,7 +158,7 @@ export { uniland }
 // export * from "@uniland-ui/c-portal"
 
 // R
-// export * from "@uniland-ui/c-reset"
+export * from "@uniland-ui/u-reset"
 
 // S
 // export * from "@uniland-ui/c-skip-nav"

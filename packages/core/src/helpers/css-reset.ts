@@ -1,5 +1,5 @@
 import { injectGlobal, css } from "@uniland-ui/system"
-// import { cssResetStyles } from "@uniland-ui/c-reset"
+import { cssResetStyles } from "@uniland-ui/u-reset"
 import { ThemeOverride } from "../extend-theme"
 import { get, runIfFn } from "@uniland-ui/utils"
 import { ColorModeRef } from "@uniland-ui/u-color-mode"
@@ -11,7 +11,7 @@ import { insertStyles, SerializedStyles } from "@emotion/utils"
 
 /** Injects CSS reset styles */
 export function injectResetStyles() {
-  // injectGlobal(cssResetStyles)
+  injectGlobal(cssResetStyles)
 }
 
 /** Injects styles from `theme.styles.global` property */
