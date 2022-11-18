@@ -1,10 +1,10 @@
-import * as UnilandComponents from "@uniland-ui/vue-next"
+import * as UnilandComponents from "@uniland-ui/vue"
 
 export const componentResolver = (name: string) => {
   if (name in UnilandComponents) {
     return {
       importName: name,
-      path: `@uniland-ui/vue-next`,
+      path: `@uniland-ui/vue`,
     }
   }
 }

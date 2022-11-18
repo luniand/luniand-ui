@@ -12,8 +12,8 @@
       "default": "./dist/uniland-ui-vue-auto-import.esm.js"
     }
   },
-  "description": "Uniland UI Vue | VueAutoImport module",
-  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next/tree/master/tooling/auto-import",
+  "description": "Uniland UI | VueAutoImport module",
+  "repository": "https://github.com/luniand/uniland-ui/tree/main/tooling/auto-import",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {
@@ -26,13 +26,13 @@
     "lodash.kebabcase": "^4.1.1"
   },
   "peerDependencies": {
-    "@uniland-ui/vue-next": "1.0.0-alpha.13",
-    "unplugin-vue-components": "^0.14.0",
-    "vue": "^3.0.11"
+    "@uniland-ui/vue": "^1.0.0-alpha.13",
+    "@vue/runtime-core": "^3.2.45",
+    "unplugin-vue-components": "^0.22.9"
   },
   "devDependencies": {
-    "@uniland-ui/vue-next": "1.0.0-alpha.13",
-    "unplugin-vue-components": "^0.14.0",
-    "vue": "^3.2.37"
+    "@uniland-ui/vue": "^1.0.0-alpha.13",
+    "@vue/runtime-core": "^3.2.45",
+    "unplugin-vue-components": "^0.22.9"
   }
 }
