@@ -6,17 +6,17 @@ import {
   provide,
   inject,
   computed,
-} from "vue"
-import { Theme } from "@uniland-ui/vue-theme"
-import { ComponentWithProps } from "@uniland-ui/vue-system"
+} from "@vue/runtime-core"
+import { Theme } from "@uniland-ui/theme"
+import { ComponentWithProps } from "@uniland-ui/system"
 
-export interface CThemeProviderProps {
+export interface UThemeProviderProps {
   value?: Theme
 }
 
-const CThemeProvider: ComponentWithProps<CThemeProviderProps> = defineComponent(
+const UThemeProvider: ComponentWithProps<UThemeProviderProps> = defineComponent(
   {
-    name: "CThemeProvider",
+    name: "UThemeProvider",
     props: {
       value: {
         type: [Object] as PropType<Theme>,
@@ -32,4 +32,4 @@ const CThemeProvider: ComponentWithProps<CThemeProviderProps> = defineComponent(
   }
 )
 
-export default CThemeProvider
+export default UThemeProvider
