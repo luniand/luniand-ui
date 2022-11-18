@@ -14,11 +14,11 @@ module.exports = {
   transformIgnorePatterns: ["/node_modules/(?!@popperjs/.*|lodash.)"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/$1",
-    "@uisland-ui/vue-test-utils": "<rootDir>/packages/test-utils",
+    "@uniland-ui/vue-test-utils": "<rootDir>/packages/test-utils",
   },
   moduleFileExtensions: ["ts", "tsx", "js", "jsx"],
   snapshotSerializers: [
-    "@uisland-ui/vue-test-utils/src/snapshot-serializer.ts",
+    "@uniland-ui/vue-test-utils/src/snapshot-serializer.ts",
   ],
   testMatch: ["**/**/*.test.(js|jsx|ts|tsx)"],
 }

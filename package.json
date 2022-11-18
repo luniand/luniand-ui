@@ -1,9 +1,9 @@
 {
-  "name": "uisland-ui-vue-next",
+  "name": "uniland-ui-vue-next",
   "version": "1.0.0",
-  "description": "Vue 3 compatible Uisland UI",
+  "description": "Vue 3 compatible Uniland UI",
   "main": "index.js",
-  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next",
+  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "workspaces": [
     "packages/*",

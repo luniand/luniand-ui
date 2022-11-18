@@ -1,11 +1,11 @@
-import { drawerAnatomy as parts } from "@uisland-ui/anatomy"
+import { drawerAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { mode } from "@uniland-ui/theme-tools"
 
 /**
  * Since the `maxWidth` prop references theme.sizes internally,

@@ -1,5 +1,5 @@
 /**
- * This file will be replaced by running "npx @uisland-ui/cli tokens"
+ * This file will be replaced by running "npx @uniland-ui/cli tokens"
  */
 import type { BaseThemeTypings } from "./theme.types"
 

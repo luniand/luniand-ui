@@ -1,10 +1,10 @@
-import { menuAnatomy as parts } from "@uisland-ui/anatomy"
+import { menuAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { mode } from "@uniland-ui/theme-tools"
 
 const baseStyleList: SystemStyleFunction = (props) => {
   return {

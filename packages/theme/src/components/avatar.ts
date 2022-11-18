@@ -1,10 +1,10 @@
-import { avatarAnatomy as parts } from "@uisland-ui/anatomy"
-import { isDark, mode, randomColor } from "@uisland-ui/theme-tools"
+import { avatarAnatomy as parts } from "@uniland-ui/anatomy"
+import { isDark, mode, randomColor } from "@uniland-ui/theme-tools"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleFunction,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 import themeSizes from "../foundations/sizes"
 
 const baseStyleBadge: SystemStyleFunction = (props) => {

@@ -1,16 +1,16 @@
-# `@uisland-ui/vue-auto-import`
+# `@uniland-ui/vue-auto-import`
 
-If you use [Vite](https://vitejs.org), you can use this package to auto import components for you so that you needn't manually import components from Uisland UI Vue that you want to consume.
+If you use [Vite](https://vitejs.org), you can use this package to auto import components for you so that you needn't manually import components from Uniland UI Vue that you want to consume.
 
 
-This package depends on the [`unplugin-vue-components`]() to help resolve components from the template. `@uisland-ui/vue-auto-import` exports a `componentResolverFunction` that will identify Uisland UI Vue components and resolve them for you.
+This package depends on the [`unplugin-vue-components`]() to help resolve components from the template. `@uniland-ui/vue-auto-import` exports a `componentResolverFunction` that will identify Uniland UI Vue components and resolve them for you.
 
 ## Installation
 
 ```sh
-yarn add @uisland-ui/vue-auto-import && yarn add -D unplugin-vue-components
+yarn add @uniland-ui/vue-auto-import && yarn add -D unplugin-vue-components
 # or
-npm i @uisland-ui/vue-auto-import && npm install --dev unplugin-vue-components
+npm i @uniland-ui/vue-auto-import && npm install --dev unplugin-vue-components
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ npm i @uisland-ui/vue-auto-import && npm install --dev unplugin-vue-components
 
 import { defineConfig } from 'vite'
 import ComponentsPlugin from 'unplugin-vue-components'
-import { componentResolver } from '@uisland-ui/vue-auto-import'
+import { componentResolver } from '@uniland-ui/vue-auto-import'
 
 
 export default defineConfig({

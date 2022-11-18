@@ -1,4 +1,4 @@
-import type { SystemStyleObject } from "@uisland-ui/theme-tools"
+import type { SystemStyleObject } from "@uniland-ui/theme-tools"
 
 const baseStyle: SystemStyleObject = {
   fontSize: "md",

@@ -1,4 +1,4 @@
-import { Dict, isObject, mergeWith } from "@uisland-ui/utils"
+import { Dict, isObject, mergeWith } from "@uniland-ui/utils"
 import { calc, Operand } from "./calc"
 import { cssVar } from "./css-var"
 import { FlatToken, FlatTokens } from "./flatten-tokens"
@@ -17,10 +17,10 @@ export interface ThemeVars {
  * Convert a token name to a css variable
  *
  * @example
- * tokenToCssVar('colors.red.500', 'uisland')
+ * tokenToCssVar('colors.red.500', 'uniland')
  * => {
- *   variable: '--uisland-colors-red-500',
- *   reference: 'var(--uisland-colors-red-500)'
+ *   variable: '--uniland-colors-red-500',
+ *   reference: 'var(--uniland-colors-red-500)'
  * }
  */
 function tokenToCssVar(token: string | number, prefix?: string) {
@@ -88,7 +88,7 @@ export function createThemeVars(
             return acc
           }
 
-          /** @example { _dark: "#fff" } => { '.uisland-ui-dark': "#fff" } */
+          /** @example { _dark: "#fff" } => { '.uniland-ui-dark': "#fff" } */
           const conditionSelector =
             // @ts-ignore
             pseudoSelectors?.[conditionAlias] ?? conditionAlias

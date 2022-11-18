@@ -1,6 +1,6 @@
 import createCache from "@emotion/cache"
 import { EmotionCache } from "@emotion/utils"
-import { createContext, canUseDOM } from "@uisland-ui/utils"
+import { createContext, canUseDOM } from "@uniland-ui/utils"
 import {
   DefineComponent,
   Component,
@@ -15,7 +15,7 @@ const [EmotionCacheProvider, useEmotionCache, EmotionCacheInjectionSymbol] =
   })
 
 export const defaultCache = createCache({
-  key: "uisland",
+  key: "uniland",
 })
 
 export let __unusafe_useEmotionCache = useEmotionCache
@@ -47,7 +47,7 @@ if (canUseDOM()) {
       const cache = useEmotionCache(defaultCache)
       if (!cache) {
         const cache = createCache({
-          key: "uisland",
+          key: "uniland",
         })
         EmotionCacheProvider(cache)
         return fn(cache)

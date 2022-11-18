@@ -5,9 +5,9 @@ updates:
     schedule:
       interval: "daily"
     allow:
-      - dependency-name: "@uisland-ui/utils"
-      - dependency-name: "@uisland-ui/styled-system"
+      - dependency-name: "@uniland-ui/utils"
+      - dependency-name: "@uniland-ui/styled-system"
     target-branch: "develop"
     commit-message:
       # Prefix all commit messages with "npm"
-      prefix: "uisland-ui:core"
+      prefix: "uniland-ui:core"

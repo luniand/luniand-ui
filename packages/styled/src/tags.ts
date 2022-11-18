@@ -1,4 +1,4 @@
-import { UnionStringArray } from "@uisland-ui/utils"
+import { UnionStringArray } from "@uniland-ui/utils"
 
 export const tags = [
   "a",

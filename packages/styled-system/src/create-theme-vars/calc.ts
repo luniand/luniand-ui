@@ -1,4 +1,4 @@
-import { isObject } from "@uisland-ui/utils"
+import { isObject } from "@uniland-ui/utils"
 
 export type Operand = string | number | { reference: string }
 type Operator = "+" | "-" | "*" | "/"

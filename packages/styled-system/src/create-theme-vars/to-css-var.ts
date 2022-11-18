@@ -1,4 +1,4 @@
-import { analyzeBreakpoints, Dict } from "@uisland-ui/utils"
+import { analyzeBreakpoints, Dict } from "@uniland-ui/utils"
 import type { WithCSSVar } from "../utils"
 import { createThemeVars } from "./create-theme-vars"
 import { extractSemanticTokens, extractTokens, omitVars } from "./theme-tokens"
@@ -32,14 +32,14 @@ export function toCSSVar<T extends Dict>(rawTheme: T) {
   } = createThemeVars(flatTokens, { cssVarPrefix })
 
   const defaultCssVars: Dict = {
-    "--uisland-ring-inset": "var(--uisland-empty,/*!*/ /*!*/)",
-    "--uisland-ring-offset-width": "0px",
-    "--uisland-ring-offset-color": "#fff",
-    "--uisland-ring-color": "rgba(66, 153, 225, 0.6)",
-    "--uisland-ring-offset-shadow": "0 0 #0000",
-    "--uisland-ring-shadow": "0 0 #0000",
-    "--uisland-space-x-reverse": "0",
-    "--uisland-space-y-reverse": "0",
+    "--uniland-ring-inset": "var(--uniland-empty,/*!*/ /*!*/)",
+    "--uniland-ring-offset-width": "0px",
+    "--uniland-ring-offset-color": "#fff",
+    "--uniland-ring-color": "rgba(66, 153, 225, 0.6)",
+    "--uniland-ring-offset-shadow": "0 0 #0000",
+    "--uniland-ring-shadow": "0 0 #0000",
+    "--uniland-space-x-reverse": "0",
+    "--uniland-space-y-reverse": "0",
   }
 
   Object.assign(theme, {

@@ -1,8 +1,8 @@
-import { listAnatomy as parts } from "@uisland-ui/anatomy"
+import { listAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyleIcon: SystemStyleObject = {
   marginEnd: "0.5rem",

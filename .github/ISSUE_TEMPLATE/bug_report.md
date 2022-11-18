@@ -1,6 +1,6 @@
 ---
 name: Report a bug
-about: Create a bug report for the Uisland UI ecosystem
+about: Create a bug report for the Uniland UI ecosystem
 ---
 
 # Bug report
@@ -24,9 +24,9 @@ able to triage your issue in a timely manner. -->
 <!-- Please provide a codesandbox link or GitHub repo with a minimal
 reproduction of the bug.
 
-Official Uisland CodeSandbox templates:
-- [JavaScript CodeSandbox template](https://codesandbox.io/s/github/uisland-ui/codesandbox-react-js-template/tree/master)
-- [TypeScript CodeSandbox template](https://codesandbox.io/s/github/uisland-ui/codesandbox-react-ts-template/tree/master)
+Official Uniland CodeSandbox templates:
+- [JavaScript CodeSandbox template](https://codesandbox.io/s/github/uniland-ui/codesandbox-react-js-template/tree/master)
+- [TypeScript CodeSandbox template](https://codesandbox.io/s/github/uniland-ui/codesandbox-react-ts-template/tree/master)
 -->
 
 ## Expected behavior
@@ -41,7 +41,7 @@ Official Uisland CodeSandbox templates:
 
 - OS: [e.g. macOS, Windows]
 - Browser (if applies): [e.g. Chrome, Safari]
-- Version of @uisland-ui/core: [e.g. 1.0.0-rc.3]
+- Version of @uniland-ui/core: [e.g. 1.0.0-rc.3]
 - Version of Node.js: [e.g. 12.11.1]
 
 ## Additional context

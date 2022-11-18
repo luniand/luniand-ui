@@ -1,13 +1,13 @@
 import { h, defineComponent, PropType, reactive } from "vue"
 import type CSS from "csstype"
 import {
-  uisland,
+  uniland,
   DOMElements,
   ThemingProps,
   SystemStyleObject,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 
 export interface FlexProps {
   /**
@@ -86,9 +86,9 @@ const CFlex: ComponentWithProps<DeepPartial<FlexProps>> = defineComponent({
       w: props.size,
     })
     return () => (
-      <uisland.div as={props.as} __label="flex" __css={styles} {...attrs}>
+      <uniland.div as={props.as} __label="flex" __css={styles} {...attrs}>
         {slots}
-      </uisland.div>
+      </uniland.div>
     )
   },
 })

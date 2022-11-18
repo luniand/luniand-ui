@@ -1,8 +1,8 @@
-import { editableAnatomy as parts } from "@uisland-ui/anatomy"
+import { editableAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStylePreview: SystemStyleObject = {
   borderRadius: "md",

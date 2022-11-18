@@ -1,14 +1,14 @@
 import type { HTMLAttributes, VNode } from "vue"
-import type { UislandProps } from "@uisland-ui/vue-system"
+import type { UnilandProps } from "@uniland-ui/vue-system"
 import { DefineComponent } from "vue"
-import { UislandFactoryProps, ComponentWithProps } from "@uisland-ui/vue-system"
+import { UnilandFactoryProps, ComponentWithProps } from "@uniland-ui/vue-system"
 
 declare global {
   namespace JSX {
     interface Element extends VNode {}
     interface ElementClass
-      extends DefineComponent<UislandFactoryProps>,
-        ComponentWithProps<UislandFactoryProps> {
+      extends DefineComponent<UnilandFactoryProps>,
+        ComponentWithProps<UnilandFactoryProps> {
       $props: {}
     }
     interface ElementAttributesProperty {
@@ -17,7 +17,7 @@ declare global {
 
     interface IntrinsicAttributes
       extends Omit<HTMLAttributes, "color">,
-        UislandProps {}
+        UnilandProps {}
   }
 }
 

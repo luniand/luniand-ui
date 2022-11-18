@@ -7,8 +7,8 @@ import {
   inject,
   computed,
 } from "vue"
-import { Theme } from "@uisland-ui/vue-theme"
-import { ComponentWithProps } from "@uisland-ui/vue-system"
+import { Theme } from "@uniland-ui/vue-theme"
+import { ComponentWithProps } from "@uniland-ui/vue-system"
 
 export interface CThemeProviderProps {
   value?: Theme
@@ -24,10 +24,10 @@ const CThemeProvider: ComponentWithProps<CThemeProviderProps> = defineComponent(
       },
     },
     setup(props, { slots }) {
-      const pluginTheme = inject("$uislandTheme")
+      const pluginTheme = inject("$unilandTheme")
       const applicationTheme = computed(() => props.value || pluginTheme)
-      provide("$uislandTheme", applicationTheme.value)
-      return () => h(Fragment, slots.default?.({ $uislandTheme: props.value }))
+      provide("$unilandTheme", applicationTheme.value)
+      return () => h(Fragment, slots.default?.({ $unilandTheme: props.value }))
     },
   }
 )

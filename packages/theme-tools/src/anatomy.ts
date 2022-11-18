@@ -1,4 +1,4 @@
-import { fromEntries } from "@uisland-ui/utils"
+import { fromEntries } from "@uniland-ui/utils"
 /**
  * Used to define the anatomy/parts of a component in a way that provides
  * a consistent API for `className`, css selector and `theming`.
@@ -87,7 +87,7 @@ export class Anatomy<T extends string = string> {
       ? [this.name]
       : [this.name, part]
     const attr = el.filter(Boolean).join("__")
-    const className = `uisland-${attr}`
+    const className = `uniland-${attr}`
 
     const partObj = {
       className,

@@ -13,5 +13,5 @@
   </c-v-stack>
 </template>
 <script setup>
-import { CVStack } from "@uisland-ui/vue-layout"
+import { CVStack } from "@uniland-ui/vue-layout"
 </script>

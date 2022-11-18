@@ -1,4 +1,4 @@
-import type { SystemStyleObject } from "@uisland-ui/theme-tools"
+import type { SystemStyleObject } from "@uniland-ui/theme-tools"
 import Badge from "./badge"
 
 const { variants, defaultProps } = Badge

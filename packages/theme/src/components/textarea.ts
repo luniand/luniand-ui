@@ -1,7 +1,7 @@
 import type {
   SystemStyleInterpolation,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 import Input from "./input"
 
 const baseStyle: SystemStyleObject = {

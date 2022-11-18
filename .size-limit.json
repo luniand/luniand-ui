@@ -1,11 +1,11 @@
 [
   {
-    "path": "packages/core/dist/uisland-ui-vue-next.cjs.prod.js",
+    "path": "packages/core/dist/uniland-ui-vue-next.cjs.prod.js",
     "limit": "86 KB",
     "ignore": ["vue", "@emotion/css"]
   },
   {
-    "path": "packages/core/dist/uisland-ui-vue-next.esm.js",
+    "path": "packages/core/dist/uniland-ui-vue-next.esm.js",
     "limit": "85 KB",
     "ignore": ["vue", "@emotion/css"]
   }

@@ -3,21 +3,21 @@ to: packages/<%=h.changeCase.paramCase(name)%>/package.json
 ---
 
 {
-  "name": "<%= '@uisland-ui/' + h.changeCase.paramCase(name)%>",
+  "name": "<%= '@uniland-ui/' + h.changeCase.paramCase(name)%>",
   "version": "0.0.0-alpha.0",
-  "main": "<%= 'dist/uisland-ui-' + h.changeCase.paramCase(name) + '.cjs.js' %>",
-  "module": "<%= 'dist/uisland-ui-' + h.changeCase.paramCase(name) + '.esm.js' %>",
+  "main": "<%= 'dist/uniland-ui-' + h.changeCase.paramCase(name) + '.cjs.js' %>",
+  "module": "<%= 'dist/uniland-ui-' + h.changeCase.paramCase(name) + '.esm.js' %>",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "require": "<%= './dist/uisland-ui-' + h.changeCase.paramCase(name) + '.cjs.js' %>",
-      "default": "<%= './dist/uisland-ui-' + h.changeCase.paramCase(name) + '.esm.js' %>"
+      "require": "<%= './dist/uniland-ui-' + h.changeCase.paramCase(name) + '.cjs.js' %>",
+      "default": "<%= './dist/uniland-ui-' + h.changeCase.paramCase(name) + '.esm.js' %>"
     }
   },
-  "description": "<%= 'Uisland UI Vue | ' + h.changeCase.pascalCase(name) + ' module'%>",
-  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next.git",
+  "description": "<%= 'Uniland UI Vue | ' + h.changeCase.pascalCase(name) + ' module'%>",
+  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next.git",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {

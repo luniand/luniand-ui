@@ -1,18 +1,18 @@
-import { filterUndefined } from "@uisland-ui/utils"
+import { filterUndefined } from "@uniland-ui/utils"
 import {
-  uisland,
-  HTMLUislandProps,
+  uniland,
+  HTMLUnilandProps,
   ThemingProps,
   SystemProps,
   useStyleConfig,
   DOMElements,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
-import { SNAO, vueThemingProps } from "@uisland-ui/vue-utils"
+} from "@uniland-ui/vue-system"
+import { SNAO, vueThemingProps } from "@uniland-ui/vue-utils"
 import { computed, defineComponent, h, PropType } from "vue"
 
-export interface TextProps extends HTMLUislandProps<"p">, ThemingProps<"Text"> {
+export interface TextProps extends HTMLUnilandProps<"p">, ThemingProps<"Text"> {
   /**
    * The CSS `text-align` property
    * @type SystemProps["textAlign"]
@@ -33,7 +33,7 @@ export interface TextProps extends HTMLUislandProps<"p">, ThemingProps<"Text"> {
 /**
  * Used to render texts or paragraphs.
  *
- * @see Docs https://vue.uisland-ui.com/docs/typography/text
+ * @see Docs https://vue.uniland-ui.com/docs/typography/text
  */
 export const CText: ComponentWithProps<DeepPartial<TextProps>> =
   defineComponent({
@@ -69,14 +69,14 @@ export const CText: ComponentWithProps<DeepPartial<TextProps>> =
 
       return () => {
         return (
-          <uisland.p
+          <uniland.p
             __label="text"
             {...aliasedProps.value}
             __css={styles.value}
             {...attrs}
           >
             {slots}
-          </uisland.p>
+          </uniland.p>
         )
       }
     },

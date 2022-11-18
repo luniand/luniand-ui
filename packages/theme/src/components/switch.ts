@@ -1,11 +1,11 @@
-import { switchAnatomy as parts } from "@uisland-ui/anatomy"
+import { switchAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { calc, cssVar, mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { calc, cssVar, mode } from "@uniland-ui/theme-tools"
 
 const $width = cssVar("switch-track-width")
 const $height = cssVar("switch-track-height")

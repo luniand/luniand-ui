@@ -1,4 +1,4 @@
-import { Dict, isObject } from "@uisland-ui/utils"
+import { Dict, isObject } from "@uniland-ui/utils"
 import type { ThemeScale } from "../create-theme-vars"
 import type { Transform } from "./types"
 

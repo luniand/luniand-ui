@@ -1,4 +1,4 @@
-import { SystemStyleObject } from "@uisland-ui/theme-tools"
+import { SystemStyleObject } from "@uniland-ui/theme-tools"
 
 const baseStyle: SystemStyleObject = {
   fontFamily: "heading",

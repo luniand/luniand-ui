@@ -31,6 +31,6 @@
     "packages/vue-a11y",
     "packages/vue-composables"
   ],
-  "sandboxes": ["uisland-ui-vue-v1-jcidb"],
+  "sandboxes": ["uniland-ui-vue-v1-jcidb"],
   "node": "16"
 }

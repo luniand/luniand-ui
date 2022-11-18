@@ -1,5 +1,5 @@
 import weakMemoize from "@emotion/weak-memoize"
-import { createContext } from "@uisland-ui/utils"
+import { createContext } from "@uniland-ui/utils"
 import { getTheme } from "./utils"
 
 const [_EmotionThemeProvider, useEmotionTheme, EmotionThemeContextSymbol] =

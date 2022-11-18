@@ -1,9 +1,9 @@
-import { radioAnatomy as parts } from "@uisland-ui/anatomy"
+import { radioAnatomy as parts } from "@uniland-ui/anatomy"
 import {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleFunction,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 import Checkbox from "./checkbox"
 
 const baseStyleControl: SystemStyleFunction = (props) => {

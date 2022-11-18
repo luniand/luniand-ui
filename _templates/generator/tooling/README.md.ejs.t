@@ -2,14 +2,14 @@
 to: tooling/<%=h.changeCase.paramCase(name)%>/README.md
 ---
 
-# @uisland-ui/<%=h.changeCase.paramCase(name)%>
+# @uniland-ui/<%=h.changeCase.paramCase(name)%>
 
 <%=h.changeCase.sentence(description)%>
 
 ## Installation
 
 ```sh
-yarn add @uisland-ui/<%=h.changeCase.paramCase(name)%>
+yarn add @uniland-ui/<%=h.changeCase.paramCase(name)%>
 # or
-npm i @uisland-ui/<%=h.changeCase.paramCase(name)%>
+npm i @uniland-ui/<%=h.changeCase.paramCase(name)%>
 ```

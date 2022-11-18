@@ -1,4 +1,4 @@
-import { mode, cssVar, SystemStyleFunction } from "@uisland-ui/theme-tools"
+import { mode, cssVar, SystemStyleFunction } from "@uniland-ui/theme-tools"
 
 const $bg = cssVar("tooltip-bg")
 const $arrowBg = cssVar("popper-arrow-bg")

@@ -1,4 +1,4 @@
-Thanks for showing interest to contribute to Uisland UI 💖, you rock!
+Thanks for showing interest to contribute to Uniland UI 💖, you rock!
 
 When it comes to open source, there are different ways you can contribute, all
 of which are valuable. Here's a few guidelines that should help you as you
@@ -6,16 +6,16 @@ prepare your contribution.
 
 ## Setup the Project
 
-The following steps will get you up and running to contribute to Uisland UI:
+The following steps will get you up and running to contribute to Uniland UI:
 
 1. Fork the repo (click the <kbd>Fork</kbd> button at the top right of
-   [this page](https://github.com/uisland-ui/uisland-ui-vue-next))
+   [this page](https://github.com/uniland-ui/uniland-ui-vue-next))
 
 2. Clone your fork locally
 
 ```sh
-git clone https://github.com/<your_github_username>/uisland-ui-vue-next.git
-cd uisland-ui
+git clone https://github.com/<your_github_username>/uniland-ui-vue-next.git
+cd uniland-ui
 ```
 
 3. Install dependencies and bootstrap the project
@@ -24,7 +24,7 @@ yarn
 # After the dependencies are installed, the `postinstall` script with trigger `preconstruct dev` which will build all the component packages.
 ```
 
-> If you run into any issues during these steps, kindly reach out to the Uisland UI
+> If you run into any issues during these steps, kindly reach out to the Uniland UI
 > Vue team here:[https://discord.gg/cMpMfvxa](https://discord.gg/cMpMfvxa)
 
 ## For Windows OS Users
@@ -35,7 +35,7 @@ There may be some trouble specific to the local setup in Windows. The following 
 
 ## Development
 
-To improve our development process, we've set up tooling and systems. Uisland UI
+To improve our development process, we've set up tooling and systems. Uniland UI
 uses a monorepo structure and we treat each component as an independent package
 that can be consumed in isolation.
 
@@ -78,28 +78,28 @@ working on. You can run `build`, `test`, `lint` commands.
 Since we're using lerna monorepo + yarn workspaces by default, this enables us
 to run commands within component packages directly from the root.
 
-Each component is named this way: `@uisland-ui/[component]`. Let's say we want to
+Each component is named this way: `@uniland-ui/[component]`. Let's say we want to
 build the button component. Here's how to do it:
 
 > *Take note that in order to prevent template tags name clashing with HTML elements or other Vue library components,*
 > *we prefix all component names with a `c-` in kebab-case or a capital `C` in PascalCase.*
 
 ```bash
-yarn workspace @uisland-ui/c-button build
+yarn workspace @uniland-ui/c-button build
 
 # or
 
-lerna run build --scope @uisland-ui/c-button
+lerna run build --scope @uniland-ui/c-button
 ```
 
 **Shortcut:**
 ```bash
 # to build
-yarn pkg @uisland-ui/c-tabs build
+yarn pkg @uniland-ui/c-tabs build
 
 # to test
-yarn pkg @uisland-ui/c-tabs test
-yarn pkg @uisland-ui/c-tabs test --watch
+yarn pkg @uniland-ui/c-tabs test
+yarn pkg @uniland-ui/c-tabs test --watch
 
 ```
 
@@ -125,8 +125,8 @@ link.
 
 You may wish to use our starters to help you get going:
 
-TODO: Add Typescript starter for `@uisland-ui/vue` v1
-TODO: Add Javascript starter for `@uisland-ui/vue` v1
+TODO: Add Typescript starter for `@uniland-ui/vue` v1
+TODO: Add Javascript starter for `@uniland-ui/vue` v1
 
 ## Proposing new or changed API?
 
@@ -170,7 +170,7 @@ https://www.conventionalcommits.org/ or check out the
 
 ### Steps to PR
 
-1. Fork of the uisland-ui-vue repository and clone your fork
+1. Fork of the uniland-ui-vue repository and clone your fork
 
 2. Create a new branch out of the `main` branch. We follow the convention
    `[type/scope]`. For example `fix/accordion-hook` or `docs/menu-typo`. `type`
@@ -178,7 +178,7 @@ https://www.conventionalcommits.org/ or check out the
    commit type. `scope` is just a short id that describes the scope of work.
 
 3. Make and commit your changes following the
-   [commit convention](https://github.com/uisland-ui/uisland-ui/blob/main/CONTRIBUTING.md#commit-convention).
+   [commit convention](https://github.com/uniland-ui/uniland-ui/blob/main/CONTRIBUTING.md#commit-convention).
    As you develop, you can run `yarn pkg <module> build` and
    `yarn pkg <module> test` to make sure everything works as expected. Please
    note that you might have to run `yarn boot` first in order to build all
@@ -198,11 +198,11 @@ https://www.conventionalcommits.org/ or check out the
 
 All commits that fix bugs or add features need a test.
 
-> **Dear Uisland UI Vue team:** Please do not merge code without tests
+> **Dear Uniland UI Vue team:** Please do not merge code without tests
 
 ## Want to write a blog post or tutorial
 
-That would be amazing! Reach out to the Uisland UI Vue core team here:
+That would be amazing! Reach out to the Uniland UI Vue core team here:
 https://discord.gg/dQHfcWF. We would love to support you any way we can.
 
 ## Want to help improve the docs?
@@ -214,7 +214,7 @@ Creating a GitHub token and storing it as the `GITHUB_TOKEN` environment
 variable allows the user to avoid the limit.
 
 Visit
-https://github.com/settings/tokens/new?description=Uisland+website+development to
+https://github.com/settings/tokens/new?description=Uniland+website+development to
 create a new personal access token. After creating the token, be sure to copy
 the token string to your clipboard.
 
@@ -227,5 +227,5 @@ export GITHUB_TOKEN=<PASTE YOUR TOKEN HERE>
 
 ## License
 
-By contributing your code to the uisland-ui-vue GitHub repository, you agree to
+By contributing your code to the uniland-ui-vue GitHub repository, you agree to
 license your contribution under the MIT license.

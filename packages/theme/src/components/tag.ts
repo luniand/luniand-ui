@@ -1,9 +1,9 @@
-import { tagAnatomy as parts } from "@uisland-ui/anatomy"
+import { tagAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleInterpolation,
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 import Badge from "./badge"
 
 const baseStyleContainer: SystemStyleObject = {

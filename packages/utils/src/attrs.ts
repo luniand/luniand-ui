@@ -1,5 +1,5 @@
 import camelCase from "lodash.camelcase"
-// import { StyleObjectOrFn, isStyleProp } from "@uisland-ui/styled-system"
+// import { StyleObjectOrFn, isStyleProp } from "@uniland-ui/styled-system"
 import { HTMLAttributes } from "@vue/runtime-dom"
 import memoize from "lodash.memoize"
 

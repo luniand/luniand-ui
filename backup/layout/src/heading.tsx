@@ -1,18 +1,18 @@
-import { vueThemingProps } from "@uisland-ui/vue-utils"
+import { vueThemingProps } from "@uniland-ui/vue-utils"
 import {
-  uisland,
+  uniland,
   DOMElements,
   ThemingProps,
   useStyleConfig,
-  HTMLUislandProps,
+  HTMLUnilandProps,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 import { computed, defineComponent, h, PropType } from "vue"
-import { filterUndefined } from "@uisland-ui/utils"
+import { filterUndefined } from "@uniland-ui/utils"
 
 export interface HeadingProps
-  extends HTMLUislandProps<"h2">,
+  extends HTMLUnilandProps<"h2">,
     ThemingProps<"Heading"> {}
 
 export const CHeading: ComponentWithProps<DeepPartial<HeadingProps>> =
@@ -37,14 +37,14 @@ export const CHeading: ComponentWithProps<DeepPartial<HeadingProps>> =
       const styles = useStyleConfig("Heading", themingProps)
 
       return () => (
-        <uisland.h2
+        <uniland.h2
           as={props.as}
           __label="heading"
           __css={styles.value}
           {...attrs}
         >
           {slots}
-        </uisland.h2>
+        </uniland.h2>
       )
     },
   })

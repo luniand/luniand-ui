@@ -1,11 +1,11 @@
-import { numberInputAnatomy as parts } from "@uisland-ui/anatomy"
+import { numberInputAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { calc, cssVar, mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { calc, cssVar, mode } from "@uniland-ui/theme-tools"
 import typography from "../foundations/typography"
 import Input from "./input"
 

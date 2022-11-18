@@ -1,6 +1,6 @@
-import { keyframes } from "@uisland-ui/system"
-import type { SystemStyleFunction } from "@uisland-ui/theme-tools"
-import { getColor, mode } from "@uisland-ui/theme-tools"
+import { keyframes } from "@uniland-ui/system"
+import type { SystemStyleFunction } from "@uniland-ui/theme-tools"
+import { getColor, mode } from "@uniland-ui/theme-tools"
 
 const fade = (startColor: string, endColor: string) =>
   keyframes({

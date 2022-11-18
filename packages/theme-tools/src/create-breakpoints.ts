@@ -1,4 +1,4 @@
-import { warn } from "@uisland-ui/utils"
+import { warn } from "@uniland-ui/utils"
 
 export interface BaseBreakpointConfig {
   sm: string
@@ -20,7 +20,7 @@ export const createBreakpoints = <T extends BaseBreakpointConfig>(
   warn({
     condition: true,
     message: [
-      `[uisland-ui]: createBreakpoints(...) will be deprecated pretty soon`,
+      `[uniland-ui]: createBreakpoints(...) will be deprecated pretty soon`,
       `simply pass the breakpoints as an object. Remove the createBreakpoints(..) call`,
     ].join(""),
   })

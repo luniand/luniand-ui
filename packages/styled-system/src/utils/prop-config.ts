@@ -1,4 +1,4 @@
-import { Dict } from "@uisland-ui/utils"
+import { Dict } from "@uniland-ui/utils"
 import * as CSS from "csstype"
 import { createTransform } from "./create-transform"
 import { ThemeScale } from "../create-theme-vars"

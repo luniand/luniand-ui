@@ -1,4 +1,4 @@
-# @uisland-ui/c-flex
+# @uniland-ui/c-flex
 
 C flex component
 `CFlex` is `CBox` with display: flex and comes with helpful style shorthands.
@@ -6,7 +6,7 @@ C flex component
 ## Installation
 
 ```sh
-yarn add @uisland-ui/c-flex
+yarn add @uniland-ui/c-flex
 # or
-npm i @uisland-ui/c-flex
+npm i @uniland-ui/c-flex
 ```

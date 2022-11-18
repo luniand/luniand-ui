@@ -1,14 +1,14 @@
 /**
- * Hey! Welcome to @uisland-ui/vue-next Anatomy
+ * Hey! Welcome to @uniland-ui/vue-next Anatomy
  *
- * The anatomy of all uisland components
+ * The anatomy of all uniland components
  *
- * @see Docs     https://vue.uisland-ui.com/anatomy
- * @see Source   https://github.com/rhp-island/uisland-ui/blob/master/packages/vue-anatomy/src/vue-anatomy/vue-anatomy.ts
+ * @see Docs     https://vue.uniland-ui.com/anatomy
+ * @see Source   https://github.com/rhp-island/uniland-ui/blob/master/packages/vue-anatomy/src/vue-anatomy/vue-anatomy.ts
  * @see WAI-ARIA https://www.w3.org/TR/wai-aria-practices-1.2
  */
 
-import { anatomy } from "@uisland-ui/theme-tools"
+import { anatomy } from "@uniland-ui/theme-tools"
 
 /**
  * **Accordion anatomy**

@@ -28,7 +28,7 @@ import {
   CWrap,
   CWrapItem,
 } from "../src"
-import { CFlex } from "@uisland-ui/vue-next"
+import { CFlex } from "@uniland-ui/vue-next"
 import { render, testA11y } from "../../test-utils/src"
 
 describe("<CLink />", () => {
@@ -56,7 +56,7 @@ describe("<CLinkBox /> <CLinkOverlay />", () => {
       template: `
       <c-link-box as="article">
         <c-heading as="h2" font-size="20">
-          <c-link-overlay is-external href="https://vue.uisland-ui.com">Some blog post</c-link-overlay>
+          <c-link-overlay is-external href="https://vue.uniland-ui.com">Some blog post</c-link-overlay>
         </c-heading>
         <p>
           As a side note, using quotation marks around an attribute value is
@@ -396,7 +396,7 @@ describe("<CText />", () => {
       <c-text :noOfLines="[1, 2, 3]" maxW="sm">
         "The quick brown fox jumps over the lazy dog" is an English-language
         pangram—a sentence that contains all of the letters of the English alphabet.
-        Owing to its existence, Uisland was created.
+        Owing to its existence, Uniland was created.
       </c-text>
       `,
     })

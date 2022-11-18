@@ -1,8 +1,6 @@
-# `@uisland-ui/vue` for Vue 3 (WIP)
+# `@uniland-ui/vue` for Vue 3 (WIP)
 
-The official working repository for V1 of Uisland UI Vue with Vue 3 support.
-
-[See Roadmap](https://www.notion.so/4517ba273ef3409d8e0e9ec3d121f6c1?v=ce00244a41b74b79b4d01ee4c3aa61ec)
+The official working repository for V1 of Uniland UI Vue with Vue 3 support.
 
 ### Install dependencies
 ```bash
@@ -12,7 +10,7 @@ yarn playground:dev
 ```
 
 ## Development Guide
-### Major todos:
+### Major todo(s):
 - [-] Documentation (WIP)
 - [-] Accessibility JS hooks (WIP, Documented in Roadmap)
 
@@ -33,4 +31,4 @@ git commit -m "chore: update x dependencies"
 For more information visit: [conventional-changelog/commitlint](https://github.com/conventional-changelog/commitlint/#what-is-commitlint)
 
 ## Project Stats
-![Alt](https://repobeats.axiom.co/api/embed/40b60a8e21b08d97af5849ea7a8c7d7f46956824.svg "Repobeats analytics image")
+![Alt](https://repobeats.axiom.co/api/embed/5b832034396345269a735339cf412625eaece10b.svg "Repository beats analytics image")

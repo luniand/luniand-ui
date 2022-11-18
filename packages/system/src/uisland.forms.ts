@@ -5,7 +5,7 @@ import {
   getCurrentInstance,
   ComponentInternalInstance,
 } from "@vue/runtime-core"
-import { UnionStringArray } from "@uisland-ui/utils"
+import { UnionStringArray } from "@uniland-ui/utils"
 
 const inputTypes = [
   "button",
@@ -137,19 +137,19 @@ export const formElements: Record<string, FormElementProps> = {
   },
 }
 
-export type UislandFactoryElements = "input" | "select" | "textarea"
+export type UnilandFactoryElements = "input" | "select" | "textarea"
 
-interface UislandFactoryElementHandlers {
+interface UnilandFactoryElementHandlers {
   onChange?: Function[]
   onInput?: Function[]
 }
 
 const events = new Map<
   ComponentInternalInstance["uid"],
-  UislandFactoryElementHandlers
+  UnilandFactoryElementHandlers
 >()
 
-export function useFormElement(element: UislandFactoryElements, props: any) {
+export function useFormElement(element: UnilandFactoryElements, props: any) {
   const instance = getCurrentInstance()
   const uid = computed(() => instance?.uid || Date.now())
 

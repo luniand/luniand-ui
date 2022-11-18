@@ -1,4 +1,4 @@
-import { AnalyzeBreakpointsReturn, Dict } from "@uisland-ui/utils"
+import { AnalyzeBreakpointsReturn, Dict } from "@uniland-ui/utils"
 import { ThemeTypings } from "../theme.types"
 
 export type ResponsiveArray<T> = Array<T | null>

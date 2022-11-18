@@ -1,4 +1,4 @@
-import { Dict, pick } from "@uisland-ui/utils"
+import { Dict, pick } from "@uniland-ui/utils"
 
 const tokens = [
   "colors",

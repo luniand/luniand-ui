@@ -1,4 +1,4 @@
-import { mergeWith } from "@uisland-ui/utils"
+import { mergeWith } from "@uniland-ui/utils"
 
 interface InternalIcon {
   [key: string]:

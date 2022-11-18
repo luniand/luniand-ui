@@ -1,9 +1,9 @@
 import { computed, ComputedRef, Ref } from "@vue/runtime-core"
-import { SystemStyleObject } from "@uisland-ui/styled-system"
+import { SystemStyleObject } from "@uniland-ui/styled-system"
 import { ThemingProps } from "../system.types"
-import { filterUndefined, get, mergeWith, runIfFn } from "@uisland-ui/utils"
-import { useUisland } from "./use-uisland"
-// import type { Theme } from "@uisland-ui/theme"
+import { filterUndefined, get, mergeWith, runIfFn } from "@uniland-ui/utils"
+import { useUniland } from "./use-uniland"
+// import type { Theme } from "@uniland-ui/theme"
 // TODO: replace to theme packages
 type Theme = any
 
@@ -39,7 +39,7 @@ export function useStyleConfig<Component extends keyof Theme["components"]>(
   return computed(() => {
     const { styleConfig: styleConfigProp, ...rest } =
       themingProps.value || themingProps
-    const { theme, colorMode } = useUisland()
+    const { theme, colorMode } = useUniland()
     const themeStyleConfig = get(theme, `components.${String(themeKey)}`)
 
     const styleConfig = styleConfigProp || themeStyleConfig

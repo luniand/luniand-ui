@@ -16,8 +16,8 @@ import {
   ResponsiveValue,
   SystemProps,
   SystemStyleObject,
-} from "@uisland-ui/styled-system"
-import _styled from "@uisland-ui/styled"
+} from "@uniland-ui/styled-system"
+import _styled from "@uniland-ui/styled"
 
 import {
   isFunction,
@@ -27,16 +27,16 @@ import {
   Dict,
   SNAO,
   extractStyleAttrs,
-} from "@uisland-ui/utils"
+} from "@uniland-ui/utils"
 import { cx, css as _css, CSSObject } from "@emotion/css"
 import { domElements, DOMElements } from "./system.utils"
-import { useTheme } from "./composables/use-uisland"
-import { As, UislandProps, ComponentWithProps } from "./system.types"
-import { formElements, InputTypes } from "./uisland.forms"
+import { useTheme } from "./composables/use-uniland"
+import { As, UnilandProps, ComponentWithProps } from "./system.types"
+import { formElements, InputTypes } from "./uniland.forms"
 import { FunctionInterpolation } from "@emotion/serialize"
 
 export interface BaseStyleResolverProps {
-  as?: UislandTagOrComponent
+  as?: UnilandTagOrComponent
   __css?: SystemStyleObject
   sx?: SystemStyleObject
   css?: CSSObject
@@ -49,12 +49,12 @@ export interface BaseStyleResolverProps {
     | SystemStyleObject
     | ((props: StyleResolverProps) => SystemStyleObject)
   /**
-   * User provided styles from component/uisland API
+   * User provided styles from component/uniland API
    */
   styles?: SystemStyleObject
   /**
    * This attribute/property is reserved for all TSX component definitions.
-   * It is referenced by the uisland factiry function to
+   * It is referenced by the uniland factiry function to
    * preserve the component's label class
    */
   __label?: string
@@ -70,10 +70,10 @@ interface StyleResolverOptions extends StyleResolverProps {
   theme?: any
 }
 
-interface UislandFactoryOptions extends StyleResolverProps {}
+interface UnilandFactoryOptions extends StyleResolverProps {}
 
-const uislandProps = {
-  as: [String, Object] as PropType<UislandTagOrComponent>,
+const unilandProps = {
+  as: [String, Object] as PropType<UnilandTagOrComponent>,
   __css: Object as PropType<StyleResolverProps["__css"]>,
   sx: Object as PropType<StyleResolverProps["sx"]>,
   css: Object as PropType<StyleResolverProps["css"]>,
@@ -88,11 +88,11 @@ const uislandProps = {
   /**
    * @warning
    * @internal
-   * This internal is an internal UislandFactoryFunction prop that
-   * is used to determine how events are handled on Uisland Factory
+   * This internal is an internal UnilandFactoryFunction prop that
+   * is used to determine how events are handled on Uniland Factory
    * components.
    *
-   * For example, if a factory component is considered to be raw (i.e. `__uislandIsRaw: true`),
+   * For example, if a factory component is considered to be raw (i.e. `__unilandIsRaw: true`),
    * then, we do not pass v-model event listeners onto the component. This means that
    * `v-model` will not work in the template context.
    *
@@ -100,41 +100,41 @@ const uislandProps = {
    *
    * THIS PROP IS A NON-DOCUMENTED PROP, AND IS ONLY TO BE USED FOR INTERNAL DEVELOPMENT.
    */
-  __uislandIsRaw: Boolean as PropType<boolean>,
+  __unilandIsRaw: Boolean as PropType<boolean>,
 }
 
-export type UislandBaseComponentProps = typeof uislandProps
-export type UislandTagOrComponent =
+export type UnilandBaseComponentProps = typeof unilandProps
+export type UnilandTagOrComponent =
   | DOMElements
   | Component
   | ConcreteComponent
   | string
 
 /**
- * Uisland factory serves as an object of uisland enabled HTML elements,
- * and also a function that can be used to enable custom component receive uisland's style props.
+ * Uniland factory serves as an object of uniland enabled HTML elements,
+ * and also a function that can be used to enable custom component receive uniland's style props.
  * @param tag Tag or Component
  * @param options resolver options
  * 
  * How does it work?
  *
- * 1. Components returned from the uisland factory can be styled after consuming them
+ * 1. Components returned from the uniland factory can be styled after consuming them
  *    @example
  *    ```js
- *    const Form = uisland('form') // returns a VNode you can use in the template directly
+ *    const Form = uniland('form') // returns a VNode you can use in the template directly
  *    ```
  * 
- * 2. Uisland components can directly be styled upon creation using the options object of type `StyleResolverProps`
+ * 2. Uniland components can directly be styled upon creation using the options object of type `StyleResolverProps`
  *    This resolves style object for component styles defined in the theme.
  * 
- *    Styling components using the uisland factory function can be done using the following keys from the theme:
+ *    Styling components using the uniland factory function can be done using the following keys from the theme:
  *    - `baseStyle`
  *    - `layerStyle`
  *    - `textStyle`
  * 
  *    @example
  *    ```js
- *    const MyCustomButton = uisland('button', {
+ *    const MyCustomButton = uniland('button', {
  *     baseStyle: {
          bg: 'papayawhip,
          color: 'red.500,
@@ -149,7 +149,7 @@ export type UislandTagOrComponent =
  * 
  *    See more about the style resolution in the `resolveStyles` function.
  * 
- * 3. Uisland components created and styled using the `uisland` factory can be overriden in the template by applying
+ * 3. Uniland components created and styled using the `uniland` factory can be overriden in the template by applying
  *    style properties directly
  * 
  *    @example
@@ -160,16 +160,16 @@ export type UislandTagOrComponent =
  *    ```
  */
 // @ts-expect-error
-export const uisland: IUislandFactory = (tag, options = {}) => {
+export const uniland: IUnilandFactory = (tag, options = {}) => {
   const inputHandlers = formElements[typeof tag === "string" ? tag : ""]
   const _props = (inputHandlers && inputHandlers.props) || {}
   const handleValueChange = inputHandlers && inputHandlers.handleValueChange
 
   return defineComponent({
-    name: `uisland-factory-${String(tag)}`,
+    name: `uniland-factory-${String(tag)}`,
     inheritAttrs: false,
     props: {
-      ...uislandProps,
+      ...unilandProps,
       ..._props,
     },
     setup(props, { slots, emit, attrs }) {
@@ -230,7 +230,7 @@ export const uisland: IUislandFactory = (tag, options = {}) => {
         })
 
         const componentLabel = label || __label
-        const _componentName = componentLabel ? `uisland-${componentLabel}` : ""
+        const _componentName = componentLabel ? `uniland-${componentLabel}` : ""
         const className = _css(resolvedComponentStyles)
 
         let componentOrTag = props.as || tag
@@ -249,7 +249,7 @@ export const uisland: IUislandFactory = (tag, options = {}) => {
           {
             class: cx(inheritedClass as string, _componentName, className),
             ...elementAttributes,
-            ...(!props.__uislandIsRaw &&
+            ...(!props.__unilandIsRaw &&
               handleValueChange &&
               // @ts-ignore
               handleValueChange(props, attrs.type as InputTypes)(emit)),
@@ -265,7 +265,7 @@ export const uisland: IUislandFactory = (tag, options = {}) => {
 //   _styled((componentOrTag as any) || props.as)({
 //     ...resolvedComponentStyles,
 //     ...elementAttributes,
-//   }) as unknown as DefineComponent<UislandProps>,
+//   }) as unknown as DefineComponent<UnilandProps>,
 //   slots
 // )
 interface GetStyleObject {
@@ -301,27 +301,27 @@ export function styled<T extends As, P = {}>(
   const { baseStyle, ...styledOptions } = options ?? {}
 
   const styleObject = toCSSObject(options)
-  return _styled(component as UislandTagOrComponent, styledOptions)(styleObject)
+  return _styled(component as UnilandTagOrComponent, styledOptions)(styleObject)
 }
 
-export type UislandComponent<P = UislandProps> = ComponentWithProps<As & P>
+export type UnilandComponent<P = UnilandProps> = ComponentWithProps<As & P>
 
-type UislandFactory = {
-  <T extends UislandTagOrComponent, P = {}>(
+type UnilandFactory = {
+  <T extends UnilandTagOrComponent, P = {}>(
     component: T,
     options?: StyledOptions
-  ): UislandComponent<P>
+  ): UnilandComponent<P>
 }
 
-export type HTMLUislandComponents<P> = {
-  [Tag in DOMElements]: UislandComponent<P>
+export type HTMLUnilandComponents<P> = {
+  [Tag in DOMElements]: UnilandComponent<P>
 }
 
-export const _uisland = styled as unknown as UislandFactory &
-  HTMLUislandComponents<UislandProps>
+export const _uniland = styled as unknown as UnilandFactory &
+  HTMLUnilandComponents<UnilandProps>
 
 domElements.forEach((tag) => {
-  uisland[tag] = uisland(tag)
+  uniland[tag] = uniland(tag)
 })
 
 export const resolveStyles = (
@@ -382,7 +382,7 @@ export const resolveStyles = (
   return cssObject
 }
 
-export type UislandFactoryProps = UislandProps &
+export type UnilandFactoryProps = UnilandProps &
   StyleResolverProps &
   HTMLAttributes &
   ComponentCustomProps &
@@ -393,27 +393,27 @@ export type UislandFactoryProps = UislandProps &
 
 /**
  * @example
- * h(uisland(RouterLink, { to: 'https://vue.uisland-ui.com' }), {}, slots)
+ * h(uniland(RouterLink, { to: 'https://vue.uniland-ui.com' }), {}, slots)
  */
 type UserProvidedProps = { [key: string]: any }
 
-type IUislandFactory = {
+type IUnilandFactory = {
   [key in DOMElements]:
-    | DefineComponent<UislandFactoryProps>
-    | ComponentWithProps<UislandFactoryProps>
+    | DefineComponent<UnilandFactoryProps>
+    | ComponentWithProps<UnilandFactoryProps>
 } & {
   (
-    tag: UislandTagOrComponent,
+    tag: UnilandTagOrComponent,
     options?: StyleResolverOptions & UserProvidedProps
   ):
-    | DefineComponent<UislandFactoryProps>
-    | ComponentWithProps<UislandFactoryProps>
+    | DefineComponent<UnilandFactoryProps>
+    | ComponentWithProps<UnilandFactoryProps>
 }
 
 domElements.forEach((tag) => {
-  uisland[tag] = uisland(tag, {})
+  uniland[tag] = uniland(tag, {})
 })
 
 domElements.forEach((tag) => {
-  _uisland[tag] = _uisland(tag, {})
+  _uniland[tag] = _uniland(tag, {})
 })

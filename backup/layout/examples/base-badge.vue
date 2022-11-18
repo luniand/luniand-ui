@@ -1,10 +1,10 @@
 <template>
-  <uisland.div py="4">
-    <uisland.h3>Default Badge</uisland.h3>
+  <uniland.div py="4">
+    <uniland.h3>Default Badge</uniland.h3>
     <c-badge> New ! </c-badge>
-  </uisland.div>
-  <uisland.div py="4">
-    <uisland.h3>Outline Badges</uisland.h3>
+  </uniland.div>
+  <uniland.div py="4">
+    <uniland.h3>Outline Badges</uniland.h3>
     <c-badge
       v-for="(color, i) in colorSchemes"
       :key="i"
@@ -14,9 +14,9 @@
     >
       {{ color }}
     </c-badge>
-  </uisland.div>
-  <uisland.div py="4">
-    <uisland.h3>Solid Badges</uisland.h3>
+  </uniland.div>
+  <uniland.div py="4">
+    <uniland.h3>Solid Badges</uniland.h3>
     <c-badge
       v-for="(color, i) in colorSchemes"
       :key="i"
@@ -26,9 +26,9 @@
     >
       {{ color }}
     </c-badge>
-  </uisland.div>
-  <uisland.div py="4">
-    <uisland.h3>Subtle Badges</uisland.h3>
+  </uniland.div>
+  <uniland.div py="4">
+    <uniland.h3>Subtle Badges</uniland.h3>
     <c-badge
       v-for="(color, i) in colorSchemes"
       :key="i"
@@ -38,7 +38,7 @@
     >
       {{ color }}
     </c-badge>
-  </uisland.div>
+  </uniland.div>
 </template>
 <script setup>
 import { ref } from "vue"

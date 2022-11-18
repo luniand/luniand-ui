@@ -1,16 +1,16 @@
-import { Dict, mapResponsive } from "@uisland-ui/utils"
+import { Dict, mapResponsive } from "@uniland-ui/utils"
 import {
-  uisland,
-  HTMLUislandProps,
+  uniland,
+  HTMLUnilandProps,
   SystemProps,
   DOMElements,
   tokenToCSSVar,
   ComponentWithProps,
-} from "@uisland-ui/vue-system"
-import { getValidChildren, SNAO, vueThemingProps } from "@uisland-ui/vue-utils"
+} from "@uniland-ui/vue-system"
+import { getValidChildren, SNAO, vueThemingProps } from "@uniland-ui/vue-utils"
 import { computed, defineComponent, h, PropType } from "vue"
 
-export interface WrapProps extends HTMLUislandProps<"div"> {
+export interface WrapProps extends HTMLUnilandProps<"div"> {
   /**
    * The space between the each child (even if it wraps)
    * @type SystemProps["margin"]
@@ -48,7 +48,7 @@ export const CWrapProps = {
 /**
  * Used to render texts or paragraphs.
  *
- * @see Docs https://vue.uisland-ui.com/docs/typography/text
+ * @see Docs https://vue.uniland-ui.com/docs/typography/text
  */
 export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
   props: {
@@ -60,11 +60,11 @@ export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
   },
   setup(props, { slots, attrs }) {
     const styles = computed(() => ({
-      "--uisland-wrap-spacing": (theme: Dict) =>
+      "--uniland-wrap-spacing": (theme: Dict) =>
         mapResponsive(props.spacing, (value) =>
           tokenToCSSVar("space", value)(theme)
         ),
-      "--wrap-spacing": "calc(var(--uisland-wrap-spacing) / 2)",
+      "--wrap-spacing": "calc(var(--uniland-wrap-spacing) / 2)",
       display: "flex",
       flexWrap: "wrap",
       justifyContent: props.justify,
@@ -86,14 +86,14 @@ export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
 
     return () => {
       return h(
-        uisland(props.as, {
+        uniland(props.as, {
           label: "wrap",
           ...attrs,
         }),
         {},
         () =>
           h(
-            uisland("ul", { label: "wrap__list", __css: styles.value }),
+            uniland("ul", { label: "wrap__list", __css: styles.value }),
             {},
             childrenToRender
           )
@@ -102,13 +102,13 @@ export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
   },
 })
 
-export interface WrapItemProps extends HTMLUislandProps<"li"> {}
+export interface WrapItemProps extends HTMLUnilandProps<"li"> {}
 
 export const CWrapItem = defineComponent({
   setup(_, { attrs, slots }) {
     return () => {
       return h(
-        uisland("li", {
+        uniland("li", {
           label: "wrap__listItem",
           __css: {
             display: "flex",

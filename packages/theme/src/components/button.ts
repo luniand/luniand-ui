@@ -1,8 +1,8 @@
-import { mode, transparentize } from "@uisland-ui/theme-tools"
+import { mode, transparentize } from "@uniland-ui/theme-tools"
 import type {
   SystemStyleObject,
   SystemStyleFunction,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyle: SystemStyleObject = {
   lineHeight: "1.2",
@@ -59,7 +59,7 @@ const variantOutline: SystemStyleFunction = (props) => {
   return {
     border: "1px solid",
     borderColor: c === "gray" ? borderColor : "currentColor",
-    ".uisland-button__group[data-attached] > &:not(:last-of-type)": {
+    ".uniland-button__group[data-attached] > &:not(:last-of-type)": {
       marginEnd: "-1px",
     },
     ...variantGhost(props),

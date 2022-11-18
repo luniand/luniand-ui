@@ -1,5 +1,5 @@
-import { ResponsiveValue, SystemProps } from "@uisland-ui/vue-system"
-import { mapResponsive } from "@uisland-ui/utils"
+import { ResponsiveValue, SystemProps } from "@uniland-ui/vue-system"
+import { mapResponsive } from "@uniland-ui/utils"
 
 export type StackDirection = ResponsiveValue<
   "row" | "column" | "row-reverse" | "column-reverse"

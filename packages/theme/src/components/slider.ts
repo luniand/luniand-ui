@@ -1,11 +1,11 @@
-import { sliderAnatomy as parts } from "@uisland-ui/anatomy"
+import { sliderAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   StyleFunctionProps,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { mode, orient } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { mode, orient } from "@uniland-ui/theme-tools"
 
 function thumbOrientation(props: StyleFunctionProps): SystemStyleObject {
   return orient({

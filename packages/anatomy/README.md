@@ -1,11 +1,11 @@
-# @uisland-ui/anatomy
+# @uniland-ui/anatomy
 
-The anatomy of all uisland components
+The anatomy of all uniland components
 
 ## Installation
 
 ```sh
-yarn add @uisland-ui/anatomy
+yarn add @uniland-ui/anatomy
 # or
-npm i @uisland-ui/anatomy
+npm i @uniland-ui/anatomy
 ```

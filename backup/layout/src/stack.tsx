@@ -1,4 +1,4 @@
-import { SystemProps } from "@uisland-ui/styled-system"
+import { SystemProps } from "@uniland-ui/styled-system"
 import {
   h,
   defineComponent,
@@ -9,18 +9,18 @@ import {
   createVNode,
 } from "vue"
 import {
-  uisland,
+  uniland,
   ComponentWithProps,
   DOMElements,
-  HTMLUislandProps,
-} from "@uisland-ui/vue-system"
+  HTMLUnilandProps,
+} from "@uniland-ui/vue-system"
 import {
   getDividerStyles,
   getStackStyles,
   selector,
   StackDirection,
 } from "./stack.utils"
-import { getValidChildren, SNAO, SAO } from "@uisland-ui/vue-utils"
+import { getValidChildren, SNAO, SAO } from "@uniland-ui/vue-utils"
 
 interface StackOptions {
   /**
@@ -63,7 +63,7 @@ interface StackOptions {
   isInline?: boolean
 }
 
-export interface StackDividerProps extends HTMLUislandProps<"div"> {}
+export interface StackDividerProps extends HTMLUnilandProps<"div"> {}
 
 export const CStackDivider = defineComponent({
   name: "CStackDivider",
@@ -71,7 +71,7 @@ export const CStackDivider = defineComponent({
   setup(_, { attrs, slots }) {
     return () => {
       return (
-        <uisland.div
+        <uniland.div
           __label="stack__divider"
           borderWidth={0}
           alignSelf={"stretch"}
@@ -81,7 +81,7 @@ export const CStackDivider = defineComponent({
           {...attrs}
         >
           {slots?.default?.()}
-        </uisland.div>
+        </uniland.div>
       )
     }
   },
@@ -91,7 +91,7 @@ export const CStackItem = defineComponent({
   name: "CStackItem",
   setup(_, { attrs, slots }) {
     return () => (
-      <uisland.div
+      <uniland.div
         __label="stack__item"
         display="inline-block"
         flex="0 0 auto"
@@ -99,12 +99,12 @@ export const CStackItem = defineComponent({
         {...attrs}
       >
         {slots?.default?.()}
-      </uisland.div>
+      </uniland.div>
     )
   },
 })
 
-export interface StackProps extends HTMLUislandProps<"div">, StackOptions {}
+export interface StackProps extends HTMLUnilandProps<"div">, StackOptions {}
 
 const stackProps = {
   as: {
@@ -134,7 +134,7 @@ const stackProps = {
  *
  * It uses `display: flex` internally and renders a `div`.
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/stack
+ * @see Docs https://vue.uniland-ui.com/docs/layout/stack
  *
  */
 export const CStack: ComponentWithProps<StackProps> = defineComponent({
@@ -182,7 +182,7 @@ export const CStack: ComponentWithProps<StackProps> = defineComponent({
           })
 
       return (
-        <uisland.div
+        <uniland.div
           __label={attrs.label ? (attrs.label as string) : "stack"}
           display={"flex"}
           alignItems={props.align}
@@ -192,7 +192,7 @@ export const CStack: ComponentWithProps<StackProps> = defineComponent({
           __css={hasDivider.value ? {} : { [selector]: styles.value[selector] }}
         >
           {() => clones}
-        </uisland.div>
+        </uniland.div>
       )
     }
   },

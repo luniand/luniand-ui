@@ -1,5 +1,5 @@
-import { SystemStyleObject } from "@uisland-ui/system"
-import { Dict, runIfFn } from "@uisland-ui/utils"
+import { SystemStyleObject } from "@uniland-ui/system"
+import { Dict, runIfFn } from "@uniland-ui/utils"
 
 /* -----------------------------------------------------------------------------
  * Style Configuration definition for components

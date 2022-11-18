@@ -1,12 +1,12 @@
-import { tabsAnatomy as parts } from "@uisland-ui/anatomy"
+import { tabsAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   PartsStyleInterpolation,
   PartsStyleObject,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { getColor, mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { getColor, mode } from "@uniland-ui/theme-tools"
 
 const baseStyleRoot: SystemStyleFunction = (props) => {
   const { orientation } = props

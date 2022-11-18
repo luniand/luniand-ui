@@ -1,10 +1,10 @@
 {
-  "name": "@uisland-ui/system",
+  "name": "@uniland-ui/system",
   "version": "0.1.0-alpha.12",
-  "main": "dist/uisland-ui-system.cjs.js",
-  "module": "dist/uisland-ui-system.esm.js",
-  "description": "Uisland UI | System module",
-  "repository": "https://github.com/uisland-ui/uisland-ui-next/tree/master/packages/system",
+  "main": "dist/uniland-ui-system.cjs.js",
+  "module": "dist/uniland-ui-system.esm.js",
+  "description": "Uniland UI | System module",
+  "repository": "https://github.com/uniland-ui/uniland-ui-next/tree/master/packages/system",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",
   "files": [
@@ -12,8 +12,8 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/uisland-ui-system.cjs.js",
-      "default": "./dist/uisland-ui-system.esm.js"
+      "require": "./dist/uniland-ui-system.cjs.js",
+      "default": "./dist/uniland-ui-system.esm.js"
     }
   },
   "scripts": {
@@ -21,10 +21,10 @@
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
-    "@uisland-ui/styled": "^0.0.0-alpha.0",
-    "@uisland-ui/styled-system": "^0.1.1-alpha.0",
-    "@uisland-ui/u-color-mode": "^0.1.0-alpha.10",
-    "@uisland-ui/utils": "^0.1.0-alpha.10",
+    "@uniland-ui/styled": "^0.0.0-alpha.0",
+    "@uniland-ui/styled-system": "^0.1.1-alpha.0",
+    "@uniland-ui/u-color-mode": "^0.1.0-alpha.10",
+    "@uniland-ui/utils": "^0.1.0-alpha.10",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
     "lodash.memoize": "^4.1.2"

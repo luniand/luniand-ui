@@ -1,11 +1,11 @@
-# @uisland-ui/layout
+# @uniland-ui/layout
 
-Uisland ui layout components that give you massive speed
+Uniland ui layout components that give you massive speed
 
 ## Installation
 
 ```sh
-yarn add @uisland-ui/layout
+yarn add @uniland-ui/layout
 # or
-npm i @uisland-ui/layout
+npm i @uniland-ui/layout
 ```

@@ -1,35 +1,35 @@
 {
-  "name": "@uisland-ui/c-flex",
-  "description": "Uisland UI Vue | C-flex component component",
+  "name": "@uniland-ui/c-flex",
+  "description": "Uniland UI Vue | C-flex component component",
   "version": "1.0.0-alpha.10",
-  "main": "dist/uisland-ui-c-flex.cjs.js",
-  "module": "dist/uisland-ui-c-flex.esm.js",
+  "main": "dist/uniland-ui-c-flex.cjs.js",
+  "module": "dist/uniland-ui-c-flex.esm.js",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
-  "homepage": "https://github.com/uisland-ui/uisland-ui-vue-next#readme",
+  "homepage": "https://github.com/uniland-ui/uniland-ui-vue-next#readme",
   "license": "MIT",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "require": "./dist/uisland-ui-c-flex.cjs.js",
-      "default": "./dist/uisland-ui-c-flex.esm.js"
+      "require": "./dist/uniland-ui-c-flex.cjs.js",
+      "default": "./dist/uniland-ui-c-flex.esm.js"
     }
   },
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next/tree/master/packages/c-flex",
+  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next/tree/master/packages/c-flex",
   "bugs": {
-    "url": "https://github.com/uisland-ui/uisland-ui-vue-next/issues"
+    "url": "https://github.com/uniland-ui/uniland-ui-vue-next/issues"
   },
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@uisland-ui/vue-system": "0.1.0-alpha.10",
-    "@uisland-ui/vue-utils": "0.1.0-alpha.10"
+    "@uniland-ui/vue-system": "0.1.0-alpha.10",
+    "@uniland-ui/vue-utils": "0.1.0-alpha.10"
   },
   "devDependencies": {
     "csstype": "^3.0.5",

@@ -1,9 +1,9 @@
-import { formAnatomy as parts } from "@uisland-ui/anatomy"
+import { formAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   SystemStyleFunction,
-} from "@uisland-ui/theme-tools"
-import { mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { mode } from "@uniland-ui/theme-tools"
 
 const baseStyleRequiredIndicator: SystemStyleFunction = (props) => {
   return {

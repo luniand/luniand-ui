@@ -27,16 +27,16 @@ export interface BaseThemeTypings {
 
 /**
  * This is a placeholder meant to be implemented via TypeScript's Module
- * Augmentation feature and is an alternative to running `npx @uisland-ui/cli
+ * Augmentation feature and is an alternative to running `npx @uniland-ui/cli
  * tokens`
  *
  * @example
  * ```ts
- * import { BaseThemeTypings } from "@uisland-ui/styled-system";
+ * import { BaseThemeTypings } from "@uniland-ui/styled-system";
  *
  * type DefaultSizes = 'small' | 'medium' | 'large';
  *
- * declare module "@uisland-ui/styled-system" {
+ * declare module "@uniland-ui/styled-system" {
  *   export interface CustomThemeTypings extends BaseThemeTypings {
  *     // Example custom `borders` tokens
  *     borders: 'none' | 'thin' | 'thick';

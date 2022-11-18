@@ -1,4 +1,4 @@
-import { mode, Styles } from "@uisland-ui/theme-tools"
+import { mode, Styles } from "@uniland-ui/theme-tools"
 
 // @ts-ignore
 const styles: Styles = {

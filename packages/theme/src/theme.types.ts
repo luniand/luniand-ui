@@ -1,10 +1,10 @@
-import type { ThemingProps } from "@uisland-ui/system"
-import type { Breakpoints, Styles } from "@uisland-ui/theme-tools"
-import type { Dict } from "@uisland-ui/utils"
+import type { ThemingProps } from "@uniland-ui/system"
+import type { Breakpoints, Styles } from "@uniland-ui/theme-tools"
+import type { Dict } from "@uniland-ui/utils"
 import type {
   StyleObjectOrFn,
   SystemStyleObject,
-} from "@uisland-ui/styled-system"
+} from "@uniland-ui/styled-system"
 
 export type ColorMode = "light" | "dark"
 
@@ -108,7 +108,7 @@ interface Foundations extends Typography {
   zIndices: RecursiveObject
 }
 
-export interface UislandTheme extends Foundations {
+export interface UnilandTheme extends Foundations {
   components: ThemeComponents
   config: ThemeConfig
   direction: ThemeDirection

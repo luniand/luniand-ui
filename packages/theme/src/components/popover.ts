@@ -1,10 +1,10 @@
-import { popoverAnatomy as parts } from "@uisland-ui/anatomy"
+import { popoverAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { cssVar, mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { cssVar, mode } from "@uniland-ui/theme-tools"
 
 const $popperBg = cssVar("popper-bg")
 

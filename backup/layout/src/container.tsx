@@ -1,18 +1,18 @@
 import { h, defineComponent, PropType, computed } from "vue"
 import {
-  uisland,
+  uniland,
   DOMElements,
   ThemingProps,
   useStyleConfig,
-  HTMLUislandProps,
+  HTMLUnilandProps,
   DeepPartial,
   ComponentWithProps,
-} from "@uisland-ui/vue-system"
-import { filterUndefined } from "@uisland-ui/utils"
-import { vueThemingProps } from "@uisland-ui/vue-utils"
+} from "@uniland-ui/vue-system"
+import { filterUndefined } from "@uniland-ui/utils"
+import { vueThemingProps } from "@uniland-ui/vue-utils"
 
 export interface ContainerProps
-  extends HTMLUislandProps<"div">,
+  extends HTMLUnilandProps<"div">,
     ThemingProps<"Container"> {
   /**
    * If `true`, container will center its children
@@ -54,7 +54,7 @@ export const CContainer: ComponentWithProps<DeepPartial<ContainerProps>> =
       const styles = useStyleConfig("Container", themingProps)
 
       return () => (
-        <uisland.div
+        <uniland.div
           __label="container"
           __css={{
             ...styles.value,
@@ -67,7 +67,7 @@ export const CContainer: ComponentWithProps<DeepPartial<ContainerProps>> =
           {...attrs}
         >
           {slots}
-        </uisland.div>
+        </uniland.div>
       )
     },
   })

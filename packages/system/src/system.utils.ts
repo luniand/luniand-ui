@@ -1,10 +1,10 @@
-import { UnionStringArray, omit } from "@uisland-ui/utils"
+import { UnionStringArray, omit } from "@uniland-ui/utils"
 import { keyframes, injectGlobal } from "@emotion/css"
 import { PropType } from "@vue/runtime-core"
 
 /**
- * Carefully selected html elements for uisland components.
- * This is mostly for `uisland.[element]` syntax.
+ * Carefully selected html elements for uniland components.
+ * This is mostly for `uniland.[element]` syntax.
  *
  * Adapted from React package
  */

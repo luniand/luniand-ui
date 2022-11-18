@@ -1,6 +1,6 @@
-import { createContext } from "@uisland-ui/utils"
-import { Dict } from "@uisland-ui/utils"
-import { SystemStyleObject } from "@uisland-ui/styled-system"
+import { createContext } from "@uniland-ui/utils"
+import { Dict } from "@uniland-ui/utils"
+import { SystemStyleObject } from "@uniland-ui/styled-system"
 import { ComputedRef } from "@vue/reactivity"
 
 const [StylesProvider, useStyles] = createContext<

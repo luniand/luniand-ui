@@ -1,4 +1,4 @@
-import { cssVar, SystemStyleObject } from "@uisland-ui/theme-tools"
+import { cssVar, SystemStyleObject } from "@uniland-ui/theme-tools"
 
 const $size = cssVar("spinner-size")
 

@@ -1,4 +1,4 @@
-import { AnyFunction, objectKeys } from "@uisland-ui/utils"
+import { AnyFunction, objectKeys } from "@uniland-ui/utils"
 
 const state = {
   hover: (str: string, post: string) =>
@@ -298,12 +298,12 @@ export const pseudoSelectors = {
    * Styles for when `data-theme` is applied to any parent of
    * this component or element.
    */
-  _dark: ".uisland-ui-dark &, [data-theme=dark] &, &[data-theme=dark]",
+  _dark: ".uniland-ui-dark &, [data-theme=dark] &, &[data-theme=dark]",
   /**
    * Styles for when `data-theme` is applied to any parent of
    * this component or element.
    */
-  _light: ".uisland-ui-light &, [data-theme=light] &, &[data-theme=light]",
+  _light: ".uniland-ui-light &, [data-theme=light] &, &[data-theme=light]",
 }
 
 export type Pseudos = typeof pseudoSelectors

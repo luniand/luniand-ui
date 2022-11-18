@@ -1,8 +1,8 @@
 {
-  "name": "@uisland-ui/u-color-mode",
+  "name": "@uniland-ui/u-color-mode",
   "version": "0.1.0-alpha.10",
-  "main": "dist/uisland-ui-u-color-mode.cjs.js",
-  "module": "dist/uisland-ui-u-color-mode.esm.js",
+  "main": "dist/uniland-ui-u-color-mode.cjs.js",
+  "module": "dist/uniland-ui-u-color-mode.esm.js",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
   "license": "MIT",
   "files": [
@@ -10,23 +10,23 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/uisland-ui-u-color-mode.cjs.js",
-      "default": "./dist/uisland-ui-u-color-mode.esm.js"
+      "require": "./dist/uniland-ui-u-color-mode.cjs.js",
+      "default": "./dist/uniland-ui-u-color-mode.esm.js"
     }
   },
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/rhp-island/uisland-ui/tree/master/packages/u-color-mode",
+  "repository": "https://github.com/rhp-island/uniland-ui/tree/master/packages/u-color-mode",
   "bugs": {
-    "url": "https://github.com/rhp-island/uisland-ui/issues"
+    "url": "https://github.com/rhp-island/uniland-ui/issues"
   },
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@uisland-ui/utils": "^0.1.0-alpha.10"
+    "@uniland-ui/utils": "^0.1.0-alpha.10"
   },
   "devDependencies": {
     "@vue/runtime-core": "^3.2.45"

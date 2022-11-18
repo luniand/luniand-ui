@@ -1,8 +1,8 @@
-import { breadcrumbAnatomy as parts } from "@uisland-ui/anatomy"
+import { breadcrumbAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyleLink: SystemStyleObject = {
   transitionProperty: "common",

@@ -1,5 +1,5 @@
-import type { SystemStyleFunction } from "@uisland-ui/theme-tools"
-import { mode } from "@uisland-ui/theme-tools"
+import type { SystemStyleFunction } from "@uniland-ui/theme-tools"
+import { mode } from "@uniland-ui/theme-tools"
 
 const baseStyle: SystemStyleFunction = (props) => {
   return {

@@ -14,11 +14,11 @@ import {
   ResponsiveValue,
   StyleProps,
   ThemeTypings,
-} from "@uisland-ui/styled-system"
-import { Dict } from "@uisland-ui/utils"
+} from "@uniland-ui/styled-system"
+import { Dict } from "@uniland-ui/utils"
 import { IntrinsicElementAttributes } from "./dom.types"
 import { DOMElements } from "./system.utils"
-import { StyleResolverProps } from "./uisland"
+import { StyleResolverProps } from "./uniland"
 
 /**
  * Export component with custom type
@@ -45,7 +45,7 @@ export type Tag =
   | typeof Suspense
   | Component
 
-export interface UislandProps extends SystemProps, StyleResolverProps {
+export interface UnilandProps extends SystemProps, StyleResolverProps {
   /**
    * apply layer styles defined in `theme.layerStyles`
    */
@@ -74,7 +74,7 @@ export interface UislandProps extends SystemProps, StyleResolverProps {
    */
   noOfLines?: ResponsiveValue<number>
   /**
-   * Internal prop used to label Uisland factory component tags
+   * Internal prop used to label Uniland factory component tags
    */
   label?: string
   /**
@@ -100,13 +100,13 @@ export type PropsOf<T extends As> = T & {
   as?: As
 }
 
-export type HTMLUislandProps<T extends As> = Omit<
+export type HTMLUnilandProps<T extends As> = Omit<
   PropsOf<T>,
   T extends "svg"
     ? "ref" | "children" | keyof StyleProps
     : "ref" | keyof StyleProps
 > &
-  UislandProps & { as?: As }
+  UnilandProps & { as?: As }
 
 declare global {
   namespace h.JSX {
@@ -120,7 +120,7 @@ declare global {
 
     interface IntrinsicAttributes
       extends Omit<HTMLAttributes, "color">,
-        UislandProps {}
+        UnilandProps {}
   }
 }
 

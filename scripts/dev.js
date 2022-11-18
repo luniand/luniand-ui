@@ -1,4 +1,4 @@
-const UislandComponents = require("@uisland-ui/vue-next")
+const UnilandComponents = require("@uniland-ui/vue-next")
 const { writeFileSync, existsSync, mkdirSync } = require("fs")
 const { resolve } = require("path")
 
@@ -6,9 +6,9 @@ const BUILD_DIR = resolve(__dirname, "../build/")
 
 async function main() {
   const components = {}
-  for (const prop in UislandComponents) {
+  for (const prop in UnilandComponents) {
     if (prop.startsWith("C")) {
-      components[prop] = UislandComponents[prop]
+      components[prop] = UnilandComponents[prop]
     }
   }
 

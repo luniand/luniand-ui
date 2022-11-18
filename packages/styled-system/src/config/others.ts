@@ -1,4 +1,4 @@
-import { memoizedGet as get } from "@uisland-ui/utils"
+import { memoizedGet as get } from "@uniland-ui/utils"
 import { Config } from "../utils/prop-config"
 import { ResponsiveValue, Token } from "../utils/types"
 

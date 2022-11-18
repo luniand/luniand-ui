@@ -1,11 +1,11 @@
-import { tableAnatomy as parts } from "@uisland-ui/anatomy"
+import { tableAnatomy as parts } from "@uniland-ui/anatomy"
 
-import { mode } from "@uisland-ui/theme-tools"
+import { mode } from "@uniland-ui/theme-tools"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyle: PartsStyleObject<typeof parts> = {
   table: {

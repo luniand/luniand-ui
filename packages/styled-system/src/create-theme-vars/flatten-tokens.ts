@@ -1,4 +1,4 @@
-import { flatten, fromEntries } from "@uisland-ui/utils"
+import { flatten, fromEntries } from "@uniland-ui/utils"
 import { Union } from "../utils"
 
 export type SemanticValue<

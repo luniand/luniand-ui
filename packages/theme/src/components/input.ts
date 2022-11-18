@@ -1,10 +1,10 @@
-import { inputAnatomy as parts } from "@uisland-ui/anatomy"
+import { inputAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { getColor, mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { getColor, mode } from "@uniland-ui/theme-tools"
 
 const baseStyle: PartsStyleObject<typeof parts> = {
   field: {

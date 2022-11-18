@@ -1,19 +1,19 @@
 import { computed, Plugin, ref, UnwrapRef } from "@vue/runtime-core"
-import defaultTheme from "@uisland-ui/theme"
-import type { ColorModeRef } from "@uisland-ui/u-color-mode"
-import { toCSSVar, WithCSSVar } from "@uisland-ui/styled-system"
-import { uisland, injectGlobal } from "@uisland-ui/system"
+import defaultTheme from "@uniland-ui/theme"
+import type { ColorModeRef } from "@uniland-ui/u-color-mode"
+import { toCSSVar, WithCSSVar } from "@uniland-ui/styled-system"
+import { uniland, injectGlobal } from "@uniland-ui/system"
 import {
   EmotionThemeContextSymbol,
   EmotionCacheInjectionSymbol,
-} from "@uisland-ui/styled"
+} from "@uniland-ui/styled"
 import createCache, { EmotionCache } from "@emotion/cache"
 import internalIcons from "./icon.internals"
 import { extendTheme, ThemeOverride } from "./extend-theme"
 import { MergedIcons, parseIcons } from "./parse-icons"
 import { injectResetStyles, injectThemeGlobalStyles } from "./helpers/css-reset"
-import { mode } from "@uisland-ui/theme-tools"
-import { UislandPluginOptions } from "./helpers/plugin.types"
+import { mode } from "@uniland-ui/theme-tools"
+import { UnilandPluginOptions } from "./helpers/plugin.types"
 
 /**
  * 1. Support passing cache options from plugin
@@ -22,18 +22,18 @@ import { UislandPluginOptions } from "./helpers/plugin.types"
  */
 
 /**
- * Helper function to extend Uisland plugin with options
+ * Helper function to extend Uniland plugin with options
  * It just returns its arguments with typescript types added
  */
 
-export function extendUisland(
-  options: UislandPluginOptions = { cssReset: true }
+export function extendUniland(
+  options: UnilandPluginOptions = { cssReset: true }
 ) {
   return options
 }
 
-const UislandUIVuePlugin: Plugin = {
-  install(app, options: UislandPluginOptions = { cssReset: true }) {
+const UnilandUIVuePlugin: Plugin = {
+  install(app, options: UnilandPluginOptions = { cssReset: true }) {
     // 1. Get theme value
     // 2. Parse theme tokens to CSS variables
     // 3. Inject all CSS variables as theme object
@@ -42,7 +42,7 @@ const UislandUIVuePlugin: Plugin = {
       toCSSVar(theme)
     )
 
-    // Inject Uisland CSS variables
+    // Inject Uniland CSS variables
     injectGlobal({
       ":root": computedTheme.value.__cssVars,
     })
@@ -55,7 +55,7 @@ const UislandUIVuePlugin: Plugin = {
     app.config.globalProperties.$initialColorMode = colorMode
 
     const colorModeRef = ref(colorMode) as ColorModeRef
-    app.provide<ColorModeRef>("$uislandColorMode", colorModeRef)
+    app.provide<ColorModeRef>("$unilandColorMode", colorModeRef)
 
     if (options.cssReset) {
       injectResetStyles()
@@ -65,10 +65,10 @@ const UislandUIVuePlugin: Plugin = {
     let extendedIcons = options.icons?.extend || {}
 
     // Bind theme to application global properties and provide to application
-    app.config.globalProperties.$uislandTheme = computedTheme.value
-    app.config.globalProperties.$uislandTheme = computedTheme.value
+    app.config.globalProperties.$unilandTheme = computedTheme.value
+    app.config.globalProperties.$unilandTheme = computedTheme.value
     app.provide(EmotionThemeContextSymbol, computedTheme.value)
-    app.provide("$uislandTheme", computedTheme.value as ThemeOverride)
+    app.provide("$unilandTheme", computedTheme.value as ThemeOverride)
 
     let emotionCache: EmotionCache | null = null
     // Provide emotion cache
@@ -79,8 +79,8 @@ const UislandUIVuePlugin: Plugin = {
 
     if (!emotionCache) {
       emotionCache = createCache({
-        key: "uisland",
-        nonce: `uisland-global-cache-${Date.now()}`,
+        key: "uniland",
+        nonce: `uniland-global-cache-${Date.now()}`,
       })
     }
 
@@ -96,20 +96,20 @@ const UislandUIVuePlugin: Plugin = {
       ...extendedIcons,
     }
 
-    app.provide("$uislandIcons", mergedIcons)
+    app.provide("$unilandIcons", mergedIcons)
 
     // Set color mode property
     app.config.globalProperties.$mode = mode
   },
 }
 
-export type { UislandPluginOptions }
+export type { UnilandPluginOptions }
 export interface ThemeProviderProps extends ThemeOverride {}
-export default UislandUIVuePlugin
+export default UnilandUIVuePlugin
 export { extendTheme }
 
-// Export uisland factory function
-export { uisland }
+// Export uniland factory function
+export { uniland }
 
 /**
  *
@@ -122,59 +122,59 @@ export { uisland }
  */
 
 // A
-// export * from "@uisland-ui/c-accordion"
-// export * from "@uisland-ui/c-alert"
-// export * from "@uisland-ui/c-avatar"
+// export * from "@uniland-ui/c-accordion"
+// export * from "@uniland-ui/c-alert"
+// export * from "@uniland-ui/c-avatar"
 
 // B
-// export * from "@uisland-ui/c-breadcrumb"
-// export * from "@uisland-ui/c-button"
+// export * from "@uniland-ui/c-breadcrumb"
+// export * from "@uniland-ui/c-button"
 
 // C
-// export * from "@uisland-ui/c-checkbox"
-// export * from "@uisland-ui/c-color-mode"
-// export * from "@uisland-ui/c-close-button"
-// export * from "@uisland-ui/c-code"
+// export * from "@uniland-ui/c-checkbox"
+// export * from "@uniland-ui/c-color-mode"
+// export * from "@uniland-ui/c-close-button"
+// export * from "@uniland-ui/c-code"
 
 // F
-// export * from "@uisland-ui/c-flex"
-// export * from "@uisland-ui/c-focus-lock"
-// export * from "@uisland-ui/c-form-control"
+// export * from "@uniland-ui/c-flex"
+// export * from "@uniland-ui/c-focus-lock"
+// export * from "@uniland-ui/c-form-control"
 
 // I
-// export * from "@uisland-ui/c-icon"
-// export * from "@uisland-ui/c-input"
+// export * from "@uniland-ui/c-icon"
+// export * from "@uniland-ui/c-input"
 
 // L
-// export * from "@uisland-ui/vue-layout"
+// export * from "@uniland-ui/vue-layout"
 
 // M
-// export * from "@uisland-ui/c-modal"
-// export * from "@uisland-ui/c-motion"
+// export * from "@uniland-ui/c-modal"
+// export * from "@uniland-ui/c-motion"
 
 // P
-// export * from "@uisland-ui/c-pin-input"
-// export * from "@uisland-ui/c-popper"
-// export * from "@uisland-ui/c-portal"
+// export * from "@uniland-ui/c-pin-input"
+// export * from "@uniland-ui/c-popper"
+// export * from "@uniland-ui/c-portal"
 
 // R
-// export * from "@uisland-ui/c-reset"
+// export * from "@uniland-ui/c-reset"
 
 // S
-// export * from "@uisland-ui/c-skip-nav"
-// export * from "@uisland-ui/c-spinner"
-// export * from "@uisland-ui/c-scroll-lock"
+// export * from "@uniland-ui/c-skip-nav"
+// export * from "@uniland-ui/c-spinner"
+// export * from "@uniland-ui/c-scroll-lock"
 
 // T
-// export * from "@uisland-ui/c-theme-provider"
-// export * from "@uisland-ui/c-tag"
+// export * from "@uniland-ui/c-theme-provider"
+// export * from "@uniland-ui/c-tag"
 
 // V
-// export * from "@uisland-ui/c-visually-hidden"
+// export * from "@uniland-ui/c-visually-hidden"
 
 // OTHERS
-// export * from "@uisland-ui/vue-composables"
-// export * from "@uisland-ui/vue-a11y"
+// export * from "@uniland-ui/vue-composables"
+// export * from "@uniland-ui/vue-a11y"
 
 /**
  *

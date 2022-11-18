@@ -29,5 +29,5 @@
   </c-container>
 </template>
 <script setup lang="ts">
-import { CStack } from "@uisland-ui/vue-layout"
+import { CStack } from "@uniland-ui/vue-layout"
 </script>

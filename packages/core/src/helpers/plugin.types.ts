@@ -1,4 +1,4 @@
-import { ColorModeRef } from "@uisland-ui/u-color-mode"
+import { ColorModeRef } from "@uniland-ui/u-color-mode"
 import { UnwrapRef } from "@vue/runtime-core"
 import { ThemeOverride } from "../extend-theme"
 import { Options } from "@emotion/cache"
@@ -13,7 +13,7 @@ interface IconsOptions {
   library?: {}
   extend?: Record<string, ExtendIconsPath>
 }
-export interface UislandPluginOptions {
+export interface UnilandPluginOptions {
   cssReset?: boolean
   extendTheme?: ThemeOverride
   icons?: IconsOptions

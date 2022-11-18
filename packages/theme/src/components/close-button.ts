@@ -1,8 +1,8 @@
 import type {
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { cssVar, mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { cssVar, mode } from "@uniland-ui/theme-tools"
 
 const $size = cssVar("close-button-size")
 

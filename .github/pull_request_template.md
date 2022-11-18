@@ -1,4 +1,4 @@
-<!-- Please refer to our contributing documentation for any questions on submitting a pull request, or let us know here if you need any help: https://github.com/uisland-ui/uisland-ui/blob/develop/CONTRIBUTING.md -->
+<!-- Please refer to our contributing documentation for any questions on submitting a pull request, or let us know here if you need any help: https://github.com/uniland-ui/uniland-ui/blob/develop/CONTRIBUTING.md -->
 
 ## Pull request checklist
 

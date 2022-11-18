@@ -1,19 +1,19 @@
 import { defineComponent, h, PropType } from "vue"
 import {
-  uisland,
+  uniland,
   ComponentWithProps,
   DeepPartial,
   DOMElements,
-  HTMLUislandProps,
-} from "@uisland-ui/vue-system"
+  HTMLUnilandProps,
+} from "@uniland-ui/vue-system"
 
-export interface CCenterProps extends HTMLUislandProps<"div"> {}
+export interface CCenterProps extends HTMLUnilandProps<"div"> {}
 
 /**
  * Vue component used to horizontally and vertically center its child.
  * It uses the popular `display: flex` centering technique.
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/center
+ * @see Docs https://vue.uniland-ui.com/docs/layout/center
  */
 export const CCenter: ComponentWithProps<DeepPartial<CCenterProps>> =
   defineComponent({
@@ -27,7 +27,7 @@ export const CCenter: ComponentWithProps<DeepPartial<CCenterProps>> =
     setup(props, { slots, attrs }) {
       return () => {
         return (
-          <uisland.div
+          <uniland.div
             __label="center"
             __css={{
               display: "flex",
@@ -38,7 +38,7 @@ export const CCenter: ComponentWithProps<DeepPartial<CCenterProps>> =
             {...attrs}
           >
             {slots}
-          </uisland.div>
+          </uniland.div>
         )
       }
     },

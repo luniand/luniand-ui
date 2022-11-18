@@ -3,7 +3,7 @@ import vue from "@vitejs/plugin-vue"
 import Components from "unplugin-vue-components/vite"
 import Pages from "vite-plugin-pages"
 import Layouts from "vite-plugin-vue-layouts"
-import UislandComponents from "./playground/build/components.json"
+import UnilandComponents from "./playground/build/components.json"
 import path from "path"
 
 export default defineConfig({
@@ -28,7 +28,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@uisland-ui/vue-test-utils": path.resolve(
+      "@uniland-ui/vue-test-utils": path.resolve(
         __dirname,
         "./packages/test-utils"
       ),
@@ -59,10 +59,10 @@ export default defineConfig({
     Components({
       resolvers: [
         (name: string) => {
-          if (name in UislandComponents) {
+          if (name in UnilandComponents) {
             return {
               importName: name,
-              path: `@uisland-ui/vue-next`,
+              path: `@uniland-ui/vue-next`,
             }
           }
         },

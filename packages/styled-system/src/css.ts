@@ -5,7 +5,7 @@ import {
   isString,
   mergeWith as merge,
   runIfFn,
-} from "@uisland-ui/utils"
+} from "@uniland-ui/utils"
 import * as CSS from "csstype"
 import { pseudoSelectors } from "./pseudos"
 import { systemProps as systemPropConfigs } from "./system"
@@ -64,7 +64,7 @@ export function getCss(options: GetCSSOptions) {
 
       /**
        * allows the user to use theme tokens in css vars
-       * { --banner-height: "sizes.md" } => { --banner-height: "var(--uisland-sizes-md)" }
+       * { --banner-height: "sizes.md" } => { --banner-height: "var(--uniland-sizes-md)" }
        *
        * You can also provide fallback values
        * { --banner-height: "sizes.no-exist, 40px" } => { --banner-height: "40px" }

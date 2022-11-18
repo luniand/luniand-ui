@@ -3,7 +3,7 @@
 exports[`<CAspectRatio /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-aspect-ratio css-w9t1xc"
+    class="uniland-aspect-ratio css-w9t1xc"
   >
     <img
       alt="img"
@@ -16,7 +16,7 @@ exports[`<CAspectRatio /> should render properly 1`] = `
 exports[`<CBadge /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-badge css-1f1oimr"
+    class="uniland-badge css-1f1oimr"
   >
     this is a badge
   </div>
@@ -26,12 +26,12 @@ exports[`<CBadge /> should render properly 1`] = `
 exports[`<CBox /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-box css-2sy3sl"
+    class="uniland-box css-2sy3sl"
   >
      This is a div 
   </div>
   <section
-    class="uisland-box css-2sy3sl"
+    class="uniland-box css-2sy3sl"
   >
      This is a box with as="section" 
   </section>
@@ -41,7 +41,7 @@ exports[`<CBox /> should render properly 1`] = `
 exports[`<CCenter /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-center css-40w18w"
+    class="uniland-center css-40w18w"
   >
      C 
   </div>
@@ -51,7 +51,7 @@ exports[`<CCenter /> should render properly 1`] = `
 exports[`<CContainer /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-container css-1v8lbpd"
+    class="uniland-container css-1v8lbpd"
   >
      container 
   </div>
@@ -62,14 +62,14 @@ exports[`<CDivider /> should render properly 1`] = `
 <DocumentFragment>
   <hr
     aria-orientation="horizontal"
-    class="uisland-divider css-1y71u2e"
+    class="uniland-divider css-1y71u2e"
   />
   <div
-    class="uisland-center css-1yj0ggl"
+    class="uniland-center css-1yj0ggl"
   >
     <hr
       aria-orientation="vertical"
-      class="uisland-divider css-1psxsf8"
+      class="uniland-divider css-1psxsf8"
     />
   </div>
 </DocumentFragment>
@@ -78,48 +78,48 @@ exports[`<CDivider /> should render properly 1`] = `
 exports[`<CGrid /> & <CGridItem /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-grid css-ssvt16"
+    class="uniland-grid css-ssvt16"
   >
     <div
-      class="uisland-box css-62u0by"
+      class="uniland-box css-62u0by"
     >
       <!---->
     </div>
     <div
-      class="uisland-box css-62u0by"
+      class="uniland-box css-62u0by"
     >
       <!---->
     </div>
     <div
-      class="uisland-box css-62u0by"
+      class="uniland-box css-62u0by"
     >
       <!---->
     </div>
     <div
-      class="uisland-box css-62u0by"
+      class="uniland-box css-62u0by"
     >
       <!---->
     </div>
     <div
-      class="uisland-box css-62u0by"
+      class="uniland-box css-62u0by"
     >
       <!---->
     </div>
   </div>
   <div
-    class="uisland-grid css-85u0uj"
+    class="uniland-grid css-85u0uj"
   >
     <div
-      class="uisland-grid__item css-1q1m6d7"
+      class="uniland-grid__item css-1q1m6d7"
     />
     <div
-      class="uisland-grid__item css-1qvc0pb"
+      class="uniland-grid__item css-1qvc0pb"
     />
     <div
-      class="uisland-grid__item css-1qvc0pb"
+      class="uniland-grid__item css-1qvc0pb"
     />
     <div
-      class="uisland-grid__item css-1anmq07"
+      class="uniland-grid__item css-1anmq07"
     />
   </div>
 </DocumentFragment>
@@ -128,45 +128,45 @@ exports[`<CGrid /> & <CGridItem /> should render properly 1`] = `
 exports[`<CHeading /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-stack css-17kdbol"
+    class="uniland-stack css-17kdbol"
   >
     <h1
-      class="uisland-heading css-cule"
+      class="uniland-heading css-cule"
     >
       (4xl) In love with Vue & Vite & Nuxt
     </h1>
     <h2
-      class="uisland-heading css-15xpjkx"
+      class="uniland-heading css-15xpjkx"
     >
        (3xl) In love with Vue & Vite & Nuxt
     </h2>
     <h2
-      class="uisland-heading css-1dpg06m"
+      class="uniland-heading css-1dpg06m"
     >
       (2xl) In love with Vue & Vite & Nuxt
     </h2>
     <h2
-      class="uisland-heading css-ueokap"
+      class="uniland-heading css-ueokap"
     >
        (xl) In love with Vue & Vite & Nuxt 
     </h2>
     <h3
-      class="uisland-heading css-1q5o9wg"
+      class="uniland-heading css-1q5o9wg"
     >
        (lg) In love with Vue & Vite & Nuxt 
     </h3>
     <h4
-      class="uisland-heading css-528rta"
+      class="uniland-heading css-528rta"
     >
        (md) In love with Vue & Vite & Nuxt 
     </h4>
     <h5
-      class="uisland-heading css-s5h6tf"
+      class="uniland-heading css-s5h6tf"
     >
        (sm) In love with Vue & Vite & Nuxt 
     </h5>
     <h6
-      class="uisland-heading css-ngsgu1"
+      class="uniland-heading css-ngsgu1"
     >
        (xs) In love with Vue & Vite & Nuxt 
     </h6>
@@ -178,13 +178,13 @@ exports[`<CKbd /> should render properly 1`] = `
 <DocumentFragment>
   <span>
     <kbd
-      class="uisland-kbd css-1t0x8xj"
+      class="uniland-kbd css-1t0x8xj"
     >
       shift
     </kbd>
      + 
     <kbd
-      class="uisland-kbd css-1t0x8xj"
+      class="uniland-kbd css-1t0x8xj"
     >
       H
     </kbd>
@@ -195,12 +195,12 @@ exports[`<CKbd /> should render properly 1`] = `
 exports[`<CLink /> should render properly 1`] = `
 <DocumentFragment>
   <a
-    class="uisland-link css-8jj5m5"
+    class="uniland-link css-8jj5m5"
   >
     CLink
   </a>
   <a
-    class="uisland-link css-8jj5m5"
+    class="uniland-link css-8jj5m5"
     rel="noopener noreferrer"
     target="_blank"
   >
@@ -212,14 +212,14 @@ exports[`<CLink /> should render properly 1`] = `
 exports[`<CLinkBox /> <CLinkOverlay /> should render properly 1`] = `
 <DocumentFragment>
   <article
-    class="uisland-linkbox css-10n1vic"
+    class="uniland-linkbox css-10n1vic"
   >
     <h2
-      class="uisland-heading css-1bhhtxl"
+      class="uniland-heading css-1bhhtxl"
     >
       <a
-        class="uisland-linkbox__overlay css-1hnz6hu"
-        href="https://vue.uisland-ui.com"
+        class="uniland-linkbox__overlay css-1hnz6hu"
+        href="https://vue.uniland-ui.com"
         rel="noopener noreferrer"
         target="_blank"
       >
@@ -230,7 +230,7 @@ exports[`<CLinkBox /> <CLinkOverlay /> should render properly 1`] = `
        As a side note, using quotation marks around an attribute value is required only if this value is not a valid identifier. 
     </p>
     <a
-      class="uisland-link css-8jj5m5"
+      class="uniland-link css-8jj5m5"
       href="https://google.com"
       rel="noopener noreferrer"
       target="_blank"
@@ -244,44 +244,44 @@ exports[`<CLinkBox /> <CLinkOverlay /> should render properly 1`] = `
 exports[`<CList /> <CListItem /> <CUnorderedList /> <COrderedList /> <CListIcon />  should render properly 1`] = `
 <DocumentFragment>
   <ul
-    class="uisland-list css-1dg6mvm"
+    class="uniland-list css-1dg6mvm"
     role="list"
   >
     <li
-      class="uisland-list__item css-0"
+      class="uniland-list__item css-0"
     >
       Lorem ipsum dolor sit amet
     </li>
     <li
-      class="uisland-list__item css-0"
+      class="uniland-list__item css-0"
     >
       Facilisis in pretium nisl aliquet
     </li>
   </ul>
   <ul
-    class="uisland-list css-tu0njr"
+    class="uniland-list css-tu0njr"
     role="list"
   >
     <li
-      class="uisland-list__item css-0"
+      class="uniland-list__item css-0"
     >
       Lorem ipsum dolor sit amet
     </li>
     <li
-      class="uisland-list__item css-0"
+      class="uniland-list__item css-0"
     >
       Consectetur adipiscing elit
     </li>
   </ul>
   <ul
-    class="uisland-list css-155za0w"
+    class="uniland-list css-155za0w"
     role="list"
   >
     <li
-      class="uisland-list__item css-0"
+      class="uniland-list__item css-0"
     >
       <svg
-        class="uisland-icon css-a2vvhw"
+        class="uniland-icon css-a2vvhw"
         focusable="false"
         role="presentation"
         viewBox="0 0 24 24"
@@ -324,10 +324,10 @@ exports[`<CList /> <CListItem /> <CUnorderedList /> <COrderedList /> <CListIcon 
        Lorem ipsum dolor sit amet. 
     </li>
     <li
-      class="uisland-list__item css-0"
+      class="uniland-list__item css-0"
     >
       <svg
-        class="uisland-icon css-a2vvhw"
+        class="uniland-icon css-a2vvhw"
         focusable="false"
         role="presentation"
         viewBox="0 0 24 24"
@@ -376,30 +376,30 @@ exports[`<CList /> <CListItem /> <CUnorderedList /> <COrderedList /> <CListIcon 
 exports[`<CSimpleGrid /> should render properly 1`] = `
 <DocumentFragment>
   <ul
-    class="uisland-simple-grid css-12tmpmw"
+    class="uniland-simple-grid css-12tmpmw"
   >
     <div
-      class="uisland-box css-9rloc5"
+      class="uniland-box css-9rloc5"
     >
       simple 1
     </div>
     <div
-      class="uisland-box css-9rloc5"
+      class="uniland-box css-9rloc5"
     >
       simple 2
     </div>
     <div
-      class="uisland-box css-9rloc5"
+      class="uniland-box css-9rloc5"
     >
       simple 3
     </div>
     <div
-      class="uisland-box css-9rloc5"
+      class="uniland-box css-9rloc5"
     >
       simple 4
     </div>
     <div
-      class="uisland-box css-9rloc5"
+      class="uniland-box css-9rloc5"
     >
       simple 5
     </div>
@@ -410,18 +410,18 @@ exports[`<CSimpleGrid /> should render properly 1`] = `
 exports[`<CSpacer /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-flex css-1xhj18k"
+    class="uniland-flex css-1xhj18k"
   >
     <div
-      class="uisland-box css-zzdd9b"
+      class="uniland-box css-zzdd9b"
     >
        Box 1 
     </div>
     <div
-      class="uisland-spacer css-17xejub"
+      class="uniland-spacer css-17xejub"
     />
     <div
-      class="uisland-box css-pp1cg2"
+      class="uniland-box css-pp1cg2"
     >
        Box 2 
     </div>
@@ -432,12 +432,12 @@ exports[`<CSpacer /> should render properly 1`] = `
 exports[`<CSquare /> & <CCircle /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-square css-yh3vrj"
+    class="uniland-square css-yh3vrj"
   >
      S 
   </div>
   <div
-    class="uisland-circle css-1afsfyy"
+    class="uniland-circle css-1afsfyy"
   >
      C 
   </div>
@@ -447,7 +447,7 @@ exports[`<CSquare /> & <CCircle /> should render properly 1`] = `
 exports[`<CStack /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-stack css-n21gh5"
+    class="uniland-stack css-n21gh5"
   >
     <div>
       1
@@ -457,7 +457,7 @@ exports[`<CStack /> should render properly 1`] = `
     </div>
   </div>
   <div
-    class="uisland-stack-horizontal css-x9juev"
+    class="uniland-stack-horizontal css-x9juev"
   >
     <div>
       1
@@ -467,7 +467,7 @@ exports[`<CStack /> should render properly 1`] = `
     </div>
   </div>
   <div
-    class="uisland-stack-vertical css-n21gh5"
+    class="uniland-stack-vertical css-n21gh5"
   >
     <div>
       1
@@ -482,34 +482,34 @@ exports[`<CStack /> should render properly 1`] = `
 exports[`<CText /> should render properly 1`] = `
 <DocumentFragment>
   <p
-    class="uisland-text css-0"
+    class="uniland-text css-0"
   >
     normal:
   </p>
   <p
-    class="uisland-text css-n2bes8"
+    class="uniland-text css-n2bes8"
   >
     (6xl) In love with Vue & Vite & Nuxt
   </p>
   <p
-    class="uisland-text css-0"
+    class="uniland-text css-0"
   >
     truncated:
   </p>
   <p
-    class="uisland-text css-3urtkt"
+    class="uniland-text css-3urtkt"
   >
      Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups. 
   </p>
   <p
-    class="uisland-text css-0"
+    class="uniland-text css-0"
   >
     line clamp:
   </p>
   <p
-    class="uisland-text css-3jijpv"
+    class="uniland-text css-3jijpv"
   >
-     "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains all of the letters of the English alphabet. Owing to its existence, Uisland was created. 
+     "The quick brown fox jumps over the lazy dog" is an English-language pangram—a sentence that contains all of the letters of the English alphabet. Owing to its existence, Uniland was created. 
   </p>
 </DocumentFragment>
 `;
@@ -517,43 +517,43 @@ exports[`<CText /> should render properly 1`] = `
 exports[`<CWrap /> & <CWrapItem /> should render properly 1`] = `
 <DocumentFragment>
   <div
-    class="uisland-wrap css-0"
+    class="uniland-wrap css-0"
   >
     <ul
-      class="uisland-wrap__list css-gbdy1k"
+      class="uniland-wrap__list css-gbdy1k"
     >
       <li
-        class="uisland-wrap__listItem css-1yp4ln"
+        class="uniland-wrap__listItem css-1yp4ln"
       >
         <div
-          class="uisland-center css-58a5xs"
+          class="uniland-center css-58a5xs"
         >
            Box 1 
         </div>
       </li>
       <li
-        class="uisland-wrap__listItem css-1yp4ln"
+        class="uniland-wrap__listItem css-1yp4ln"
       >
         <div
-          class="uisland-center css-1cf3c28"
+          class="uniland-center css-1cf3c28"
         >
            Box 2 
         </div>
       </li>
       <li
-        class="uisland-wrap__listItem css-1yp4ln"
+        class="uniland-wrap__listItem css-1yp4ln"
       >
         <div
-          class="uisland-center css-1un2hvj"
+          class="uniland-center css-1un2hvj"
         >
            Box 3 
         </div>
       </li>
       <li
-        class="uisland-wrap__listItem css-1yp4ln"
+        class="uniland-wrap__listItem css-1yp4ln"
       >
         <div
-          class="uisland-center css-dd3w5r"
+          class="uniland-center css-dd3w5r"
         >
            Box 4 
         </div>

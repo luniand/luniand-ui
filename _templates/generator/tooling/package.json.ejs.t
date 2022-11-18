@@ -3,7 +3,7 @@ to: tooling/<%=h.changeCase.paramCase(name)%>/package.json
 ---
 
 {
-  "name": "<%= '@uisland-ui/' + h.changeCase.paramCase(name)%>",
+  "name": "<%= '@uniland-ui/' + h.changeCase.paramCase(name)%>",
   "version": "1.0.0",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -16,8 +16,8 @@ to: tooling/<%=h.changeCase.paramCase(name)%>/package.json
       "default": "./dist/esm/index.js"
     }
   },
-  "description": "<%= 'Uisland UI Vue | ' + h.changeCase.pascalCase(name) + ' module'%>",
-  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next.git",
+  "description": "<%= 'Uniland UI Vue | ' + h.changeCase.pascalCase(name) + ' module'%>",
+  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next.git",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {

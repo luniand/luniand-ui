@@ -1,8 +1,8 @@
-import { accordionAnatomy as parts } from "@uisland-ui/anatomy"
+import { accordionAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleObject,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyleContainer: SystemStyleObject = {
   borderTopWidth: "1px",

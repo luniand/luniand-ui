@@ -1,8 +1,8 @@
-import { getColor, mode, transparentize } from "@uisland-ui/theme-tools"
+import { getColor, mode, transparentize } from "@uniland-ui/theme-tools"
 import type {
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyle: SystemStyleObject = {
   px: 1,

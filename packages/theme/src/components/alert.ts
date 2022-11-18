@@ -1,10 +1,10 @@
-import { alertAnatomy as parts } from "@uisland-ui/anatomy"
-import { getColor, mode, transparentize } from "@uisland-ui/theme-tools"
+import { alertAnatomy as parts } from "@uniland-ui/anatomy"
+import { getColor, mode, transparentize } from "@uniland-ui/theme-tools"
 import type {
   PartsStyleObject,
   PartsStyleFunction,
   StyleFunctionProps,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 const baseStyle: PartsStyleObject<typeof parts> = {
   container: {

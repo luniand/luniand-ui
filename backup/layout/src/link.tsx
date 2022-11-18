@@ -1,16 +1,16 @@
-import { vueThemingProps } from "@uisland-ui/vue-utils"
-import { ComponentWithProps, HTMLUislandProps } from "@uisland-ui/vue-system"
+import { vueThemingProps } from "@uniland-ui/vue-utils"
+import { ComponentWithProps, HTMLUnilandProps } from "@uniland-ui/vue-system"
 import { h, defineComponent, PropType, computed } from "vue"
 import {
-  uisland,
+  uniland,
   DOMElements,
   ThemingProps,
   useStyleConfig,
   DeepPartial,
-} from "@uisland-ui/vue-system"
-import { filterUndefined } from "@uisland-ui/utils"
+} from "@uniland-ui/vue-system"
+import { filterUndefined } from "@uniland-ui/utils"
 
-export interface LinkProps extends HTMLUislandProps<"a">, ThemingProps<"Link"> {
+export interface LinkProps extends HTMLUnilandProps<"a">, ThemingProps<"Link"> {
   /**
    *  If `true`, the link will open in new tab
    */
@@ -29,7 +29,7 @@ export interface LinkProps extends HTMLUislandProps<"a">, ThemingProps<"Link"> {
  * <CLink as="router-link" to="/home">Home</CLink>
  * ```
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/link
+ * @see Docs https://vue.uniland-ui.com/docs/layout/link
  */
 export const CLink: ComponentWithProps<DeepPartial<LinkProps>> =
   defineComponent({
@@ -54,7 +54,7 @@ export const CLink: ComponentWithProps<DeepPartial<LinkProps>> =
       const styles = useStyleConfig("Link", themingProps)
 
       return () => (
-        <uisland.a
+        <uniland.a
           as={props.as}
           __label="link"
           // @ts-ignore Need to type "target" as Intrinsic HTML property
@@ -64,7 +64,7 @@ export const CLink: ComponentWithProps<DeepPartial<LinkProps>> =
           {...attrs}
         >
           {slots}
-        </uisland.a>
+        </uniland.a>
       )
     },
   })

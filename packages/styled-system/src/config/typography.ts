@@ -22,9 +22,9 @@ export const typography: Config = {
       display: "-webkit-box",
       WebkitBoxOrient: "vertical",
       //@ts-ignore
-      WebkitLineClamp: "var(--uisland-line-clamp)",
+      WebkitLineClamp: "var(--uniland-line-clamp)",
     },
-    property: "--uisland-line-clamp",
+    property: "--uniland-line-clamp",
   },
   isTruncated: {
     transform(value) {

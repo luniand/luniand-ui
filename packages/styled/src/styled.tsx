@@ -2,7 +2,7 @@ import { mergeProps, SetupContext } from "@vue/runtime-core"
 import clsx from "clsx"
 import memoize from "lodash.memoize"
 import { CSSInterpolation, serializeStyles } from "@emotion/serialize"
-import { extractStyleAttrs } from "@uisland-ui/utils"
+import { extractStyleAttrs } from "@uniland-ui/utils"
 import {
   getRegisteredStyles,
   insertStyles,

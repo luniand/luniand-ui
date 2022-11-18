@@ -1,5 +1,5 @@
 <template>
-  <div>Uisland UI Vue v1</div>
+  <div>Uniland UI Vue v1</div>
 </template>
 
 <script>

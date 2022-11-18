@@ -1,17 +1,17 @@
 import { createApp } from "vue"
-import Uisland, {
-  uisland,
+import Uniland, {
+  uniland,
   extendTheme,
   BodyScrollLockDirective,
-  extendUisland,
-} from "@uisland-ui/vue-next"
-import { domElements } from "@uisland-ui/vue-system"
+  extendUniland,
+} from "@uniland-ui/vue-next"
+import { domElements } from "@uniland-ui/vue-system"
 import { feActivity, feUser } from "feather-icons-paths"
 import PerfectScrollbar from "vue3-perfect-scrollbar"
 import { MotionPlugin } from "@vueuse/motion"
 import App from "./App.vue"
 import router from "./router"
-import { mode } from "@uisland-ui/theme-tools"
+import { mode } from "@uniland-ui/theme-tools"
 
 console.log({ router })
 
@@ -19,8 +19,8 @@ const app = createApp(App)
   .use(router)
   .use(MotionPlugin)
   .use(
-    Uisland,
-    extendUisland({
+    Uniland,
+    extendUniland({
       cssReset: true,
       icons: {
         library: {
@@ -35,7 +35,7 @@ const app = createApp(App)
         },
       },
       emotionCacheOptions: {
-        key: "uisland",
+        key: "uniland",
       },
       extendTheme: extendTheme({
         config: {},
@@ -78,7 +78,7 @@ const app = createApp(App)
   .use(PerfectScrollbar)
 
 domElements.forEach((tag) => {
-  app.component(`uisland.${tag}`, uisland(tag))
+  app.component(`uniland.${tag}`, uniland(tag))
 })
 
 app.directive("scroll-lock", BodyScrollLockDirective)

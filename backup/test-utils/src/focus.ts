@@ -1,4 +1,4 @@
-import { getActiveElement, isFocusable } from "@uisland-ui/utils"
+import { getActiveElement, isFocusable } from "@uniland-ui/utils"
 
 export function focus(el: HTMLElement) {
   if (getActiveElement(el) === el) return

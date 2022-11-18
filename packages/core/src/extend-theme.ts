@@ -1,5 +1,5 @@
-import defaultTheme, { Theme, ColorHues } from "@uisland-ui/theme"
-import { isFunction, mergeWith } from "@uisland-ui/utils"
+import defaultTheme, { Theme, ColorHues } from "@uniland-ui/theme"
+import { isFunction, mergeWith } from "@uniland-ui/utils"
 
 type ThemeExtensionTypeHints = {
   colors: Record<string, Partial<ColorHues> | Record<string, string> | string>
@@ -22,7 +22,7 @@ type DeepThemeExtension<ThemeObject, TypeHints> = {
 export type ThemeOverride = DeepThemeExtension<Theme, ThemeExtensionTypeHints>
 
 /**
- * Function to override or customize the Uisland UI theme conveniently
+ * Function to override or customize the Uniland UI theme conveniently
  * @param overrides - Your custom theme object overrides
  * @param baseTheme - theme to customize
  */

@@ -1,4 +1,4 @@
-import { __DEV__ } from "@uisland-ui/utils"
+import { __DEV__ } from "@uniland-ui/utils"
 import { inject, isRef, ref, watchEffect } from "@vue/runtime-core"
 import { ColorModeRef } from "./color-mode.utils"
 
@@ -16,7 +16,7 @@ export type ColorModeContext = {
 
 /** Injects color mode into component instance */
 export const useColorMode = (): ColorModeContext => {
-  const _colorMode = inject("$uislandColorMode") as ColorModeRef
+  const _colorMode = inject("$unilandColorMode") as ColorModeRef
   const colorMode = isRef(_colorMode) ? _colorMode : ref(_colorMode)
 
   const toggleColorMode = () => {

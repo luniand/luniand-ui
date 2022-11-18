@@ -1,8 +1,8 @@
-import { injectGlobal, css } from "@uisland-ui/system"
-// import { cssResetStyles } from "@uisland-ui/c-reset"
+import { injectGlobal, css } from "@uniland-ui/system"
+// import { cssResetStyles } from "@uniland-ui/c-reset"
 import { ThemeOverride } from "../extend-theme"
-import { get, runIfFn } from "@uisland-ui/utils"
-import { ColorModeRef } from "@uisland-ui/u-color-mode"
+import { get, runIfFn } from "@uniland-ui/utils"
+import { ColorModeRef } from "@uniland-ui/u-color-mode"
 import { serializeStyles } from "@emotion/serialize"
 import { StyleSheet } from "@emotion/sheet"
 import { computed, ref, watch, watchEffect } from "@vue/runtime-core"
@@ -30,8 +30,8 @@ export function injectThemeGlobalStyles(
   if (!globalStyles.value) return undefined
 
   const cache = createCache({
-    key: "uisland-global",
-    nonce: "__uisland__",
+    key: "uniland-global",
+    nonce: "__uniland__",
   })
 
   const _globalStyles = computed(() => css(globalStyles.value)(theme))

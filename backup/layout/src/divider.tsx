@@ -1,17 +1,17 @@
 import { h, defineComponent, PropType, computed } from "vue"
 import {
-  uisland,
+  uniland,
   ThemingProps,
   useStyleConfig,
-  HTMLUislandProps,
+  HTMLUnilandProps,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
-import { filterUndefined } from "@uisland-ui/utils"
-import { vueThemingProps } from "@uisland-ui/vue-utils"
+} from "@uniland-ui/vue-system"
+import { filterUndefined } from "@uniland-ui/utils"
+import { vueThemingProps } from "@uniland-ui/vue-utils"
 
 export interface DividerProps
-  extends HTMLUislandProps<"div">,
+  extends HTMLUnilandProps<"div">,
     ThemingProps<"Container"> {
   orientation?: "horizontal" | "vertical"
 }
@@ -20,7 +20,7 @@ export interface DividerProps
  * Layout component used to visually separate content in a list or group.
  * It display a thin horizontal or vertical line, and renders a `hr` tag.
  *
- * @see Docs https://vue.uisland-ui.com/docs/data-display/divider
+ * @see Docs https://vue.uniland-ui.com/docs/data-display/divider
  */
 export const CDivider: ComponentWithProps<DeepPartial<DividerProps>> =
   defineComponent({
@@ -73,7 +73,7 @@ export const CDivider: ComponentWithProps<DeepPartial<DividerProps>> =
       })
 
       return () => (
-        <uisland.hr
+        <uniland.hr
           aria-orientation={props.orientation}
           __css={{
             ...stylesRest,
@@ -85,7 +85,7 @@ export const CDivider: ComponentWithProps<DeepPartial<DividerProps>> =
           __label="divider"
         >
           {slots.default?.()}
-        </uisland.hr>
+        </uniland.hr>
       )
     },
   })

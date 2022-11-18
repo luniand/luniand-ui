@@ -1,4 +1,4 @@
-import { Dict, isObject, runIfFn } from "@uisland-ui/utils"
+import { Dict, isObject, runIfFn } from "@uniland-ui/utils"
 
 /**
  * Expands an array or object syntax responsive style.

@@ -2,12 +2,12 @@ import {
   ComponentWithProps,
   DeepPartial,
   ResponsiveValue,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 import { h, defineComponent, PropType, computed } from "vue"
-import { DOMElements } from "@uisland-ui/vue-system"
-import { SNAO } from "@uisland-ui/vue-utils"
+import { DOMElements } from "@uniland-ui/vue-system"
+import { SNAO } from "@uniland-ui/vue-utils"
 import { CGrid, GridProps } from "./grid"
-import { isNull, isNumber, mapResponsive } from "@uisland-ui/utils"
+import { isNull, isNumber, mapResponsive } from "@uniland-ui/utils"
 
 interface SimpleGridOptions {
   /**
@@ -40,7 +40,7 @@ export interface SimpleGridProps extends GridProps, SimpleGridOptions {}
  * Vue component make that providers a simpler interface, and
  * make its easy to create responsive grid layouts.
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/simple-grid
+ * @see Docs https://vue.uniland-ui.com/docs/layout/simple-grid
  */
 export const CSimpleGrid: ComponentWithProps<DeepPartial<SimpleGridProps>> =
   defineComponent({

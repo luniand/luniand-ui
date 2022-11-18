@@ -9,18 +9,18 @@ import {
   ConcreteComponent,
 } from "vue"
 import {
-  uisland,
-  HTMLUislandProps,
+  uniland,
+  HTMLUnilandProps,
   SystemProps,
   ResponsiveValue,
   DOMElements,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
-import { filterUndefined, mapResponsive } from "@uisland-ui/utils"
-import { SNAO } from "@uisland-ui/vue-utils"
+} from "@uniland-ui/vue-system"
+import { filterUndefined, mapResponsive } from "@uniland-ui/utils"
+import { SNAO } from "@uniland-ui/vue-utils"
 
-export interface GridProps extends HTMLUislandProps<"div">, GridOptions {}
+export interface GridProps extends HTMLUnilandProps<"div">, GridOptions {}
 
 export interface GridOptions {
   /**
@@ -120,7 +120,7 @@ export interface GridItemProps extends BoxProps {
  * It renders a `div` with `display: grid` and
  * comes with helpful style shorthand.
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/grid
+ * @see Docs https://vue.uniland-ui.com/docs/layout/grid
  */
 export const CGrid: ComponentWithProps<DeepPartial<GridProps>> =
   defineComponent({
@@ -165,14 +165,14 @@ export const CGrid: ComponentWithProps<DeepPartial<GridProps>> =
       )
       return () => {
         return (
-          <uisland.div
+          <uniland.div
             as={props.as}
             __label="grid"
             __css={styles.value}
             {...attrs}
           >
             {slots}
-          </uisland.div>
+          </uniland.div>
         )
       }
     },
@@ -214,14 +214,14 @@ export const CGridItem: ComponentWithProps<DeepPartial<GridItemProps>> =
       )
 
       return () => (
-        <uisland.div
+        <uniland.div
           as={props.as}
           __label="grid__item"
           __css={styles.value}
           {...attrs}
         >
           {slots}
-        </uisland.div>
+        </uniland.div>
       )
     },
   })

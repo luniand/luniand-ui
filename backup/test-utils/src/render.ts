@@ -1,5 +1,5 @@
-import theme from "@uisland-ui/vue-theme"
-import { EmotionThemeContextSymbol } from "@uisland-ui/vue-styled"
+import theme from "@uniland-ui/vue-theme"
+import { EmotionThemeContextSymbol } from "@uniland-ui/vue-styled"
 import "@testing-library/jest-dom"
 import "@testing-library/jest-dom/extend-expect"
 import * as vtl from "@testing-library/vue"
@@ -11,9 +11,9 @@ import { RunOptions } from "axe-core"
 expect.extend(toHaveNoViolations)
 
 const useDefaultProviders = () => {
-  provide("$uislandTheme", theme)
-  provide("$uislandColorMode", "light")
-  provide("$uislandIcons", {})
+  provide("$unilandTheme", theme)
+  provide("$unilandColorMode", "light")
+  provide("$unilandIcons", {})
   provide(EmotionThemeContextSymbol, theme)
 }
 
@@ -34,7 +34,7 @@ export const render = (
 ): RenderResult => {
   const utils = vtl.render(
     defineComponent({
-      name: "UislandUIVueTestContainer",
+      name: "UnilandUIVueTestContainer",
       setup(_, { slots }) {
         useDefaultProviders()
         return () => h(component as any, {}, slots)

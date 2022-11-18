@@ -1,6 +1,6 @@
-import { CIcon } from "@uisland-ui/c-icon"
+import { CIcon } from "@uniland-ui/c-icon"
 import {
-  HTMLUislandProps,
+  HTMLUnilandProps,
   SystemProps,
   ThemingProps,
   useMultiStyleConfig,
@@ -8,10 +8,10 @@ import {
   StylesProvider,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 import { h, defineComponent, PropType, computed } from "vue"
-import { uisland, DOMElements } from "@uisland-ui/vue-system"
-import { getValidChildren, SNAO, SAO } from "@uisland-ui/vue-utils"
+import { uniland, DOMElements } from "@uniland-ui/vue-system"
+import { getValidChildren, SNAO, SAO } from "@uniland-ui/vue-utils"
 
 interface ListOptions {
   /**
@@ -32,14 +32,14 @@ interface ListOptions {
 }
 
 export interface ListProps
-  extends HTMLUislandProps<"ul">,
+  extends HTMLUnilandProps<"ul">,
     ThemingProps<"List">,
     ListOptions {}
 
 /**
  * List is used to display list items, it renders a `<ul>` by default.
  *
- * @see Docs https://vue.uisland-ui.com/docs/data-display/list
+ * @see Docs https://vue.uniland-ui.com/docs/data-display/list
  */
 export const CList: ComponentWithProps<DeepPartial<ListProps>> =
   defineComponent({
@@ -69,7 +69,7 @@ export const CList: ComponentWithProps<DeepPartial<ListProps>> =
         const validChildren = () => getValidChildren(slots)
 
         return (
-          <uisland.ul
+          <uniland.ul
             __label="list"
             as={props.as}
             listStyleType={props.styleType}
@@ -82,7 +82,7 @@ export const CList: ComponentWithProps<DeepPartial<ListProps>> =
             {...attrs}
           >
             {validChildren}
-          </uisland.ul>
+          </uniland.ul>
         )
       }
     },
@@ -114,23 +114,23 @@ export const CUnorderedList: ComponentWithProps<DeepPartial<ListProps>> =
     },
   })
 
-export const CListItem: ComponentWithProps<DeepPartial<HTMLUislandProps<"li">>> =
+export const CListItem: ComponentWithProps<DeepPartial<HTMLUnilandProps<"li">>> =
   defineComponent({
     name: "CListItem",
     setup(_, { slots, attrs }) {
       const styles = useStyles()
       return () => {
         return (
-          <uisland.li __label="list__item" __css={styles.value.item} {...attrs}>
+          <uniland.li __label="list__item" __css={styles.value.item} {...attrs}>
             {slots}
-          </uisland.li>
+          </uniland.li>
         )
       }
     },
   })
 
 export const CListIcon: ComponentWithProps<
-  DeepPartial<HTMLUislandProps<"svg">>
+  DeepPartial<HTMLUnilandProps<"svg">>
 > = defineComponent({
   name: "CListIcon",
   setup(_, { slots, attrs }) {

@@ -16,7 +16,7 @@ export const flexbox: Config = {
     transform: createTransform({
       scale: "space",
       transform: (value) =>
-        value !== null ? { "--uisland-space-x": value } : null,
+        value !== null ? { "--uniland-space-x": value } : null,
     }),
   },
   experimental_spaceY: {
@@ -24,7 +24,7 @@ export const flexbox: Config = {
     transform: createTransform({
       scale: "space",
       transform: (value) =>
-        value != null ? { "--uisland-space-y": value } : null,
+        value != null ? { "--uniland-space-y": value } : null,
     }),
   },
   flex: true,

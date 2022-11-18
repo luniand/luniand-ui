@@ -1,4 +1,4 @@
-import { ThemeProviderProps } from "@uisland-ui/vue-next/src"
+import { ThemeProviderProps } from "@uniland-ui/vue-next/src"
 import { render, screen } from "../../test-utils/src"
 import { defineComponent, h, inject } from "vue"
 import CThemeProvider from "../src"
@@ -7,7 +7,7 @@ let blueString: string
 
 const ChildComponent = defineComponent({
   setup() {
-    const theme = inject<ThemeProviderProps>("$uislandTheme")
+    const theme = inject<ThemeProviderProps>("$unilandTheme")
     blueString = JSON.stringify(theme?.colors?.blue)
     return () => h("div", blueString)
   },

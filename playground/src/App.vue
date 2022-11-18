@@ -1,10 +1,10 @@
 <template>
   <c-reset />
-  <uisland.section display="flex" transition="all 0.2s" height="inherit" w="inherit">
+  <uniland.section display="flex" transition="all 0.2s" height="inherit" w="inherit">
     <perfect-scrollbar>
-      <uisland.div pb="12">
+      <uniland.div pb="12">
         <sidebar :stories="routes" />
-      </uisland.div>
+      </uniland.div>
     </perfect-scrollbar>
     <c-center w="full" pos="relative" border-left="1px solid" border-color="gray.200" padding="4">
       <c-square box-size="800px">
@@ -16,13 +16,13 @@
       </c-square>
       <c-icon-button color="inherit" pos="absolute" @click="toggleColorMode" top="10" right="10" :aria-label="`Switch to ${colorMode === 'light' ? 'dark' : 'light'} mode`" :icon="colorMode === 'light' ? 'moon' : 'sun'" />
     </c-center>
-  </uisland.section>
+  </uniland.section>
 </template>
 
 <script lang="ts">
 import { computed, defineComponent, watchEffect } from 'vue'
-import { CReset, CIconButton, useColorMode } from '@uisland-ui/vue-next'
-import { useTheme } from "@uisland-ui/vue-system"
+import { CReset, CIconButton, useColorMode } from '@uniland-ui/vue-next'
+import { useTheme } from "@uniland-ui/vue-system"
 import Sidebar from './components/Sidebar.vue'
 import { routes } from './router'
 

@@ -1,11 +1,11 @@
-import { mapResponsive } from "@uisland-ui/utils"
+import { mapResponsive } from "@uniland-ui/utils"
 import {
-  uisland,
-  HTMLUislandProps,
+  uniland,
+  HTMLUnilandProps,
   ResponsiveValue,
   DeepPartial,
   ComponentWithProps,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 import { defineComponent, h, PropType } from "vue"
 
 interface AspectRatioOptions {
@@ -18,14 +18,14 @@ interface AspectRatioOptions {
 }
 
 export interface AspectRatioProps
-  extends HTMLUislandProps<"div">,
+  extends HTMLUnilandProps<"div">,
     AspectRatioOptions {}
 
 /**
  * Vue component used to cropping media (videos, images and maps)
  * to a desired aspect ratio.
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/aspect-ratio
+ * @see Docs https://vue.uniland-ui.com/docs/layout/aspect-ratio
  */
 export const CAspectRatio: ComponentWithProps<DeepPartial<AspectRatioProps>> =
   defineComponent({
@@ -38,7 +38,7 @@ export const CAspectRatio: ComponentWithProps<DeepPartial<AspectRatioProps>> =
     },
     setup(props, { slots, attrs }) {
       return () => (
-        <uisland.div
+        <uniland.div
           __label="aspect-ratio"
           position="relative"
           _before={{
@@ -71,7 +71,7 @@ export const CAspectRatio: ComponentWithProps<DeepPartial<AspectRatioProps>> =
           {...attrs}
         >
           {slots}
-        </uisland.div>
+        </uniland.div>
       )
     },
   })

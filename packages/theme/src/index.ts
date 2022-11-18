@@ -16,7 +16,7 @@ export interface ColorModeOptions {
 const config: ColorModeOptions = {
   useSystemColorMode: false,
   initialColorMode: "light",
-  cssVarPrefix: "uisland",
+  cssVarPrefix: "uniland",
 }
 
 export const theme = {

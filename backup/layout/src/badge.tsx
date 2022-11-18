@@ -1,25 +1,25 @@
 import { h, defineComponent, PropType, computed } from "vue"
 import {
-  uisland,
+  uniland,
   DOMElements,
-  HTMLUislandProps,
+  HTMLUnilandProps,
   ThemingProps,
   useStyleConfig,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
-import { filterUndefined } from "@uisland-ui/utils"
-import { vueThemingProps } from "@uisland-ui/vue-utils"
+} from "@uniland-ui/vue-system"
+import { filterUndefined } from "@uniland-ui/utils"
+import { vueThemingProps } from "@uniland-ui/vue-utils"
 
 export interface BadgeProps
-  extends HTMLUislandProps<"span">,
+  extends HTMLUnilandProps<"span">,
     Partial<ThemingProps<"Badge">> {}
 
 /**
  * Vue component used to display notifications, messages, or
  * statuses in different shapes and sizes.
  *
- * @see Docs https://vue.uisland-ui.com/docs/data-display/badge
+ * @see Docs https://vue.uniland-ui.com/docs/data-display/badge
  */
 export const CBadge: ComponentWithProps<DeepPartial<BadgeProps>> =
   defineComponent({
@@ -43,7 +43,7 @@ export const CBadge: ComponentWithProps<DeepPartial<BadgeProps>> =
       const styles = useStyleConfig("Badge", themingProps)
       return () => {
         return (
-          <uisland.div
+          <uniland.div
             as={props.as}
             __label="badge"
             __css={{
@@ -55,7 +55,7 @@ export const CBadge: ComponentWithProps<DeepPartial<BadgeProps>> =
             {...attrs}
           >
             {slots}
-          </uisland.div>
+          </uniland.div>
         )
       }
     },

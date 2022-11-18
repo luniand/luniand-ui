@@ -1,7 +1,7 @@
 import { TinyColor, readability, isReadable, random } from "@ctrl/tinycolor"
 import type { WCAG2Parms } from "@ctrl/tinycolor"
-import { memoizedGet as get, isEmptyObject } from "@uisland-ui/utils"
-import type { Dict } from "@uisland-ui/utils"
+import { memoizedGet as get, isEmptyObject } from "@uniland-ui/utils"
+import type { Dict } from "@uniland-ui/utils"
 
 /**
  * Get the color raw value from theme

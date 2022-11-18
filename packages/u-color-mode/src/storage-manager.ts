@@ -1,8 +1,8 @@
-import { __DEV__ } from "@uisland-ui/utils"
+import { __DEV__ } from "@uniland-ui/utils"
 import { ColorModeRef } from "./color-mode.utils"
 
 const hasSupport = () => typeof Storage !== "undefined"
-export const storageKey = "uisland-ui-color-mode"
+export const storageKey = "uniland-ui-color-mode"
 
 type MaybeColorMode = ColorModeRef["value"] | undefined
 

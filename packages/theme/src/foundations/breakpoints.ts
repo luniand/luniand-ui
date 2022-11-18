@@ -1,4 +1,4 @@
-import { createBreakpoints } from "@uisland-ui/theme-tools"
+import { createBreakpoints } from "@uniland-ui/theme-tools"
 
 /**
  * Breakpoints for responsive design

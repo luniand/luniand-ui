@@ -1,4 +1,4 @@
-import { DOMElements, ThemingProps } from "@uisland-ui/system"
+import { DOMElements, ThemingProps } from "@uniland-ui/system"
 import { PropType } from "@vue/runtime-core"
 
 export const vueThemingProps = {

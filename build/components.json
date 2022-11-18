@@ -969,7 +969,7 @@
     "name": "CSkipNavContent",
     "props": {
       "id": {
-        "default": "uisland-skip-nav"
+        "default": "uniland-skip-nav"
       }
     }
   },
@@ -977,7 +977,7 @@
     "name": "CSkipNavLink",
     "props": {
       "id": {
-        "default": "uisland-skip-nav"
+        "default": "uniland-skip-nav"
       }
     }
   },
@@ -1011,7 +1011,7 @@
   "CTagLeftIcon": {},
   "CTagRightIcon": {},
   "CVisuallyHidden": {
-    "name": "uisland-factory-span",
+    "name": "uniland-factory-span",
     "inheritAttrs": false,
     "props": {
       "as": [null, null],
@@ -1020,7 +1020,7 @@
     }
   },
   "CVisuallyHiddenInput": {
-    "name": "uisland-factory-input",
+    "name": "uniland-factory-input",
     "inheritAttrs": false,
     "props": {
       "as": [null, null],

@@ -1,19 +1,19 @@
 {
-  "name": "@uisland-ui/u-reset",
+  "name": "@uniland-ui/u-reset",
   "version": "0.0.0-alpha.0",
-  "main": "dist/uisland-ui-u-reset.cjs.js",
-  "module": "dist/uisland-ui-u-reset.esm.js",
+  "main": "dist/uniland-ui-u-reset.cjs.js",
+  "module": "dist/uniland-ui-u-reset.esm.js",
   "files": [
     "dist"
   ],
   "exports": {
     ".": {
-      "require": "./dist/uisland-ui-u-reset.cjs.js",
-      "default": "./dist/uisland-ui-u-reset.esm.js"
+      "require": "./dist/uniland-ui-u-reset.cjs.js",
+      "default": "./dist/uniland-ui-u-reset.esm.js"
     }
   },
-  "description": "Uisland UI Vue | UReset module",
-  "repository": "https://github.com/uisland-ui/uisland-ui-vue-next.git",
+  "description": "Uniland UI Vue | UReset module",
+  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next.git",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",
   "scripts": {

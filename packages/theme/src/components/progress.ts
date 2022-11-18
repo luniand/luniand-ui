@@ -1,4 +1,4 @@
-import { progressAnatomy as parts } from "@uisland-ui/anatomy"
+import { progressAnatomy as parts } from "@uniland-ui/anatomy"
 import {
   generateStripe,
   getColor,
@@ -6,11 +6,11 @@ import {
   PartsStyleFunction,
   PartsStyleObject,
   StyleFunctionProps,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 import type {
   SystemStyleObject,
   SystemStyleFunction,
-} from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
 
 function filledStyle(props: StyleFunctionProps): SystemStyleObject {
   const { colorScheme: c, theme: t, isIndeterminate, hasStripe } = props

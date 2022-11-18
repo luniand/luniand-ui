@@ -1,12 +1,12 @@
-import { selectAnatomy as parts } from "@uisland-ui/anatomy"
+import { selectAnatomy as parts } from "@uniland-ui/anatomy"
 import type {
   PartsStyleFunction,
   PartsStyleObject,
   SystemStyleFunction,
   SystemStyleObject,
-} from "@uisland-ui/theme-tools"
-import { mergeWith } from "@uisland-ui/utils"
-import { mode } from "@uisland-ui/theme-tools"
+} from "@uniland-ui/theme-tools"
+import { mergeWith } from "@uniland-ui/utils"
+import { mode } from "@uniland-ui/theme-tools"
 import Input from "./input"
 
 const baseStyleField: SystemStyleFunction = (props) => {

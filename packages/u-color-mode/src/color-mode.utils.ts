@@ -1,9 +1,9 @@
 import { Ref } from "@vue/runtime-core"
-import { isBrowser, noop } from "@uisland-ui/utils"
+import { isBrowser, noop } from "@uniland-ui/utils"
 
 const classNames = {
-  light: "uisland-ui-light",
-  dark: "uisland-ui-dark",
+  light: "uniland-ui-light",
+  dark: "uniland-ui-dark",
 }
 
 export type ColorModeRef = Ref<"light" | "dark">
@@ -76,12 +76,12 @@ export function addListener(fn: Function) {
 export const root = {
   get: () =>
     document.documentElement.style.getPropertyValue(
-      "--uisland-ui-color-mode"
+      "--uniland-ui-color-mode"
     ) as ColorModeRef["value"],
   set: (mode: ColorModeRef) => {
     if (isBrowser) {
       document.documentElement.style.setProperty(
-        "--uisland-ui-color-mode",
+        "--uniland-ui-color-mode",
         mode.value
       )
     }

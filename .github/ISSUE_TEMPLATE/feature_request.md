@@ -1,6 +1,6 @@
 ---
 name: Request a feature
-about: Create a feature request for the Uisland UI ecosystem
+about: Create a feature request for the Uniland UI ecosystem
 ---
 
 # Feature request

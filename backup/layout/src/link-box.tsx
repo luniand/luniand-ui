@@ -1,8 +1,8 @@
-import { ComponentWithProps, HTMLUislandProps } from "@uisland-ui/vue-system"
+import { ComponentWithProps, HTMLUnilandProps } from "@uniland-ui/vue-system"
 import { h, defineComponent, PropType } from "vue"
-import { uisland, DOMElements, DeepPartial } from "@uisland-ui/vue-system"
+import { uniland, DOMElements, DeepPartial } from "@uniland-ui/vue-system"
 
-export interface LinkOverlayProps extends HTMLUislandProps<"a"> {
+export interface LinkOverlayProps extends HTMLUnilandProps<"a"> {
   /**
    *  If `true`, the link will open in new tab
    */
@@ -21,7 +21,7 @@ export const CLinkOverlay: ComponentWithProps<DeepPartial<LinkOverlayProps>> =
     },
     setup(props, { slots, attrs }) {
       return () => (
-        <uisland.div
+        <uniland.div
           as={props.as}
           __label="linkbox__overlay"
           // @ts-ignore Can we type the "rel" HTML JSX Attribute?
@@ -44,17 +44,17 @@ export const CLinkOverlay: ComponentWithProps<DeepPartial<LinkOverlayProps>> =
           {...attrs}
         >
           {slots}
-        </uisland.div>
+        </uniland.div>
       )
     },
   })
 
-export interface LinkBoxProps extends HTMLUislandProps<"div"> {}
+export interface LinkBoxProps extends HTMLUnilandProps<"div"> {}
 
 /**
  * `LinkBox` is used to wrap content areas within a link while ensuring semantic html
  *
- * @see Docs https://vue.uisland-ui.com/docs/link-overlay
+ * @see Docs https://vue.uniland-ui.com/docs/link-overlay
  * @see Resources https://www.sarasoueidan.com/blog/nested-links
  */
 export const CLinkBox: ComponentWithProps<DeepPartial<LinkBoxProps>> =
@@ -69,13 +69,13 @@ export const CLinkBox: ComponentWithProps<DeepPartial<LinkBoxProps>> =
     setup(props, { slots, attrs }) {
       return () => {
         return (
-          <uisland.div
+          <uniland.div
             as={props.as}
             __label="linkbox"
             position="relative"
             __css={{
               /* Elevates links and abbreviations */
-              "a[href]:not(.uisland-linkbox__overlay), abbr[title]": {
+              "a[href]:not(.uniland-linkbox__overlay), abbr[title]": {
                 position: "relative",
                 zIndex: 1,
               },
@@ -83,7 +83,7 @@ export const CLinkBox: ComponentWithProps<DeepPartial<LinkBoxProps>> =
             {...attrs}
           >
             {slots}
-          </uisland.div>
+          </uniland.div>
         )
       }
     },

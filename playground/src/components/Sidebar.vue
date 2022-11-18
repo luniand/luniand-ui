@@ -1,5 +1,5 @@
 <script>
-import { uisland } from '@uisland-ui/vue-system'
+import { uniland } from '@uniland-ui/vue-system'
 import { defineComponent, h } from 'vue'
 import { RouterLink } from 'vue-router'
 
@@ -8,30 +8,30 @@ const Stories = defineComponent({
   inheritAttrs: false,
   setup(props) {
     return () => {
-      const uislandLogo = h(
-        uisland(RouterLink),
+      const unilandLogo = h(
+        uniland(RouterLink),
         {
           to: '/',
           _hover: { color: 'blue.400' },
         },
         () =>
-          h(uisland.img, {
+          h(uniland.img, {
             w: '120px',
             mt: 4,
             src:
-              'https://res.cloudinary.com/xtellar/image/upload/v1584242872/uisland-ui/uisland-ui-vue.png',
+              'https://res.cloudinary.com/xtellar/image/upload/v1584242872/uniland-ui/uniland-ui-vue.png',
           })
       )
 
       const storyTitle = (story) =>
-        h(uisland.h3, { mt: 2, mb: 0, fontWeight: 'bold' }, () => story.name)
+        h(uniland.h3, { mt: 2, mb: 0, fontWeight: 'bold' }, () => story.name)
 
       const storyItem = (story) => {
         if (story.path === '/') {
-          return uislandLogo
+          return unilandLogo
         } else
           return h(
-            uisland(RouterLink),
+            uniland(RouterLink),
             {
               to: story.path,
               _hover: { color: 'blue.400' },
@@ -42,7 +42,7 @@ const Stories = defineComponent({
 
       const liItem = (story) =>
         h(
-          uisland.li,
+          uniland.li,
           {
             pl: 2,
             fontSize: '0.8rem',
@@ -54,9 +54,9 @@ const Stories = defineComponent({
           ]
         )
 
-      return h(uisland.nav, { overflowY: 'scroll', w: '250px' }, () =>
+      return h(uniland.nav, { overflowY: 'scroll', w: '250px' }, () =>
         h(
-          uisland.ul,
+          uniland.ul,
           {
             p: 0,
             m: 0,

@@ -1,6 +1,6 @@
 <template>
-  <uisland.div py="4">
-    <uisland.div py="4">
+  <uniland.div py="4">
+    <uniland.div py="4">
       <c-aspect-ratio maxW="360px" :ratio="16 / 9" mb="4">
         <img src="https://bit.ly/naruto-sage" alt="img" />
       </c-aspect-ratio>
@@ -16,6 +16,6 @@
           allowFullScreen
         />
       </c-aspect-ratio>
-    </uisland.div>
-  </uisland.div>
+    </uniland.div>
+  </uniland.div>
 </template>

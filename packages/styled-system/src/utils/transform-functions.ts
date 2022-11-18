@@ -1,4 +1,4 @@
-import { Dict, isCssVar, isNumber, isString } from "@uisland-ui/utils"
+import { Dict, isCssVar, isNumber, isString } from "@uniland-ui/utils"
 import {
   backdropFilterTemplate,
   filterTemplate,

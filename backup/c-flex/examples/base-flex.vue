@@ -1,7 +1,7 @@
 <template>
   <c-flex align="center">
     <c-flex :bg="{ base: 'green.50', sm: 'blue.50' }" align="flex-end">
-      <uisland.p>Box 1</uisland.p>
+      <uniland.p>Box 1</uniland.p>
     </c-flex>
     <c-flex
       :bg="['blue.50', 'pink.50']"
@@ -9,10 +9,10 @@
       align="center"
       justify="center"
     >
-      <uisland.p text-align="center" bg="orange.50"> Box 2 </uisland.p>
+      <uniland.p text-align="center" bg="orange.50"> Box 2 </uniland.p>
     </c-flex>
-    <uisland.div>
-      <uisland.p bg="tomato" color="white"> Box 3 </uisland.p>
-    </uisland.div>
+    <uniland.div>
+      <uniland.p bg="tomato" color="white"> Box 3 </uniland.p>
+    </uniland.div>
   </c-flex>
 </template>

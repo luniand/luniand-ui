@@ -1,20 +1,20 @@
 import { computed, defineComponent, h, PropType } from "vue"
 import {
-  uisland,
+  uniland,
   DOMElements,
   SystemStyleObject,
-  HTMLUislandProps,
+  HTMLUnilandProps,
   DeepPartial,
   ComponentWithProps,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 
-export interface BoxProps extends HTMLUislandProps<"div"> {}
+export interface BoxProps extends HTMLUnilandProps<"div"> {}
 
 /**
- * Box is the most abstract component on top of which other uisland
+ * Box is the most abstract component on top of which other uniland
  * components are built. It renders a `div` element by default.
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/box
+ * @see Docs https://vue.uniland-ui.com/docs/layout/box
  */
 export const CBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
   name: "CBox",
@@ -26,9 +26,9 @@ export const CBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
   },
   setup(props, { slots, attrs }) {
     return () => (
-      <uisland.div as={props.as} __label="box" {...attrs}>
+      <uniland.div as={props.as} __label="box" {...attrs}>
         {() => slots?.default?.()}
-      </uisland.div>
+      </uniland.div>
     )
   },
 })
@@ -53,7 +53,7 @@ export interface SquareProps extends Omit<BoxProps, Omitted> {
 /**
  * CSquare is the `CBox` component implemented as a square
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/box
+ * @see Docs https://vue.uniland-ui.com/docs/layout/box
  */
 export const CSquare: ComponentWithProps<DeepPartial<SquareProps>> =
   defineComponent({
@@ -91,7 +91,7 @@ export const CSquare: ComponentWithProps<DeepPartial<SquareProps>> =
 /**
  * CCircle is the `CBox` component implemented as a circle
  *
- * @see Docs https://vue.uisland-ui.com/docs/layout/box
+ * @see Docs https://vue.uniland-ui.com/docs/layout/box
  */
 export const CCircle: ComponentWithProps<DeepPartial<SquareProps>> =
   defineComponent({

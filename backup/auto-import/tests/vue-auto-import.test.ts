@@ -1,6 +1,6 @@
 import { componentResolver } from "../src"
 
-it("should resolve uisland components with import name and path", () => {
+it("should resolve uniland components with import name and path", () => {
   const components = [
     "CCloseButton",
     "CBox",
@@ -13,7 +13,7 @@ it("should resolve uisland components with import name and path", () => {
     "CKbd",
   ]
 
-  const path = "@uisland-ui/vue-next"
+  const path = "@uniland-ui/vue-next"
 
   components.forEach((templateComponent: string) => {
     expect(componentResolver(templateComponent)).toEqual({

@@ -1,4 +1,4 @@
-import { Dict, isString } from "@uisland-ui/utils"
+import { Dict, isString } from "@uniland-ui/utils"
 import { Transform } from "./types"
 
 const directionMap = {

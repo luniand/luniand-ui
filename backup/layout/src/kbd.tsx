@@ -1,17 +1,17 @@
-import { vueThemingProps, extractStyleAttrs } from "@uisland-ui/vue-utils"
+import { vueThemingProps, extractStyleAttrs } from "@uniland-ui/vue-utils"
 import {
-  uisland,
+  uniland,
   DOMElements,
   ThemingProps,
   useStyleConfig,
-  HTMLUislandProps,
+  HTMLUnilandProps,
   ComponentWithProps,
   DeepPartial,
-} from "@uisland-ui/vue-system"
+} from "@uniland-ui/vue-system"
 import { computed, defineComponent, h, PropType } from "vue"
-import { filterUndefined } from "@uisland-ui/utils"
+import { filterUndefined } from "@uniland-ui/utils"
 
-export interface KbdProps extends HTMLUislandProps<"kbd">, ThemingProps<"Kbd"> {}
+export interface KbdProps extends HTMLUnilandProps<"kbd">, ThemingProps<"Kbd"> {}
 
 /**
  * Semantic component to render a keyboard shortcut
@@ -23,7 +23,7 @@ export interface KbdProps extends HTMLUislandProps<"kbd">, ThemingProps<"Kbd"> {
  * <CKbd>⌘ + T</CKbd>
  * ```
  *
- * @see Docs https://vue.uisland-ui.com/docs/data-display/kbd
+ * @see Docs https://vue.uniland-ui.com/docs/data-display/kbd
  */
 export const CKbd: ComponentWithProps<DeepPartial<KbdProps>> = defineComponent({
   name: "CKbd",
@@ -46,13 +46,13 @@ export const CKbd: ComponentWithProps<DeepPartial<KbdProps>> = defineComponent({
     const styles = useStyleConfig("Kbd", themingProps)
 
     return () => (
-      <uisland.kbd
+      <uniland.kbd
         __label="kbd"
         __css={{ fontFamily: "mono", ...styles.value }}
         {...attrs}
       >
         {slots}
-      </uisland.kbd>
+      </uniland.kbd>
     )
   },
 })

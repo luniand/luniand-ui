@@ -6,31 +6,31 @@ const {
 } = require("../packages/core/package.json")
 
 const { ESLint } = require("eslint")
-const { domElements } = require("@uisland-ui/vue-system")
-const UislandComponents = require("@uisland-ui/vue-next")
+const { domElements } = require("@uniland-ui/vue-system")
+const UnilandComponents = require("@uniland-ui/vue-next")
 
-type ComponentsImport = typeof UislandComponents
+type ComponentsImport = typeof UnilandComponents
 
 async function generateComponents() {
   let code = ``
 
-  for (const component in UislandComponents) {
+  for (const component in UnilandComponents) {
     /**
      * Group of strict checks to make sure that
      * we only generate types for components.
      */
     if (
       component.startsWith("C") &&
-      UislandComponents[component]?.name &&
-      UislandComponents[component]?.setup &&
-      typeof UislandComponents[component]?.setup === "function"
+      UnilandComponents[component]?.name &&
+      UnilandComponents[component]?.setup &&
+      typeof UnilandComponents[component]?.setup === "function"
     ) {
       code += `${component}: typeof import('${pkgName}')['${component}']\n`
     }
   }
 
   for (let el = 0; el < domElements.length; el++) {
-    code += `'uisland.${domElements[el]}': typeof import('${pkgName}')['CBox']\n`
+    code += `'uniland.${domElements[el]}': typeof import('${pkgName}')['CBox']\n`
   }
 
   const allTypes = `
@@ -45,7 +45,7 @@ async function generateComponents() {
    * This file was generated on ${new Date().toISOString()}
    */
 
-   import { UislandProps, uisland } from '@uisland-ui/vue-system'
+   import { UnilandProps, uniland } from '@uniland-ui/vue-system'
    import { VNodeChild, VNode, HTMLAttributes } from 'vue'
    
    export type JsxNode = VNodeChild | JSX.Element
@@ -62,7 +62,7 @@ async function generateComponents() {
     
         interface IntrinsicAttributes
           extends Omit<HTMLAttributes, "color">,
-            UislandProps {}
+            UnilandProps {}
       }
     }
 
@@ -89,22 +89,22 @@ async function generateComponents() {
        innerHTML?: JsxNode
      }
   
-  declare var uisland: typeof import("@uisland-ui/vue-next")["uisland"]
+  declare var uniland: typeof import("@uniland-ui/vue-next")["uniland"]
 
   declare module '@vue/runtime-core' {
-    import { uisland } from '@uisland-ui/vue-next'
-    export { uisland }
+    import { uniland } from '@uniland-ui/vue-next'
+    export { uniland }
 
     /* Global component types for Volar auto-complete */
     export interface GlobalComponents {
-      uisland: typeof import('@uisland-ui/vue-next')['uisland']
+      uniland: typeof import('@uniland-ui/vue-next')['uniland']
       ${code}
     }
 
     /* Component custom props types for JSX and TSX auto complete */
     export interface ComponentCustomProps
       extends JsxComponentCustomProps,
-        UislandProps {
+        UnilandProps {
       vSlots?: {
         [eleName: string]: JSX.Element
       }

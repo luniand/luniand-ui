@@ -7,10 +7,10 @@ import { Config } from "../utils/prop-config"
  */
 export const ring: Config = {
   ring: { transform: transforms.ring },
-  ringColor: t.colors("--uisland-ring-color"),
-  ringOffset: t.prop("--uisland-ring-offset-width"),
-  ringOffsetColor: t.colors("--uisland-ring-offset-color"),
-  ringInset: t.prop("--uisland-ring-inset"),
+  ringColor: t.colors("--uniland-ring-color"),
+  ringOffset: t.prop("--uniland-ring-offset-width"),
+  ringOffsetColor: t.colors("--uniland-ring-offset-color"),
+  ringInset: t.prop("--uniland-ring-inset"),
 }
 
 export interface RingProps {

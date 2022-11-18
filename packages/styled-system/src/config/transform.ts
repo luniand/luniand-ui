@@ -6,14 +6,14 @@ export const transform: Config = {
   clipPath: true,
   transform: t.propT("transform", transforms.transform),
   transformOrigin: true,
-  translateX: t.spaceT("--uisland-translate-x"),
-  translateY: t.spaceT("--uisland-translate-y"),
-  skewX: t.degreeT("--uisland-skew-x"),
-  skewY: t.degreeT("--uisland-skew-y"),
-  scaleX: t.prop("--uisland-scale-x"),
-  scaleY: t.prop("--uisland-scale-y"),
-  scale: t.prop(["--uisland-scale-x", "--uisland-scale-y"]),
-  rotate: t.degreeT("--uisland-rotate"),
+  translateX: t.spaceT("--uniland-translate-x"),
+  translateY: t.spaceT("--uniland-translate-y"),
+  skewX: t.degreeT("--uniland-skew-x"),
+  skewY: t.degreeT("--uniland-skew-y"),
+  scaleX: t.prop("--uniland-scale-x"),
+  scaleY: t.prop("--uniland-scale-y"),
+  scale: t.prop(["--uniland-scale-x", "--uniland-scale-y"]),
+  rotate: t.degreeT("--uniland-rotate"),
 }
 
 export interface TransformProps {
@@ -34,13 +34,13 @@ export interface TransformProps {
   /**
    * Translate value of an elements in the x-direction.
    * - Only works if `transform=auto`
-   * - It sets the value of `--uisland-translate-x`
+   * - It sets the value of `--uniland-translate-x`
    */
   translateX?: Token<Length>
   /**
    * Translate value of an elements in the y-direction.
    * - Only works if `transform=auto`
-   * - It sets the value of `--uisland-translate-y`
+   * - It sets the value of `--uniland-translate-y`
    */
   translateY?: Token<Length>
   /**
@@ -50,25 +50,25 @@ export interface TransformProps {
   /**
    * Skew value of an elements in the x-direction.
    * - Only works if `transform=auto`
-   * - It sets the value of `--uisland-skew-x`
+   * - It sets the value of `--uniland-skew-x`
    */
   skewX?: Token<Length>
   /**
    * Skew value of an elements in the y-direction.
    * - Only works if `transform=auto`
-   * - It sets the value of `--uisland-skew-y`
+   * - It sets the value of `--uniland-skew-y`
    */
   skewY?: Token<Length>
   /**
    * Scale value of an elements in the x-direction.
    * - Only works if `transform=auto`
-   * - It sets the value of `--uisland-scale-x`
+   * - It sets the value of `--uniland-scale-x`
    */
   scaleX?: Token<Length>
   /**
    * Scale value of an elements in the y-direction.
    * - Only works if `transform=auto`
-   * - It sets the value of `--uisland-scale-y`
+   * - It sets the value of `--uniland-scale-y`
    */
   scaleY?: Token<Length>
   /**

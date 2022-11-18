@@ -1,4 +1,4 @@
-import { isObject } from "@uisland-ui/utils"
+import { isObject } from "@uniland-ui/utils"
 import { CSSVar } from "./css-var"
 
 export type Operand = string | number | CSSVar
