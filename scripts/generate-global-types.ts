@@ -6,8 +6,8 @@ const {
 } = require("../packages/core/package.json")
 
 const { ESLint } = require("eslint")
-const { domElements } = require("@uniland-ui/vue-system")
-const UnilandComponents = require("@uniland-ui/vue-next")
+const { domElements } = require("@uniland-ui/system")
+const UnilandComponents = require("@uniland-ui/vue")
 
 type ComponentsImport = typeof UnilandComponents
 
@@ -30,7 +30,7 @@ async function generateComponents() {
   }
 
   for (let el = 0; el < domElements.length; el++) {
-    code += `'uniland.${domElements[el]}': typeof import('${pkgName}')['CBox']\n`
+    code += `'uniland.${domElements[el]}': typeof import('${pkgName}')['UBox']\n`
   }
 
   const allTypes = `
@@ -45,8 +45,8 @@ async function generateComponents() {
    * This file was generated on ${new Date().toISOString()}
    */
 
-   import { UnilandProps, uniland } from '@uniland-ui/vue-system'
-   import { VNodeChild, VNode, HTMLAttributes } from 'vue'
+   import { UnilandProps, uniland } from '@uniland-ui/system'
+   import { VNodeChild, VNode, HTMLAttributes } from '@vue/runtime-core'
    
    export type JsxNode = VNodeChild | JSX.Element
    
@@ -89,15 +89,15 @@ async function generateComponents() {
        innerHTML?: JsxNode
      }
   
-  declare var uniland: typeof import("@uniland-ui/vue-next")["uniland"]
+  declare var uniland: typeof import("@uniland-ui/vue")["uniland"]
 
   declare module '@vue/runtime-core' {
-    import { uniland } from '@uniland-ui/vue-next'
+    import { uniland } from '@uniland-ui/vue'
     export { uniland }
 
     /* Global component types for Volar auto-complete */
     export interface GlobalComponents {
-      uniland: typeof import('@uniland-ui/vue-next')['uniland']
+      uniland: typeof import('@uniland-ui/vue')['uniland']
       ${code}
     }
 
