@@ -34,9 +34,9 @@ export default defineConfig({
 That's it! In your template, you can use it as follows:
 ```vue
 <template>
-  <c-alert status="info" mb="3">
-    <c-alert-title> Info alert </c-alert-title>
-    <c-alert-description> Something just happened </c-alert-description>
-  </c-alert>
+  <u-alert status="info" mb="3">
+    <u-alert-title> Info alert </u-alert-title>
+    <u-alert-description> Something just happened </u-alert-description>
+  </u-alert>
 </template>
 ```

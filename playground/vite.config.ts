@@ -3,14 +3,10 @@ import vue from "@vitejs/plugin-vue"
 import Components from "unplugin-vue-components/vite"
 import Pages from "vite-plugin-pages"
 import Layouts from "vite-plugin-vue-layouts"
-import UnilandComponents from "./playground/build/components.json"
 import path from "path"
+import UnilandComponents from "./build/components.json"
 
 export default defineConfig({
-  test: {
-    globals: true,
-    environment: "happy-dom",
-  },
   esbuild: {
     jsxFactory: "h",
     jsxFragment: "Fragment",
@@ -20,19 +16,6 @@ export default defineConfig({
   },
   build: {
     target: "modules",
-  },
-  server: {
-    watch: {
-      ignored: ["**/*snapshots*"],
-    },
-  },
-  resolve: {
-    alias: {
-      "@uniland-ui/vue-test-utils": path.resolve(
-        __dirname,
-        "./packages/test-utils"
-      ),
-    },
   },
   plugins: [
     vue(),
@@ -44,7 +27,7 @@ export default defineConfig({
           return route
         }
         const [groupRaw] = route.name!.split("-examples-")
-        const [_, group] = groupRaw.split("c-")
+        const [_, group] = groupRaw.split("u-")
         return {
           ...route,
           groupRaw,
@@ -62,7 +45,7 @@ export default defineConfig({
           if (name in UnilandComponents) {
             return {
               importName: name,
-              path: `@uniland-ui/vue-next`,
+              path: `@uniland-ui/vue`,
             }
           }
         },

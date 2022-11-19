@@ -279,7 +279,7 @@ select::-ms-expand {
 }
 `
 
-export const CReset = defineComponent({
+export const UReset = defineComponent({
   setup() {
     injectGlobal(cssResetStyles)
     return () => null

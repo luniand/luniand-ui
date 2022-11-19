@@ -31,6 +31,7 @@
     "@uniland-ui/theme-tools": "^0.1.0-alpha.10",
     "@uniland-ui/u-color-mode": "^0.1.0-alpha.10",
     "@uniland-ui/u-icon": "^1.0.0-alpha.10",
+    "@uniland-ui/u-layout": "^0.1.0-alpha.11",
     "@uniland-ui/u-reset": "^1.0.0-alpha.10",
     "@uniland-ui/utils": "^0.1.0-alpha.13"
   },

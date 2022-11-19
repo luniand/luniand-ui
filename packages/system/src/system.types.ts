@@ -59,7 +59,7 @@ export interface UnilandProps extends SystemProps, StyleResolverProps {
    *
    * @example
    * ```html
-   * <c-box apply="styles.h3">This is a div</c-box>
+   * <u-box apply="styles.h3">This is a div</u-box>
    * ```
    *
    * This will apply styles defined in `theme.styles.h3`

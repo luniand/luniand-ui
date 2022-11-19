@@ -8,7 +8,7 @@ import { defineComponent } from 'vue'
 export default defineComponent({
   mounted() {
     this.$nextTick(() => {
-      this.$router.push('/c-alert/examples/base-alert')
+      this.$router.push('/u-alert/examples/base-alert')
     })
   }
 })

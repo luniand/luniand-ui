@@ -1,9 +1,9 @@
 {
-  "name": "@uniland-ui/c-flex",
-  "description": "Uniland UI Vue | C-flex component component",
+  "name": "@uniland-ui/u-flex",
+  "description": "Uniland UI Vue | u-flex component component",
   "version": "1.0.0-alpha.10",
-  "main": "dist/uniland-ui-c-flex.cjs.js",
-  "module": "dist/uniland-ui-c-flex.esm.js",
+  "main": "dist/uniland-ui-u-flex.cjs.js",
+  "module": "dist/uniland-ui-u-flex.esm.js",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
   "homepage": "https://github.com/uniland-ui/uniland-ui-vue-next#readme",
   "license": "MIT",
@@ -12,14 +12,14 @@
   ],
   "exports": {
     ".": {
-      "require": "./dist/uniland-ui-c-flex.cjs.js",
-      "default": "./dist/uniland-ui-c-flex.esm.js"
+      "require": "./dist/uniland-ui-u-flex.cjs.js",
+      "default": "./dist/uniland-ui-u-flex.esm.js"
     }
   },
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next/tree/master/packages/c-flex",
+  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next/tree/master/packages/u-flex",
   "bugs": {
     "url": "https://github.com/uniland-ui/uniland-ui-vue-next/issues"
   },

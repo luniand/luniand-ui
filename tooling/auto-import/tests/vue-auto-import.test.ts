@@ -9,7 +9,7 @@ it("should resolve uniland components with import name and path", () => {
     "CVStack",
     "CBox",
     "CCircle",
-    "CSquare",
+    "USquare",
     "CKbd",
   ]
 

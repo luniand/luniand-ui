@@ -1,4 +1,4 @@
-import { computed, defineComponent, h, PropType } from "vue"
+import { computed, defineComponent, h, PropType } from "@vue/runtime-core"
 import {
   uniland,
   DOMElements,
@@ -6,7 +6,7 @@ import {
   HTMLUnilandProps,
   DeepPartial,
   ComponentWithProps,
-} from "@uniland-ui/vue-system"
+} from "@uniland-ui/system"
 
 export interface BoxProps extends HTMLUnilandProps<"div"> {}
 
@@ -14,10 +14,10 @@ export interface BoxProps extends HTMLUnilandProps<"div"> {}
  * Box is the most abstract component on top of which other uniland
  * components are built. It renders a `div` element by default.
  *
- * @see Docs https://vue.uniland-ui.com/docs/layout/box
+ * @see Docs https://uniland-ui.luniand.com/docs/layout/box
  */
-export const CBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
-  name: "CBox",
+export const UBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
+  name: "UBox",
   props: {
     as: {
       type: [String, Object] as PropType<DOMElements>,
@@ -25,14 +25,18 @@ export const CBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
     },
   },
   setup(props, { slots, attrs }) {
-    return () => (
-      <uniland.div as={props.as} __label="box" {...attrs}>
-        {() => slots?.default?.()}
-      </uniland.div>
-    )
+    return () =>
+      h(
+        uniland.div,
+        {
+          as: props.as,
+          __label: "box",
+          ...attrs,
+        },
+        () => slots?.default?.()
+      )
   },
 })
-
 /**
  * As a constraint, you can't pass size related props
  * Only `size` would be allowed
@@ -51,13 +55,13 @@ export interface SquareProps extends Omit<BoxProps, Omitted> {
 }
 
 /**
- * CSquare is the `CBox` component implemented as a square
+ * USquare is the `UBox` component implemented as a square
  *
- * @see Docs https://vue.uniland-ui.com/docs/layout/box
+ * @see Docs https://uniland-ui.luniand.com/docs/layout/box
  */
-export const CSquare: ComponentWithProps<DeepPartial<SquareProps>> =
+export const USquare: ComponentWithProps<DeepPartial<SquareProps>> =
   defineComponent({
-    name: "CSquare",
+    name: "USquare",
     props: {
       size: [Object, String, Number] as PropType<SquareProps["size"]>,
       centerContent: {
@@ -71,36 +75,43 @@ export const CSquare: ComponentWithProps<DeepPartial<SquareProps>> =
           ? { display: "flex", alignItems: "center", justifyContent: "center" }
           : {}
       )
-      return () => (
-        <CBox
-          __label="square"
-          boxSize={props.size}
-          __css={{
-            ...styles.value,
-            flexShrink: 0,
-            flexGrow: 0,
-          }}
-          {...attrs}
-        >
-          {slots}
-        </CBox>
-      )
+
+      return () =>
+        h(
+          UBox,
+          {
+            __label: "square",
+            boxSize: props.size,
+            __css: {
+              ...styles.value,
+              flexShrink: 0,
+              flexGrow: 0,
+            },
+            ...attrs,
+          },
+          slots
+        )
     },
   })
 
 /**
- * CCircle is the `CBox` component implemented as a circle
+ * UCircle is the `UBox` component implemented as a circle
  *
- * @see Docs https://vue.uniland-ui.com/docs/layout/box
+ * @see Docs https://uniland-ui.luniand.com/docs/layout/box
  */
-export const CCircle: ComponentWithProps<DeepPartial<SquareProps>> =
+export const UCircle: ComponentWithProps<DeepPartial<SquareProps>> =
   defineComponent({
-    name: "CCircle",
+    name: "UCircle",
     setup(_, { slots, attrs }) {
-      return () => (
-        <CSquare __label="circle" borderRadius="9999px" {...attrs}>
-          {slots}
-        </CSquare>
-      )
+      return () =>
+        h(
+          USquare,
+          {
+            __label: "circle",
+            borderRadius: "9999px",
+            ...attrs,
+          },
+          slots
+        )
     },
   })

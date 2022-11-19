@@ -96,7 +96,7 @@ const unilandProps = {
    * then, we do not pass v-model event listeners onto the component. This means that
    * `v-model` will not work in the template context.
    *
-   * You can see how this prop is used in the `c-input` component.
+   * You can see how this prop is used in the `u-input` component.
    *
    * THIS PROP IS A NON-DOCUMENTED PROP, AND IS ONLY TO BE USED FOR INTERNAL DEVELOPMENT.
    */
@@ -136,7 +136,7 @@ export type UnilandTagOrComponent =
  *    ```js
  *    const MyCustomButton = uniland('button', {
  *     baseStyle: {
-         bg: 'papayawhip,
+         bg: 'red,
          color: 'red.500,
          px: 4,
          py: 3
@@ -149,7 +149,7 @@ export type UnilandTagOrComponent =
  * 
  *    See more about the style resolution in the `resolveStyles` function.
  * 
- * 3. Uniland components created and styled using the `uniland` factory can be overriden in the template by applying
+ * 3. Uniland components created and styled using the `uniland` factory can be over-written in the template by applying
  *    style properties directly
  * 
  *    @example

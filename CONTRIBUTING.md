@@ -82,24 +82,24 @@ Each component is named this way: `@uniland-ui/[component]`. Let's say we want t
 build the button component. Here's how to do it:
 
 > *Take note that in order to prevent template tags name clashing with HTML elements or other Vue library components,*
-> *we prefix all component names with a `c-` in kebab-case or a capital `C` in PascalCase.*
+> *we prefix all component names with a `u-` in kebab-case or a capital `C` in PascalCase.*
 
 ```bash
-yarn workspace @uniland-ui/c-button build
+yarn workspace @uniland-ui/u-button build
 
 # or
 
-lerna run build --scope @uniland-ui/c-button
+lerna run build --scope @uniland-ui/u-button
 ```
 
 **Shortcut:**
 ```bash
 # to build
-yarn pkg @uniland-ui/c-tabs build
+yarn pkg @uniland-ui/u-tabs build
 
 # to test
-yarn pkg @uniland-ui/c-tabs test
-yarn pkg @uniland-ui/c-tabs test --watch
+yarn pkg @uniland-ui/u-tabs test
+yarn pkg @uniland-ui/u-tabs test --watch
 
 ```
 

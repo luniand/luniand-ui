@@ -8,8 +8,6 @@ import App from "./App.vue"
 import router from "./router"
 import { mode } from "@uniland-ui/theme-tools"
 
-console.log({ router })
-
 const app = createApp(App)
   .use(router)
   .use(MotionPlugin)
@@ -58,13 +56,6 @@ const app = createApp(App)
                 },
               },
             }
-          },
-        },
-        components: {
-          Button: {
-            baseStyle: {
-              shadow: "inset",
-            },
           },
         },
       }),

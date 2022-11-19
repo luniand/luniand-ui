@@ -1,8 +1,23 @@
 <template>
-  <h1>Hello</h1>
+  <u-reset />
+  <!-- <uniland.section display="flex" transition="all 0.2s" height="inherit" w="inherit">
+    <perfect-scrollbar>
+      <uniland.div pb="12">
+        <u-sidebar :stories="routes" />
+      </uniland.div>
+    </perfect-scrollbar>
+  </uniland.section> -->
+  <u-box bg="red" w="300px">
+    <u-square size="200" :center-content="false"  bg='tomato' color='white'>
+    <h1>Hello</h1>
+  </u-square>
+  </u-box>
 </template>
 
 <script setup lang="ts">
+import { UReset, UBox, USquare } from '@uniland-ui/vue'
+import USidebar from './components/Sidebar'
+import { routes } from './router'
 </script>
 
 <style src="vue3-perfect-scrollbar/dist/vue3-perfect-scrollbar.css"></style>

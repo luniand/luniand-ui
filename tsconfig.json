@@ -1,7 +1,6 @@
 {
-  //  "extends": "@vue/tsconfig/tsconfig.node.json",
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES5",
     "module": "esnext",
     "types": [
       "node",
@@ -36,6 +35,7 @@
     "packages/**/*.ts",
     "packages/**/*.tsx",
     "packages/*.tsx",
+    "playground/**/*.json",
     "playground/**/*.ts",
     "playground/**/*.tsx",
     "playground/**/*.d.ts",

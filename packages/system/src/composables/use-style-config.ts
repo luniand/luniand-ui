@@ -3,9 +3,7 @@ import { SystemStyleObject } from "@uniland-ui/styled-system"
 import { ThemingProps } from "../system.types"
 import { filterUndefined, get, mergeWith, runIfFn } from "@uniland-ui/utils"
 import { useUniland } from "./use-uniland"
-// import type { Theme } from "@uniland-ui/theme"
-// TODO: replace to theme packages
-type Theme = any
+import type { Theme } from "@uniland-ui/theme"
 
 export function useStyleConfig<Component extends keyof Theme["components"]>(
   themeKey: Component,

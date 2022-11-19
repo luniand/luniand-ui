@@ -122,55 +122,55 @@ export { uniland }
  */
 
 // A
-// export * from "@uniland-ui/c-accordion"
-// export * from "@uniland-ui/c-alert"
-// export * from "@uniland-ui/c-avatar"
+// export * from "@uniland-ui/u-accordion"
+// export * from "@uniland-ui/u-alert"
+// export * from "@uniland-ui/u-avatar"
 
 // B
-// export * from "@uniland-ui/c-breadcrumb"
-// export * from "@uniland-ui/c-button"
+// export * from "@uniland-ui/u-breadcrumb"
+// export * from "@uniland-ui/u-button"
 
 // C
-// export * from "@uniland-ui/c-checkbox"
-// export * from "@uniland-ui/c-color-mode"
-// export * from "@uniland-ui/c-close-button"
-// export * from "@uniland-ui/c-code"
+// export * from "@uniland-ui/u-checkbox"
+// export * from "@uniland-ui/u-color-mode"
+// export * from "@uniland-ui/u-close-button"
+// export * from "@uniland-ui/u-code"
 
 // F
-// export * from "@uniland-ui/c-flex"
-// export * from "@uniland-ui/c-focus-lock"
-// export * from "@uniland-ui/c-form-control"
+// export * from "@uniland-ui/u-flex"
+// export * from "@uniland-ui/u-focus-lock"
+// export * from "@uniland-ui/u-form-control"
 
 // I
 export * from "@uniland-ui/u-icon"
-// export * from "@uniland-ui/c-input"
+// export * from "@uniland-ui/u-input"
 
 // L
-// export * from "@uniland-ui/vue-layout"
+export * from "@uniland-ui/u-layout"
 
 // M
-// export * from "@uniland-ui/c-modal"
-// export * from "@uniland-ui/c-motion"
+// export * from "@uniland-ui/u-modal"
+// export * from "@uniland-ui/u-motion"
 
 // P
-// export * from "@uniland-ui/c-pin-input"
-// export * from "@uniland-ui/c-popper"
-// export * from "@uniland-ui/c-portal"
+// export * from "@uniland-ui/u-pin-input"
+// export * from "@uniland-ui/u-popper"
+// export * from "@uniland-ui/u-portal"
 
 // R
 export * from "@uniland-ui/u-reset"
 
 // S
-// export * from "@uniland-ui/c-skip-nav"
-// export * from "@uniland-ui/c-spinner"
-// export * from "@uniland-ui/c-scroll-lock"
+// export * from "@uniland-ui/u-skip-nav"
+// export * from "@uniland-ui/u-spinner"
+// export * from "@uniland-ui/u-scroll-lock"
 
 // T
-// export * from "@uniland-ui/c-theme-provider"
-// export * from "@uniland-ui/c-tag"
+// export * from "@uniland-ui/u-theme-provider"
+// export * from "@uniland-ui/u-tag"
 
 // V
-// export * from "@uniland-ui/c-visually-hidden"
+// export * from "@uniland-ui/u-visually-hidden"
 
 // OTHERS
 // export * from "@uniland-ui/vue-composables"

@@ -6,7 +6,7 @@
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-11-19T16:52:03.846Z
+ * This file was generated on 2022-11-19T20:13:26.302Z
  */
 
 import { UnilandProps, uniland } from "@uniland-ui/system"
@@ -63,6 +63,9 @@ declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     uniland: typeof import("@uniland-ui/vue")["uniland"]
     UIcon: typeof import("@uniland-ui/vue")["UIcon"]
+    UBox: typeof import("@uniland-ui/vue")["UBox"]
+    UCircle: typeof import("@uniland-ui/vue")["UCircle"]
+    USquare: typeof import("@uniland-ui/vue")["USquare"]
     "uniland.a": typeof import("@uniland-ui/vue")["UBox"]
     "uniland.b": typeof import("@uniland-ui/vue")["UBox"]
     "uniland.article": typeof import("@uniland-ui/vue")["UBox"]

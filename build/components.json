@@ -1,3 +1,20 @@
 {
-  "CReset": {}
+  "UIcon": {
+    "name": "UIcon",
+    "props": {
+      "as": [
+        null,
+        null,
+        null,
+        null
+      ],
+      "size": [
+        null,
+        null,
+        null,
+        null
+      ]
+    }
+  },
+  "UReset": {}
 }

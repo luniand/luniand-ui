@@ -1,11 +1,11 @@
-# @uniland-ui/c-reset
+# @uniland-ui/u-reset
 
-uniland ui vue s lobal styles reset component
+uniland ui vue s global styles reset component
 
 ## Installation
 
 ```sh
-yarn add @uniland-ui/c-reset
+yarn add @uniland-ui/u-reset
 # or
-npm i @uniland-ui/c-reset
+npm i @uniland-ui/u-reset
 ```

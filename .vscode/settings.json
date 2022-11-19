@@ -6,6 +6,7 @@
     "composables",
     "contenteditable",
     "csstype",
+    "esbuild",
     "factiry",
     "feathericons",
     "flexbox",
@@ -13,13 +14,16 @@
     "fontawesome",
     "hygen",
     "mergewith",
+    "popperjs",
     "postbuild",
     "preplaygound",
+    "Segoe",
     "SNAO",
     "tabindex",
     "Uniland",
     "unplugin",
     "unusafe",
-    "vnode"
+    "vnode",
+    "vueuse"
   ]
 }
