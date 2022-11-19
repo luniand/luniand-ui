@@ -1,11 +1,6 @@
 import { createApp } from "vue"
-import Uniland, {
-  uniland,
-  extendTheme,
-  BodyScrollLockDirective,
-  extendUniland,
-} from "@uniland-ui/vue-next"
-import { domElements } from "@uniland-ui/vue-system"
+import Uniland, { uniland, extendTheme, extendUniland } from "@uniland-ui/vue"
+import { domElements } from "@uniland-ui/system"
 import { feActivity, feUser } from "feather-icons-paths"
 import PerfectScrollbar from "vue3-perfect-scrollbar"
 import { MotionPlugin } from "@vueuse/motion"
@@ -80,7 +75,5 @@ const app = createApp(App)
 domElements.forEach((tag) => {
   app.component(`uniland.${tag}`, uniland(tag))
 })
-
-app.directive("scroll-lock", BodyScrollLockDirective)
 
 app.mount("#app")

@@ -1,4 +1,4 @@
-const UnilandComponents = require("@uniland-ui/vue-next")
+const UnilandComponents = require("@uniland-ui/vue")
 const { writeFileSync, existsSync, mkdirSync } = require("fs")
 const { resolve } = require("path")
 

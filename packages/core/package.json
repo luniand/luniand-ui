@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/vue",
-  "version": "1.0.0-alpha.14",
+  "version": "1.0.0-alpha.15",
   "description": "Vue 3 compatible version of Uniland UI",
   "main": "dist/uniland-ui-vue.cjs.js",
   "module": "dist/uniland-ui-vue.esm.js",
@@ -30,6 +30,7 @@
     "@uniland-ui/theme": "^1.0.0-alpha.12",
     "@uniland-ui/theme-tools": "^0.1.0-alpha.10",
     "@uniland-ui/u-color-mode": "^0.1.0-alpha.10",
+    "@uniland-ui/u-icon": "^1.0.0-alpha.10",
     "@uniland-ui/u-reset": "^1.0.0-alpha.10",
     "@uniland-ui/utils": "^0.1.0-alpha.13"
   },

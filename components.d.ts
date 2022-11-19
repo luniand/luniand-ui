@@ -1,12 +1,12 @@
 /**
- * Typescript support for @@uniland-ui/vue1.0.0-alpha.14 auto-imported
+ * Typescript support for @@uniland-ui/vue1.0.0-alpha.15 auto-imported
  * components using `unplugin-vue-components,`
  *
  * @see: https://github.com/antfu/unplugin-vue-components/#typescript
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-11-18T21:41:57.108Z
+ * This file was generated on 2022-11-19T16:52:03.846Z
  */
 
 import { UnilandProps, uniland } from "@uniland-ui/system"
@@ -62,6 +62,7 @@ declare module "@vue/runtime-core" {
   /* Global component types for Volar auto-complete */
   export interface GlobalComponents {
     uniland: typeof import("@uniland-ui/vue")["uniland"]
+    UIcon: typeof import("@uniland-ui/vue")["UIcon"]
     "uniland.a": typeof import("@uniland-ui/vue")["UBox"]
     "uniland.b": typeof import("@uniland-ui/vue")["UBox"]
     "uniland.article": typeof import("@uniland-ui/vue")["UBox"]

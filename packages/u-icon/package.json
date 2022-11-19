@@ -1,7 +1,7 @@
 {
   "name": "@uniland-ui/u-icon",
   "description": "uniland UI | A component to display icons in the browser component",
-  "version": "1.0.0-alpha.10",
+  "version": "1.0.0-alpha.11",
   "main": "dist/uniland-ui-u-icon.cjs.js",
   "module": "dist/uniland-ui-u-icon.esm.js",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",

@@ -20,7 +20,7 @@ async function generateComponents() {
      * we only generate types for components.
      */
     if (
-      component.startsWith("C") &&
+      component.startsWith("U") &&
       UnilandComponents[component]?.name &&
       UnilandComponents[component]?.setup &&
       typeof UnilandComponents[component]?.setup === "function"

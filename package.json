@@ -34,7 +34,9 @@
     "test:silent": "cross-env NODE_ENV=test jest --verbose --silent --config jest.config.js",
     "test:ci": "yarn test:silent && yarn cy:run",
     "test:unit": "cross-env NODE_ENV=test jest --config jest.config.js",
-    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix"
+    "lint": "eslint '*/**/*.{js,ts,tsx}' --quiet --fix",
+    "size": "echo `TODO: Analyze build sizes`",
+    "analyze": "size-limit --why"
   },
   "license": "MIT",
   "private": true,
