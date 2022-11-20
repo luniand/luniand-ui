@@ -1,5 +1,6 @@
-import defaultTheme, { Theme, ColorHues } from "@uniland-ui/theme"
+import defaultTheme, { Theme } from "@uniland-ui/theme"
 import { isFunction, mergeWith } from "@uniland-ui/utils"
+import { ColorHues } from "@uniland-ui/theme"
 
 type ThemeExtensionTypeHints = {
   colors: Record<string, Partial<ColorHues> | Record<string, string> | string>
@@ -22,7 +23,7 @@ type DeepThemeExtension<ThemeObject, TypeHints> = {
 export type ThemeOverride = DeepThemeExtension<Theme, ThemeExtensionTypeHints>
 
 /**
- * Function to override or customize the Uniland UI theme conveniently
+ * Function to override or customize the uniland UI theme conveniently
  * @param overrides - Your custom theme object overrides
  * @param baseTheme - theme to customize
  */
@@ -30,7 +31,7 @@ export function extendTheme<T extends ThemeOverride>(
   overrides: T,
   baseTheme: any = defaultTheme
 ) {
-  function customize(source: unknown, override: unknown) {
+  function customizer(source: unknown, override: unknown) {
     if (isFunction(source)) {
       return (...args: unknown[]) => {
         const sourceValue = source(...args)
@@ -39,7 +40,7 @@ export function extendTheme<T extends ThemeOverride>(
           ? override(...args)
           : override
 
-        return mergeWith({}, sourceValue, overrideValue, customize)
+        return mergeWith({}, sourceValue, overrideValue, customizer)
       }
     }
 
@@ -47,5 +48,5 @@ export function extendTheme<T extends ThemeOverride>(
     return undefined
   }
 
-  return mergeWith({}, baseTheme, overrides, customize)
+  return mergeWith({}, baseTheme, overrides, customizer)
 }

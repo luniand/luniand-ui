@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/styled",
-  "version": "0.0.0-alpha.1",
+  "version": "0.0.1-alpha.1",
   "main": "dist/uniland-ui-styled.cjs.js",
   "module": "dist/uniland-ui-styled.esm.js",
   "files": [

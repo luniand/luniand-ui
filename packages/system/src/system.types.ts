@@ -1,24 +1,21 @@
-import {
-  Component,
-  Fragment,
-  Suspense,
-  Teleport,
-  AllowedComponentProps,
-  ComponentCustomProps,
-  VNodeProps,
-  VNode,
-} from "@vue/runtime-core"
-import { HTMLAttributes } from "@vue/runtime-dom"
+import { Component, Fragment, Suspense, Teleport } from "@vue/runtime-core"
 import {
   SystemProps,
   ResponsiveValue,
   StyleProps,
   ThemeTypings,
 } from "@uniland-ui/styled-system"
-import { Dict } from "@uniland-ui/utils"
 import { IntrinsicElementAttributes } from "./dom.types"
+import {
+  AllowedComponentProps,
+  ComponentCustomProps,
+  VNodeProps,
+  VNode,
+} from "@vue/runtime-core"
+import type { HTMLAttributes } from "@vue/runtime-dom"
 import { DOMElements } from "./system.utils"
 import { StyleResolverProps } from "./uniland"
+import { Dict } from "@uniland-ui/utils"
 
 /**
  * Export component with custom type
@@ -124,14 +121,14 @@ declare global {
   }
 }
 
-export interface ThemingProps<ThemeComponent extends string = any> {
+export interface ThemingProps<ThemeComponent extends string = string> {
   variant?: ThemeComponent extends keyof ThemeTypings["components"]
-    ? ThemeTypings["components"][ThemeComponent]["variants"]
+    ? ThemeTypings["components"][ThemeComponent]["variants"] | (string & {})
     : string
   size?: ThemeComponent extends keyof ThemeTypings["components"]
-    ? ThemeTypings["components"][ThemeComponent]["sizes"]
+    ? ThemeTypings["components"][ThemeComponent]["sizes"] | (string & {})
     : string
-  colorScheme?: ThemeTypings["colorSchemes"]
+  colorScheme?: ThemeTypings["colorSchemes"] | (string & {})
   orientation?: "vertical" | "horizontal"
   styleConfig?: Dict
 }

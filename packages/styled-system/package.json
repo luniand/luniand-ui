@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/styled-system",
-  "version": "0.1.1-alpha.1",
+  "version": "0.1.1-alpha.2",
   "main": "dist/uniland-ui-styled-system.cjs.js",
   "module": "dist/uniland-ui-styled-system.esm.js",
   "description": "uniland UI | Styled System module",
@@ -18,7 +18,8 @@
   },
   "dependencies": {
     "@uniland-ui/utils": "^0.1.0-alpha.10",
-    "csstype": "^3.1.1"
+    "csstype": "^3.1.1",
+    "lodash.mergewith": "^4.6.2"
   },
   "devDependencies": {
     "@vue/runtime-core": "^3.2.45"

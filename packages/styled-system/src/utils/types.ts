@@ -1,4 +1,4 @@
-import { AnalyzeBreakpointsReturn, Dict } from "@uniland-ui/utils"
+import { AnalyzeBreakpointsReturn } from "@uniland-ui/utils"
 import { ThemeTypings } from "../theme.types"
 
 export type ResponsiveArray<T> = Array<T | null>
@@ -20,19 +20,26 @@ export type Token<
   ? ResponsiveValue<Union<CSSType | ThemeTypings[ThemeKey]>>
   : ResponsiveValue<CSSType>
 
-// eslint-disable-next-line @typescript-eslint/member-delimiter-style
-export type CSSMap = Dict<{ value: string; var: string; varRef: string }>
+export type CSSMap = Record<
+  string,
+  // eslint-disable-next-line @typescript-eslint/member-delimiter-style
+  { value: string; var: string; varRef: string }
+>
 
-export type Transform = (value: any, theme: CssTheme, styles?: Dict) => any
+export type Transform = (
+  value: any,
+  theme: CssTheme,
+  styles?: Record<string, any>
+) => any
 
 export type WithCSSVar<T> = T & {
-  __cssVars: Dict
+  __cssVars: Record<string, any>
   __cssMap: CSSMap
   __breakpoints: AnalyzeBreakpointsReturn
 }
 
 export type CssTheme = WithCSSVar<{
-  breakpoints: Dict
+  breakpoints: Record<string, any>
   direction?: "ltr" | "rtl"
   [key: string]: any
 }>

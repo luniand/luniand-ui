@@ -1,3 +1,6 @@
+/**
+ * Thank you @albert for this piece of art!
+ */
 import { isObject } from "@uniland-ui/utils"
 
 export type Operand = string | number | { reference: string }

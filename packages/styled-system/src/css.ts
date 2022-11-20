@@ -1,30 +1,28 @@
-import {
-  Dict,
-  isCssVar,
-  isObject,
-  isString,
-  mergeWith as merge,
-  runIfFn,
-} from "@uniland-ui/utils"
+import { isObject, runIfFn } from "@uniland-ui/utils"
 import * as CSS from "csstype"
+import mergeWith from "lodash.mergewith"
 import { pseudoSelectors } from "./pseudos"
 import { systemProps as systemPropConfigs } from "./system"
 import { StyleObjectOrFn } from "./system.types"
 import { expandResponsive } from "./utils/expand-responsive"
 import { Config, PropConfig } from "./utils/prop-config"
+import { splitByComma } from "./utils/split-by-comma"
 import { CssTheme } from "./utils/types"
 
-const isCSSVariableTokenValue = (key: string, value: any): value is string =>
-  key.startsWith("--") && isString(value) && !isCssVar(value)
+function isCssVar(value: string): boolean {
+  return /^var\(--.+\)$/.test(value)
+}
 
-const resolveTokenValue = (theme: Dict, value: string) => {
+const isCSSVariableTokenValue = (key: string, value: any): value is string =>
+  key.startsWith("--") && typeof value === "string" && !isCssVar(value)
+
+const resolveTokenValue = (theme: Record<string, any>, value: string) => {
   if (value == null) return value
 
   const getVar = (val: string) => theme.__cssMap?.[val]?.varRef
   const getValue = (val: string) => getVar(val) ?? val
 
-  const valueSplit = value.split(",").map((v) => v.trim())
-  const [tokenValue, fallbackValue] = valueSplit
+  const [tokenValue, fallbackValue] = splitByComma(value)
   value = getVar(tokenValue) ?? getValue(fallbackValue) ?? getValue(value)
 
   return value
@@ -39,11 +37,11 @@ interface GetCSSOptions {
 export function getCss(options: GetCSSOptions) {
   const { configs = {}, pseudos = {}, theme } = options
 
-  const css = (stylesOrFn: Dict, nested = false) => {
+  const css = (stylesOrFn: Record<string, any>, nested = false) => {
     const _styles = runIfFn(stylesOrFn, theme)
     const styles = expandResponsive(_styles)(theme)
 
-    let computedStyles: Dict = {}
+    let computedStyles: Record<string, any> = {}
 
     for (let key in styles) {
       const valueOrFn = styles[key]
@@ -78,10 +76,13 @@ export function getCss(options: GetCSSOptions) {
       if (config === true) {
         config = { property: key } as PropConfig
       }
-
       if (isObject(value)) {
         computedStyles[key] = computedStyles[key] ?? {}
-        computedStyles[key] = merge({}, computedStyles[key], css(value, true))
+        computedStyles[key] = mergeWith(
+          {},
+          computedStyles[key],
+          css(value, true)
+        )
         continue
       }
 
@@ -97,7 +98,7 @@ export function getCss(options: GetCSSOptions) {
       rawValue = config?.processResult ? css(rawValue, true) : rawValue
 
       /**
-       * allows us define css properties for RTL and LTR.
+       * allows us to define css properties for RTL and LTR.
        *
        * const marginStart = {
        *   property: theme => theme.direction === "rtl" ? "marginRight": "marginLeft",
@@ -107,7 +108,7 @@ export function getCss(options: GetCSSOptions) {
 
       if (!nested && config?.static) {
         const staticStyles = runIfFn(config.static, theme)
-        computedStyles = merge({}, computedStyles, staticStyles)
+        computedStyles = mergeWith({}, computedStyles, staticStyles)
       }
 
       if (configProperty && Array.isArray(configProperty)) {
@@ -119,7 +120,7 @@ export function getCss(options: GetCSSOptions) {
 
       if (configProperty) {
         if (configProperty === "&" && isObject(rawValue)) {
-          computedStyles = merge({}, computedStyles, rawValue)
+          computedStyles = mergeWith({}, computedStyles, rawValue)
         } else {
           computedStyles[configProperty as string] = rawValue
         }
@@ -127,7 +128,7 @@ export function getCss(options: GetCSSOptions) {
       }
 
       if (isObject(rawValue)) {
-        computedStyles = merge({}, computedStyles, rawValue)
+        computedStyles = mergeWith({}, computedStyles, rawValue)
         continue
       }
 

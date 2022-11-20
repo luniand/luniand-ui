@@ -9,7 +9,7 @@ import {
   PropType,
   resolveComponent,
 } from "@vue/runtime-core"
-import { HTMLAttributes } from "@vue/runtime-dom"
+import type { HTMLAttributes } from "@vue/runtime-dom"
 import {
   css,
   isStyleProp,
@@ -25,12 +25,11 @@ import {
   isObject,
   memoizedGet as get,
   Dict,
-  SNAO,
-  extractStyleAttrs,
 } from "@uniland-ui/utils"
 import { cx, css as _css, CSSObject } from "@emotion/css"
 import { domElements, DOMElements } from "./system.utils"
 import { useTheme } from "./composables/use-uniland"
+import { SNAO, extractStyleAttrs } from "@uniland-ui/utils"
 import { As, UnilandProps, ComponentWithProps } from "./system.types"
 import { formElements, InputTypes } from "./uniland.forms"
 import { FunctionInterpolation } from "@emotion/serialize"
@@ -149,7 +148,7 @@ export type UnilandTagOrComponent =
  * 
  *    See more about the style resolution in the `resolveStyles` function.
  * 
- * 3. Uniland components created and styled using the `uniland` factory can be over-written in the template by applying
+ * 3. Uniland components created and styled using the `uniland` factory can be overriden in the template by applying
  *    style properties directly
  * 
  *    @example

@@ -27,7 +27,7 @@ export const UBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
   setup(props, { slots, attrs }) {
     return () =>
       h(
-        uniland.div,
+        uniland("div"),
         {
           as: props.as,
           __label: "box",

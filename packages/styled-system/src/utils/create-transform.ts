@@ -1,4 +1,4 @@
-import { Dict, isObject } from "@uniland-ui/utils"
+import { isObject } from "@uniland-ui/utils"
 import type { ThemeScale } from "../create-theme-vars"
 import type { Transform } from "./types"
 
@@ -8,13 +8,30 @@ interface CreateTransformOptions {
   transform?: Transform
 }
 
+const isImportant = (value: string) => /!(important)?$/.test(value)
+
+const withoutImportant = (value: string | number) =>
+  typeof value === "string" ? value.replace(/!(important)?$/, "").trim() : value
+
 export const tokenToCSSVar =
-  (scale: ThemeScale, value: any) => (theme: Dict) => {
+  (scale: ThemeScale, value: any) => (theme: Record<string, any>) => {
     const valueStr = String(value)
-    const key = scale ? `${scale}.${valueStr}` : valueStr
-    return isObject(theme.__cssMap) && key in theme.__cssMap
-      ? theme.__cssMap[key].varRef
-      : value
+
+    const important = isImportant(valueStr)
+    const valueWithoutImportant = withoutImportant(valueStr)
+
+    const key = scale
+      ? `${scale}.${valueWithoutImportant}`
+      : valueWithoutImportant
+
+    let transformed =
+      isObject(theme.__cssMap) && key in theme.__cssMap
+        ? theme.__cssMap[key].varRef
+        : value
+
+    transformed = withoutImportant(transformed)
+
+    return important ? `${transformed} !important` : transformed
   }
 
 export function createTransform(options: CreateTransformOptions) {

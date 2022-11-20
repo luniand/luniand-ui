@@ -10,6 +10,7 @@ export const typography: Config = {
   letterSpacing: t.prop("letterSpacing", "letterSpacings"),
   textAlign: true,
   fontStyle: true,
+  textIndent: true,
   wordBreak: true,
   overflowWrap: true,
   textOverflow: true,
@@ -25,17 +26,6 @@ export const typography: Config = {
       WebkitLineClamp: "var(--uniland-line-clamp)",
     },
     property: "--uniland-line-clamp",
-  },
-  isTruncated: {
-    transform(value) {
-      if (value === true) {
-        return {
-          overflow: "hidden",
-          textOverflow: "ellipsis",
-          whiteSpace: "nowrap",
-        }
-      }
-    },
   },
 }
 
@@ -73,6 +63,10 @@ export interface TypographyProps {
    */
   fontStyle?: Token<CSS.Property.FontStyle>
   /**
+   * The CSS `text-indent` property
+   */
+  textIndent?: Token<CSS.Property.TextIndent>
+  /**
    * The CSS `word-break` property
    */
   wordBreak?: Token<CSS.Property.WordBreak>
@@ -96,9 +90,4 @@ export interface TypographyProps {
    * Used to visually truncate a text after a number of lines.
    */
   noOfLines?: ResponsiveValue<number>
-  /**
-   * If `true`, it clamps truncate a text after one line.
-   * @deprecated - Use `noOfLines` instead
-   */
-  isTruncated?: boolean
 }

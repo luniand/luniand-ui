@@ -1,4 +1,4 @@
-import { Dict, isObject, runIfFn } from "@uniland-ui/utils"
+import { isObject, runIfFn } from "@uniland-ui/utils"
 
 /**
  * Expands an array or object syntax responsive style.
@@ -10,51 +10,53 @@ import { Dict, isObject, runIfFn } from "@uniland-ui/utils"
  *
  * // => { mx: 1, "@media(min-width:<sm>)": { mx: 2 } }
  */
-export const expandResponsive = (styles: Dict) => (theme: Dict) => {
-  /**
-   * Before any style can be processed, the user needs to call `toCSSVar`
-   * which analyzes the theme's breakpoint and appends a `__breakpoints` property
-   * to the theme with more details of the breakpoints.
-   *
-   * To learn more, go here: packages/utils/src/responsive.ts #analyzeBreakpoints
-   */
-  if (!theme.__breakpoints) return styles
-  const { isResponsive, toArrayValue, media: medias } = theme.__breakpoints
+export const expandResponsive =
+  (styles: Record<string, any>) => (theme: Record<string, any>) => {
+    /**
+     * Before any style can be processed, the user needs to call `toCSSVar`
+     * which analyzes the theme's breakpoint and appends a `__breakpoints` property
+     * to the theme with more details of the breakpoints.
+     *
+     * To learn more, go here: packages/utils/src/responsive.ts #analyzeBreakpoints
+     */
+    if (!theme.__breakpoints) return styles
+    const { isResponsive, toArrayValue, media: medias } = theme.__breakpoints
 
-  const computedStyles: Dict = {}
+    const computedStyles: Record<string, any> = {}
 
-  for (const key in styles) {
-    let value = runIfFn(styles[key], theme)
+    for (const key in styles) {
+      let value = runIfFn(styles[key], theme)
 
-    if (value == null) continue
+      if (value == null) continue
 
-    // converts the object responsive syntax to array syntax
-    value = isObject(value) && isResponsive(value) ? toArrayValue(value) : value
+      // converts the object responsive syntax to array syntax
+      value =
+        isObject(value) && isResponsive(value) ? toArrayValue(value) : value
 
-    if (!Array.isArray(value)) {
-      computedStyles[key] = value
-      continue
-    }
-
-    const queries = value.slice(0, medias.length).length
-
-    for (let index = 0; index < queries; index += 1) {
-      const media = medias?.[index]
-
-      if (!media) {
-        computedStyles[key] = value[index]
+      if (!Array.isArray(value)) {
+        computedStyles[key] = value
         continue
       }
 
-      computedStyles[media] = computedStyles[media] || {}
+      const queries = value.slice(0, medias.length).length
 
-      if (value[index] == null) {
-        continue
+      for (let index = 0; index < queries; index += 1) {
+        const media = medias?.[index]
+
+        if (!media) {
+          computedStyles[key] = value[index]
+          continue
+        }
+
+        computedStyles[media] = computedStyles[media] || {}
+
+        if (value[index] == null) {
+          continue
+        }
+
+        computedStyles[media][key] = value[index]
       }
-
-      computedStyles[media][key] = value[index]
     }
+
+    return computedStyles
   }
-
-  return computedStyles
-}

@@ -7,7 +7,6 @@ const BUILD_DIR = resolve(__dirname, "../build/")
 async function main() {
   const components = {}
   for (const prop in UnilandComponents) {
-    console.log(prop)
     if (prop.startsWith("U")) {
       components[prop] = UnilandComponents[prop]
     }

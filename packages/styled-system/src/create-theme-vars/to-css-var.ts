@@ -1,12 +1,12 @@
-import { analyzeBreakpoints, Dict } from "@uniland-ui/utils"
+import { analyzeBreakpoints } from "@uniland-ui/utils"
 import type { WithCSSVar } from "../utils"
 import { createThemeVars } from "./create-theme-vars"
 import { extractSemanticTokens, extractTokens, omitVars } from "./theme-tokens"
 import { flattenTokens } from "./flatten-tokens"
 
-export function toCSSVar<T extends Dict>(rawTheme: T) {
+export function toCSSVar<T extends Record<string, any>>(rawTheme: T) {
   /**
-   * In the case the theme has already been converted to css-var (e.g extending the theme),
+   * In the case the theme has already been converted to css-var (e.g. extending the theme),
    * we can omit the computed css vars and recompute it for the extended theme.
    */
   const theme = omitVars(rawTheme)
@@ -31,7 +31,7 @@ export function toCSSVar<T extends Dict>(rawTheme: T) {
     cssVars,
   } = createThemeVars(flatTokens, { cssVarPrefix })
 
-  const defaultCssVars: Dict = {
+  const defaultCssVars: Record<string, any> = {
     "--uniland-ring-inset": "var(--uniland-empty,/*!*/ /*!*/)",
     "--uniland-ring-offset-width": "0px",
     "--uniland-ring-offset-color": "#fff",

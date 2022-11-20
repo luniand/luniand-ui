@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/vue",
-  "version": "1.0.0-alpha.15",
+  "version": "1.0.1-alpha.1",
   "description": "Vue 3 compatible version of Uniland UI",
   "main": "dist/uniland-ui-vue.cjs.js",
   "module": "dist/uniland-ui-vue.esm.js",

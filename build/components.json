@@ -1,4 +1,5 @@
 {
+  "UReset": {},
   "UIcon": {
     "name": "UIcon",
     "props": {
@@ -16,5 +17,35 @@
       ]
     }
   },
-  "UReset": {}
+  "UBox": {
+    "name": "UBox",
+    "props": {
+      "as": {
+        "type": [
+          null,
+          null
+        ],
+        "default": "div"
+      }
+    }
+  },
+  "UCircle": {
+    "name": "UCircle"
+  },
+  "USquare": {
+    "name": "USquare",
+    "props": {
+      "size": [
+        null,
+        null,
+        null
+      ],
+      "centerContent": {
+        "type": [
+          null
+        ],
+        "default": true
+      }
+    }
+  }
 }

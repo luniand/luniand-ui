@@ -38,7 +38,7 @@ export function useStyleConfig<Component extends keyof Theme["components"]>(
     const { styleConfig: styleConfigProp, ...rest } =
       themingProps.value || themingProps
     const { theme, colorMode } = useUniland()
-    const themeStyleConfig = get(theme, `components.${String(themeKey)}`)
+    const themeStyleConfig = get(theme, `components.${themeKey}`)
 
     const styleConfig = styleConfigProp || themeStyleConfig
 

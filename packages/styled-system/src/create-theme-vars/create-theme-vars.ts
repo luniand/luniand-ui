@@ -1,16 +1,17 @@
-import { Dict, isObject, mergeWith } from "@uniland-ui/utils"
+import { isObject } from "@uniland-ui/utils"
 import { calc, Operand } from "./calc"
 import { cssVar } from "./css-var"
 import { FlatToken, FlatTokens } from "./flatten-tokens"
 import { pseudoSelectors } from "../pseudos"
+import mergeWith from "lodash.mergewith"
 
 export interface CreateThemeVarsOptions {
   cssVarPrefix?: string
 }
 
 export interface ThemeVars {
-  cssVars: Dict
-  cssMap: Dict
+  cssVars: Record<string, any>
+  cssMap: Record<string, any>
 }
 
 /**
@@ -31,8 +32,8 @@ export function createThemeVars(
   flatTokens: FlatTokens,
   options: CreateThemeVarsOptions
 ) {
-  let cssVars = {}
-  const cssMap = {}
+  let cssVars: Record<string, any> = {}
+  const cssMap: Record<string, any> = {}
 
   for (const [token, tokenValue] of Object.entries<FlatToken>(flatTokens)) {
     const { isSemantic, value } = tokenValue
@@ -46,7 +47,6 @@ export function createThemeVars(
         const negativeLookupKey = `${firstKey}.-${referenceKeys.join(".")}`
         const negativeValue = calc.negate(value as Operand)
         const negatedReference = calc.negate(reference)
-        // @ts-ignore
         cssMap[negativeLookupKey] = {
           value: negativeValue,
           var: variable,
@@ -54,9 +54,7 @@ export function createThemeVars(
         }
       }
 
-      // @ts-ignore
       cssVars[variable] = value
-      // @ts-ignore
       cssMap[token] = {
         value,
         var: variable,
@@ -81,8 +79,7 @@ export function createThemeVars(
       cssVars,
       Object.entries(normalizedValue).reduce(
         (acc, [conditionAlias, conditionValue]) => {
-          // @ts-ignore
-          const maybeReference = lookupToken(conditionValue)
+          const maybeReference = lookupToken(conditionValue as string)
           if (conditionAlias === "default") {
             acc[variable] = maybeReference
             return acc
@@ -90,8 +87,7 @@ export function createThemeVars(
 
           /** @example { _dark: "#fff" } => { '.uniland-ui-dark': "#fff" } */
           const conditionSelector =
-            // @ts-ignore
-            pseudoSelectors?.[conditionAlias] ?? conditionAlias
+            (pseudoSelectors as any)?.[conditionAlias] ?? conditionAlias
           acc[conditionSelector] = { [variable]: maybeReference }
 
           return acc
@@ -100,7 +96,6 @@ export function createThemeVars(
       )
     )
 
-    // @ts-ignore
     cssMap[token] = {
       value: reference,
       var: variable,

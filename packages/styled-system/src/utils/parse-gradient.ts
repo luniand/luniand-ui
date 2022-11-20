@@ -1,4 +1,3 @@
-import { Dict, isString } from "@uniland-ui/utils"
 import { Transform } from "./types"
 
 const directionMap = {
@@ -25,7 +24,10 @@ export const globalSet = new Set([
 
 const trimSpace = (str: string) => str.trim()
 
-export function parseGradient(value: string | null | undefined, theme: Dict) {
+export function parseGradient(
+  value: string | null | undefined,
+  theme: Record<string, any>
+) {
   if (value == null || globalSet.has(value)) return value
   const regex = /(?<type>^[a-z-A-Z]+)\((?<values>(.*))\)/g
   const { type, values } = regex.exec(value)?.groups ?? {}
@@ -42,8 +44,7 @@ export function parseGradient(value: string | null | undefined, theme: Dict) {
 
   const direction =
     maybeDirection in directionMap
-      ? // @ts-ignore
-        directionMap[maybeDirection]
+      ? (directionMap as any)[maybeDirection]
       : maybeDirection
 
   stops.unshift(direction)
@@ -77,7 +78,7 @@ export function parseGradient(value: string | null | undefined, theme: Dict) {
 }
 
 export const isCSSFunction = (value: unknown) => {
-  return isString(value) && value.includes("(") && value.includes(")")
+  return typeof value === "string" && value.includes("(") && value.includes(")")
 }
 
 export const gradientTransform: Transform = (value, theme) =>

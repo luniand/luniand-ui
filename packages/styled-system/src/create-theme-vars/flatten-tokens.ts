@@ -1,4 +1,4 @@
-import { flatten, fromEntries } from "@uniland-ui/utils"
+import { isObject } from "@uniland-ui/utils"
 import { Union } from "../utils"
 
 export type SemanticValue<
@@ -38,5 +38,33 @@ export function flattenTokens<T extends FlattenTokensParam>({
     return [token, enhancedToken] as [string, SemanticToken]
   })
 
-  return fromEntries([...tokenEntries, ...semanticTokenEntries]) as FlatTokens
+  return Object.fromEntries([
+    ...tokenEntries,
+    ...semanticTokenEntries,
+  ]) as FlatTokens
+}
+
+export function flatten<Value = any>(
+  target: Record<string, Value> | undefined | null,
+  maxDepth = Infinity
+) {
+  if ((!isObject(target) && !Array.isArray(target)) || !maxDepth) {
+    return target
+  }
+
+  return Object.entries(target).reduce((result, [key, value]) => {
+    if (isObject(value) || Array.isArray(value)) {
+      Object.entries(flatten(value, maxDepth - 1)).forEach(
+        ([childKey, childValue]) => {
+          // e.g. gray.500
+          result[`${key}.${childKey}`] = childValue
+        }
+      )
+    } else {
+      // e.g. transparent
+      result[key] = value
+    }
+
+    return result
+  }, {} as any)
 }

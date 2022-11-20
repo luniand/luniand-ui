@@ -1,4 +1,4 @@
-import { AnyFunction, objectKeys } from "@uniland-ui/utils"
+type AnyFunction<T = any> = (...args: T[]) => any
 
 const state = {
   hover: (str: string, post: string) =>
@@ -61,14 +61,15 @@ export const pseudoSelectors = {
    * Styles to apply when this element has received focus via tabbing
    * - CSS Selector `&:focus-visible`
    */
-  _focusVisible: "&:focus-visible",
+  _focusVisible: "&:focus-visible, &[data-focus-visible]",
   /**
    * Styles to apply when this element is disabled. The passed styles are applied to these CSS selectors:
    * - `&[aria-disabled=true]`
    * - `&:disabled`
    * - `&[data-disabled]`
+   * - `&[disabled]`
    */
-  _disabled: "&[disabled], &[aria-disabled=true], &[data-disabled]",
+  _disabled: "&:disabled, &[disabled], &[aria-disabled=true], &[data-disabled]",
   /**
    * Styles for CSS Selector `&:readonly`
    */
@@ -298,14 +299,22 @@ export const pseudoSelectors = {
    * Styles for when `data-theme` is applied to any parent of
    * this component or element.
    */
-  _dark: ".uniland-ui-dark &, [data-theme=dark] &, &[data-theme=dark]",
+  _dark:
+    ".uniland-ui-dark &:not([data-theme])," +
+    "[data-theme=dark] &:not([data-theme])," +
+    "&[data-theme=dark]",
   /**
    * Styles for when `data-theme` is applied to any parent of
    * this component or element.
    */
-  _light: ".uniland-ui-light &, [data-theme=light] &, &[data-theme=light]",
+  _light:
+    ".uniland-ui-light &:not([data-theme])," +
+    "[data-theme=light] &:not([data-theme])," +
+    "&[data-theme=light]",
 }
 
 export type Pseudos = typeof pseudoSelectors
 
-export const pseudoPropNames = objectKeys(pseudoSelectors)
+export const pseudoPropNames = Object.keys(
+  pseudoSelectors
+) as (keyof typeof pseudoSelectors)[]
