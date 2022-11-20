@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/utils",
-  "version": "0.1.1-alpha.1",
+  "version": "0.1.1-alpha.2",
   "main": "dist/uniland-ui-utils.cjs.js",
   "module": "dist/uniland-ui-utils.esm.js",
   "description": "Uniland UI | Utils module",

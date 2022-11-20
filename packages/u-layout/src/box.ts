@@ -78,8 +78,7 @@ export const USquare: ComponentWithProps<DeepPartial<SquareProps>> =
 
       return () =>
         h(
-          UBox,
-          {
+          uniland(UBox, {
             __label: "square",
             boxSize: props.size,
             __css: {
@@ -88,7 +87,8 @@ export const USquare: ComponentWithProps<DeepPartial<SquareProps>> =
               flexGrow: 0,
             },
             ...attrs,
-          },
+          }),
+          {},
           slots
         )
     },
@@ -105,12 +105,12 @@ export const UCircle: ComponentWithProps<DeepPartial<SquareProps>> =
     setup(_, { slots, attrs }) {
       return () =>
         h(
-          USquare,
-          {
+          uniland(USquare, {
             __label: "circle",
             borderRadius: "9999px",
             ...attrs,
-          },
+          }),
+          {},
           slots
         )
     },

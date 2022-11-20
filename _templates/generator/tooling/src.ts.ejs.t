@@ -1,5 +1,5 @@
 ---
-to: tooling/<%=h.changeCase.paramCase(name)%>/src/index.tsx
+to: tooling/<%=h.changeCase.paramCase(name)%>/src/index.ts
 ---
 const <%= h.changeCase.pascalCase(name) %> = () => {
   return {}

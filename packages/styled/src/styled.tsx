@@ -1,5 +1,5 @@
 import clsx from "clsx"
-import { mergeProps, SetupContext, h, Fragment } from "@vue/runtime-core"
+import { mergeProps, SetupContext } from "@vue/runtime-core"
 import { CSSInterpolation, serializeStyles } from "@emotion/serialize"
 import { extractStyleAttrs } from "@uniland-ui/utils"
 import {
@@ -76,10 +76,7 @@ export const createStyled: CreateStyled = (
       }
     }
 
-    function StyledComponent(
-      props: any,
-      { attrs, expose, slots }: SetupContext
-    ) {
+    function StyledComponent(props: any, { attrs, slots }: SetupContext) {
       const cache = __unusafe_useEmotionCache(defaultCache)
       const { as, ...restAttrs } = attrs || {}
 

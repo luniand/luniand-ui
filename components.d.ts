@@ -6,7 +6,7 @@
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-11-20T14:11:59.931Z
+ * This file was generated on 2022-11-20T18:52:15.710Z
  */
 
 import { UnilandProps, uniland } from "@uniland-ui/system"
@@ -63,9 +63,32 @@ declare module "@vue/runtime-core" {
   export interface GlobalComponents {
     uniland: typeof import("@uniland-ui/vue")["uniland"]
     UIcon: typeof import("@uniland-ui/vue")["UIcon"]
+    UAspectRatio: typeof import("@uniland-ui/vue")["UAspectRatio"]
+    UBadge: typeof import("@uniland-ui/vue")["UBadge"]
     UBox: typeof import("@uniland-ui/vue")["UBox"]
+    UCenter: typeof import("@uniland-ui/vue")["UCenter"]
     UCircle: typeof import("@uniland-ui/vue")["UCircle"]
+    UContainer: typeof import("@uniland-ui/vue")["UContainer"]
+    UDivider: typeof import("@uniland-ui/vue")["UDivider"]
+    UGrid: typeof import("@uniland-ui/vue")["UGrid"]
+    UGridItem: typeof import("@uniland-ui/vue")["UGridItem"]
+    UHStack: typeof import("@uniland-ui/vue")["UHStack"]
+    UKbd: typeof import("@uniland-ui/vue")["UKbd"]
+    ULink: typeof import("@uniland-ui/vue")["ULink"]
+    ULinkBox: typeof import("@uniland-ui/vue")["ULinkBox"]
+    ULinkOverlay: typeof import("@uniland-ui/vue")["ULinkOverlay"]
+    UList: typeof import("@uniland-ui/vue")["UList"]
+    UListIcon: typeof import("@uniland-ui/vue")["UListIcon"]
+    UListItem: typeof import("@uniland-ui/vue")["UListItem"]
+    UOrderedList: typeof import("@uniland-ui/vue")["UOrderedList"]
+    USimpleGrid: typeof import("@uniland-ui/vue")["USimpleGrid"]
     USquare: typeof import("@uniland-ui/vue")["USquare"]
+    UStack: typeof import("@uniland-ui/vue")["UStack"]
+    UStackDivider: typeof import("@uniland-ui/vue")["UStackDivider"]
+    UStackItem: typeof import("@uniland-ui/vue")["UStackItem"]
+    UText: typeof import("@uniland-ui/vue")["UText"]
+    UUnorderedList: typeof import("@uniland-ui/vue")["UUnorderedList"]
+    UVStack: typeof import("@uniland-ui/vue")["UVStack"]
     "uniland.a": typeof import("@uniland-ui/vue")["UBox"]
     "uniland.b": typeof import("@uniland-ui/vue")["UBox"]
     "uniland.article": typeof import("@uniland-ui/vue")["UBox"]
