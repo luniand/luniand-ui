@@ -7,7 +7,7 @@
 - ci: fix core build package
 
 - Updated dependencies []:
-  - @uniland-ui/vue-system@0.1.0-alpha.10
+  - @uniland-ui/system@0.1.0-alpha.10
 
 ## 0.1.0-alpha.9
 
@@ -16,7 +16,7 @@
 - [#122](https://github.com/uniland-ui/uniland-ui-vue-next/pull/122) [`2963735`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/29637355d6e37257e7ce43c10851049aba229359) Thanks [@codebender828](https://github.com/codebender828)! - Rewrite focus trap logic
 
 - Updated dependencies [[`2963735`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/29637355d6e37257e7ce43c10851049aba229359)]:
-  - @uniland-ui/vue-system@0.1.0-alpha.9
+  - @uniland-ui/system@0.1.0-alpha.9
 
 ## 0.1.0-alpha.8
 
@@ -25,7 +25,7 @@
 - lz "chore: upgrade to latest version. Fixes build error"
 
 - Updated dependencies []:
-  - @uniland-ui/vue-system@0.1.0-alpha.8
+  - @uniland-ui/system@0.1.0-alpha.8
 
 ## 0.1.0-alpha.7
 
@@ -36,7 +36,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @uniland-ui/vue-system@0.1.0-alpha.7
+  - @uniland-ui/system@0.1.0-alpha.7
 
 ## 0.1.0-alpha.6
 
@@ -49,7 +49,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`a7df008`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/a7df008af57158fbd9240645d4177cf862ca764d), [`64ec694`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/64ec694a67bf0932ad8d7569cf4347cd1da48513)]:
-  - @uniland-ui/vue-system@0.1.0-alpha.6
+  - @uniland-ui/system@0.1.0-alpha.6
 
 ## 0.1.0-alpha.5
 
@@ -60,7 +60,7 @@
 ### Patch Changes
 
 - Updated dependencies [[`ac28d42`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/ac28d4217c3afb83383801316876f982163c5f5c)]:
-  - @uniland-ui/vue-system@0.1.0-alpha.5
+  - @uniland-ui/system@0.1.0-alpha.5
 
 ## 0.1.0-alpha.4
 
@@ -71,7 +71,7 @@
 * [#76](https://github.com/uniland-ui/uniland-ui-vue-next/pull/76) [`52fa76a`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/52fa76ab461cf53ac619bcab0e591fe525a7a30b) Thanks [@codebender828](https://github.com/codebender828)! - Adds Drawer and AlertDialog components
 
 * Updated dependencies [[`86045b1`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/86045b1c34a21c05f93015489a461887beffee27), [`52fa76a`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/52fa76ab461cf53ac619bcab0e591fe525a7a30b)]:
-  - @uniland-ui/vue-system@0.1.0-alpha.4
+  - @uniland-ui/system@0.1.0-alpha.4
 
 ## 0.1.0-alpha.3
 
@@ -85,7 +85,7 @@
 ### Patch Changes
 
 - Updated dependencies []:
-  - @uniland-ui/vue-system@0.1.0-alpha.3
+  - @uniland-ui/system@0.1.0-alpha.3
 
 ## 0.1.0-alpha.2
 
@@ -98,7 +98,7 @@
 - [#59](https://github.com/uniland-ui/uniland-ui-vue-next/pull/59) [`a79204f`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/a79204f8a6786fdb6456632350480a14e17ad345) Thanks [@devivekw](https://github.com/devivekw)! - Created code component
 
 - Updated dependencies [[`a79204f`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/a79204f8a6786fdb6456632350480a14e17ad345), [`520550f`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/520550f0a233af45d83a5dd49907646422b39eb9)]:
-  - @uniland-ui/vue-system@0.1.0-alpha.2
+  - @uniland-ui/system@0.1.0-alpha.2
 
 ## 0.1.0-alpha.1
 
@@ -113,7 +113,7 @@
 * [#50](https://github.com/uniland-ui/uniland-ui-vue-next/pull/50) [`082c70b`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/082c70b03bd0e07704e1285592f515b3a43073b4) Thanks [@carwack](https://github.com/carwack)! - Add option to extend icons with custom icons
 
 * Updated dependencies [[`cd4893b`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/cd4893b6a27df39b59066c6e1d714b3830cf41bd), [`ccae794`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/ccae794937096c98b50dd5b72ac21856bd0e0e67), [`082c70b`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/082c70b03bd0e07704e1285592f515b3a43073b4)]:
-  - @uniland-ui/vue-system@0.1.0-alpha.1
+  - @uniland-ui/system@0.1.0-alpha.1
 
 ## 0.0.1-alpha.0
 
@@ -122,5 +122,5 @@
 - [#36](https://github.com/uniland-ui/uniland-ui-vue-next/pull/36) [`8243ac6`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/8243ac6cdc1ef47e56b3ec2f4635f44396273ee8) Thanks [@codebender828](https://github.com/codebender828)! - Initial release for core system packages
 
 - Updated dependencies [[`8243ac6`](https://github.com/uniland-ui/uniland-ui-vue-next/commit/8243ac6cdc1ef47e56b3ec2f4635f44396273ee8)]:
-  - @uniland-ui/vue-system@0.0.1-alpha.0
+  - @uniland-ui/system@0.0.1-alpha.0
   - @uniland-ui/vue-utils@0.0.1-alpha.0

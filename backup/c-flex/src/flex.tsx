@@ -7,7 +7,7 @@ import {
   SystemStyleObject,
   ComponentWithProps,
   DeepPartial,
-} from "@uniland-ui/vue-system"
+} from "@uniland-ui/system"
 
 export interface FlexProps {
   /**

@@ -1,13 +1,11 @@
 import camelCase from "lodash.camelcase"
-// import { StyleObjectOrFn, isStyleProp } from "@uniland-ui/styled-system"
+import { StyleObjectOrFn, isStyleProp } from "@uniland-ui/styled-system"
 import { HTMLAttributes } from "@vue/runtime-dom"
 import memoize from "lodash.memoize"
 
-export type StyleAndHTMLAttributes = any
-
-// export type StyleAndHTMLAttributes = StyleObjectOrFn &
-//   Record<string, string | number | boolean | unknown> &
-//   HTMLAttributes
+export type StyleAndHTMLAttributes = StyleObjectOrFn &
+  Record<string, string | number | boolean | unknown> &
+  HTMLAttributes
 
 interface ExtractedStyleAttrs {
   styles: Partial<StyleAndHTMLAttributes>
@@ -15,7 +13,7 @@ interface ExtractedStyleAttrs {
 }
 
 const camelCaseCache: any = {}
-// const _isStyledProp = memoize((attr) => isStyleProp(attr))
+const _isStyledProp = memoize((attr) => isStyleProp(attr))
 
 /** Extracts CSS style properties and HTML attributes from merged component attributes */
 export const extractStyleAttrs = <
@@ -36,16 +34,14 @@ export const extractStyleAttrs = <
       camelCaseCache[prop] = _attr
     }
 
-    // if (_isStyledProp(_attr)) {
-    //   styles[_attr] = styleProps[prop]
-    // } else if (_isStyledProp(prop)) {
-    //   styles[_attr] = styleProps[prop]
-    // } else {
-    //   // @ts-expect-error Not sure how to cast returned string into typeof key of U
-    //   attrs[prop as keyof U] = styleProps[prop]
-    // }
-    // @ts-expect-error Not sure how to cast returned string into typeof key of U
-    attrs[prop as keyof U] = styleProps[prop]
+    if (_isStyledProp(_attr)) {
+      styles[_attr] = styleProps[prop]
+    } else if (_isStyledProp(prop)) {
+      styles[_attr] = styleProps[prop]
+    } else {
+      // @ts-expect-error Not sure how to cast returned string into typeof key of U
+      attrs[prop as keyof U] = styleProps[prop]
+    }
   }
 
   return {

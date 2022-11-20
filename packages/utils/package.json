@@ -17,6 +17,7 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
+    "@uniland-ui/styled-system": "latest",
     "@types/lodash.camelcase": "^4.3.6",
     "@types/lodash.memoize": "^4.1.6",
     "css-box-model": "1.2.1",

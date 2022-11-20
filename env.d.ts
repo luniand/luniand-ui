@@ -1,7 +1,7 @@
 import type { HTMLAttributes, VNode } from "vue"
-import type { UnilandProps } from "@uniland-ui/vue-system"
+import type { UnilandProps } from "@uniland-ui/system"
 import { DefineComponent } from "vue"
-import { UnilandFactoryProps, ComponentWithProps } from "@uniland-ui/vue-system"
+import { UnilandFactoryProps, ComponentWithProps } from "@uniland-ui/system"
 
 declare global {
   namespace JSX {

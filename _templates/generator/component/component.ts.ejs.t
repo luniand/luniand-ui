@@ -12,7 +12,7 @@ to: packages/<%=h.changeCase.paramCase(name)%>/src/<%=h.changeCase.paramCase(nam
  */
 
 import { h, defineComponent, PropType } from 'vue'
-import { uniland, DOMElements } from '@uniland-ui/vue-system'
+import { uniland, DOMElements } from '@uniland-ui/system'
 
 export const <%= h.changeCase.pascalCase(name) %> = defineComponent({
   props: {

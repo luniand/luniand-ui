@@ -4,7 +4,7 @@
  * The anatomy of all uniland components
  *
  * @see Docs     https://vue.uniland-ui.com/anatomy
- * @see Source   https://github.com/rhp-island/uniland-ui/blob/master/packages/vue-anatomy/src/vue-anatomy/vue-anatomy.ts
+ * @see Source   https://github.com/rhp-island/uniland-ui/blob/master/packages/anatomy/src/anatomy/anatomy.ts
  * @see WAI-ARIA https://www.w3.org/TR/wai-aria-practices-1.2
  */
 

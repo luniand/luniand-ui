@@ -1,6 +1,5 @@
 import { mode, Styles } from "@uniland-ui/theme-tools"
 
-// @ts-ignore
 const styles: Styles = {
   global: (props: any) => ({
     body: {

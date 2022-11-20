@@ -6,7 +6,7 @@
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-11-20T12:26:56.494Z
+ * This file was generated on 2022-11-20T14:11:59.931Z
  */
 
 import { UnilandProps, uniland } from "@uniland-ui/system"

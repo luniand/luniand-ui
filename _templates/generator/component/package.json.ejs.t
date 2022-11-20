@@ -32,7 +32,7 @@ to: packages/<%=h.changeCase.paramCase(name)%>/package.json
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@uniland-ui/vue-system": "0.1.0-alpha.5"
+    "@uniland-ui/system": "0.1.0-alpha.5"
   },
   "devDependencies": {
     "vue": "^3.1.4"
