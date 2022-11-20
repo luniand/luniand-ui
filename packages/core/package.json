@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/vue",
-  "version": "1.0.1-alpha.1",
+  "version": "1.0.1-alpha.2",
   "description": "Vue 3 compatible version of Uniland UI",
   "main": "dist/uniland-ui-vue.cjs.js",
   "module": "dist/uniland-ui-vue.esm.js",
@@ -24,16 +24,16 @@
     "@emotion/serialize": "^1.0.2",
     "@emotion/sheet": "^1.1.0",
     "@emotion/utils": "^1.1.0",
-    "@uniland-ui/styled": "^0.0.0-alpha.1",
-    "@uniland-ui/styled-system": "^0.1.1-alpha.1",
-    "@uniland-ui/system": "^0.1.0-alpha.12",
-    "@uniland-ui/theme": "^1.0.0-alpha.12",
-    "@uniland-ui/theme-tools": "^0.1.0-alpha.10",
-    "@uniland-ui/u-color-mode": "^0.1.0-alpha.10",
-    "@uniland-ui/u-icon": "^1.0.0-alpha.10",
-    "@uniland-ui/u-layout": "^0.1.0-alpha.11",
-    "@uniland-ui/u-reset": "^1.0.0-alpha.10",
-    "@uniland-ui/utils": "^0.1.0-alpha.13"
+    "@uniland-ui/styled": "latest",
+    "@uniland-ui/styled-system": "latest",
+    "@uniland-ui/system": "latest",
+    "@uniland-ui/theme": "latest",
+    "@uniland-ui/theme-tools": "latest",
+    "@uniland-ui/u-color-mode": "latest",
+    "@uniland-ui/u-icon": "latest",
+    "@uniland-ui/u-layout": "latest",
+    "@uniland-ui/u-reset": "latest",
+    "@uniland-ui/utils": "latest3"
   },
   "devDependencies": {
     "@vue/runtime-core": "^3.2.45"

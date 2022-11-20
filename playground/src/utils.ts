@@ -14,6 +14,8 @@ export type ProcessableRoute = Omit<RouteRecordRaw, "redirect">
 
 export const processRoutes = (routes: ProcessableRoute[]) => {
   const groups = groupBy(routes, "group")
+  console.log("groups: ", groups)
+
   const processedRoutes: ProcessableRoute[] = [
     {
       name: "Home",

@@ -132,7 +132,7 @@ export { uniland }
 
 // C
 // export * from "@uniland-ui/c-checkbox"
-// export * from "@uniland-ui/c-color-mode"
+export * from "@uniland-ui/u-color-mode"
 // export * from "@uniland-ui/c-close-button"
 // export * from "@uniland-ui/c-code"
 

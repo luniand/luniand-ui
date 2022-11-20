@@ -2,8 +2,8 @@
   <div>Uniland UI Vue v1</div>
 </template>
 
-<script>
-import { defineComponent } from 'vue'
+<script lang="ts">
+import { defineComponent } from '@vue/runtime-core'
 
 export default defineComponent({
   mounted() {
