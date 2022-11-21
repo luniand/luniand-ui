@@ -24,9 +24,6 @@ import { UReset, UCenter, USquare , useColorMode} from '@uniland-ui/vue'
 import USidebar from './components/Sidebar'
 import { routes } from './router'
 
-console.log("routes", routes);
-
-
 const { colorMode, toggleColorMode } = useColorMode()
 
     const rootStyles = computed(() => {

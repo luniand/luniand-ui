@@ -1,11 +1,11 @@
 {
   "name": "@uniland-ui/u-flex",
-  "description": "Uniland UI Vue | u-flex component component",
-  "version": "1.0.0-alpha.10",
+  "description": "Uniland UI | Flex component component",
+  "version": "1.0.2",
   "main": "dist/uniland-ui-u-flex.cjs.js",
   "module": "dist/uniland-ui-u-flex.esm.js",
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
-  "homepage": "https://github.com/uniland-ui/uniland-ui-vue-next#readme",
+  "homepage": "https://github.com/luniand/uniland-ui#readme",
   "license": "MIT",
   "files": [
     "dist"
@@ -19,23 +19,21 @@
   "publishConfig": {
     "access": "public"
   },
-  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next/tree/master/packages/u-flex",
+  "repository": "https://github.com/luniand/uniland-ui/tree/main/packages/u-flex",
   "bugs": {
-    "url": "https://github.com/uniland-ui/uniland-ui-vue-next/issues"
+    "url": "https://github.com/luniand/uniland-ui/issues"
   },
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@uniland-ui/system": "0.1.0-alpha.10",
-    "@uniland-ui/vue-utils": "0.1.0-alpha.10"
+    "@uniland-ui/system": "latest"
   },
   "devDependencies": {
-    "csstype": "^3.0.5",
-    "vue": "^3.2.37"
+    "@vue/runtime-core": "^3.2.37"
   },
   "peerDependencies": {
-    "vue": "^3.1.4"
+    "@vue/runtime-core": "^3.2.37"
   }
 }

@@ -14,9 +14,9 @@ export interface SpacerProps extends HTMLUnilandProps<"div"> {}
  *
  * @see Docs https://uniland-ui.com/docs/layout/flex#using-the-spacer
  */
-export const CSpacer: ComponentWithProps<DeepPartial<SpacerProps>> =
+export const USpacer: ComponentWithProps<DeepPartial<SpacerProps>> =
   defineComponent({
-    name: "CSpacer",
+    name: "USpacer",
     setup(_, { slots }) {
       return () =>
         h(

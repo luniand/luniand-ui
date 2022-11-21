@@ -37,7 +37,7 @@ export interface WrapProps extends HTMLUnilandProps<"div"> {
   shouldWrapChildren?: boolean
 }
 
-export const CWrapProps = {
+export const UWrapProps = {
   spacing: SNAO as PropType<WrapProps["spacing"]>,
   justify: SNAO as PropType<WrapProps["justify"]>,
   align: SNAO as PropType<WrapProps["align"]>,
@@ -50,13 +50,13 @@ export const CWrapProps = {
  *
  * @see Docs https://vue.uniland-ui.com/docs/typography/text
  */
-export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
+export const UWrap: ComponentWithProps<WrapProps> = defineComponent({
   props: {
     as: {
       type: [Object, String] as PropType<DOMElements>,
       default: "div",
     },
-    ...CWrapProps,
+    ...UWrapProps,
   },
   setup(props, { slots, attrs }) {
     const styles = computed(() => ({
@@ -80,7 +80,7 @@ export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
 
     const childrenToRender = props.shouldWrapChildren
       ? getValidChildren(slots).map((child, index) =>
-          h(CWrapItem, { key: index }, child)
+          h(UWrapItem, { key: index }, child)
         )
       : slots
 
@@ -104,7 +104,7 @@ export const CWrap: ComponentWithProps<WrapProps> = defineComponent({
 
 export interface WrapItemProps extends HTMLUnilandProps<"li"> {}
 
-export const CWrapItem = defineComponent({
+export const UWrapItem = defineComponent({
   setup(_, { attrs, slots }) {
     return () => {
       return h(

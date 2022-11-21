@@ -28,7 +28,3 @@
     </uniland.div>
   </uniland.div>
 </template>
-<script lang="ts" setup>
-import { uniland } from "@uniland-ui/vue-system"
-import { CHStack, CVStack } from "@uniland-ui/vue-layout"
-</script>

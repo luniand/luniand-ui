@@ -137,7 +137,7 @@ export * from "@uniland-ui/u-color-mode"
 // export * from "@uniland-ui/c-code"
 
 // F
-// export * from "@uniland-ui/c-flex"
+export * from "@uniland-ui/u-flex"
 // export * from "@uniland-ui/c-focus-lock"
 // export * from "@uniland-ui/c-form-control"
 

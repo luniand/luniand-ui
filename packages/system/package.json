@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/system",
-  "version": "0.1.1-alpha.1",
+  "version": "1.0.2",
   "main": "dist/uniland-ui-system.cjs.js",
   "module": "dist/uniland-ui-system.esm.js",
   "description": "Uniland UI | System module",
@@ -21,10 +21,10 @@
   },
   "dependencies": {
     "@emotion/css": "^11.7.1",
-    "@uniland-ui/styled": "^0.0.0-alpha.0",
-    "@uniland-ui/styled-system": "^0.1.1-alpha.0",
-    "@uniland-ui/u-color-mode": "^0.1.0-alpha.10",
-    "@uniland-ui/utils": "^0.1.0-alpha.10",
+    "@uniland-ui/styled": "latest",
+    "@uniland-ui/styled-system": "latest",
+    "@uniland-ui/u-color-mode": "latest",
+    "@uniland-ui/utils": "latest",
     "lodash.camelcase": "^4.3.0",
     "lodash.kebabcase": "^4.1.1",
     "lodash.memoize": "^4.1.2"

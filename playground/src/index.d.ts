@@ -1,7 +1,8 @@
-declare module '*.vue' {
-  import { Component } from 'vue'
+declare module "*.vue" {
+  import { Component } from "vue"
   const component: Component
   export default component
 }
 
-declare module 'feather-icons-paths';
+declare module "feather-icons-paths"
+declare module "pages-generated"

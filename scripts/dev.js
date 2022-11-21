@@ -17,7 +17,7 @@ async function main() {
   }
 
   writeFileSync(
-    resolve(__dirname, "../build/components.json"),
+    resolve(__dirname, "../playground/build/components.json"),
     JSON.stringify(components, null, 2),
     { encoding: "utf8" }
   )

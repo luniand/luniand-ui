@@ -14,9 +14,9 @@ export interface HeadingProps
   extends HTMLUnilandProps<"h2">,
     ThemingProps<"Heading"> {}
 
-export const CHeading: ComponentWithProps<DeepPartial<HeadingProps>> =
+export const UHeading: ComponentWithProps<DeepPartial<HeadingProps>> =
   defineComponent({
-    name: "CHeading",
+    name: "UHeading",
     props: {
       as: {
         type: [String, Object] as PropType<DOMElements>,

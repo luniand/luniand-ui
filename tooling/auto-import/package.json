@@ -26,12 +26,12 @@
     "lodash.kebabcase": "^4.1.1"
   },
   "peerDependencies": {
-    "@uniland-ui/vue": "^1.0.0-alpha.13",
+    "@uniland-ui/vue": "latest",
     "@vue/runtime-core": "^3.2.45",
     "unplugin-vue-components": "^0.22.9"
   },
   "devDependencies": {
-    "@uniland-ui/vue": "^1.0.0-alpha.13",
+    "@uniland-ui/vue": "latest",
     "@vue/runtime-core": "^3.2.45",
     "unplugin-vue-components": "^0.22.9"
   }

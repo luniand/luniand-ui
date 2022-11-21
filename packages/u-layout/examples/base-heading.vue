@@ -28,6 +28,3 @@
     </u-stack>
   </u-container>
 </template>
-<script setup lang="ts">
-import { CStack } from "@uniland-ui/vue-layout"
-</script>

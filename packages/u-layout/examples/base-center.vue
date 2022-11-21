@@ -26,16 +26,3 @@
     </u-box>
   </u-v-stack>
 </template>
-
-<script setup lang="ts">
-import {
-  CHStack,
-  CVStack,
-  CCenter,
-  CBox,
-  CSquare,
-  CCircle,
-  CLink,
-  CKbd,
-} from "../src"
-</script>

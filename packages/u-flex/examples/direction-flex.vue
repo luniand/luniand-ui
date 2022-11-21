@@ -1,7 +1,7 @@
 <template>
   <div>
     <uniland.h2>Row (default)</uniland.h2>
-    <c-flex direction="row" justify-content="space-between">
+    <u-flex direction="row" justify-content="space-between">
       <uniland.div rounded="md" w="12" h="12" shadow="inner" bg="green.500">
         div 1
       </uniland.div>
@@ -11,9 +11,9 @@
       <uniland.div rounded="md" w="12" h="12" shadow="inner" bg="red.500">
         div 3
       </uniland.div>
-    </c-flex>
+    </u-flex>
     <uniland.h2>Column</uniland.h2>
-    <c-flex direction="column" justify-content="space-between">
+    <u-flex direction="column" justify-content="space-between">
       <uniland.div rounded="md" w="12" h="12" shadow="inner" bg="green.500">
         div 1
       </uniland.div>
@@ -23,6 +23,6 @@
       <uniland.div rounded="md" w="12" h="12" shadow="inner" bg="red.500">
         div 3
       </uniland.div>
-    </c-flex>
+    </u-flex>
   </div>
 </template>

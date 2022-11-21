@@ -12,6 +12,3 @@
     <u-container max-w="container.sm">Small Container</u-container>
   </u-v-stack>
 </template>
-<script setup>
-import { CVStack } from "@uniland-ui/vue-layout"
-</script>

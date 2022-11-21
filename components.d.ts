@@ -1,12 +1,12 @@
 /**
- * Typescript support for @@uniland-ui/vue1.0.1-alpha.1 auto-imported
+ * Typescript support for @@uniland-ui/vue1.0.2 auto-imported
  * components using `unplugin-vue-components,`
  *
  * @see: https://github.com/antfu/unplugin-vue-components/#typescript
  *
  * This is a generated file. Do not edit it's contents.
  *
- * This file was generated on 2022-11-20T19:05:52.051Z
+ * This file was generated on 2022-11-21T20:26:34.911Z
  */
 
 import { UnilandProps, uniland } from "@uniland-ui/system"
@@ -73,6 +73,7 @@ declare module "@vue/runtime-core" {
     UGrid: typeof import("@uniland-ui/vue")["UGrid"]
     UGridItem: typeof import("@uniland-ui/vue")["UGridItem"]
     UHStack: typeof import("@uniland-ui/vue")["UHStack"]
+    UHeading: typeof import("@uniland-ui/vue")["UHeading"]
     UKbd: typeof import("@uniland-ui/vue")["UKbd"]
     ULink: typeof import("@uniland-ui/vue")["ULink"]
     ULinkBox: typeof import("@uniland-ui/vue")["ULinkBox"]
@@ -82,6 +83,7 @@ declare module "@vue/runtime-core" {
     UListItem: typeof import("@uniland-ui/vue")["UListItem"]
     UOrderedList: typeof import("@uniland-ui/vue")["UOrderedList"]
     USimpleGrid: typeof import("@uniland-ui/vue")["USimpleGrid"]
+    USpacer: typeof import("@uniland-ui/vue")["USpacer"]
     USquare: typeof import("@uniland-ui/vue")["USquare"]
     UStack: typeof import("@uniland-ui/vue")["UStack"]
     UStackDivider: typeof import("@uniland-ui/vue")["UStackDivider"]

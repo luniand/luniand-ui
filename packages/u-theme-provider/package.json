@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/u-theme-provider",
-  "version": "1.0.0-alpha.10",
+  "version": "1.0.2",
   "main": "dist/uniland-ui-u-theme-provider.cjs.js",
   "module": "dist/uniland-ui-u-theme-provider.esm.js",
   "files": [
@@ -20,8 +20,8 @@
     "clean": "rimraf dist"
   },
   "dependencies": {
-    "@uniland-ui/system": "^0.1.0-alpha.12",
-    "@uniland-ui/theme": "^1.0.0-alpha.12"
+    "@uniland-ui/system": "latest",
+    "@uniland-ui/theme": "latest"
   },
   "devDependencies": {
     "@vue/runtime-core": "^3.2.45"

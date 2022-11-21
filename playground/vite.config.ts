@@ -20,7 +20,7 @@ export default defineConfig({
   plugins: [
     vue(),
     Pages({
-      pagesDir: path.relative(__dirname, "../packages"),
+      pagesDir: path.relative(__dirname, "packages"),
       extensions: ["vue"],
       extendRoute(route, parent) {
         if (route.path === "/") {
