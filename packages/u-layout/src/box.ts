@@ -27,10 +27,11 @@ export const UBox: ComponentWithProps<DeepPartial<BoxProps>> = defineComponent({
   setup(props, { slots, attrs }) {
     return () =>
       h(
-        uniland("div"),
+        uniland("div", {
+          label: "box",
+        }),
         {
           as: props.as,
-          __label: "box",
           ...attrs,
         },
         () => slots?.default?.()
@@ -79,16 +80,17 @@ export const USquare: ComponentWithProps<DeepPartial<SquareProps>> =
       return () =>
         h(
           uniland(UBox, {
-            __label: "square",
             boxSize: props.size,
+            label: "square",
+          }),
+          {
             __css: {
               ...styles.value,
               flexShrink: 0,
               flexGrow: 0,
             },
             ...attrs,
-          }),
-          {},
+          },
           slots
         )
     },
@@ -106,14 +108,11 @@ export const UCircle: ComponentWithProps<DeepPartial<SquareProps>> =
       return () =>
         h(
           uniland(USquare, {
-            __label: "circle",
+            label: "circle",
             borderRadius: "9999px",
-            ...attrs,
           }),
-          {},
+          { ...attrs },
           slots
         )
     },
   })
-
-// TODO: UCircle is not working
