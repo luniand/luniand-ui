@@ -27,7 +27,7 @@ import {
   Dict,
 } from "@uniland-ui/utils"
 import { cx, css as _css, CSSObject } from "@emotion/css"
-import { domElements, DOMElements } from "./system.utils"
+import { domElements, DOMElements, filterClassesInherit } from "./system.utils"
 import { useTheme } from "./composables/use-uniland"
 import { SNAO, extractStyleAttrs } from "@uniland-ui/utils"
 import { As, UnilandProps, ComponentWithProps } from "./system.types"
@@ -246,7 +246,9 @@ export const uniland: IUnilandFactory = (tag, options = {}) => {
         return h(
           (componentOrTag as any) || props.as,
           {
-            class: cx(inheritedClass as string, _componentName, className),
+            class: filterClassesInherit(
+              cx(inheritedClass as string, _componentName, className)
+            ),
             ...elementAttributes,
             ...(!props.__unilandIsRaw &&
               handleValueChange &&

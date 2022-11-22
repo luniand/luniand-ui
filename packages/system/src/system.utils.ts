@@ -81,4 +81,11 @@ export type ToPropType<T> = {
   [P in keyof T]?: PropType<T[P]>
 }
 
+export const filterClassesInherit = (str: string) =>
+  str
+    .split(" ")
+    .filter((cls, clsIndex) => !(clsIndex > 0 && cls.includes("uniland-")))
+    .toString()
+    .replace(",", " ")
+
 export { keyframes, injectGlobal }

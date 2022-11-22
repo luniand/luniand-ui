@@ -1,6 +1,6 @@
 {
   "name": "@uniland-ui/system",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "dist/uniland-ui-system.cjs.js",
   "module": "dist/uniland-ui-system.esm.js",
   "description": "Uniland UI | System module",
