@@ -13,7 +13,7 @@ export interface CCenterProps extends HTMLUnilandProps<"div"> {}
  * Vue component used to horizontally and vertically center its child.
  * It uses the popular `display: flex` centering technique.
  *
- * @see Docs https://vue.chakra-ui.com/docs/layout/center
+ * @see Docs https://vue.uniland-ui.com/docs/layout/center
  */
 export const UCenter: ComponentWithProps<DeepPartial<CCenterProps>> =
   defineComponent({
