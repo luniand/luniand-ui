@@ -1,12 +1,12 @@
 {
   "name": "@uniland-ui/utils",
-  "version": "1.0.2",
-  "main": "dist/uniland-ui-utils.cjs.js",
-  "module": "dist/uniland-ui-utils.esm.js",
-  "description": "Uniland UI | Utils module",
-  "repository": "https://github.com/uniland-ui/uniland-ui-vue-next/tree/master/packages/utils",
+  "version": "0.0.1",
+  "description": "Uniland UI | Utils module or common functions",
+  "repository": "https://github.com/luniand/uniland-ui/tree/main/packages/utils",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "license": "MIT",
+  "main": "dist/uniland-ui-utils.cjs.js",
+  "module": "dist/uniland-ui-utils.esm.js",
   "exports": {
     ".": {
       "require": "./dist/uniland-ui-utils.cjs.js",
@@ -14,21 +14,20 @@
     }
   },
   "scripts": {
-    "clean": "rimraf dist"
+    "build": "../../node_modules/.bin/tsc --build --force"
   },
   "dependencies": {
-    "@uniland-ui/styled-system": "latest",
-    "@types/lodash.camelcase": "^4.3.6",
-    "@types/lodash.memoize": "^4.1.6",
-    "css-box-model": "1.2.1",
+    "@types/lodash.camelcase": "^4.3.7",
+    "@types/lodash.memoize": "^4.1.7",
+    "css-box-model": "^1.2.1",
     "lodash.camelcase": "^4.3.0",
     "lodash.memoize": "^4.1.2",
     "lodash.mergewith": "^4.6.2",
     "object-assign": "^4.1.1"
   },
   "devDependencies": {
-    "@types/lodash.mergewith": "^4.6.6",
-    "@types/object-assign": "4.0.30",
+    "@types/lodash.mergewith": "^4",
+    "@types/object-assign": "^4",
     "@vue/runtime-core": "^3.2.45"
   },
   "peerDependencies": {

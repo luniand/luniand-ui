@@ -1,32 +1,32 @@
 export function getFirstItem<T>(array: T[]): T | undefined {
-  return array != null && array.length ? array[0] : undefined
+  return array != null && array.length ? array[0] : undefined;
 }
 
 export function getLastItem<T>(array: T[]): T | undefined {
-  const length = array == null ? 0 : array.length
-  return length ? array[length - 1] : undefined
+  const length = array == null ? 0 : array.length;
+  return length ? array[length - 1] : undefined;
 }
 
 export function getPrevItem<T>(index: number, array: T[], loop = true): T {
-  const prevIndex = getPrevIndex(index, array.length, loop)
-  return array[prevIndex]
+  const prevIndex = getPrevIndex(index, array.length, loop);
+  return array[prevIndex];
 }
 
 export function getNextItem<T>(index: number, array: T[], loop = true): T {
-  const nextIndex = getNextIndex(index, array.length, 1, loop)
-  return array[nextIndex]
+  const nextIndex = getNextIndex(index, array.length, 1, loop);
+  return array[nextIndex];
 }
 
 export function removeIndex<T>(array: T[], index: number): T[] {
-  return array.filter((_, idx) => idx !== index)
+  return array.filter((_, idx) => idx !== index);
 }
 
 export function addItem<T>(array: T[], item: T): T[] {
-  return [...array, item]
+  return [...array, item];
 }
 
 export function removeItem<T>(array: T[], item: T): T[] {
-  return array.filter((eachItem) => eachItem !== item)
+  return array.filter((eachItem) => eachItem !== item);
 }
 
 /**
@@ -43,24 +43,24 @@ export function getNextIndex(
   step = 1,
   loop = true
 ): number {
-  const lastIndex = length - 1
+  const lastIndex = length - 1;
 
   if (currentIndex === -1) {
-    return step > 0 ? 0 : lastIndex
+    return step > 0 ? 0 : lastIndex;
   }
 
-  const nextIndex = currentIndex + step
+  const nextIndex = currentIndex + step;
 
   if (nextIndex < 0) {
-    return loop ? lastIndex : 0
+    return loop ? lastIndex : 0;
   }
 
   if (nextIndex >= length) {
-    if (loop) return 0
-    return currentIndex > length ? length : currentIndex
+    if (loop) return 0;
+    return currentIndex > length ? length : currentIndex;
   }
 
-  return nextIndex
+  return nextIndex;
 }
 
 /**
@@ -77,7 +77,7 @@ export function getPrevIndex(
   count: number,
   loop = true
 ): number {
-  return getNextIndex(index, count, -1, loop)
+  return getNextIndex(index, count, -1, loop);
 }
 
 /**
@@ -89,12 +89,12 @@ export function getPrevIndex(
 export function chunk<T>(array: T[], size: number): T[][] {
   return array.reduce((rows: T[][], currentValue: T, index: number) => {
     if (index % size === 0) {
-      rows.push([currentValue])
+      rows.push([currentValue]);
     } else {
-      rows[rows.length - 1].push(currentValue)
+      rows[rows.length - 1].push(currentValue);
     }
-    return rows
-  }, [] as T[][])
+    return rows;
+  }, [] as T[][]);
 }
 
 /**
@@ -112,40 +112,40 @@ export function getNextItemFromSearch<T>(
   currentItem: T
 ): T | undefined {
   if (searchString == null) {
-    return currentItem
+    return currentItem;
   }
 
   // If current item doesn't exist, find the item that matches the search string
   if (!currentItem) {
     const foundItem = items.find((item) =>
       itemToString(item).toLowerCase().startsWith(searchString.toLowerCase())
-    )
-    return foundItem
+    );
+    return foundItem;
   }
 
   // Filter items for ones that match the search string (case insensitive)
   const matchingItems = items.filter((item) =>
     itemToString(item).toLowerCase().startsWith(searchString.toLowerCase())
-  )
+  );
 
   // If there's a match, let's get the next item to select
   if (matchingItems.length > 0) {
-    let nextIndex: number
+    let nextIndex: number;
 
     // If the currentItem is in the available items, we move to the next available option
     if (matchingItems.includes(currentItem)) {
-      const currentIndex = matchingItems.indexOf(currentItem)
-      nextIndex = currentIndex + 1
+      const currentIndex = matchingItems.indexOf(currentItem);
+      nextIndex = currentIndex + 1;
       if (nextIndex === matchingItems.length) {
-        nextIndex = 0
+        nextIndex = 0;
       }
-      return matchingItems[nextIndex]
+      return matchingItems[nextIndex];
     }
     // Else, we pick the first item in the available items
-    nextIndex = items.indexOf(matchingItems[0])
-    return items[nextIndex]
+    nextIndex = items.indexOf(matchingItems[0]);
+    return items[nextIndex];
   }
 
   // a decent fallback to the currentItem
-  return currentItem
+  return currentItem;
 }

@@ -3,7 +3,7 @@ export function canUseDOM(): boolean {
     typeof window !== "undefined" &&
     window.document &&
     window.document.createElement
-  )
+  );
 }
 
-export const defaultWindow = canUseDOM() ? window : null
+export const defaultWindow = canUseDOM() ? window : null;

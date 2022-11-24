@@ -1,31 +1,12 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib",
   "cSpell.words": [
     "camelcase",
-    "clsx",
-    "composables",
-    "contenteditable",
-    "csstype",
-    "esbuild",
-    "factiry",
-    "feathericons",
-    "flexbox",
-    "focusables",
-    "fontawesome",
-    "hygen",
-    "linkbox",
+    "luniand",
+    "manypkg",
     "mergewith",
-    "noindex",
-    "popperjs",
-    "postbuild",
-    "preplaygound",
-    "Segoe",
-    "SNAO",
-    "tabindex",
-    "Uniland",
-    "unplugin",
-    "unusafe",
-    "vnode",
-    "vueuse"
+    "precommit",
+    "uniland",
+    "yarnpkg",
+    "yarnrc"
   ]
 }

@@ -6,15 +6,15 @@ import {
   ref,
   unref,
   UnwrapRef,
-} from "@vue/runtime-core"
-import { debounce } from "./timers"
-import { MaybeRef } from "./types"
-import { canUseDOM } from "./configurable"
+} from "@vue/runtime-core";
+import { debounce } from "./timers";
+import { MaybeRef } from "./types";
+import { canUseDOM } from "./configurable";
 
 /**
  * Interface for node provided by template ref
  */
-export type TemplateRef = Element | VueComponentInstance | undefined | null
+export type TemplateRef = Element | VueComponentInstance | undefined | null;
 
 /**
  * For internal use
@@ -36,33 +36,33 @@ export function useRef(): [
   (el: TemplateRef | null) => void,
   Ref<HTMLElement | null>
 ] {
-  const refEl = ref<HTMLElement | null>(null)
+  const refEl = ref<HTMLElement | null>(null);
 
   onBeforeUpdate(() => {
     // clear refs before DOM updates
-    refEl.value = null
-  })
+    refEl.value = null;
+  });
 
   /**
    * Getter function to bind ref to value
    * @param el Template ref value provided by Vue
    */
   const _ref = (el: TemplateRef | null) => {
-    refEl.value = (el as VueComponentInstance)?.$el ?? el
-  }
+    refEl.value = (el as VueComponentInstance)?.$el ?? el;
+  };
 
-  return [_ref, refEl]
+  return [_ref, refEl];
 }
 
 /** Vue Component HTML Element Instance */
 export type VueComponentInstance = InstanceType<
   ReturnType<typeof defineComponent>
->
+>;
 
 /** Ref may or may not be an HTML Element or VueComponent instance */
 export type MaybeElementRef = MaybeRef<
   Element | VueComponentInstance | undefined | null
->
+>;
 
 /**
  * Unwraps element from ref
@@ -71,8 +71,8 @@ export type MaybeElementRef = MaybeRef<
 export function unrefElement(
   elementRef: MaybeElementRef
 ): UnwrapRef<MaybeElementRef> {
-  const node = unref(elementRef)
-  return (node as VueComponentInstance)?.$el ?? node
+  const node = unref(elementRef);
+  return (node as VueComponentInstance)?.$el ?? node;
 }
 
 /**
@@ -101,33 +101,33 @@ export function useDebouncedRef<T = unknown>(
   delay: number = 300,
   immediate: boolean = false
 ) {
-  const state = ref<T>(initialValue)
+  const state = ref<T>(initialValue);
   const debouncedRef = customRef((track, trigger) => ({
     get() {
-      track()
-      return state.value
+      track();
+      return state.value;
     },
     set: debounce(
       (value: T) => {
-        state.value = value as UnwrapRef<T>
-        trigger()
+        state.value = value as UnwrapRef<T>;
+        trigger();
       },
       delay,
       immediate
     ),
-  }))
+  }));
 
-  return debouncedRef
+  return debouncedRef;
 }
 
-export type DebouncedRef = Ref<unknown>
+export type DebouncedRef = Ref<unknown>;
 
 export function contains(containers: Set<HTMLElement>, element: HTMLElement) {
   for (let container of containers) {
-    if (container.contains(element)) return true
+    if (container.contains(element)) return true;
   }
 
-  return false
+  return false;
 }
 
 export function isElement(el: any): el is Element {
@@ -136,20 +136,20 @@ export function isElement(el: any): el is Element {
     typeof el == "object" &&
     "nodeType" in el &&
     el.nodeType === Node.ELEMENT_NODE
-  )
+  );
 }
 
 export function isHTMLElement(el: any): el is HTMLElement {
   if (!isElement(el)) {
-    return false
+    return false;
   }
 
-  const win = el.ownerDocument.defaultView ?? window
-  return el instanceof win.HTMLElement
+  const win = el.ownerDocument.defaultView ?? window;
+  return el instanceof win.HTMLElement;
 }
 
 export function getOwnerDocument(node?: Element | null): Document {
-  return isElement(node) ? node.ownerDocument ?? document : document
+  return isElement(node) ? node.ownerDocument ?? document : document;
 }
 
-export const isBrowser = canUseDOM()
+export const isBrowser = canUseDOM();

@@ -1,8 +1,8 @@
-import { isFocusable } from "./tabbable"
+import { isFocusable } from "./tabbable";
 
 interface IChildNode extends ChildNode {
-  item?: any
-  localName?: string
+  item?: any;
+  localName?: string;
 }
 
 const focusableElList = [
@@ -20,11 +20,12 @@ const focusableElList = [
   "video[controls]",
   "*[tabindex]:not([aria-disabled])",
   "*[contenteditable]",
-]
+];
 
-const focusableElSelector = focusableElList.join()
+const focusableElSelector = focusableElList.join();
 
-const isVisible = (el: HTMLElement) => el.offsetWidth > 0 && el.offsetHeight > 0
+const isVisible = (el: HTMLElement) =>
+  el.offsetWidth > 0 && el.offsetHeight > 0;
 
 /**
  * Computes the selector of an element from the DOM
@@ -40,60 +41,60 @@ const isVisible = (el: HTMLElement) => el.offsetWidth > 0 && el.offsetHeight > 0
  * https://stackoverflow.com/questions/22515835/javascript-find-selector-of-an-element
  */
 export function getSelector(node: HTMLElement) {
-  const id = node.getAttribute("id")
+  const id = node.getAttribute("id");
 
-  if (id) return "#" + id
+  if (id) return "#" + id;
 
-  let path = ""
+  let path = "";
 
   while (node) {
-    let name = node.localName
-    const parent = node.parentNode
+    let name = node.localName;
+    const parent = node.parentNode;
 
     if (!parent) {
-      path = name + " > " + path
-      continue
+      path = name + " > " + path;
+      continue;
     }
 
     if (node.getAttribute("id")) {
-      path = "#" + node.getAttribute("id") + " > " + path
-      break
+      path = "#" + node.getAttribute("id") + " > " + path;
+      break;
     }
 
-    const sameTagSiblings: any = []
-    let children = parent.childNodes
-    children = Array.prototype.slice.call(children) as any
+    const sameTagSiblings: any = [];
+    let children = parent.childNodes;
+    children = Array.prototype.slice.call(children) as any;
 
     children.forEach((child) => {
       // @ts-ignore
       if (child.localName == name) {
-        sameTagSiblings.push(child)
+        sameTagSiblings.push(child);
       }
-    })
+    });
 
     // if there are more than one
     // children of that type use nth-of-type
     if (sameTagSiblings.length > 1) {
-      const index = sameTagSiblings.indexOf(node)
-      name += ":nth-of-type(" + (index + 1) + ")"
+      const index = sameTagSiblings.indexOf(node);
+      name += ":nth-of-type(" + (index + 1) + ")";
     }
 
     if (path) {
-      path = name + " > " + path
+      path = name + " > " + path;
     } else {
-      path = name
+      path = name;
     }
 
-    node = parent as HTMLElement
+    node = parent as HTMLElement;
   }
 
-  return path
+  return path;
 }
 
 export function getAllFocusable<T extends HTMLElement>(container: T) {
   const focusableEls = Array.from(
     container.querySelectorAll<T>(focusableElSelector)
-  )
-  focusableEls.unshift(container)
-  return focusableEls.filter((el) => isFocusable(el) && isVisible(el))
+  );
+  focusableEls.unshift(container);
+  return focusableEls.filter((el) => isFocusable(el) && isVisible(el));
 }

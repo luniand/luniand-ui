@@ -1,11 +1,11 @@
-import { isArray, isObject } from "./assertion"
+import { isArray, isObject } from "./assertion";
 
 export function flatten<Value = any>(
   target: Record<string, Value> | undefined | null,
   maxDepth = Infinity
 ) {
   if ((!isObject(target) && !Array.isArray(target)) || !maxDepth) {
-    return target
+    return target;
   }
 
   return Object.entries(target).reduce((result, [key, value]) => {
@@ -13,14 +13,14 @@ export function flatten<Value = any>(
       Object.entries(flatten(value, maxDepth - 1)).forEach(
         ([childKey, childValue]) => {
           // e.g. gray.500
-          result[`${key}.${childKey}`] = childValue
+          result[`${key}.${childKey}`] = childValue;
         }
-      )
+      );
     } else {
       // e.g. transparent
-      result[key] = value
+      result[key] = value;
     }
 
-    return result
-  }, {} as any)
+    return result;
+  }, {} as any);
 }

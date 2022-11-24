@@ -1,5 +1,5 @@
-import { getCurrentScope, onScopeDispose } from "@vue/runtime-core"
-import { Fn } from "./types"
+import { getCurrentScope, onScopeDispose } from "@vue/runtime-core";
+import { Fn } from "./types";
 
 /**
  * Invokes onScopeDispose() if it's inside a effect scope lifecycle, if not, do nothing
@@ -8,8 +8,8 @@ import { Fn } from "./types"
  */
 export function tryOnScopeDispose(fn: Fn) {
   if (getCurrentScope()) {
-    onScopeDispose(fn)
-    return true
+    onScopeDispose(fn);
+    return true;
   }
-  return false
+  return false;
 }

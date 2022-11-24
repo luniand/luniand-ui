@@ -8,10 +8,10 @@ export function match<T extends string | number = string, U = unknown>(
   ...args: any[]
 ): U {
   if (value in lookup) {
-    let returnValue = lookup[value]
+    let returnValue = lookup[value];
     return typeof returnValue === "function"
       ? returnValue(...args)
-      : returnValue
+      : returnValue;
   }
 
   let error = new Error(
@@ -20,8 +20,8 @@ export function match<T extends string | number = string, U = unknown>(
     )
       .map((key) => `"${key}"`)
       .join(", ")}.`
-  )
+  );
 
-  if (Error?.captureStackTrace) Error.captureStackTrace(error, match)
-  throw error
+  if (Error?.captureStackTrace) Error.captureStackTrace(error, match);
+  throw error;
 }

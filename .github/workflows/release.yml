@@ -1,72 +1,55 @@
-# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
-# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
-
+# https://github.com/changesets/action\#with-publishing
 name: Release
 
 on:
   push:
-    paths:
-      - "packages/**"
     branches:
-      - master
+      - main
+
+concurrency: ${{ github.workflow }}-${{ github.ref }}
 
 jobs:
   release:
     name: Release
     runs-on: ubuntu-latest
     steps:
-    - name: Get Yarn cache path
-      id: yarn-cache
-      run: echo "::set-output name=dir::$(yarn cache dir)"
-
-    - name: Checkout Repo
-      uses: actions/checkout@master
-      with:
-        # This makes Actions fetch all Git history
-        # so that Changesets can generate changelogs with the correct commits
-        fetch-depth: 0
-
-    - name: Use Node.js 16.x
-      uses: actions/setup-node@master
-      with:
-        node-version: 16
-
-    - name: Load Yarn cache
-      uses: actions/cache@v2
-      with:
-        path: ${{ steps.yarn-cache.outputs.dir }}
-        key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-yarn-
-
-    - name: Install dependencies
-      run: yarn install --frozen-lockfile && yarn bootstrap
-
-
-    - name: Linting
-      run: yarn lint
-
-    - name: Building packages
-      run: yarn build && yarn bootstrap
-
-    - name: Testing components
-      run: yarn test:ci
-      env:
-        CI: true
-
-    # TODO: Uncomment when ready to start testing RCs
-
-    - name: Setup CI Git User
-      run: |
-        git config --global user.name "codebender828"
-        git config --global user.email "jbakebwa@163.com"
-    
-    - name: Create Release Pull Request
-      uses: changesets/action@master
-      with:
-        publish: yarn release
-        title: "chore(release): version packages and publish"
-        commit: "chore(release): version packages"
-      env:
-        NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@luniand'
+      - name: Setup .yarnrc.yml
+        run: |
+          yarn config set npmScopes.luniand.npmRegistryServer "https://npm.pkg.github.com"
+          yarn config set npmScopes.luniand.npmAlwaysAuth true
+          yarn config set npmScopes.luniand.npmAuthToken $NPM_AUTH_TOKEN
+        env:
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Cache node_modules and yarn cache
+        uses: actions/cache@v3
+        with:
+          path: |
+            node_modules
+            packages/*/node_modules
+            .yarn/cache
+          key: root-node-modules-folder-v1
+          restore-keys: |
+            root-node-modules-folder-
+      - run: yarn install
+      # FIXME: run yarn lint and yarn test before releasing
+      - name: Create Release Pull Request or Publish to Github Package Registry
+        id: changesets
+        uses: changesets/action@v1
+        with:
+          # This expects you to have a script called version which updates the lockfile after calling `changeset version`.
+          version: yarn version
+          # This expects you to have a script called release which builds your packages and then calls `changeset publish`.
+          publish: yarn release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # https://docs.github.com/en/actions/publishing-packages/publishing-nodejs-packages\#example-workflow
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false

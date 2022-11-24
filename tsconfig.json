@@ -1,16 +1,8 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "es5",
     "module": "esnext",
-    "types": [
-      "node",
-      "dom.iterable",
-      "vue",
-      "jest",
-      "components.d.ts",
-      "env.d.ts",
-      "cypress"
-    ],
+    "types": ["node"],
     "lib": ["dom", "esnext"],
     "composite": true,
     "declaration": true,
@@ -22,41 +14,12 @@
     "importsNotUsedAsValues": "preserve",
     "noFallthroughCasesInSwitch": true,
     "jsx": "preserve",
-    "esModuleInterop": true,
     "resolveJsonModule": true,
-    "allowSyntheticDefaultImports": true,
     "downlevelIteration": true,
     "preserveValueImports": false,
     "incremental": true,
-    "declarationMap": true
-  },
-  "include": [
-    "./components.d.ts",
-    "packages/**/*.ts",
-    "packages/**/*.tsx",
-    "packages/*.tsx",
-    "playground/**/*.json",
-    "playground/**/*.ts",
-    "playground/**/*.tsx",
-    "playground/**/*.d.ts",
-    "playground/**/*.vue",
-    "tests/index.d.ts",
-    "**/*.d.ts",
-    "vite.config.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "./@types",
-    "dist",
-    "packages/**/*.test.ts",
-    "**/*.cy.tsx",
-    "cypress/**/*.(ts|tsx)"
-  ],
-  "ts-node": {
-    "compilerOptions": {
-      "module": "CommonJS",
-      "resolveJsonModule": true,
-      "noImplicitAny": false
-    }
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true
   }
 }
