@@ -1,0 +1,45 @@
+{
+  "name": "@luniand-ui/theme-provider",
+  "version": "1.0.2",
+  "description": "Luniand UI | Theme Provider module",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "keywords": [
+    "component",
+    "theme-provider",
+    "luniand"
+  ],
+  "homepage": "https://github.com/luniand/luniand-ui#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luniand/luniand-ui.git",
+    "directory": "packages/components/theme-provider"
+  },
+  "bugs": {
+    "url": "https://github.com/luniand/luniand-ui/issues"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "dev": "pnpm build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src/index.ts --format=esm,cjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@luniand-ui/system": "workspace:*",
+    "@luniand-ui/theme": "workspace:*"
+  },
+  "devDependencies": {
+    "@vue/runtime-core": "^3.2.45"
+  }
+}
