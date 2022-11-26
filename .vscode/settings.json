@@ -7,13 +7,16 @@
     "luniand",
     "manypkg",
     "mergewith",
+    "Parms",
     "postpack",
     "precommit",
     "SNAO",
+    "tinycolor",
     "tsup",
     "typecheck",
     "unusafe",
     "vnode",
+    "WCAG",
     "yarnpkg",
     "yarnrc"
   ]

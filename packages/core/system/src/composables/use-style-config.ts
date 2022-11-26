@@ -1,6 +1,5 @@
 import { computed, ComputedRef, Ref } from "@vue/runtime-core";
-import { SystemStyleObject } from "@luniand-ui/styled-system";
-import { ThemingProps } from "../system.types";
+import { SystemStyleObject, ThemingProps } from "@luniand-ui/styled-system";
 import { filterUndefined, get, mergeWith, runIfFn } from "@luniand-ui/utils";
 import { useLuniand } from "./use-luniand";
 // import type { Theme } from "@luniand-ui/theme";

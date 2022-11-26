@@ -120,15 +120,3 @@ declare global {
         LuniandProps {}
   }
 }
-
-export interface ThemingProps<ThemeComponent extends string = string> {
-  variant?: ThemeComponent extends keyof ThemeTypings["components"]
-    ? ThemeTypings["components"][ThemeComponent]["variants"] | (string & {})
-    : string;
-  size?: ThemeComponent extends keyof ThemeTypings["components"]
-    ? ThemeTypings["components"][ThemeComponent]["sizes"] | (string & {})
-    : string;
-  colorScheme?: ThemeTypings["colorSchemes"] | (string & {});
-  orientation?: "vertical" | "horizontal";
-  styleConfig?: Dict;
-}
