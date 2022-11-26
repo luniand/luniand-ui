@@ -1,7 +1,7 @@
 {
-  "name": "@luniand-ui/theme-provider",
-  "version": "0.0.1",
-  "description": "Luniand UI | Theme Provider module",
+  "name": "@luniand-ui/reset",
+  "version": "1.0.2",
+  "description": "Luniand UI | Global styles reset component",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "keywords": [
     "component",
@@ -36,8 +36,7 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@luniand-ui/system": "workspace:*",
-    "@luniand-ui/theme": "workspace:*"
+    "@luniand-ui/system": "workspace:*"
   },
   "devDependencies": {
     "@vue/runtime-core": "^3.2.45"

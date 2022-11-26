@@ -1,11 +1,11 @@
 {
-  "name": "@luniand-ui/theme-provider",
+  "name": "@luniand-ui/icon",
   "version": "0.0.1",
-  "description": "Luniand UI | Theme Provider module",
+  "description": "Luniand UI | A component to display icons in the browser component",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "keywords": [
     "component",
-    "theme-provider",
+    "icon",
     "luniand"
   ],
   "homepage": "https://github.com/luniand/luniand-ui#readme",
@@ -21,7 +21,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luniand/luniand-ui.git",
-    "directory": "packages/components/theme-provider"
+    "directory": "packages/components/icon"
   },
   "bugs": {
     "url": "https://github.com/luniand/luniand-ui/issues"
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@luniand-ui/system": "workspace:*",
-    "@luniand-ui/theme": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
   },
   "devDependencies": {
     "@vue/runtime-core": "^3.2.45"

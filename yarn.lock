@@ -582,7 +582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:^11.10.5":
+"@emotion/cache@npm:^11.10.5, @emotion/cache@npm:^11.7.1":
   version: 11.10.5
   resolution: "@emotion/cache@npm:11.10.5"
   dependencies:
@@ -627,7 +627,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/serialize@npm:^1.1.1":
+"@emotion/serialize@npm:^1.0.2, @emotion/serialize@npm:^1.1.1":
   version: 1.1.1
   resolution: "@emotion/serialize@npm:1.1.1"
   dependencies:
@@ -640,7 +640,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/sheet@npm:^1.2.1":
+"@emotion/sheet@npm:^1.1.0, @emotion/sheet@npm:^1.2.1":
   version: 1.2.1
   resolution: "@emotion/sheet@npm:1.2.1"
   checksum: ce78763588ea522438156344d9f592203e2da582d8d67b32e1b0b98eaba26994c6c270f8c7ad46442fc9c0a9f048685d819cd73ca87e544520fd06f0e24a1562
@@ -654,7 +654,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/utils@npm:^1.2.0":
+"@emotion/utils@npm:^1.1.0, @emotion/utils@npm:^1.2.0":
   version: 1.2.0
   resolution: "@emotion/utils@npm:1.2.0"
   checksum: 55457a49ddd4db6a014ea0454dc09eaa23eedfb837095c8ff90470cb26a303f7ceb5fcc1e2190ef64683e64cfd33d3ba3ca3109cd87d12bc9e379e4195c9a4dd
@@ -743,10 +743,29 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@luniand-ui/icon@workspace:*, @luniand-ui/icon@workspace:packages/components/icon":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/icon@workspace:packages/components/icon"
+  dependencies:
+    "@luniand-ui/system": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
+    "@vue/runtime-core": ^3.2.45
+  languageName: unknown
+  linkType: soft
+
 "@luniand-ui/prop-utils@workspace:packages/utilities/prop-utils":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/prop-utils@workspace:packages/utilities/prop-utils"
   dependencies:
+    "@vue/runtime-core": ^3.2.45
+  languageName: unknown
+  linkType: soft
+
+"@luniand-ui/reset@workspace:*, @luniand-ui/reset@workspace:packages/components/reset":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/reset@workspace:packages/components/reset"
+  dependencies:
+    "@luniand-ui/system": "workspace:*"
     "@vue/runtime-core": ^3.2.45
   languageName: unknown
   linkType: soft
@@ -853,6 +872,27 @@ __metadata:
     lodash.memoize: ^4.1.2
     lodash.mergewith: ^4.6.2
     object-assign: ^4.1.1
+  languageName: unknown
+  linkType: soft
+
+"@luniand-ui/vue@workspace:packages/components/vue":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/vue@workspace:packages/components/vue"
+  dependencies:
+    "@emotion/cache": ^11.7.1
+    "@emotion/serialize": ^1.0.2
+    "@emotion/sheet": ^1.1.0
+    "@emotion/utils": ^1.1.0
+    "@luniand-ui/color-mode": "workspace:*"
+    "@luniand-ui/icon": "workspace:*"
+    "@luniand-ui/reset": "workspace:*"
+    "@luniand-ui/styled": "workspace:*"
+    "@luniand-ui/styled-system": "workspace:*"
+    "@luniand-ui/system": "workspace:*"
+    "@luniand-ui/theme": "workspace:*"
+    "@luniand-ui/theme-tools": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
+    "@vue/runtime-core": ^3.2.45
   languageName: unknown
   linkType: soft
 
