@@ -1,9 +1,12 @@
 {
-  "name": "uniland-ui",
+  "name": "luniand-ui",
   "packageManager": "yarn@3.3.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "packages/core/*",
+    "packages/utilities/*",
+    "packages/components/*"
   ],
   "scripts": {
     "build": "turbo run --concurrency=4 build",
@@ -25,6 +28,8 @@
     "@commitlint/config-lerna-scopes": "^17.2.1",
     "@manypkg/cli": "^0.19.2",
     "husky": "^8.0.0",
-    "turbo": "^1.6.3"
+    "tsup": "^6.5.0",
+    "turbo": "^1.6.3",
+    "vue": "latest"
   }
 }

@@ -51,6 +51,7 @@ export function useRef(): [
     refEl.value = (el as VueComponentInstance)?.$el ?? el;
   };
 
+  // @ts-ignore
   return [_ref, refEl];
 }
 

@@ -1,0 +1,25 @@
+{
+  "name": "@luniand-ui/styled",
+  "version": "1.0.2",
+  "main": "dist/luniand-ui-styled.cjs.js",
+  "module": "dist/luniand-ui-styled.esm.js",
+  "files": [
+    "dist"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/luniand-ui-styled.cjs.js",
+      "default": "./dist/luniand-ui-styled.esm.js"
+    }
+  },
+  "description": "Luniand UI | Styled module",
+  "repository": "https://github.com/luniand-ui/luniand-ui-vue-next/tree/master/packages/styled",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@luniand-ui/utils": "workspace:*"
+  }
+}

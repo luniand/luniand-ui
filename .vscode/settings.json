@@ -1,11 +1,14 @@
 {
   "cSpell.words": [
     "camelcase",
+    "csstype",
     "luniand",
     "manypkg",
     "mergewith",
+    "postpack",
     "precommit",
-    "uniland",
+    "tsup",
+    "typecheck",
     "yarnpkg",
     "yarnrc"
   ]

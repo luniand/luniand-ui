@@ -1,10 +1,10 @@
 {
-  "name": "@luniand-ui/utils",
-  "version": "0.0.2",
-  "description": "Luniand UI | Utils module or common functions",
+  "name": "@luniand-ui/prop-utils",
+  "version": "0.0.1",
+  "description": "Luniand UI | Attr utils module or common functions",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "keywords": [
-    "breakpoint",
+    "property",
     "utilities",
     "luniand"
   ],
@@ -21,7 +21,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luniand/luniand-ui.git",
-    "directory": "packages/utils"
+    "directory": "packages/utilities/prop-utils"
   },
   "bugs": {
     "url": "https://github.com/luniand/luniand-ui/issues"
@@ -35,20 +35,7 @@
     "prepack": "clean-package",
     "postpack": "clean-package restore"
   },
-  "dependencies": {
-    "@types/lodash.camelcase": "^4.3.7",
-    "@types/lodash.memoize": "^4.1.7",
-    "css-box-model": "^1.2.1",
-    "lodash.camelcase": "^4.3.0",
-    "lodash.memoize": "^4.1.2",
-    "lodash.mergewith": "^4.6.2",
-    "object-assign": "^4.1.1"
-  },
   "devDependencies": {
-    "@types/lodash.mergewith": "^4",
-    "@types/object-assign": "^4",
-    "@vue/runtime-core": "^3.2.45",
-    "@vue/runtime-dom": "^3.2.45",
-    "clean-package": "^2.2.0"
+    "@vue/runtime-core": "^3.2.45"
   }
 }

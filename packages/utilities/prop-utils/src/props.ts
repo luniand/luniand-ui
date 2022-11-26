@@ -1,4 +1,4 @@
-// import { DOMElements, ThemingProps } from "@uniland-ui/system";
+// import { DOMElements, ThemingProps } from "@luniand-ui/system";
 // import { PropType } from "@vue/runtime-core";
 
 // export const vueThemingProps = {
@@ -19,3 +19,5 @@
 //   > {
 //   as?: DOMElements | "router-link" | "nuxt-link";
 // }
+
+export const PropUtilsType = "Hello";
