@@ -1,11 +1,11 @@
 {
-  "name": "@luniand-ui/vue",
+  "name": "@luniand-ui/flex",
   "version": "1.0.2",
-  "description": "Vue 3 compatible version of Luniand UI",
+  "description": "Luniand UI | Flex component",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "keywords": [
     "component",
-    "vue",
+    "flex",
     "luniand"
   ],
   "homepage": "https://github.com/luniand/luniand-ui#readme",
@@ -21,7 +21,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luniand/luniand-ui.git",
-    "directory": "packages/core/styled"
+    "directory": "packages/components/flex"
   },
   "bugs": {
     "url": "https://github.com/luniand/luniand-ui/issues"
@@ -36,22 +36,9 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
-    "@emotion/cache": "^11.7.1",
-    "@emotion/serialize": "^1.0.2",
-    "@emotion/sheet": "^1.1.0",
-    "@emotion/utils": "^1.1.0",
-    "@luniand-ui/color-mode": "workspace:*",
-    "@luniand-ui/flex": "workspace:*",
-    "@luniand-ui/icon": "workspace:*",
-    "@luniand-ui/reset": "workspace:*",
-    "@luniand-ui/styled": "workspace:*",
-    "@luniand-ui/styled-system": "workspace:*",
-    "@luniand-ui/system": "workspace:*",
-    "@luniand-ui/theme": "workspace:*",
-    "@luniand-ui/theme-tools": "workspace:*",
-    "@luniand-ui/utils": "workspace:*"
+    "@luniand-ui/system": "workspace:*"
   },
   "devDependencies": {
-    "@vue/runtime-core": "^3.2.45"
+    "@vue/runtime-core": "^3.2.37"
   }
 }

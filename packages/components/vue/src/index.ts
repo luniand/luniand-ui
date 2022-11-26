@@ -140,7 +140,7 @@ export * from "@luniand-ui/color-mode";
 // export * from "@luniand-ui/c-code"
 
 // F
-// export * from "@luniand-ui/u-flex";
+export * from "@luniand-ui/flex";
 // export * from "@luniand-ui/c-focus-lock"
 // export * from "@luniand-ui/c-form-control"
 

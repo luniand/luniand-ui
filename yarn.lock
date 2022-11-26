@@ -743,6 +743,15 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@luniand-ui/flex@workspace:*, @luniand-ui/flex@workspace:packages/components/flex":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/flex@workspace:packages/components/flex"
+  dependencies:
+    "@luniand-ui/system": "workspace:*"
+    "@vue/runtime-core": ^3.2.37
+  languageName: unknown
+  linkType: soft
+
 "@luniand-ui/icon@workspace:*, @luniand-ui/icon@workspace:packages/components/icon":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/icon@workspace:packages/components/icon"
@@ -884,6 +893,7 @@ __metadata:
     "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.1.0
     "@luniand-ui/color-mode": "workspace:*"
+    "@luniand-ui/flex": "workspace:*"
     "@luniand-ui/icon": "workspace:*"
     "@luniand-ui/reset": "workspace:*"
     "@luniand-ui/styled": "workspace:*"
@@ -1249,7 +1259,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/runtime-core@npm:3.2.45, @vue/runtime-core@npm:^3.2.45":
+"@vue/runtime-core@npm:3.2.45, @vue/runtime-core@npm:^3.2.37, @vue/runtime-core@npm:^3.2.45":
   version: 3.2.45
   resolution: "@vue/runtime-core@npm:3.2.45"
   dependencies:
