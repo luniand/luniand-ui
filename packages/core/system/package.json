@@ -1,0 +1,55 @@
+{
+  "name": "@luniand-ui/system",
+  "version": "1.0.2",
+  "description": "Luniand UI | System module",
+  "author": "Albert Tran trantoan.fox.97@gmail.com",
+  "keywords": [
+    "core",
+    "styled-system",
+    "luniand"
+  ],
+  "homepage": "https://github.com/luniand/luniand-ui#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luniand/luniand-ui.git",
+    "directory": "packages/core/system"
+  },
+  "bugs": {
+    "url": "https://github.com/luniand/luniand-ui/issues"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "dev": "pnpm build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src/index.ts --format=esm,cjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@emotion/css": "^11.10.5",
+    "@luniand-ui/attr-utils": "workspace:*",
+    "@luniand-ui/color-mode": "workspace:*",
+    "@luniand-ui/styled": "workspace:*",
+    "@luniand-ui/styled-system": "workspace:*",
+    "@luniand-ui/utils": "workspace:*",
+    "lodash.camelcase": "^4.3.0",
+    "lodash.kebabcase": "^4.1.1",
+    "lodash.memoize": "^4.1.2"
+  },
+  "devDependencies": {
+    "@types/lodash.camelcase": "^4.3.7",
+    "@types/lodash.kebabcase": "^4",
+    "@types/lodash.memoize": "^4.1.7",
+    "@vue/runtime-core": "^3.2.45"
+  }
+}

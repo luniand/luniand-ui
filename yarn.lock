@@ -719,7 +719,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@luniand-ui/color-mode@workspace:packages/components/color-mode":
+"@luniand-ui/color-mode@workspace:*, @luniand-ui/color-mode@workspace:packages/components/color-mode":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/color-mode@workspace:packages/components/color-mode"
   dependencies:
@@ -748,7 +748,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@luniand-ui/styled@workspace:packages/core/styled":
+"@luniand-ui/styled@workspace:*, @luniand-ui/styled@workspace:packages/core/styled":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/styled@workspace:packages/core/styled"
   dependencies:
@@ -764,6 +764,25 @@ __metadata:
     "@vue/runtime-core": ^3.2.45
     clsx: ^1.2.1
     lodash.camelcase: ^4.3.0
+    lodash.memoize: ^4.1.2
+  languageName: unknown
+  linkType: soft
+
+"@luniand-ui/system@workspace:packages/core/system":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/system@workspace:packages/core/system"
+  dependencies:
+    "@emotion/css": ^11.10.5
+    "@luniand-ui/color-mode": "workspace:*"
+    "@luniand-ui/styled": "workspace:*"
+    "@luniand-ui/styled-system": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
+    "@types/lodash.camelcase": ^4.3.7
+    "@types/lodash.kebabcase": ^4
+    "@types/lodash.memoize": ^4.1.7
+    "@vue/runtime-core": ^3.2.45
+    lodash.camelcase: ^4.3.0
+    lodash.kebabcase: ^4.1.1
     lodash.memoize: ^4.1.2
   languageName: unknown
   linkType: soft
@@ -962,6 +981,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash.kebabcase@npm:^4":
+  version: 4.1.7
+  resolution: "@types/lodash.kebabcase@npm:4.1.7"
+  dependencies:
+    "@types/lodash": "*"
+  checksum: 8c28dae574d0d15d316b8412f1edf7628398f0d1d34bec978af9d8b9f1286749492c23680817e74c6bd15e14b45b0006c79b320ebd260f9b8c0ac85668e0c409
+  languageName: node
+  linkType: hard
+
 "@types/lodash.memoize@npm:^4.1.7":
   version: 4.1.7
   resolution: "@types/lodash.memoize@npm:4.1.7"
@@ -1033,13 +1061,6 @@ __metadata:
   version: 4.0.0
   resolution: "@types/parse-json@npm:4.0.0"
   checksum: fd6bce2b674b6efc3db4c7c3d336bd70c90838e8439de639b909ce22f3720d21344f52427f1d9e57b265fcb7f6c018699b99e5e0c208a1a4823014269a6bf35b
-  languageName: node
-  linkType: hard
-
-"@types/react@file:@types/react::locator=luniand-ui%40workspace%3A.":
-  version: 0.0.0
-  resolution: "@types/react@file:@types/react#@types/react::hash=cdf41a&locator=luniand-ui%40workspace%3A."
-  checksum: ee71a1d706c7da9972c78f6ad540606c06ca943eed58582d93deedfc5b63447029e63d3532d5b69d4ae837921e4c903c0c8461feccd0166df3367a4bfa0eb794
   languageName: node
   linkType: hard
 
@@ -3549,7 +3570,6 @@ __metadata:
     "@commitlint/config-conventional": ^17.3.0
     "@commitlint/config-lerna-scopes": ^17.2.1
     "@manypkg/cli": ^0.19.2
-    "@types/react": "file:@types/react"
     husky: ^8.0.0
     tsup: ^6.5.0
     turbo: ^1.6.3
