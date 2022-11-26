@@ -6,7 +6,8 @@
     "packages/*",
     "packages/core/*",
     "packages/utilities/*",
-    "packages/components/*"
+    "packages/components/*",
+    "plugins/*"
   ],
   "scripts": {
     "build": "turbo run --concurrency=4 build",
@@ -19,7 +20,11 @@
     "release": "yarn build && changeset publish",
     "test": "turbo run --concurrency=4 test",
     "test:ci": "turbo run --concurrency=2 test -- --maxWorkers=2 --forceExit",
-    "version": "changeset version && yarn install"
+    "version": "changeset version && yarn install",
+    "build:addon": "cd plugins/storybook-addon && yarn build:fast",
+    "storybook": "yarn build:addon && start-storybook -p 6006",
+    "build:storybook": "yarn build:addon && build-storybook && sb extract",
+    "serve:storybook": "yarn serve storybook-static"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.2",
@@ -27,6 +32,13 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@commitlint/config-lerna-scopes": "^17.2.1",
     "@manypkg/cli": "^0.19.2",
+    "@storybook/addon-a11y": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-storysource": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/cli": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/vue3": "^6.5.13",
     "husky": "^8.0.0",
     "tsup": "^6.5.0",
     "turbo": "^1.6.3",

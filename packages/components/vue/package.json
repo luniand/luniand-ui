@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "dev": "pnpm build:fast -- --watch",
+    "dev": "yarn build:fast -- --watch",
     "clean": "rimraf dist .turbo",
     "typecheck": "tsc --noEmit",
     "build:fast": "tsup src/index.ts --format=esm,cjs",
@@ -42,12 +42,13 @@
     "@emotion/utils": "^1.1.0",
     "@luniand-ui/color-mode": "workspace:*",
     "@luniand-ui/flex": "workspace:*",
-    "@luniand-ui/icon": "workspace:*",
+    "@luniand-ui/icons": "workspace:*",
     "@luniand-ui/reset": "workspace:*",
     "@luniand-ui/styled": "workspace:*",
     "@luniand-ui/styled-system": "workspace:*",
     "@luniand-ui/system": "workspace:*",
     "@luniand-ui/theme": "workspace:*",
+    "@luniand-ui/theme-provider": "workspace:*",
     "@luniand-ui/theme-tools": "workspace:*",
     "@luniand-ui/utils": "workspace:*"
   },

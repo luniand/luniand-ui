@@ -1,0 +1,29 @@
+{
+  "projectName": "luniand-ui",
+  "projectOwner": "luniand-ui",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 64,
+  "commit": true,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "trantoan960",
+      "name": "Albert Tran",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31186688?v=4",
+      "profile": "https://github.com/trantoan960",
+      "contributions": [
+        "code",
+        "maintenance",
+        "doc",
+        "example",
+        "design"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true
+}

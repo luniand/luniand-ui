@@ -1,0 +1,107 @@
+{
+  "name": "@luniand-ui/storybook-addon",
+  "version": "0.0.1",
+  "description": "The official Storybook Addon for Luniand UI",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "theming-arg-types.png"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.esm.js"
+    },
+    "./*": "./*",
+    "./preset": {
+      "require": "./dist/preset/index.cjs.js",
+      "import": "./dist/preset/index.esm.js"
+    },
+    "./preset/decorators": {
+      "require": "./dist/preset/decorators.cjs.js",
+      "import": "./dist/preset/decorators.esm.js"
+    },
+    "./preset/register": {
+      "require": "./dist/preset/register.cjs.js",
+      "import": "./dist/preset/register.esm.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "preset": [
+        "./dist/preset/index.d.ts"
+      ],
+      "preset/decorators": [
+        "./dist/preset/decorators.d.ts"
+      ],
+      "preset/register": [
+        "./dist/preset/register.d.ts"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "tsup --dts",
+    "dev": "yarn build -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luniand/luniand-ui.git",
+    "directory": "plugins/storybook-addon"
+  },
+  "keywords": [
+    "storybook-addon",
+    "luniand-ui",
+    "storybook",
+    "addons",
+    "dark-mode"
+  ],
+  "author": "Albert Tran <trantoan.fox.97@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/luniand/luniand-ui/issues"
+  },
+  "homepage": "https://github.com/luniand/luniand-ui#readme",
+  "devDependencies": {
+    "@luniand-ui/vue": "workspace:*",
+    "@storybook/addons": "^6.5.6",
+    "@storybook/api": "^6.5.6",
+    "@storybook/components": "^6.5.6",
+    "vue": "latest"
+  },
+  "dependencies": {
+    "@luniand-ui/icons": "workspace:*"
+  },
+  "peerDependencies": {
+    "@luniand-ui/vue": "*",
+    "@storybook/addons": ">=6.4",
+    "@storybook/api": ">=6.4",
+    "@storybook/components": ">=6.4",
+    "vue": "*"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": true
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "storybook": {
+    "displayName": "Luniand UI",
+    "supportedFrameworks": [
+      "Vue"
+    ],
+    "unsupportedFrameworks": [
+      "React",
+      "Angular",
+      "Svelte"
+    ],
+    "icon": "https://raw.githubusercontent.com/luniand/luniand-ui/main/logo/logomark-colored.svg"
+  }
+}

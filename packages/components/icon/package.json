@@ -1,5 +1,5 @@
 {
-  "name": "@luniand-ui/icon",
+  "name": "@luniand-ui/icons",
   "version": "0.0.1",
   "description": "Luniand UI | A component to display icons in the browser component",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
@@ -28,7 +28,7 @@
   },
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --dts",
-    "dev": "pnpm build:fast -- --watch",
+    "dev": "yarn build:fast -- --watch",
     "clean": "rimraf dist .turbo",
     "typecheck": "tsc --noEmit",
     "build:fast": "tsup src/index.ts --format=esm,cjs",

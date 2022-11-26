@@ -1,7 +1,7 @@
 import { computed, Plugin, ref, UnwrapRef } from "@vue/runtime-core";
 import defaultTheme from "@luniand-ui/theme";
 import type { ColorModeRef } from "@luniand-ui/color-mode";
-import { toCSSVar, WithCSSVar } from "@luniand-ui/styled-system";
+import { toCSSVar, WithCSSVar, ThemingProps } from "@luniand-ui/styled-system";
 import { luniand, injectGlobal } from "@luniand-ui/system";
 import {
   EmotionThemeContextSymbol,
@@ -114,6 +114,8 @@ export { extendTheme };
 // Export luniand factory function
 export { luniand };
 
+export type { ThemingProps };
+
 /**
  *
  * Component exports
@@ -145,7 +147,7 @@ export * from "@luniand-ui/flex";
 // export * from "@luniand-ui/c-form-control"
 
 // I
-export * from "@luniand-ui/icon";
+export * from "@luniand-ui/icons";
 // export * from "@luniand-ui/c-input"
 
 // L
@@ -169,7 +171,7 @@ export * from "@luniand-ui/reset";
 // export * from "@luniand-ui/c-scroll-lock"
 
 // T
-// export * from "@luniand-ui/c-theme-provider"
+export * from "@luniand-ui/theme-provider";
 // export * from "@luniand-ui/c-tag"
 
 // V
