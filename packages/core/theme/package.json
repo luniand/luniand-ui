@@ -1,11 +1,11 @@
 {
-  "name": "@luniand-ui/color-mode",
-  "version": "1.0.2",
-  "description": "Luniand UI | Color mode module",
+  "name": "@luniand-ui/theme",
+  "version": "0.0.1",
+  "description": "Luniand UI | Theme module",
   "author": "Albert Tran trantoan.fox.97@gmail.com",
   "keywords": [
     "core",
-    "styled-system",
+    "theme",
     "luniand"
   ],
   "homepage": "https://github.com/luniand/luniand-ui#readme",
@@ -21,7 +21,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luniand/luniand-ui.git",
-    "directory": "packages/components/color-mode"
+    "directory": "packages/core/theme"
   },
   "bugs": {
     "url": "https://github.com/luniand/luniand-ui/issues"
@@ -36,9 +36,9 @@
     "postpack": "clean-package restore"
   },
   "dependencies": {
+    "@luniand-ui/anatomy": "workspace:*",
+    "@luniand-ui/system": "workspace:*",
+    "@luniand-ui/theme-tools": "workspace:*",
     "@luniand-ui/utils": "workspace:*"
-  },
-  "devDependencies": {
-    "@vue/runtime-core": "^3.2.45"
   }
 }

@@ -2,8 +2,7 @@ import { computed, ComputedRef, Ref } from "@vue/runtime-core";
 import { SystemStyleObject, ThemingProps } from "@luniand-ui/styled-system";
 import { filterUndefined, get, mergeWith, runIfFn } from "@luniand-ui/utils";
 import { useLuniand } from "./use-luniand";
-// import type { Theme } from "@luniand-ui/theme";
-type Theme = any; // TODO: replace back lib theme
+import type { Theme } from "@luniand-ui/theme";
 
 export function useStyleConfig<Component extends keyof Theme["components"]>(
   themeKey: Component,
