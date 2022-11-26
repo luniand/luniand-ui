@@ -1,6 +1,7 @@
 {
   "cSpell.words": [
     "camelcase",
+    "clsx",
     "csstype",
     "luniand",
     "manypkg",
@@ -9,6 +10,8 @@
     "precommit",
     "tsup",
     "typecheck",
+    "unusafe",
+    "vnode",
     "yarnpkg",
     "yarnrc"
   ]
