@@ -91,7 +91,6 @@ export const LFlex: ComponentWithProps<DeepPartial<FlexProps>> =
         h: props.size,
         w: props.size,
       });
-      console.log("inject from flex: ", inject("$aaaa"));
       return () =>
         h(
           luniand.div,

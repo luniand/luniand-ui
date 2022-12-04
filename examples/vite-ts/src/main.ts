@@ -1,4 +1,4 @@
-import { createApp } from "@vue/runtime-dom";
+import { createApp } from "vue";
 import App from "./App.vue";
 import Luniand, {
   extendLuniand,
@@ -15,5 +15,7 @@ const app = createApp(App).use(
     extendTheme: extendTheme({}),
   })
 );
+
+app.provide("$hello", { a: 1 });
 
 app.mount("#app");

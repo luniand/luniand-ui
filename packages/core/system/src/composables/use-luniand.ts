@@ -5,7 +5,6 @@ import { Dict } from "@luniand-ui/utils";
 /** Provides theme object in component context */
 export const useTheme = <T extends object = Dict>(): T => {
   const theme = inject("$luniandTheme") as T;
-  console.log("theme from use:", theme);
 
   return theme;
 };
