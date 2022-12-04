@@ -1,4 +1,10 @@
-import { h, defineComponent, PropType, reactive } from "@vue/runtime-core";
+import {
+  h,
+  defineComponent,
+  PropType,
+  reactive,
+  inject,
+} from "@vue/runtime-core";
 import {
   luniand,
   DOMElements,
@@ -85,6 +91,7 @@ export const LFlex: ComponentWithProps<DeepPartial<FlexProps>> =
         h: props.size,
         w: props.size,
       });
+      console.log("inject from flex: ", inject("$aaaa"));
       return () =>
         h(
           luniand.div,

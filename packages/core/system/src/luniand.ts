@@ -27,7 +27,7 @@ import {
   Dict,
 } from "@luniand-ui/utils";
 import { cx, css as _css, CSSObject } from "@emotion/css";
-import { domElements, DOMElements } from "./system.utils";
+import { domElements, DOMElements, filterClassesInherit } from "./system.utils";
 import { useTheme } from "./composables/use-luniand";
 import { extractStyleAttrs } from "@luniand-ui/attr-utils";
 import { SNAO } from "@luniand-ui/utils";
@@ -54,7 +54,7 @@ export interface BaseStyleResolverProps {
   styles?: SystemStyleObject;
   /**
    * This attribute/property is reserved for all TSX component definitions.
-   * It is referenced by the luniand factiry function to
+   * It is referenced by the luniand factory function to
    * preserve the component's label class
    */
   __label?: string;
@@ -249,7 +249,9 @@ export const luniand: ILuniandFactory = (tag, options = {}) => {
         return h(
           (componentOrTag as any) || props.as,
           {
-            class: cx(inheritedClass as string, _componentName, className),
+            class: filterClassesInherit(
+              cx(inheritedClass as string, _componentName, className)
+            ),
             ...elementAttributes,
             ...(!props.__luniandIsRaw &&
               handleValueChange &&

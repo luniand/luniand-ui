@@ -2,7 +2,7 @@ import { LIcon } from "../src";
 
 export default {
   title: "Components / Media and Icons / Icon",
-  // component: { LIcon },
+  component: { LIcon },
 };
 
 const Template = (args) => ({
@@ -10,7 +10,7 @@ const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: '<Icon v-bind="args" />',
+  template: '<LIcon v-bind="args" />',
 });
 
 export const Basic = Template({
