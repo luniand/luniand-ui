@@ -1,4 +1,4 @@
-import { computed, Plugin, ref, UnwrapRef } from "@vue/runtime-core";
+import { computed, Plugin, ref, UnwrapRef } from "vue";
 import defaultTheme from "@luniand-ui/theme";
 import type { ColorModeRef } from "@luniand-ui/color-mode";
 import { toCSSVar, WithCSSVar, ThemingProps } from "@luniand-ui/styled-system";

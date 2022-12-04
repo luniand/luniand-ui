@@ -1,10 +1,4 @@
-import {
-  h,
-  defineComponent,
-  PropType,
-  reactive,
-  inject,
-} from "@vue/runtime-core";
+import { h, defineComponent, PropType, reactive } from "vue";
 import {
   luniand,
   DOMElements,

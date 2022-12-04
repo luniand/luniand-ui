@@ -1,4 +1,4 @@
-import { inject } from "@vue/runtime-core";
+import { inject } from "vue";
 import { useColorMode } from "@luniand-ui/color-mode";
 import { Dict } from "@luniand-ui/utils";
 

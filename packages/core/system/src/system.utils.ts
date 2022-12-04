@@ -1,6 +1,6 @@
 import { UnionStringArray, omit } from "@luniand-ui/utils";
 import { keyframes, injectGlobal } from "@emotion/css";
-import { PropType } from "@vue/runtime-core";
+import { PropType } from "vue";
 
 /**
  * Carefully selected html elements for luniand components.

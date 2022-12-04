@@ -1,11 +1,5 @@
-import {
-  h,
-  defineComponent,
-  computed,
-  inject,
-  PropType,
-} from "@vue/runtime-core";
-import { SVGAttributes } from "@vue/runtime-dom";
+import { h, defineComponent, computed, inject, PropType } from "vue";
+import { SVGAttributes } from "vue";
 import {
   luniand,
   LuniandProps,

@@ -50,6 +50,6 @@
     "@types/lodash.camelcase": "^4.3.7",
     "@types/lodash.kebabcase": "^4",
     "@types/lodash.memoize": "^4.1.7",
-    "@vue/runtime-core": "^3.2.45"
+    "vue": "^3.2.45"
   }
 }

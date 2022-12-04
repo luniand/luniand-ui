@@ -53,6 +53,6 @@
     "@luniand-ui/utils": "workspace:*"
   },
   "devDependencies": {
-    "@vue/runtime-core": "^3.2.45"
+    "vue": "^3.2.45"
   }
 }

@@ -5,7 +5,7 @@ export default {
   component: { LIcon },
 };
 
-const Template = (args) => ({
+const Template = (args: any) => ({
   components: { LIcon },
   setup() {
     return { args };
@@ -15,5 +15,4 @@ const Template = (args) => ({
 
 export const Basic = Template({
   id: "basic-icon",
-  fontSize: "24px",
 });

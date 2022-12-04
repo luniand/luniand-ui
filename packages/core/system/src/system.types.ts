@@ -1,4 +1,4 @@
-import { Component, Fragment, Suspense, Teleport } from "@vue/runtime-core";
+import { Component, Fragment, Suspense, Teleport } from "vue";
 import {
   SystemProps,
   ResponsiveValue,
@@ -11,7 +11,7 @@ import {
   ComponentCustomProps,
   VNodeProps,
   VNode,
-} from "@vue/runtime-core";
+} from "vue";
 import type { HTMLAttributes } from "@vue/runtime-dom";
 import { DOMElements } from "./system.utils";
 import { StyleResolverProps } from "./luniand";

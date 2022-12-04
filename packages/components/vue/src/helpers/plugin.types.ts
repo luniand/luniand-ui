@@ -1,4 +1,4 @@
-import { UnwrapRef } from "@vue/runtime-core";
+import { UnwrapRef } from "vue";
 import { ColorModeRef } from "@luniand-ui/color-mode";
 import { ThemeOverride } from "../extend-theme";
 import { Options } from "@emotion/cache";

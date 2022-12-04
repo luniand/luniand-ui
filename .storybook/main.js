@@ -1,5 +1,9 @@
 const path = require("path");
 const fs = require("fs");
+import { app } from "@storybook/vue3";
+// const Luniand = require("@luniand-ui/vue");
+
+// app.use(Luniand);
 
 // [Workaround] This logic means `"../packages/components/*/stories/*.stories.ts"` but it's much faster.
 function getStories(pkg) {
@@ -12,9 +16,10 @@ function getStories(pkg) {
 
 module.exports = {
   core: {
-    builder: "@storybook/builder-webpack5",
+    builder: "@storybook/builder-vite",
     disableTelemetry: true,
   },
+  framework: "@storybook/vue3",
   stories: getStories(),
   addons: [
     "@storybook/addon-a11y",
@@ -33,7 +38,7 @@ module.exports = {
         "../packages/core/theme/src"
       ),
     };
-    config.resolve.extensions.push(".ts");
+    config.resolve.extensions.push(".ts", ".tsx");
     return config;
   },
   typescript: {

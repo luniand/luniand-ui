@@ -5,7 +5,7 @@ import { get, runIfFn } from "@luniand-ui/utils";
 import { ColorModeRef } from "@luniand-ui/color-mode";
 import { serializeStyles } from "@emotion/serialize";
 import { StyleSheet } from "@emotion/sheet";
-import { computed, ref, watch, watchEffect } from "@vue/runtime-core";
+import { computed, ref, watch, watchEffect } from "vue";
 import createCache, { EmotionCache } from "@emotion/cache";
 import { insertStyles, SerializedStyles } from "@emotion/utils";
 

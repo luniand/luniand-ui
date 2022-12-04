@@ -1,4 +1,4 @@
-import { computed, ComputedRef, Ref } from "@vue/runtime-core";
+import { computed, ComputedRef, Ref } from "vue";
 import { SystemStyleObject, ThemingProps } from "@luniand-ui/styled-system";
 import { filterUndefined, get, mergeWith, runIfFn } from "@luniand-ui/utils";
 import { useLuniand } from "./use-luniand";

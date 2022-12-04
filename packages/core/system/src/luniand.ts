@@ -8,8 +8,8 @@ import {
   ComponentCustomProps,
   PropType,
   resolveComponent,
-} from "@vue/runtime-core";
-import type { HTMLAttributes } from "@vue/runtime-dom";
+} from "vue";
+import type { HTMLAttributes } from "vue";
 import {
   css,
   isStyleProp,
