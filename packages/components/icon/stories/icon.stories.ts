@@ -2,7 +2,7 @@ import { LIcon } from "../src";
 
 export default {
   title: "Components / Media and Icons / Icon",
-  component: { LIcon },
+  // component: { LIcon },
 };
 
 const Template = (args) => ({
