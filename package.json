@@ -23,7 +23,8 @@
     "build:addon": "cd plugins/storybook-addon && yarn build:fast",
     "storybook": "yarn build:addon && start-storybook -p 6006",
     "build:storybook": "yarn build:addon && build-storybook && sb extract",
-    "serve:storybook": "yarn serve storybook-static"
+    "serve:storybook": "yarn serve storybook-static",
+    "create:pkg": "plop component"
   },
   "dependencies": {
     "@changesets/cli": "^2.25.2",
@@ -41,6 +42,7 @@
     "@storybook/vue3": "^6.5.13",
     "@vitejs/plugin-vue": "^3.2.0",
     "husky": "^8.0.0",
+    "plop": "^3.1.1",
     "tsup": "^6.5.0",
     "turbo": "^1.6.3",
     "vite": "^3.2.4",

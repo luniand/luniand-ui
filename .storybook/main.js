@@ -1,6 +1,6 @@
 const path = require("path");
 const fs = require("fs");
-import { app } from "@storybook/vue3";
+// import { app } from "@storybook/vue3";
 // const Luniand = require("@luniand-ui/vue");
 
 // app.use(Luniand);
