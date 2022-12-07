@@ -134,6 +134,7 @@ export const UListItem: ComponentWithProps<
         luniand.li,
         {
           __label: "list__item",
+          // @ts-ignore
           __css: styles.value.item,
           ...attrs,
         },
@@ -152,6 +153,7 @@ export const UListIcon: ComponentWithProps<
       h(
         luniand(LIcon, {
           role: "presentation",
+          // @ts-ignore
           __css: styles.value.icon,
           ...attrs,
         }),
