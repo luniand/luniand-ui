@@ -2492,15 +2492,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@luniand-ui/flex@workspace:*, @luniand-ui/flex@workspace:packages/components/flex":
-  version: 0.0.0-use.local
-  resolution: "@luniand-ui/flex@workspace:packages/components/flex"
-  dependencies:
-    "@luniand-ui/system": "workspace:*"
-    vue: ^3.2.45
-  languageName: unknown
-  linkType: soft
-
 "@luniand-ui/icons@workspace:*, @luniand-ui/icons@workspace:packages/components/icon":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/icons@workspace:packages/components/icon"
@@ -2511,7 +2502,22 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@luniand-ui/prop-utils@workspace:packages/utilities/prop-utils":
+"@luniand-ui/layout@workspace:packages/components/layout":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/layout@workspace:packages/components/layout"
+  dependencies:
+    "@luniand-ui/icons": "workspace:*"
+    "@luniand-ui/prop-utils": "workspace:*"
+    "@luniand-ui/system": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
+    clean-package: 2.1.1
+    vue: ">=3"
+  peerDependencies:
+    vue: ">=3"
+  languageName: unknown
+  linkType: soft
+
+"@luniand-ui/prop-utils@workspace:*, @luniand-ui/prop-utils@workspace:packages/utilities/prop-utils":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/prop-utils@workspace:packages/utilities/prop-utils"
   dependencies:
@@ -2643,7 +2649,6 @@ __metadata:
     "@emotion/sheet": ^1.1.0
     "@emotion/utils": ^1.1.0
     "@luniand-ui/color-mode": "workspace:*"
-    "@luniand-ui/flex": "workspace:*"
     "@luniand-ui/icons": "workspace:*"
     "@luniand-ui/reset": "workspace:*"
     "@luniand-ui/styled": "workspace:*"
@@ -7302,6 +7307,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"clean-package@npm:2.1.1":
+  version: 2.1.1
+  resolution: "clean-package@npm:2.1.1"
+  dependencies:
+    dot-object: ^2.1.3
+  bin:
+    clean-package: bin/main.js
+  checksum: 692ae34142be5f6a07bf10cd47ae5f6f84d979e09147ce1e1d07164161deab8153de3a86c6239aecd652dd890a110ac87f90a6baa1d9b995e3ea885c221cad7e
+  languageName: node
+  linkType: hard
+
 "clean-package@npm:^2.2.0":
   version: 2.2.0
   resolution: "clean-package@npm:2.2.0"
@@ -8512,6 +8528,18 @@ __metadata:
     no-case: ^3.0.4
     tslib: ^2.0.3
   checksum: a65e3519414856df0228b9f645332f974f2bf5433370f544a681122eab59e66038fc3349b4be1cdc47152779dac71a5864f1ccda2f745e767c46e9c6543b1169
+  languageName: node
+  linkType: hard
+
+"dot-object@npm:^2.1.3":
+  version: 2.1.4
+  resolution: "dot-object@npm:2.1.4"
+  dependencies:
+    commander: ^4.0.0
+    glob: ^7.1.5
+  bin:
+    dot-object: bin/dot-object
+  checksum: d56842129dead664e75089f7f610518dfe4d9548cec1b5f9b5df35ae916efe21e05a3b999f926ee73906a270c60f9a255d53968aa0becc8cf45ad7678b3dc626
   languageName: node
   linkType: hard
 
@@ -10503,7 +10531,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"glob@npm:^7.0.0, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.6, glob@npm:^7.2.0":
+"glob@npm:^7.0.0, glob@npm:^7.1.3, glob@npm:^7.1.4, glob@npm:^7.1.5, glob@npm:^7.1.6, glob@npm:^7.2.0":
   version: 7.2.3
   resolution: "glob@npm:7.2.3"
   dependencies:
@@ -18801,7 +18829,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vue@npm:^3.2.45, vue@npm:latest":
+"vue@npm:>=3, vue@npm:^3.2.45, vue@npm:latest":
   version: 3.2.45
   resolution: "vue@npm:3.2.45"
   dependencies:
