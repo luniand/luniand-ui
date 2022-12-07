@@ -57,6 +57,9 @@ export const UText: ComponentWithProps<DeepPartial<TextProps>> =
           styleConfig: props.styleConfig,
         })
       );
+
+      // TODO: add text into type of useStyleConfig
+      // @ts-ignore
       const styles = useStyleConfig("Text", themingProps);
 
       const aliasedProps = computed(() =>
