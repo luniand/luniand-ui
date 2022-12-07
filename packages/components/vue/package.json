@@ -41,7 +41,6 @@
     "@emotion/sheet": "^1.1.0",
     "@emotion/utils": "^1.1.0",
     "@luniand-ui/color-mode": "workspace:*",
-    "@luniand-ui/flex": "workspace:*",
     "@luniand-ui/icons": "workspace:*",
     "@luniand-ui/reset": "workspace:*",
     "@luniand-ui/styled": "workspace:*",

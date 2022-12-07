@@ -13,6 +13,6 @@ const Template = (args: any) => ({
   template: '<LIcon v-bind="args" />',
 });
 
-export const Basic = Template({
+export const Basic = Template.bind({
   id: "basic-icon",
 });

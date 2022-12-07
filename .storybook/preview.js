@@ -1,4 +1,5 @@
-import { extendTheme } from "@luniand-ui/vue";
+import { app } from "@storybook/vue3";
+import Luniand from "@luniand-ui/vue";
 
 export const parameters = {
   options: {
@@ -7,19 +8,7 @@ export const parameters = {
         ? 0
         : a[1].id.localeCompare(b[1].id, undefined, { numeric: true }),
   },
-  luniand: {
-    theme: extendTheme({
-      semanticTokens: {
-        colors: {
-          semantic: {
-            default: "red.500",
-            _light: "red.500",
-            _dark: "blue.400",
-          },
-        },
-      },
-    }),
-  },
 };
 
 export const decorators = [];
+app.use(Luniand);
