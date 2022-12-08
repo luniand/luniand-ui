@@ -2629,14 +2629,13 @@ __metadata:
     "@types/lodash.memoize": ^4.1.7
     "@types/lodash.mergewith": ^4
     "@types/object-assign": ^4
-    "@vue/runtime-core": ^3.2.45
-    "@vue/runtime-dom": ^3.2.45
     clean-package: ^2.2.0
     css-box-model: ^1.2.1
     lodash.camelcase: ^4.3.0
     lodash.memoize: ^4.1.2
     lodash.mergewith: ^4.6.2
     object-assign: ^4.1.1
+    vue: ^3.2.45
   languageName: unknown
   linkType: soft
 
@@ -5214,7 +5213,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vue/runtime-dom@npm:3.2.45, @vue/runtime-dom@npm:^3.2.45":
+"@vue/runtime-dom@npm:3.2.45":
   version: 3.2.45
   resolution: "@vue/runtime-dom@npm:3.2.45"
   dependencies:

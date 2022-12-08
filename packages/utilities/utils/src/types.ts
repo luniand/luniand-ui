@@ -1,4 +1,4 @@
-import { ComputedRef, Ref, VNodeProps } from "@vue/runtime-core";
+import { ComputedRef, Ref, VNodeProps } from "vue";
 import { TemplateRef } from "./dom";
 
 /**

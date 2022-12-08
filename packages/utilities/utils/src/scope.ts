@@ -1,4 +1,4 @@
-import { getCurrentScope, onScopeDispose } from "@vue/runtime-core";
+import { getCurrentScope, onScopeDispose } from "vue";
 import { Fn } from "./types";
 
 /**

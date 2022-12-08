@@ -6,7 +6,7 @@ import {
   ref,
   unref,
   UnwrapRef,
-} from "@vue/runtime-core";
+} from "vue";
 import { debounce } from "./timers";
 import { MaybeRef } from "./types";
 import { canUseDOM } from "./configurable";

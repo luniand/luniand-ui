@@ -47,8 +47,7 @@
   "devDependencies": {
     "@types/lodash.mergewith": "^4",
     "@types/object-assign": "^4",
-    "@vue/runtime-core": "^3.2.45",
-    "@vue/runtime-dom": "^3.2.45",
-    "clean-package": "^2.2.0"
+    "clean-package": "^2.2.0",
+    "vue": "^3.2.45"
   }
 }

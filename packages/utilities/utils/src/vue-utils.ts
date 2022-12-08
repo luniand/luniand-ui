@@ -1,11 +1,4 @@
-import {
-  inject,
-  InjectionKey,
-  provide,
-  isVNode,
-  Slots,
-  VNode,
-} from "@vue/runtime-core";
+import { inject, InjectionKey, provide, isVNode, Slots, VNode } from "vue";
 import { isObject } from "./assertion";
 
 export interface CreateContextOptions {
