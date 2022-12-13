@@ -1,4 +1,4 @@
-import { defineComponent, PropType, computed, h } from 'vue';
+import { defineComponent, PropType, computed, h } from "vue";
 
 import {
   luniand,
@@ -9,21 +9,21 @@ import {
   ComponentWithProps,
   SystemStyleObject,
   DeepPartial,
-} from '@luniand-ui/system';
+} from "@luniand-ui/system";
 
-import { dataAttr, filterUndefined, mergeWith } from '@luniand-ui/utils';
-import { useButtonGroup } from './button-group';
-import { LIcon, IconProps } from '@luniand-ui/icons';
-import { LSpinner } from '@luniand-ui/spinner';
-import { ButtonProps, defaultButtonProps } from './button.utils';
-import { SystemProps } from '@luniand-ui/styled-system';
-import { SNAO, vueThemingProps } from '@luniand-ui/prop-utils';
-import { getValidChildren } from '@luniand-ui/utils';
+import { dataAttr, filterUndefined, mergeWith } from "@luniand-ui/utils";
+import { useButtonGroup } from "./button-group";
+import { LIcon, IconProps } from "@luniand-ui/icons";
+import { LSpinner } from "@luniand-ui/spinner";
+import { ButtonProps, defaultButtonProps } from "./button.utils";
+import { SystemProps } from "@luniand-ui/styled-system";
+import { SNAO, vueThemingProps } from "@luniand-ui/prop-utils";
+import { getValidChildren } from "@luniand-ui/utils";
 
-export interface LButtonSpinnerProps extends HTMLLuniandProps<'div'> {
+export interface LButtonSpinnerProps extends HTMLLuniandProps<"div"> {
   label?: string;
-  spacing?: SystemProps['marginRight'];
-  placement?: 'start' | 'end';
+  spacing?: SystemProps["marginRight"];
+  placement?: "start" | "end";
 }
 
 const _buttonProps = {
@@ -31,22 +31,22 @@ const _buttonProps = {
   spacing: [Number, String, Array] as PropType<
     number | string | string[] | number[]
   >,
-  placement: String as PropType<'start' | 'end'>,
+  placement: String as PropType<"start" | "end">,
 };
 
 const LButtonSpinner: ComponentWithProps<DeepPartial<LButtonSpinnerProps>> =
   defineComponent({
-    name: 'LButtonSpinner',
+    name: "LButtonSpinner",
     props: _buttonProps,
     setup(props, { slots, attrs }) {
       const marginProp = computed(() =>
-        props.placement === 'start' ? 'marginEnd' : 'marginStart'
+        props.placement === "start" ? "marginEnd" : "marginStart"
       );
       const spinnerStyles = computed(() => ({
-        display: 'flex',
-        alignItems: 'center',
-        position: props.label ? 'relative' : 'absolute',
-        [marginProp.value]: props.label ? props.spacing || '0.5rem' : '0',
+        display: "flex",
+        alignItems: "center",
+        position: props.label ? "relative" : "absolute",
+        [marginProp.value]: props.label ? props.spacing || "0.5rem" : "0",
       }));
 
       return () =>
@@ -54,13 +54,13 @@ const LButtonSpinner: ComponentWithProps<DeepPartial<LButtonSpinnerProps>> =
         h(
           luniand.div,
           {
-            __label: 'button__spinner',
+            __label: "button__spinner",
             ...spinnerStyles.value,
             ...attrs,
           },
           h(LSpinner, {
-            width: '1em',
-            height: '1em',
+            width: "1em",
+            height: "1em",
           })
         );
     },
@@ -69,21 +69,21 @@ const LButtonSpinner: ComponentWithProps<DeepPartial<LButtonSpinnerProps>> =
 interface LButtonContentProps {
   leftIcon?: string;
   rightIcon?: string;
-  iconSpacing?: LButtonSpinnerProps['spacing'];
+  iconSpacing?: LButtonSpinnerProps["spacing"];
 }
 
 export const CButtonContentProps = {
-  leftIcon: 'svg',
-  rightIcon: '1em',
-  iconSpacing: '',
+  leftIcon: "svg",
+  rightIcon: "1em",
+  iconSpacing: "",
 };
 
 const LButtonContent = defineComponent({
-  name: 'LButtonContent',
+  name: "LButtonContent",
   props: {
-    leftIcon: String as PropType<LButtonContentProps['leftIcon']>,
-    rightIcon: String as PropType<LButtonContentProps['rightIcon']>,
-    iconSpacing: String as PropType<LButtonContentProps['iconSpacing']>,
+    leftIcon: String as PropType<LButtonContentProps["leftIcon"]>,
+    rightIcon: String as PropType<LButtonContentProps["rightIcon"]>,
+    iconSpacing: String as PropType<LButtonContentProps["iconSpacing"]>,
   },
   setup(props, { slots }) {
     const hasDefaultSlot = computed(() => slots?.default?.()?.length);
@@ -105,14 +105,14 @@ const LButtonContent = defineComponent({
 
 const LButtonIcon: ComponentWithProps<DeepPartial<IconProps>> = defineComponent(
   {
-    name: 'LButtonIcon',
+    name: "LButtonIcon",
     props: {
       icon: String as PropType<string>,
     },
     setup(props, { attrs }) {
       return () =>
         h(LIcon, {
-          __label: 'button__icon',
+          __label: "button__icon",
           name: props.icon,
           ...attrs,
         });
@@ -120,42 +120,42 @@ const LButtonIcon: ComponentWithProps<DeepPartial<IconProps>> = defineComponent(
   }
 );
 
-export interface LButtonProps extends HTMLLuniandProps<'button'> {}
+export interface LButtonProps extends HTMLLuniandProps<"button"> {}
 
 export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
   defineComponent({
-    name: 'LButton',
+    name: "LButton",
     props: {
       isLoading: {
-        type: Boolean as PropType<ButtonProps['isLoading']>,
+        type: Boolean as PropType<ButtonProps["isLoading"]>,
       },
       isDisabled: {
-        type: Boolean as PropType<ButtonProps['isDisabled']>,
+        type: Boolean as PropType<ButtonProps["isDisabled"]>,
       },
       isActive: {
-        type: Boolean as PropType<ButtonProps['isActive']>,
+        type: Boolean as PropType<ButtonProps["isActive"]>,
       },
       loadingText: {
-        type: String as PropType<ButtonProps['loadingText']>,
+        type: String as PropType<ButtonProps["loadingText"]>,
       },
       isFullWidth: {
-        type: Boolean as PropType<ButtonProps['isFullWidth']>,
+        type: Boolean as PropType<ButtonProps["isFullWidth"]>,
       },
       type: {
-        type: String as PropType<ButtonProps['type']>,
+        type: String as PropType<ButtonProps["type"]>,
       },
       leftIcon: {
-        type: String as PropType<ButtonProps['leftIcon']>,
+        type: String as PropType<ButtonProps["leftIcon"]>,
       },
       rightIcon: {
-        type: String as PropType<ButtonProps['rightIcon']>,
+        type: String as PropType<ButtonProps["rightIcon"]>,
       },
       iconSpacing: {
-        type: SNAO as PropType<ButtonProps['iconSpacing']>,
+        type: SNAO as PropType<ButtonProps["iconSpacing"]>,
       },
       spinnerPlacement: {
-        type: String as PropType<'start' | 'end'>,
-        default: 'start',
+        type: String as PropType<"start" | "end">,
+        default: "start",
       },
       ...vueThemingProps,
     },
@@ -174,29 +174,29 @@ export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
 
       const group = useButtonGroup();
       const styles = useStyleConfig(
-        'Button',
+        "Button",
         computed(() => ({ ...group?.value, ...themingProps.value }))
       );
 
       const _focus = computed<SystemStyleObject>(() =>
         // @ts-ignore TODO: check _focus
-        mergeWith({}, styles.value?.['_focus'] ?? {}, {
+        mergeWith({}, styles.value?.["_focus"] ?? {}, {
           zIndex: 1,
         })
       );
 
       const buttonStyles = computed<SystemStyleObject>(() => ({
-        display: 'inline-flex',
-        appearance: 'none',
-        alignItems: 'center',
-        justifyContent: 'center',
-        transition: 'all 250ms',
-        userSelect: 'none',
-        position: 'relative',
-        whiteSpace: 'nowrap',
-        verticalAlign: 'middle',
-        outline: 'none',
-        width: props.value.isFullWidth ? '100%' : 'auto',
+        display: "inline-flex",
+        appearance: "none",
+        alignItems: "center",
+        justifyContent: "center",
+        transition: "all 250ms",
+        userSelect: "none",
+        position: "relative",
+        whiteSpace: "nowrap",
+        verticalAlign: "middle",
+        outline: "none",
+        width: props.value.isFullWidth ? "100%" : "auto",
         ...styles.value,
         ...(!!group?.value && { _focus: _focus.value }),
       }));
@@ -206,11 +206,11 @@ export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
           luniand.button,
           {
             as: props.value.as,
-            __label: 'button',
+            label: "button",
             ...((props.value.isDisabled || props.value.isLoading) && {
               disabled: props.value.isDisabled || props.value.isLoading,
             }),
-            type: props.value.as === 'button' ? undefined : props.value.type,
+            type: props.value.as === "button" ? undefined : props.value.type,
             dataActive: dataAttr(props.value.isActive),
             dataLoading: dataAttr(props.value.isLoading),
             __css: buttonStyles.value,
@@ -218,15 +218,15 @@ export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
           },
           () => [
             props.value.isLoading &&
-              props.value.spinnerPlacement === 'start' &&
+              props.value.spinnerPlacement === "start" &&
               h(LButtonSpinner, {
-                placement: 'start',
+                placement: "start",
                 spacing: props.value.iconSpacing,
-                __label: 'button-spinner__start',
+                __label: "button-spinner__start",
                 label: props.value.loadingText,
                 __css: {
-                  fontSize: '1em',
-                  lineHeight: 'normal',
+                  fontSize: "1em",
+                  lineHeight: "normal",
                 },
               }),
 
@@ -256,19 +256,19 @@ export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
                 ),
 
             props.value.isLoading &&
-              props.value.spinnerPlacement === 'end' &&
+              props.value.spinnerPlacement === "end" &&
               h(LButtonSpinner, {
-                placement: 'end',
+                placement: "end",
                 spacing: props.value.iconSpacing,
-                __label: 'button-spinner__end',
+                __label: "button-spinner__end",
                 label: props.value.loadingText,
                 __css: {
-                  fontSize: '1em',
-                  lineHeight: 'normal',
+                  fontSize: "1em",
+                  lineHeight: "normal",
                 },
               }),
             slots?.default?.(),
-          ]
+          ],
         );
     },
   });

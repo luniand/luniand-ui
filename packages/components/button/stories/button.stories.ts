@@ -1,13 +1,13 @@
 import type { Meta, StoryFn } from "@storybook/vue3";
-import { LButton } from "../src";
+import { LButton ,LButtonGroup } from "../src";
 
 export default {
   title: "Components / Button",
-  component: { LButton },
-} as Meta<typeof LButton>;
+  component: { LButton ,LButtonGroup },
+};
 
-const Template: StoryFn<typeof LButton> = (args: any) => ({
-  components: { LButton },
+const Template: StoryFn = (args: any) => ({
+  components: { LButton , LButtonGroup },
   setup() {
     return { args };
   },
@@ -22,6 +22,22 @@ const Template: StoryFn<typeof LButton> = (args: any) => ({
     Button
   </LButton>
   <LButton colorScheme='teal' size='lg'>
+    Button
+  </LButton>
+  <LButtonGroup :spacing="4">
+  <LButton isLoading variantColor="blue" variant="solid">
+    Email
+  </LButton>
+  <LButton
+    is-loading
+    loading-text="Submitting"
+    variant-color="blue"
+    variant="outline"
+  >
+    Submit
+  </LButton>
+</LButtonGroup>    
+<LButton size="md" height="50px" width="250px" border="2px" border-color="green.500 leftIcon rightIcon">
     Button
   </LButton>
   `,
