@@ -113,7 +113,9 @@ export const LAlertTitle = defineComponent({
         luniand.div,
         {
           __label: "alert__title",
-          // __css: styles.value?.title,
+          // TODO: add text into type of useStyleConfig
+          // @ts-ignore
+          __css: styles.value?.title,
           ...attrs,
         },
         slots
@@ -130,7 +132,9 @@ export const LAlertDescription = defineComponent({
         luniand.div,
         {
           __label: "alert__description",
-          // __css: styles.value?.description,
+          // TODO: add text into type of useStyleConfig
+          // @ts-ignore
+          __css: styles.value?.description,
           ...attrs,
         },
         () => getValidChildren(slots)
@@ -145,9 +149,12 @@ export const LAlertIcon = defineComponent({
     const styles = useStyles();
     const { status } = useAlertContext();
     const { icon: BaseIcon } = STATUSES[status.value];
-    // const css = computed(() =>
-    //   status.value === "loading" ? styles.value?.spinner : styles.value?.icon
-    // );
+  
+    const css = computed(() =>
+      // TODO: add text into type of useStyleConfig
+      // @ts-ignore
+      status.value === "loading" ? styles.value?.spinner : styles.value?.icon
+    );
 
     const validChildren = getValidChildren(slots);
 
@@ -158,7 +165,9 @@ export const LAlertIcon = defineComponent({
           display: "inherit",
           __label: "alert__icon",
           ...attrs,
-          // __css: css.value,
+          // TODO: add text into type of useStyleConfig
+          // @ts-ignore
+          __css: css.value,
         },
         () =>
           validChildren.length ? slots : h(BaseIcon, { h: "100%", w: "100%" })
