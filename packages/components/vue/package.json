@@ -52,6 +52,7 @@
     "@luniand-ui/theme": "workspace:*",
     "@luniand-ui/theme-provider": "workspace:*",
     "@luniand-ui/theme-tools": "workspace:*",
+    "@luniand-ui/utils": "workspace:*",
     "@luniand-ui/visually-hidden": "workspace:*"
   },
   "devDependencies": {
