@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "Accessibiliy",
     "camelcase",
     "clsx",
     "composables",
@@ -17,6 +18,7 @@
     "typecheck",
     "unusafe",
     "vnode",
+    "vueuse",
     "WCAG",
     "yarnpkg",
     "yarnrc"

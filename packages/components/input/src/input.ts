@@ -16,12 +16,12 @@
  */
 
 /**
- * Hey! Welcome to @chakra-ui/vue-next CInput
+ * Hey! Welcome to @luniand-ui/vue-next CInput
  *
  * Input component is a component that is used to get user input in a text field
  *
- * @see Docs     https://next.vue.chakra-ui.com/c-input
- * @see Source   https://github.com/chakra-ui/chakra-ui-vue-next/blob/master/packages/c-input/src/c-input/c-input.ts
+ * @see Docs     https://next.vue.luniand-ui.com/c-input
+ * @see Source   https://github.com/luniand-ui/luniand-ui-vue-next/blob/master/packages/c-input/src/c-input/c-input.ts
  * @see WAI-ARIA https://www.w3.org/TR/wai-aria-practices-1.2
  */
 
@@ -34,7 +34,7 @@ import {
   ToRefs,
   computed,
   reactive,
-} from 'vue';
+} from "vue";
 import {
   luniand,
   DOMElements,
@@ -42,13 +42,13 @@ import {
   ThemingProps,
   useMultiStyleConfig,
   omitThemingProps,
-} from '@luniand-ui/system';
+} from "@luniand-ui/system";
 import {
   FormControlOptions,
   formControlProps,
   useFormControl,
-} from '../../form-control';
-import { SAO, vueThemingProps } from '@luniand-ui/prop-utils';
+} from "../../form-control";
+import { SAO, vueThemingProps } from "@luniand-ui/prop-utils";
 
 interface InputOptions {
   /**
@@ -73,39 +73,39 @@ interface InputOptions {
   isFullWidth?: boolean;
 }
 
-type Omitted = 'disabled' | 'required' | 'readOnly' | 'size';
+type Omitted = "disabled" | "required" | "readOnly" | "size";
 
 interface CInputNativeProps extends InputOptions, FormControlOptions {}
 
 export interface CInputProps
-  extends Omit<HTMLLuniandProps<'span'>, Omitted>,
+  extends Omit<HTMLLuniandProps<"span">, Omitted>,
     CInputNativeProps,
-    ThemingProps<'Input'> {
+    ThemingProps<"Input"> {
   modelValue: string;
 }
 
 export const CInput = defineComponent({
-  name: 'CInput',
+  name: "CInput",
   props: {
     modelValue: String as PropType<string>,
     ...formControlProps,
-    focusBorderColor: SAO as PropType<CInputProps['focusBorderColor']>,
-    isFullWidth: [Boolean, Array] as PropType<CInputProps['isFullWidth']>,
-    errorBorderColor: SAO as PropType<CInputProps['errorBorderColor']>,
+    focusBorderColor: SAO as PropType<CInputProps["focusBorderColor"]>,
+    isFullWidth: [Boolean, Array] as PropType<CInputProps["isFullWidth"]>,
+    errorBorderColor: SAO as PropType<CInputProps["errorBorderColor"]>,
     ...vueThemingProps,
   },
-  emits: ['update:modelValue', 'input', 'change'],
+  emits: ["update:modelValue", "input", "change"],
   setup(props, { emit, attrs }) {
-    const styles = useMultiStyleConfig('Input', props);
+    const styles = useMultiStyleConfig("Input", props);
     const ownProps = computed(() =>
-      toRefs(reactive(omitThemingProps(props as ThemingProps<'Input'>)))
+      toRefs(reactive(omitThemingProps(props as ThemingProps<"Input">)))
     );
     const input = useFormControl(ownProps.value as ToRefs<CInputNativeProps>);
 
     const handleInput = (e: Event) => {
-      emit('update:modelValue', (e?.currentTarget as HTMLInputElement)?.value);
-      emit('input', e, (e?.currentTarget as HTMLInputElement)?.value);
-      emit('change', e, (e?.currentTarget as HTMLInputElement)?.value);
+      emit("update:modelValue", (e?.currentTarget as HTMLInputElement)?.value);
+      emit("input", e, (e?.currentTarget as HTMLInputElement)?.value);
+      emit("change", e, (e?.currentTarget as HTMLInputElement)?.value);
     };
 
     return () =>
@@ -115,10 +115,10 @@ export const CInput = defineComponent({
         value: props.modelValue,
         onInput: handleInput,
         __css: styles.value.field,
-        __label: 'input',
+        __label: "input",
         ...attrs,
       });
   },
 });
 
-CInput.id = 'CInput';
+CInput.id = "CInput";

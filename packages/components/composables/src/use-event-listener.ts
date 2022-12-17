@@ -1,28 +1,27 @@
 /**
- * Much of this has ben adopted from the cgood folks at @vueuse/core
+ * Much of this has ben adopted from the repo folks at @vueuse/core
  */
 
-import { unref, watch } from 'vue';
-import { isString, noop } from '@luniand-ui/utils';
+import { unref, watch } from "vue";
+import { isString, noop } from "@luniand-ui/utils";
 import {
   Fn,
   MaybeBaseRef,
   defaultWindow,
   tryOnScopeDispose,
-} from '@luniand-ui/utils';
-
+} from "@luniand-ui/utils";
 
 interface InferEventTarget<Events> {
-  addEventListener(event: Events, fn?: any, options?: any): any
-  removeEventListener(event: Events, fn?: any, options?: any): any
+  addEventListener(event: Events, fn?: any, options?: any): any;
+  removeEventListener(event: Events, fn?: any, options?: any): any;
 }
 
-export type WindowEventName = keyof WindowEventMap
-export type DocumentEventName = keyof DocumentEventMap
+export type WindowEventName = keyof WindowEventMap;
+export type DocumentEventName = keyof DocumentEventMap;
 
 export type GeneralEventListener<E = Event> = {
-  (evt: E): void
-}
+  (evt: E): void;
+};
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -37,7 +36,7 @@ export function useEventListener<E extends keyof WindowEventMap>(
   event: E,
   listener: (this: Window, ev: WindowEventMap[E]) => any,
   options?: boolean | AddEventListenerOptions
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -54,7 +53,7 @@ export function useEventListener<E extends keyof WindowEventMap>(
   event: E,
   listener: (this: Window, ev: WindowEventMap[E]) => any,
   options?: boolean | AddEventListenerOptions
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -71,7 +70,7 @@ export function useEventListener<Names extends string, EventType = Event>(
   event: Names,
   listener: GeneralEventListener<EventType>,
   options?: boolean | AddEventListenerOptions
-): Fn
+): Fn;
 
 /**
  * Register using addEventListener on mounted, and removeEventListener automatically on unmounted.
@@ -88,47 +87,47 @@ export function useEventListener<EventType = Event>(
   event: string,
   listener: GeneralEventListener<EventType>,
   options?: boolean | AddEventListenerOptions
-): Fn
+): Fn;
 
 export function useEventListener(...args: any[]) {
-  let target: MaybeBaseRef<EventTarget> | undefined | null
-  let event: string
-  let listener: any
-  let options: any
+  let target: MaybeBaseRef<EventTarget> | undefined | null;
+  let event: string;
+  let listener: any;
+  let options: any;
 
   if (isString(args[0])) {
-    ;[event, listener, options] = args
-    target = defaultWindow
+    [event, listener, options] = args;
+    target = defaultWindow;
   } else {
-    ;[target, event, listener, options] = args
+    [target, event, listener, options] = args;
   }
 
-  if (!target) return noop
+  if (!target) return noop;
 
-  let cleanup = noop
+  let cleanup = noop;
 
   const stopWatch = watch(
     () => unref(target),
     (el) => {
-      cleanup()
-      if (!el) return
+      cleanup();
+      if (!el) return;
 
-      el.addEventListener(event, listener, options)
+      el.addEventListener(event, listener, options);
 
       cleanup = () => {
-        el.removeEventListener(event, listener, options)
-        cleanup = noop
-      }
+        el.removeEventListener(event, listener, options);
+        cleanup = noop;
+      };
     },
     { immediate: true, flush: "post" }
-  )
+  );
 
   const stop = () => {
-    stopWatch()
-    cleanup()
-  }
+    stopWatch();
+    cleanup();
+  };
 
-  tryOnScopeDispose(stop)
+  tryOnScopeDispose(stop);
 
-  return stop
+  return stop;
 }

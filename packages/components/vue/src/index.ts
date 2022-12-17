@@ -128,12 +128,12 @@ export type { ThemingProps };
 
 // A
 // export * from "@luniand-ui/c-accordion"
-export * from "@luniand-ui/alert"
+export * from "@luniand-ui/alert";
 // export * from "@luniand-ui/c-avatar"
 
 // B
 // export * from "@luniand-ui/c-breadcrumb"
-export * from "@luniand-ui/button"
+export * from "@luniand-ui/button";
 
 // C
 // export * from "@luniand-ui/c-checkbox"
@@ -166,7 +166,7 @@ export * from "@luniand-ui/reset";
 
 // S
 // export * from "@luniand-ui/c-skip-nav"
-export * from "@luniand-ui/spinner"
+export * from "@luniand-ui/spinner";
 // export * from "@luniand-ui/c-scroll-lock"
 
 // T
@@ -174,10 +174,10 @@ export * from "@luniand-ui/theme-provider";
 // export * from "@luniand-ui/c-tag"
 
 // V
-export * from "@luniand-ui/visually-hidden"
+export * from "@luniand-ui/visually-hidden";
 
 // OTHERS
-// export * from "@luniand-ui/vue-composables"
+// export * from "@luniand-ui/composables"
 // export * from "@luniand-ui/vue-a11y"
 
 /**

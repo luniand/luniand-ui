@@ -1,4 +1,4 @@
-# @luniand-ui/vue-composables
+# @luniand-ui/composables
 
 A Quick description of the component
 
@@ -7,9 +7,9 @@ A Quick description of the component
 ## Installation
 
 ```sh
-yarn add @luniand-ui/vue-composables
+yarn add @luniand-ui/composables
 # or
-npm i @luniand-ui/vue-composables
+npm i @luniand-ui/composables
 ```
 
 ## Contribution

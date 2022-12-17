@@ -5,8 +5,8 @@ import {
   Ref,
   ref,
   watchEffect,
-} from "vue"
-import { useId } from "./use-id"
+} from "vue";
+import { useId } from "./use-id";
 
 export interface UseDisclosureProps {
   /**
@@ -14,26 +14,26 @@ export interface UseDisclosureProps {
    *
    * Overrides `defaultIsOpen` prop.
    */
-  isOpen?: boolean
+  isOpen?: boolean;
   /**
-   * Default state on render. Overriden by `isOpen` prop dynamically
+   * Default state on render. Override by `isOpen` prop dynamically
    * if outside state should pass in a truthy value
    */
-  defaultIsOpen?: boolean
+  defaultIsOpen?: boolean;
   /**
    * Additional actions to run when the targeted element is closed.
    */
-  onClose?(): void
+  onClose?(): void;
   /**
    * Additional actions to run when the targeted element is opened.
    */
-  onOpen?(): void
+  onOpen?(): void;
   /**
    * Custom id to connect the toggle with the targeted element for accessibility.
    *
    * @default `disclosure-<uid>`
    */
-  id?: string
+  id?: string;
 }
 
 type ReturnUseDisclosureType = {
@@ -42,27 +42,27 @@ type ReturnUseDisclosureType = {
    *
    * @default false
    */
-  isOpen: Ref<boolean>
+  isOpen: Ref<boolean>;
   /**
    * Actions run when opening targeted element.
    *
    * If target element is uncontrolled, then it includes toggle open.
    */
-  open: () => void
+  open: () => void;
   /**
    * Actions run when closing targeted element.
    *
    * If target element is uncontrolled, then it includes toggle closed.
    */
-  close: () => void
+  close: () => void;
   /**
    * Actions run when toggling open and closed.
    */
-  toggle: () => void
+  toggle: () => void;
   /**
    * Check if external functionality controls the state of the targeted element
    */
-  isControlled: boolean
+  isControlled: boolean;
   /**
    * Computed object of Accessibility attributes and toggling event for the toggling element.
    *
@@ -71,10 +71,10 @@ type ReturnUseDisclosureType = {
    * i.e. `v-bind='buttonProps'`
    */
   buttonProps: ComputedRef<{
-    "aria-expanded": HTMLAttributes["aria-expanded"]
-    "aria-controls": HTMLAttributes["aria-controls"]
-    onClick: HTMLAttributes["onClick"]
-  }>
+    "aria-expanded": HTMLAttributes["aria-expanded"];
+    "aria-controls": HTMLAttributes["aria-controls"];
+    onClick: HTMLAttributes["onClick"];
+  }>;
   /**
    * Computed object of Accessibility attributes to show/hide targeted element and for aria controls.
    *
@@ -83,10 +83,10 @@ type ReturnUseDisclosureType = {
    * i.e. `v-bind='disclosureProps'`
    */
   disclosureProps: ComputedRef<{
-    hidden: HTMLAttributes["hidden"]
-    id: HTMLAttributes["id"]
-  }>
-}
+    hidden: HTMLAttributes["hidden"];
+    id: HTMLAttributes["id"];
+  }>;
+};
 
 /**
  * Handles common open, close, or toggle scenarios.
@@ -102,53 +102,53 @@ export function useDisclosure(
     onOpen: handleOpen,
     id: idProp,
     defaultIsOpen,
-  } = props
+  } = props;
 
-  const isOpenState = ref(defaultIsOpen || false)
+  const isOpenState = ref(defaultIsOpen || false);
 
   const isOpen: ReturnUseDisclosureType["isOpen"] = ref(
     isOpenProp !== undefined ? isOpenProp : isOpenState.value
-  )
+  );
 
-  const isControlled = isOpenProp !== undefined
+  const isControlled = isOpenProp !== undefined;
 
-  const uid = useId()
-  const id = computed(() => idProp ?? `disclosure-${uid.value}`)
+  const uid = useId();
+  const id = computed(() => idProp ?? `disclosure-${uid.value}`);
 
   const close = () => {
     if (!isControlled) {
-      isOpenState.value = false
+      isOpenState.value = false;
     }
-    handleClose?.()
-  }
+    handleClose?.();
+  };
 
   const open = () => {
     if (!isControlled) {
-      isOpenState.value = true
+      isOpenState.value = true;
     }
-    handleOpen?.()
-  }
+    handleOpen?.();
+  };
 
-  const toggle = () => (isOpen.value ? close() : open())
+  const toggle = () => (isOpen.value ? close() : open());
 
   const buttonProps: ReturnUseDisclosureType["buttonProps"] = computed(() => ({
     "aria-expanded": isOpen.value,
     "aria-controls": id.value,
     onClick() {
-      toggle()
+      toggle();
     },
-  }))
+  }));
 
   const disclosureProps: ReturnUseDisclosureType["disclosureProps"] = computed(
     () => ({
       hidden: !isOpen.value,
       id: id.value,
     })
-  )
+  );
 
   watchEffect(() => {
-    isOpen.value = isOpenState.value
-  })
+    isOpen.value = isOpenState.value;
+  });
 
   return {
     isOpen,
@@ -158,5 +158,5 @@ export function useDisclosure(
     isControlled,
     buttonProps,
     disclosureProps,
-  }
+  };
 }

@@ -1,9 +1,9 @@
 {
-  "name": "@luniand-ui/vue-composables",
+  "name": "@luniand-ui/composables",
   "version": "1.0.0",
-  "description": "vue-composables",
+  "description": "composables",
   "keywords": [
-    "vue-composables"
+    "composables"
   ],
   "author": "Albert Tran <trantoan.fox.97@gmail.com>",
   "homepage": "https://github.com/luniand/luniand-ui#readme",
@@ -19,7 +19,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/luniand/luniand-ui.git",
-    "directory": "components/vue-composables"
+    "directory": "components/composables"
   },
   "bugs": {
     "url": "https://github.com/luniand/luniand-ui/issues"
@@ -32,6 +32,10 @@
     "build:fast": "tsup src/index.ts --format=esm,cjs",
     "prepack": "clean-package",
     "postpack": "clean-package restore"
+  },
+  "dependencies": {
+    "@luniand-ui/number-utils": "workspace:*",
+    "@luniand-ui/utils": "workspace:*"
   },
   "peerDependencies": {
     "vue": ">=3"

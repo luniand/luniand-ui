@@ -2514,6 +2514,19 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@luniand-ui/composables@workspace:packages/components/composables":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/composables@workspace:packages/components/composables"
+  dependencies:
+    "@luniand-ui/number-utils": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
+    clean-package: 2.1.1
+    vue: ">=3"
+  peerDependencies:
+    vue: ">=3"
+  languageName: unknown
+  linkType: soft
+
 "@luniand-ui/form-control@workspace:packages/components/form-control":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/form-control@workspace:packages/components/form-control"
@@ -2569,6 +2582,14 @@ __metadata:
     vue: ">=3"
   peerDependencies:
     vue: ">=3"
+  languageName: unknown
+  linkType: soft
+
+"@luniand-ui/number-utils@workspace:*, @luniand-ui/number-utils@workspace:packages/utilities/number-utils":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/number-utils@workspace:packages/utilities/number-utils"
+  dependencies:
+    clean-package: 2.1.1
   languageName: unknown
   linkType: soft
 
@@ -2708,17 +2729,6 @@ __metadata:
 "@luniand-ui/visually-hidden@workspace:*, @luniand-ui/visually-hidden@workspace:packages/components/visually-hidden":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/visually-hidden@workspace:packages/components/visually-hidden"
-  dependencies:
-    clean-package: 2.1.1
-    vue: ">=3"
-  peerDependencies:
-    vue: ">=3"
-  languageName: unknown
-  linkType: soft
-
-"@luniand-ui/vue-composables@workspace:packages/components/vue-composables":
-  version: 0.0.0-use.local
-  resolution: "@luniand-ui/vue-composables@workspace:packages/components/vue-composables"
   dependencies:
     clean-package: 2.1.1
     vue: ">=3"

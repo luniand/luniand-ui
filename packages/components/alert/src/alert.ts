@@ -108,6 +108,8 @@ export const LAlertTitle = defineComponent({
   name: "LAlertTitle",
   setup(_, { attrs, slots }) {
     const styles = useStyles();
+    console.log("styles: ", styles.value);
+
     return () =>
       h(
         luniand.div,
@@ -149,7 +151,7 @@ export const LAlertIcon = defineComponent({
     const styles = useStyles();
     const { status } = useAlertContext();
     const { icon: BaseIcon } = STATUSES[status.value];
-  
+
     const css = computed(() =>
       // TODO: add text into type of useStyleConfig
       // @ts-ignore
