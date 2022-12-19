@@ -37,7 +37,7 @@ export interface WrapProps extends HTMLLuniandProps<"div"> {
   shouldWrapChildren?: boolean;
 }
 
-export const UWrapProps = {
+export const LWrapProps = {
   spacing: SNAO as PropType<WrapProps["spacing"]>,
   justify: SNAO as PropType<WrapProps["justify"]>,
   align: SNAO as PropType<WrapProps["align"]>,
@@ -50,13 +50,13 @@ export const UWrapProps = {
  *
  * @see Docs https://vue.luniand-ui.com/docs/typography/text
  */
-export const UWrap: ComponentWithProps<WrapProps> = defineComponent({
+export const LWrap: ComponentWithProps<WrapProps> = defineComponent({
   props: {
     as: {
       type: [Object, String] as PropType<DOMElements>,
       default: "div",
     },
-    ...UWrapProps,
+    ...LWrapProps,
   },
   setup(props, { slots, attrs }) {
     const styles = computed(() => ({
@@ -80,7 +80,7 @@ export const UWrap: ComponentWithProps<WrapProps> = defineComponent({
 
     const childrenToRender = props.shouldWrapChildren
       ? getValidChildren(slots).map((child, index) =>
-          h(UWrapItem, { key: index }, child)
+          h(LWrapItem, { key: index }, child)
         )
       : slots;
 
@@ -104,7 +104,7 @@ export const UWrap: ComponentWithProps<WrapProps> = defineComponent({
 
 export interface WrapItemProps extends HTMLLuniandProps<"li"> {}
 
-export const UWrapItem = defineComponent({
+export const LWrapItem = defineComponent({
   setup(_, { attrs, slots }) {
     return () => {
       return h(

@@ -1,11 +1,10 @@
-import { h, defineComponent, PropType, VNode } from 'vue';
-import LButton from './button';
-import { ButtonProps } from './button.utils';
-import { LIcon } from '@luniand-ui/icons';
-import { ComponentWithProps, DeepPartial } from '@luniand-ui/system';
+import { h, defineComponent, PropType, VNode } from "vue";
+import LButton from "./button";
+import { ButtonProps } from "./button.utils";
+import { LIcon } from "@luniand-ui/icons";
+import { ComponentWithProps, DeepPartial } from "@luniand-ui/system";
 
 const IconButtonProps = {
-  // ...BUTTON_PROPS,
   icon: String as PropType<string>,
   isRound: Boolean as PropType<boolean>,
   ariaLabel: {
@@ -22,7 +21,7 @@ export interface LIconButtonProps extends ButtonProps {
 
 const LIconButton: ComponentWithProps<DeepPartial<LIconButtonProps>> =
   defineComponent({
-    name: 'LIconButton',
+    name: "LIconButton",
     props: IconButtonProps,
     setup(props, { attrs }) {
       if (!props.ariaLabel) {
@@ -35,8 +34,8 @@ const LIconButton: ComponentWithProps<DeepPartial<LIconButtonProps>> =
         h(
           LButton,
           {
-            padding: '0',
-            rounded: props.isRound ? 'rounded' : 'md',
+            padding: "0",
+            rounded: props.isRound ? "rounded" : "md",
             ariaLabel: props.ariaLabel,
             ...attrs,
           },

@@ -154,6 +154,7 @@ export const LAlertIcon = defineComponent({
 
     const css = computed(() =>
       // TODO: add text into type of useStyleConfig
+      // TODO: Issue loading on alert component not working
       // @ts-ignore
       status.value === "loading" ? styles.value?.spinner : styles.value?.icon
     );

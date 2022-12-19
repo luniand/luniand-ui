@@ -3,7 +3,6 @@ import { defineComponent, PropType, computed, h } from "vue";
 import {
   luniand,
   useStyleConfig,
-  LuniandProps,
   ThemingProps,
   HTMLLuniandProps,
   ComponentWithProps,
@@ -38,7 +37,7 @@ const LButtonSpinner: ComponentWithProps<DeepPartial<LButtonSpinnerProps>> =
   defineComponent({
     name: "LButtonSpinner",
     props: _buttonProps,
-    setup(props, { slots, attrs }) {
+    setup(props, { attrs }) {
       const marginProp = computed(() =>
         props.placement === "start" ? "marginEnd" : "marginStart"
       );
@@ -50,7 +49,6 @@ const LButtonSpinner: ComponentWithProps<DeepPartial<LButtonSpinnerProps>> =
       }));
 
       return () =>
-        // @ts-ignore
         h(
           luniand.div,
           {
@@ -179,7 +177,8 @@ export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
       );
 
       const _focus = computed<SystemStyleObject>(() =>
-        // @ts-ignore TODO: check _focus
+        // TODO: check _focus prop in styles
+        // @ts-ignore
         mergeWith({}, styles.value?.["_focus"] ?? {}, {
           zIndex: 1,
         })
@@ -268,7 +267,7 @@ export const LButton: ComponentWithProps<DeepPartial<LButtonProps>> =
                 },
               }),
             slots?.default?.(),
-          ],
+          ]
         );
     },
   });

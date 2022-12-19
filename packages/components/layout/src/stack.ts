@@ -65,8 +65,8 @@ interface StackOptions {
 
 export interface StackDividerProps extends HTMLLuniandProps<"div"> {}
 
-export const UStackDivider = defineComponent({
-  name: "UStackDivider",
+export const LStackDivider = defineComponent({
+  name: "LStackDivider",
   inheritAttrs: false,
   setup(_, { attrs, slots }) {
     return () =>
@@ -86,8 +86,8 @@ export const UStackDivider = defineComponent({
   },
 });
 
-export const UStackItem = defineComponent({
-  name: "UStackItem",
+export const LStackItem = defineComponent({
+  name: "LStackItem",
   setup(_, { attrs, slots }) {
     return () =>
       h(
@@ -120,7 +120,7 @@ const stackProps = {
   },
   direction: SAO as PropType<StackProps["direction"]>,
 
-  // todo: divider
+  // TODO: divider
   divider: [Object, Boolean] as PropType<StackProps["divider"]>,
   shouldWrapChildren: [Boolean] as PropType<StackProps["shouldWrapChildren"]>,
   isInline: [Boolean] as PropType<StackProps["isInline"]>,
@@ -137,8 +137,8 @@ const stackProps = {
  * @see Docs https://vue.luniand-ui.com/docs/layout/stack
  *
  */
-export const UStack: ComponentWithProps<StackProps> = defineComponent({
-  name: "UStack",
+export const LStack: ComponentWithProps<StackProps> = defineComponent({
+  name: "LStack",
   props: stackProps,
   setup(props, { slots, attrs }) {
     const direction = computed(() =>
@@ -165,13 +165,13 @@ export const UStack: ComponentWithProps<StackProps> = defineComponent({
         ? validChildren
         : validChildren.map((child, index) => {
             const isLast = index + 1 === validChildren.length;
-            const wrappedChild = createVNode(UStackItem, { key: index }, child);
+            const wrappedChild = createVNode(LStackItem, { key: index }, child);
             const _child = props.shouldWrapChildren ? wrappedChild : child;
 
             if (!hasDivider.value) return _child;
 
             // todo: temporary divider
-            const clonedDivider = createVNode(UStackDivider, {
+            const clonedDivider = createVNode(LStackDivider, {
               borderColor: "blue.200",
               __css: dividerStyle.value,
             });
@@ -201,13 +201,13 @@ export const UStack: ComponentWithProps<StackProps> = defineComponent({
 /**
  * A view that arranges its children in a horizontal line.
  */
-export const UHStack: ComponentWithProps<StackProps> = defineComponent({
-  name: "UHStack",
+export const LHStack: ComponentWithProps<StackProps> = defineComponent({
+  name: "LHStack",
   props: stackProps,
   setup(props, { attrs, slots }) {
     return () =>
       h(
-        luniand(UStack, {
+        luniand(LStack, {
           __label: "stack-horizontal",
           ...props,
           ...attrs,
@@ -222,13 +222,13 @@ export const UHStack: ComponentWithProps<StackProps> = defineComponent({
 /**
  * A view that arranges its children in a vertical line.
  */
-export const UVStack: ComponentWithProps<StackProps> = defineComponent({
-  name: "UVStack",
+export const LVStack: ComponentWithProps<StackProps> = defineComponent({
+  name: "LVStack",
   props: stackProps,
   setup(props, { attrs, slots }) {
     return () =>
       h(
-        luniand(UStack, {
+        luniand(LStack, {
           __label: "stack-vertical",
           ...props,
           ...attrs,

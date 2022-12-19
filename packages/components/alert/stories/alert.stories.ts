@@ -1,41 +1,84 @@
 import type { Meta, StoryFn } from "@storybook/vue3";
-import { LAlert , LAlertIcon , LAlertTitle ,  LAlertDescription } from "../src";
+import { LAlert, LAlertIcon, LAlertTitle, LAlertDescription } from "../src";
+import { luniand } from "@luniand-ui/vue";
 
 export default {
   title: "Components / Alert",
-  component: { LAlert, LAlertIcon , LAlertTitle ,  LAlertDescription },
+  component: { LAlert, LAlertIcon, LAlertTitle, LAlertDescription },
 } as Meta;
 
-const Template: StoryFn = (args: any) => ({
-  components: { LAlert, LAlertIcon , LAlertTitle ,  LAlertDescription },
+const BasicTemplate: StoryFn = (args: any) => ({
+  components: { LAlert, LAlertIcon, LAlertTitle, LAlertDescription },
   setup() {
     return { args };
   },
   template: `
-  <LAlert status='error'>
+  <LAlert status="error">
     <LAlertIcon />
     <LAlertTitle>Your browser is outdated!</LAlertTitle>
     <LAlertDescription>Your luniand experience may be degraded.</LAlertDescription>
   </LAlert>
-  <LAlert status='error'>
-    <LAlertIcon />
-    There was an error processing your request
-  </LAlert>
+  `,
+});
 
-  <LAlert status='success'>
-    Data uploaded to the server. Fire on!
-  </LAlert>
+export const Basic = BasicTemplate.bind({});
 
-  <LAlert status='warning'>
+const SubtleTemplate: StoryFn = (args: any) => ({
+  components: { LAlert, LAlertIcon, LAlertTitle, LAlertDescription, luniand },
+  setup() {
+    return { args };
+  },
+  template: `
+  <LAlert status="success">
     <LAlertIcon />
-    Seems your account is about expire, upgrade now
-  </LAlert>
-
-  <LAlert status='info'>
-    <LAlertIcon />
-    luniand is going live on August 30th. Get ready!
+    <luniand.div>
+      <LAlertTitle>Your browser is outdated!</LAlertTitle>
+      <LAlertDescription>Your luniand experience may be degraded.</LAlertDescription>
+    </luniand.div>
   </LAlert>
   `,
 });
 
-export const Basic = Template.bind({});
+export const Subtle = SubtleTemplate.bind({});
+
+const TopAccentTemplate: StoryFn = (args: any) => ({
+  components: { LAlert, LAlertIcon, LAlertTitle, LAlertDescription, luniand },
+  setup() {
+    return { args };
+  },
+  template: `
+  <LAlert
+    variant="top-accent"
+    mx="auto"
+    alignItems="flex-start"
+    pt="3"
+    rounded="md">
+    <LAlertIcon />
+    <luniand.div flex="1">
+      <AlertTitle display="block" mr="2">
+        Holy Smokes
+      </AlertTitle>
+      <AlertDescription>Something just happened!</AlertDescription>
+    </luniand.div>
+  </LAlert>
+  `,
+});
+
+export const TopAccent = TopAccentTemplate.bind({});
+
+const LoadingTemplate: StoryFn = (args: any) => ({
+  components: { LAlert, LAlertIcon, luniand },
+  setup() {
+    return { args };
+  },
+  template: `
+  <luniand.div>
+    <LAlert status="loading">
+      <LAlertIcon />
+      We are loading something
+    </LAlert>
+  </luniand.div>
+  `,
+});
+
+export const Loading = LoadingTemplate.bind({});

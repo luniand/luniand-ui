@@ -2570,7 +2570,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@luniand-ui/layout@workspace:packages/components/layout":
+"@luniand-ui/layout@workspace:*, @luniand-ui/layout@workspace:packages/components/layout":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/layout@workspace:packages/components/layout"
   dependencies:
@@ -2749,6 +2749,7 @@ __metadata:
     "@luniand-ui/button": "workspace:*"
     "@luniand-ui/color-mode": "workspace:*"
     "@luniand-ui/icons": "workspace:*"
+    "@luniand-ui/layout": "workspace:*"
     "@luniand-ui/reset": "workspace:*"
     "@luniand-ui/spinner": "workspace:*"
     "@luniand-ui/styled": "workspace:*"

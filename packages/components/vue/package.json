@@ -44,6 +44,7 @@
     "@luniand-ui/button": "workspace:*",
     "@luniand-ui/color-mode": "workspace:*",
     "@luniand-ui/icons": "workspace:*",
+    "@luniand-ui/layout": "workspace:*",
     "@luniand-ui/reset": "workspace:*",
     "@luniand-ui/spinner": "workspace:*",
     "@luniand-ui/styled": "workspace:*",

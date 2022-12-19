@@ -150,7 +150,7 @@ export * from "@luniand-ui/icons";
 // export * from "@luniand-ui/c-input"
 
 // L
-// export * from "@luniand-ui/u-layout";
+export * from "@luniand-ui/layout";
 
 // M
 // export * from "@luniand-ui/c-modal"
