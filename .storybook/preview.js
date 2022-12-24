@@ -1,5 +1,13 @@
 import { app } from "@storybook/vue3";
 import Luniand from "@luniand-ui/vue";
+import { createRouter, createWebHistory } from "vue-router";
+
+const routes = [];
+
+const router = createRouter({
+  history: createWebHistory(),
+  routes,
+});
 
 export const parameters = {
   options: {
@@ -12,3 +20,4 @@ export const parameters = {
 
 export const decorators = [];
 app.use(Luniand);
+app.use(router);
