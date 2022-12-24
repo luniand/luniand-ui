@@ -9,7 +9,6 @@ import {
   PropType,
   resolveComponent,
 } from "vue";
-import { RouterLink } from "vue-router";
 import type { HTMLAttributes } from "vue";
 import {
   css,
