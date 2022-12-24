@@ -2527,6 +2527,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@luniand-ui/breadcrumb@workspace:packages/components/breadcrumb"
   dependencies:
+    "@luniand-ui/layout": "workspace:*"
+    "@luniand-ui/prop-utils": "workspace:*"
+    "@luniand-ui/system": "workspace:*"
+    "@luniand-ui/utils": "workspace:*"
     clean-package: 2.1.1
     vue: ">=3"
   peerDependencies:
@@ -2799,6 +2803,7 @@ __metadata:
     lodash.kebabcase: ^4.1.1
     lodash.memoize: ^4.1.2
     vue: ^3.2.45
+    vue-router: ^4.1.6
   languageName: unknown
   linkType: soft
 
@@ -5507,6 +5512,13 @@ __metadata:
     "@vue/compiler-dom": 3.2.45
     "@vue/shared": 3.2.45
   checksum: 830c475506d2b6d1a6872b3fde1024ef5132f725121fd9c34832c5cefcc8cfddf0dcaa3acc9b2da4754162fccdff48b3275b9ff31415a7793b224c04355dc632
+  languageName: node
+  linkType: hard
+
+"@vue/devtools-api@npm:^6.4.5":
+  version: 6.4.5
+  resolution: "@vue/devtools-api@npm:6.4.5"
+  checksum: 40c5adc8788cb283972ce09ba7ce105fa894f4decec9168829cc8e6211462763402442e6c31be76f9da62b0e74ae724971b924571367b4ac89b94dc6894e2d07
   languageName: node
   linkType: hard
 
@@ -19686,6 +19698,17 @@ __metadata:
   peerDependencies:
     webpack: ^4.1.0 || ^5.0.0-0
   checksum: 7c0566847b09bd1d0b8b1bd146274eb53c775668388b10a6fcd0968b41353c85018c24bc91f7ed31c20a5d5fcdc50f08149c4656663500075576b06e546ca976
+  languageName: node
+  linkType: hard
+
+"vue-router@npm:^4.1.6":
+  version: 4.1.6
+  resolution: "vue-router@npm:4.1.6"
+  dependencies:
+    "@vue/devtools-api": ^6.4.5
+  peerDependencies:
+    vue: ^3.2.0
+  checksum: c7f0156ac03a9561d110f5ff778121eee7c8c154be6ec5064558ba22ab5237db36f29ffffc95cc16d692cc68a26df0c434f395401c0e3b48f782c7bed51391c6
   languageName: node
   linkType: hard
 

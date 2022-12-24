@@ -7,7 +7,7 @@ import {
 } from "@luniand-ui/system";
 import { h, defineComponent, PropType, computed } from "vue";
 import { SNAO } from "@luniand-ui/utils";
-import { UGrid, GridProps } from "./grid";
+import { LGrid, GridProps } from "./grid";
 import { isNull, isNumber, mapResponsive } from "@luniand-ui/utils";
 
 interface SimpleGridOptions {
@@ -43,9 +43,9 @@ export interface SimpleGridProps extends GridProps, SimpleGridOptions {}
  *
  * @see Docs https://vue.luniand-ui.com/docs/layout/simple-grid
  */
-export const USimpleGrid: ComponentWithProps<DeepPartial<SimpleGridProps>> =
+export const LSimpleGrid: ComponentWithProps<DeepPartial<SimpleGridProps>> =
   defineComponent({
-    name: "USimpleGrid",
+    name: "LSimpleGrid",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,
@@ -66,7 +66,7 @@ export const USimpleGrid: ComponentWithProps<DeepPartial<SimpleGridProps>> =
 
       return () =>
         h(
-          luniand(UGrid, {
+          luniand(LGrid, {
             as: props.as,
             __label: "simple-grid",
             gap: props.spacing,

@@ -1,13 +1,13 @@
-import type { StoryFn } from '@storybook/vue3';
+import type { StoryFn } from "@storybook/vue3";
 import {
   LBreadcrumb,
   LBreadcrumbItem,
   LBreadcrumbLink,
   LBreadcrumbSeparator,
-} from '../src';
-import { LStack } from '@luniand-ui/layout';
+} from "../src";
+import { LStack } from "@luniand-ui/layout";
 export default {
-  title: 'Components / BreadCrumb',
+  title: "Components / BreadCrumb",
   component: {
     LBreadcrumb,
     LBreadcrumbItem,
@@ -27,19 +27,19 @@ const Template: StoryFn = (args: any) => ({
     return { args };
   },
   template: `
-        <LBreadcrumb>
-        <LBreadcrumbItem>
-            <LBreadcrumbLink href="#">Breadcrumb 1</LBreadcrumbLink>
-        </LBreadcrumbItem>
+    <LBreadcrumb>
+      <LBreadcrumbItem>
+          <LBreadcrumbLink href="#">Breadcrumb 1</LBreadcrumbLink>
+      </LBreadcrumbItem>
 
-        <LBreadcrumbItem>
-            <LBreadcrumbLink href="#">Breadcrumb 2</LBreadcrumbLink>
-        </LBreadcrumbItem>
+      <LBreadcrumbItem>
+          <LBreadcrumbLink href="#">Breadcrumb 2</LBreadcrumbLink>
+      </LBreadcrumbItem>
 
-        <LBreadcrumbItem isCurrentPage>
-            <LBreadcrumbLink href="#">Breadcrumb 2</LBreadcrumbLink>
-        </LBreadcrumbItem>
-        </LBreadcrumb>
+      <LBreadcrumbItem isCurrentPage>
+          <LBreadcrumbLink href="#">Breadcrumb 3</LBreadcrumbLink>
+      </LBreadcrumbItem>
+    </LBreadcrumb>
   `,
 });
 
@@ -89,7 +89,7 @@ const RouterTemplate: StoryFn = (args: any) => ({
   template: `
     <LBreadcrumb separator="›">
     <LBreadcrumbItem>
-        <LBreadcrumbLink as="nuxt-link" to="/">Components</LBreadcrumbLink>
+        <LBreadcrumbLink as="router-link" to="/">Components</LBreadcrumbLink>
     </LBreadcrumbItem>
 
     <LBreadcrumbItem>

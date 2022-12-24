@@ -36,6 +36,12 @@
   "peerDependencies": {
     "vue": ">=3"
   },
+  "dependencies": {
+    "@luniand-ui/layout": "workspace:*",
+    "@luniand-ui/prop-utils": "workspace:*",
+    "@luniand-ui/system": "workspace:*",
+    "@luniand-ui/utils": "workspace:*"
+  },
   "devDependencies": {
     "clean-package": "2.1.1",
     "vue": ">=3"
