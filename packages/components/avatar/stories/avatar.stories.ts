@@ -1,5 +1,5 @@
 import type { StoryFn } from '@storybook/vue3';
-import { LAvatar, LAvatarGroup, LAvatarBadge, LAvatarGroup } from '../src';
+import { LAvatar, LAvatarGroup, LAvatarBadge } from '../src';
 import { LStack } from '@luniand-ui/layout';
 export default {
   title: 'Components / Avatar',

@@ -14,9 +14,9 @@ export interface SpacerProps extends HTMLLuniandProps<"div"> {}
  *
  * @see Docs https://luniand-ui.com/docs/layout/flex#using-the-spacer
  */
-export const USpacer: ComponentWithProps<DeepPartial<SpacerProps>> =
+export const LSpacer: ComponentWithProps<DeepPartial<SpacerProps>> =
   defineComponent({
-    name: "USpacer",
+    name: "LSpacer",
     setup(_, { slots }) {
       return () =>
         h(

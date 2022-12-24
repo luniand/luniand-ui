@@ -21,9 +21,9 @@ export interface BadgeProps
  *
  * @see Docs https://vue.luniand-ui.com/docs/data-display/badge
  */
-export const UBadge: ComponentWithProps<DeepPartial<BadgeProps>> =
+export const LBadge: ComponentWithProps<DeepPartial<BadgeProps>> =
   defineComponent({
-    name: "UBadge",
+    name: "LBadge",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,

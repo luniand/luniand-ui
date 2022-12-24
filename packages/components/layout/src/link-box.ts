@@ -14,9 +14,9 @@ export interface LinkOverlayProps extends HTMLLuniandProps<"a"> {
   isExternal?: boolean;
 }
 
-export const ULinkOverlay: ComponentWithProps<DeepPartial<LinkOverlayProps>> =
+export const LLinkOverlay: ComponentWithProps<DeepPartial<LinkOverlayProps>> =
   defineComponent({
-    name: "ULinkOverlay",
+    name: "LLinkOverlay",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,
