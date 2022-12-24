@@ -6,6 +6,7 @@ import {
   LBreadcrumbSeparator,
 } from "../src";
 import { LStack } from "@luniand-ui/layout";
+import { NavigationFailureType } from "vue-router";
 export default {
   title: "Components / BreadCrumb",
   component: {
