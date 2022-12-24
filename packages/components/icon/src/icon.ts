@@ -85,7 +85,7 @@ export const LIcon: ComponentWithProps<DeepPartial<IconProps>> =
             ...vnodeProps.value,
             ...attrs,
           },
-          slots.defaults?.()
+          slots
         );
     },
   });
