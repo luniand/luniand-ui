@@ -9,6 +9,7 @@ import {
   PropType,
   resolveComponent,
 } from "vue";
+import { RouterLink } from "vue-router";
 import type { HTMLAttributes } from "vue";
 import {
   css,
@@ -149,7 +150,7 @@ export type LuniandTagOrComponent =
  * 
  *    See more about the style resolution in the `resolveStyles` function.
  * 
- * 3. Luniand components created and styled using the `luniand` factory can be overriden in the template by applying
+ * 3. Luniand components created and styled using the `luniand` factory can be override in the template by applying
  *    style properties directly
  * 
  *    @example
@@ -190,6 +191,7 @@ export const luniand: ILuniandFactory = (tag, options = {}) => {
       const apply$ = computed(() => props.apply || options?.apply);
 
       return () => {
+        // @ts-ignore
         const { class: inheritedClass, __label, ...rest } = attrs;
         const {
           layerStyle,

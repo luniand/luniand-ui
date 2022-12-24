@@ -121,7 +121,7 @@ export const LBreadcrumb: DefineComponent<BreadcrumbProps> = defineComponent(
           __css: styles.value.container,
           ...attrs,
         },
-        h(luniand.ol, { __label: "breadcrumb__list" }, () => children)
+        () => h(luniand.ol, { __label: "breadcrumb__list" }, () => children)
       );
     };
   }
@@ -158,7 +158,7 @@ export interface BreadcrumbSeparatorProps extends HTMLLuniandProps<"div"> {
 
 /**
  * The `LBreadcrumbSeparator` component is the separator for
- * each breacrumb item.
+ * each breadcrumb item.
  */
 export const LBreadcrumbSeparator = defineComponent({
   props: {
@@ -256,58 +256,5 @@ LBreadcrumbItem.name = "LBreadcrumbItem";
 LBreadcrumbItem.props = {
   ...LBreadcrumb.props,
   isLastChild: Boolean as PropType<boolean>,
-  isCurrentPage: Boolean as PropType<boolean>,
-};
-
-/**
- * LBreadcrumbLink
- */
-
-export interface BreadcrumbLinkProps extends LuniandProps {
-  isCurrentPage?: boolean;
-  href?: string;
-}
-
-/**
- * BreadcrumbLink link.
- *
- * It renders a `span` when it matches the current link. Otherwise,
- * it renders an anchor tag.
- */
-export const LBreadcrumbLink: DefineComponent<BreadcrumbLinkProps> =
-  defineComponent((props: BreadcrumbLinkProps, { attrs, slots }) => {
-    const styles = useStyles();
-
-    return () => {
-      if (props.isCurrentPage) {
-        return h(
-          luniand.span,
-          {
-            __label: "breadcrumb__link",
-            ariaCurrent: "page",
-            __css: styles.value.link,
-            as: props.as,
-            ...attrs,
-          },
-          slots
-        );
-      }
-
-      return h(
-        luniand.a,
-        {
-          __label: "breadcrumb__link",
-          as: props.as,
-          __css: styles.value.link,
-          ...attrs,
-        },
-        slots
-      );
-    };
-  });
-
-// @ts-ignore "name" property is typically read-only for functional components
-LBreadcrumbLink.name = "LBreadcrumbLink";
-LBreadcrumbLink.props = {
   isCurrentPage: Boolean as PropType<boolean>,
 };
