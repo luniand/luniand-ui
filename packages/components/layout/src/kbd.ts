@@ -27,8 +27,8 @@ export interface KbdProps
  *
  * @see Docs https://vue.luniand-ui.com/docs/data-display/kbd
  */
-export const UKbd: ComponentWithProps<DeepPartial<KbdProps>> = defineComponent({
-  name: "UKbd",
+export const LKbd: ComponentWithProps<DeepPartial<KbdProps>> = defineComponent({
+  name: "LKbd",
   props: {
     as: {
       type: [String, Object] as PropType<DOMElements>,

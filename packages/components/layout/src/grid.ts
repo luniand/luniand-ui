@@ -121,9 +121,9 @@ export interface GridItemProps extends BoxProps {
  *
  * @see Docs https://vue.luniand-ui.com/docs/layout/grid
  */
-export const UGrid: ComponentWithProps<DeepPartial<GridProps>> =
+export const LGrid: ComponentWithProps<DeepPartial<GridProps>> =
   defineComponent({
-    name: "UGrid",
+    name: "LGrid",
     props: {
       as: {
         type: [String, Object] as PropType<
@@ -183,9 +183,9 @@ function spanFn(span?: ResponsiveValue<number | "auto">) {
   );
 }
 
-export const UGridItem: ComponentWithProps<DeepPartial<GridItemProps>> =
+export const LGridItem: ComponentWithProps<DeepPartial<GridItemProps>> =
   defineComponent({
-    name: "UGridItem",
+    name: "LGridItem",
     props: {
       as: {
         type: [String, Object] as PropType<

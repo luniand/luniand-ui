@@ -35,9 +35,9 @@ export interface TextProps extends HTMLLuniandProps<"p">, ThemingProps<"Text"> {
  *
  * @see Docs https://vue.luniand-ui.com/docs/typography/text
  */
-export const UText: ComponentWithProps<DeepPartial<TextProps>> =
+export const LText: ComponentWithProps<DeepPartial<TextProps>> =
   defineComponent({
-    name: "UText",
+    name: "LText",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,

@@ -2,7 +2,7 @@ import {
   LBox,
   LWrap,
   LWrapItem,
-  UWrapProps,
+  LWrapProps,
   WrapProps,
 } from "@luniand-ui/layout";
 import {
@@ -78,7 +78,7 @@ export const avatarGroupProps = {
     type: Number,
     default: 2,
   },
-  ...UWrapProps,
+  ...LWrapProps,
   ...vueThemingProps,
 };
 

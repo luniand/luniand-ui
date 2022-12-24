@@ -1,0 +1,43 @@
+{
+  "name": "@luniand-ui/vue-a11y",
+  "version": "1.0.0",
+  "description": "Luniand Vue | Accessibility composables for luniand ui vue component",
+  "keywords": [
+    "vue-a11y"
+  ],
+  "author": "Albert Tran <trantoan.fox.97@gmail.com>",
+  "homepage": "https://github.com/luniand/luniand-ui#readme",
+  "license": "MIT",
+  "main": "src/index.ts",
+  "sideEffects": false,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luniand/luniand-ui.git",
+    "directory": "components/vue-a11y"
+  },
+  "bugs": {
+    "url": "https://github.com/luniand/luniand-ui/issues"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format=esm,cjs --dts",
+    "dev": "yarn build:fast -- --watch",
+    "clean": "rimraf dist .turbo",
+    "typecheck": "tsc --noEmit",
+    "build:fast": "tsup src/index.ts --format=esm,cjs",
+    "prepack": "clean-package",
+    "postpack": "clean-package restore"
+  },
+  "peerDependencies": {
+    "vue": ">=3"
+  },
+  "devDependencies": {
+    "clean-package": "2.1.1",
+    "vue": ">=3"
+  }
+}

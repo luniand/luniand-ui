@@ -27,14 +27,14 @@ export interface LinkProps extends HTMLLuniandProps<"a">, ThemingProps<"Link"> {
  * @example
  *
  * ```vue
- * <ULink as="router-link" to="/home">Home</ULink>
+ * <LLink as="router-link" to="/home">Home</LLink>
  * ```
  *
  * @see Docs https://vue.luniand-ui.com/docs/layout/link
  */
-export const ULink: ComponentWithProps<DeepPartial<LinkProps>> =
+export const LLink: ComponentWithProps<DeepPartial<LinkProps>> =
   defineComponent({
-    name: "ULink",
+    name: "LLink",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,

@@ -42,9 +42,9 @@ export interface ListProps
  *
  * @see Docs https://vue.luniand-ui.com/docs/data-display/list
  */
-export const UList: ComponentWithProps<DeepPartial<ListProps>> =
+export const LList: ComponentWithProps<DeepPartial<ListProps>> =
   defineComponent({
-    name: "UList",
+    name: "LList",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,
@@ -95,7 +95,7 @@ export const UOrderedList: ComponentWithProps<DeepPartial<ListProps>> =
     setup(props, { slots, attrs }) {
       return () =>
         h(
-          luniand(UList, {
+          luniand(LList, {
             styleType: "decimal",
             marginStart: "1em",
             ...attrs,
@@ -112,7 +112,7 @@ export const UUnorderedList: ComponentWithProps<DeepPartial<ListProps>> =
     setup(props, { slots, attrs }) {
       return () =>
         h(
-          luniand(UList, {
+          luniand(LList, {
             styleType: "initial",
             marginStart: "1em",
             ...attrs,
@@ -123,10 +123,10 @@ export const UUnorderedList: ComponentWithProps<DeepPartial<ListProps>> =
     },
   });
 
-export const UListItem: ComponentWithProps<
+export const LListItem: ComponentWithProps<
   DeepPartial<HTMLLuniandProps<"li">>
 > = defineComponent({
-  name: "UListItem",
+  name: "LListItem",
   setup(_, { slots, attrs }) {
     const styles = useStyles();
     return () =>
@@ -143,10 +143,10 @@ export const UListItem: ComponentWithProps<
   },
 });
 
-export const UListIcon: ComponentWithProps<
+export const LListIcon: ComponentWithProps<
   DeepPartial<HTMLLuniandProps<"svg">>
 > = defineComponent({
-  name: "UListIcon",
+  name: "LListIcon",
   setup(_, { slots, attrs }) {
     const styles = useStyles();
     return () =>

@@ -22,9 +22,9 @@ export interface DividerProps
  *
  * @see Docs https://vue.luniand-ui.com/docs/data-display/divider
  */
-export const UDivider: ComponentWithProps<DeepPartial<DividerProps>> =
+export const LDivider: ComponentWithProps<DeepPartial<DividerProps>> =
   defineComponent({
-    name: "UDivider",
+    name: "LDivider",
     props: {
       orientation: {
         type: [String] as PropType<DividerProps["orientation"]>,

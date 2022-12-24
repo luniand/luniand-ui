@@ -15,9 +15,9 @@ export interface CCenterProps extends HTMLLuniandProps<"div"> {}
  *
  * @see Docs https://vue.luniand-ui.com/docs/layout/center
  */
-export const UCenter: ComponentWithProps<DeepPartial<CCenterProps>> =
+export const LCenter: ComponentWithProps<DeepPartial<CCenterProps>> =
   defineComponent({
-    name: "UCenter",
+    name: "LCenter",
     props: {
       as: {
         type: [String, Object] as PropType<DOMElements>,
