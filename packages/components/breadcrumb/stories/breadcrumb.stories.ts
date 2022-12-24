@@ -93,7 +93,7 @@ const RouterTemplate: StoryFn = (args: any) => ({
     </LBreadcrumbItem>
 
     <LBreadcrumbItem>
-        <LBreadcrumbLink as="nuxt-link" to="/breadcrumb">Breadcrumb</LBreadcrumbLink>
+        <LBreadcrumbLink as="router-link" to="/breadcrumb">Breadcrumb</LBreadcrumbLink>
     </LBreadcrumbItem>
     </LBreadcrumb>
   `,
