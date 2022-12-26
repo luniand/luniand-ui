@@ -1,9 +1,9 @@
-import type { StoryFn } from "@storybook/vue3";
-import { LButton, LButtonGroup } from "../src";
-import { LStack, LBox, LWrap, LWrapItem } from "@luniand-ui/vue";
+import type { StoryFn } from '@storybook/vue3';
+import { LButton, LButtonGroup } from '../src';
+import { LStack, LBox, LWrap, LWrapItem } from '@luniand-ui/layout';
 
 export default {
-  title: "Components / Button",
+  title: 'Components / Button',
   component: { LButton, LButtonGroup },
 };
 
@@ -149,3 +149,89 @@ const ColorsTemplate: StoryFn = (args: any) => ({
 });
 
 export const Colors = ColorsTemplate.bind({});
+
+const IconTemplate: StoryFn = (args: any) => ({
+  components: { LButton, LStack, LButtonGroup },
+  setup() {
+    return { args };
+  },
+  template: `
+    <LStack spacing="4" direction="row" align="center">
+      <LButtonGroup :spacing="4">
+      <LButton left-icon="email" colorScheme="blue" variant="solid">
+        Email
+      </LButton>
+      <LButton right-icon="arrow-forward" colorScheme="blue" variant="outline">
+        Call us
+      </LButton>
+    </LButtonGroup>  
+    </LStack>
+  `,
+});
+
+export const ButtonwithIcon = IconTemplate.bind({});
+
+const LoadingTemplate: StoryFn = (args: any) => ({
+  components: { LButton, LButtonGroup },
+  setup() {
+    return { args };
+  },
+  template: `
+    <LButtonGroup :spacing="4">
+    <LButton isLoading colorScheme="blue" variant="solid">
+      Email
+    </LButton>
+    <LButton
+      is-loading
+      colorScheme="blue"
+      variant="outline"
+    >
+      Submit
+    </LButton>
+  </LButtonGroup>  
+  `,
+});
+
+export const ButtonLoadingState = LoadingTemplate.bind({});
+
+const AccessibilityTemplate: StoryFn = (args: any) => ({
+  components: { LButton, LButtonGroup },
+  setup() {
+    return { args };
+  },
+  template: `
+    <LButton size="md" height="50px" width="250px" border="2px" border-color="green.500">
+      Button
+    </LButton>  
+  `,
+});
+
+export const Accessibility = AccessibilityTemplate.bind({});
+
+const CustomButtonTemplate: StoryFn = (args: any) => ({
+  components: { LButton, LButtonGroup, LBox },
+  setup() {
+    return { args };
+  },
+  template: `
+      <LBox
+      as="button"
+      height="24px"
+      line-height="1.2"
+      transition="all 0.2s cubic-bezier(.08,.52,.52,1)"
+      border="1px"
+      px="8px"
+      rounded="2px"
+      fontSize="14px"
+      font-weight="semibold"
+      bg="#f5f6f7"
+      border-color="#ccd0d5"
+      color="#4b4f56"
+      :_active="{ bg: 'tomato' }"
+    >
+      Join Group
+    </LBox>  
+  `,
+});
+
+export const CustomButton = CustomButtonTemplate.bind({});
