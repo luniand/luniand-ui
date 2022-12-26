@@ -2742,6 +2742,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@luniand-ui/skip-nav@workspace:packages/components/skip-nav":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/skip-nav@workspace:packages/components/skip-nav"
+  dependencies:
+    clean-package: 2.1.1
+    vue: ">=3"
+  peerDependencies:
+    vue: ">=3"
+  languageName: unknown
+  linkType: soft
+
 "@luniand-ui/spinner@workspace:*, @luniand-ui/spinner@workspace:packages/components/spinner":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/spinner@workspace:packages/components/spinner"
