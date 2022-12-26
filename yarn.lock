@@ -2828,6 +2828,17 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@luniand-ui/textarea@workspace:packages/components/textarea":
+  version: 0.0.0-use.local
+  resolution: "@luniand-ui/textarea@workspace:packages/components/textarea"
+  dependencies:
+    clean-package: 2.1.1
+    vue: ">=3"
+  peerDependencies:
+    vue: ">=3"
+  languageName: unknown
+  linkType: soft
+
 "@luniand-ui/theme-provider@workspace:*, @luniand-ui/theme-provider@workspace:packages/components/theme-provider":
   version: 0.0.0-use.local
   resolution: "@luniand-ui/theme-provider@workspace:packages/components/theme-provider"
