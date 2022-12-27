@@ -27,7 +27,7 @@ const LStyledAddon = luniand('div', {
   },
 });
 
-export interface CInputAddonProps extends HTMLLuniandProps<'div'> {
+export interface LInputAddonProps extends HTMLLuniandProps<'div'> {
   placement?: Placement;
 }
 

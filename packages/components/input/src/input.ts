@@ -16,7 +16,7 @@
  */
 
 /**
- * Hey! Welcome to @luniand-ui/vue-next CInput
+ * Hey! Welcome to @luniand-ui/vue-next LInput
  *
  * Input component is a component that is used to get user input in a text field
  *
@@ -75,23 +75,23 @@ interface InputOptions {
 
 type Omitted = "disabled" | "required" | "readOnly" | "size";
 
-interface CInputNativeProps extends InputOptions, FormControlOptions {}
+interface LInputNativeProps extends InputOptions, FormControlOptions {}
 
-export interface CInputProps
+export interface LInputProps
   extends Omit<HTMLLuniandProps<"span">, Omitted>,
-    CInputNativeProps,
+    LInputNativeProps,
     ThemingProps<"Input"> {
   modelValue: string;
 }
 
-export const CInput = defineComponent({
-  name: "CInput",
+export const LInput = defineComponent({
+  name: "LInput",
   props: {
     modelValue: String as PropType<string>,
     ...formControlProps,
-    focusBorderColor: SAO as PropType<CInputProps["focusBorderColor"]>,
-    isFullWidth: [Boolean, Array] as PropType<CInputProps["isFullWidth"]>,
-    errorBorderColor: SAO as PropType<CInputProps["errorBorderColor"]>,
+    focusBorderColor: SAO as PropType<LInputProps["focusBorderColor"]>,
+    isFullWidth: [Boolean, Array] as PropType<LInputProps["isFullWidth"]>,
+    errorBorderColor: SAO as PropType<LInputProps["errorBorderColor"]>,
     ...vueThemingProps,
   },
   emits: ["update:modelValue", "input", "change"],
@@ -100,7 +100,7 @@ export const CInput = defineComponent({
     const ownProps = computed(() =>
       toRefs(reactive(omitThemingProps(props as ThemingProps<"Input">)))
     );
-    const input = useFormControl(ownProps.value as ToRefs<CInputNativeProps>);
+    const input = useFormControl(ownProps.value as ToRefs<LInputNativeProps>);
 
     const handleInput = (e: Event) => {
       emit("update:modelValue", (e?.currentTarget as HTMLInputElement)?.value);
@@ -121,4 +121,4 @@ export const CInput = defineComponent({
   },
 });
 
-CInput.id = "CInput";
+LInput.id = "LInput";
