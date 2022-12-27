@@ -89,9 +89,9 @@ export const LList: ComponentWithProps<DeepPartial<ListProps>> =
     },
   });
 
-export const UOrderedList: ComponentWithProps<DeepPartial<ListProps>> =
+export const LOrderedList: ComponentWithProps<DeepPartial<ListProps>> =
   defineComponent({
-    name: "UOrderedList",
+    name: "LOrderedList",
     setup(props, { slots, attrs }) {
       return () =>
         h(
@@ -106,7 +106,7 @@ export const UOrderedList: ComponentWithProps<DeepPartial<ListProps>> =
     },
   });
 
-export const UUnorderedList: ComponentWithProps<DeepPartial<ListProps>> =
+export const LUnorderedList: ComponentWithProps<DeepPartial<ListProps>> =
   defineComponent({
     name: "UUnorderedList",
     setup(props, { slots, attrs }) {

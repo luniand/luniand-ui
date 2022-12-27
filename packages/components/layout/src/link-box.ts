@@ -62,9 +62,9 @@ export interface LinkBoxProps extends HTMLLuniandProps<"div"> {}
  * @see Docs https://vue.luniand-ui.com/docs/link-overlay
  * @see Resources https://www.sarasoueidan.com/blog/nested-links
  */
-export const ULinkBox: ComponentWithProps<DeepPartial<LinkBoxProps>> =
+export const LLinkBox: ComponentWithProps<DeepPartial<LinkBoxProps>> =
   defineComponent({
-    name: "ULinkBox",
+    name: "LLinkBox",
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,
