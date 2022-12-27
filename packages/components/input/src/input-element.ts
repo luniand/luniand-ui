@@ -26,7 +26,7 @@ const LInputElement = defineComponent({
   name: 'LInputElement',
   props: {
     placement: {
-      type: String as PropType<CInputElementProps['placement']>,
+      type: String as PropType<LInputElementProps['placement']>,
       default: 'left',
     },
   },
