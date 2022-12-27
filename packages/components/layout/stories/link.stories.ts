@@ -1,35 +1,53 @@
-import type { Meta, StoryFn } from "@storybook/vue3";
-import { LLink } from "../src";
-
+import type { StoryFn } from "@storybook/vue3";
+import { LLink, LText } from "../src";
+import { LIcon } from "@luniand-ui/icons";
 export default {
   title: "Components / Layout / Link",
-  component: { LLink },
-} as Meta<typeof LLink>;
+  component: { LLink, LText },
+};
 
-const BasicTemplate: StoryFn<typeof LLink> = (args: any) => ({
-  components: { LLink },
+const Template: StoryFn = (args: any) => ({
+  components: { LLink, LText },
   setup() {
     return { args };
   },
   template: `
-    <LLink href="https://www.google.com" isExternal>
-      Luniand Design system
-    </LLink>
+    <LLink>Luniand UI</LLink>
   `,
 });
 
-export const ExternalLink = BasicTemplate.bind({});
+export const Basic = Template.bind({});
 
-const RoutingLink: StoryFn<typeof LLink> = (args: any) => ({
-  components: { LLink },
+const ExternalTemplate: StoryFn = (args: any) => ({
+  components: { LLink, LText, LIcon },
+  setup() {
+    return { args };
+  },
+  template: `
+    <LLink href="https://luiandui.com" is-external>
+     Luniand Design system <LIcon name="external-link" mx="2px" />
+    </LLink>
+    <LText>
+    Did you know that 
+    <LLink color="teal.500" href="#">
+      links can live inline with text
+    </LLink>
+  </LText>
+  `,
+});
+
+export const ExternalLink = ExternalTemplate.bind({});
+
+const RouterAndNuxtTemplate: StoryFn = (args: any) => ({
+  components: { LLink, LText },
   setup() {
     return { args };
   },
   template: `
     <LLink as="router-link" to="/">
-      Luniand Design system from router-link
+    Luniand Design system from router-link
     </LLink>
   `,
 });
 
-export const RoutingLibrary = RoutingLink.bind({});
+export const RouterAndNuxt = RouterAndNuxtTemplate.bind({});
