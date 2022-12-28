@@ -114,5 +114,3 @@ export const LSkeletonText = defineComponent({
     };
   },
 });
-
-LSkeletonText.displayName = "SkeletonText";
