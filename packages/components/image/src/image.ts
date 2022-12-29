@@ -85,6 +85,7 @@ interface ImageOptions extends LNativeImageOptions {
    * If `true`, opt out of the `fallbackSrc` logic and use as `img`
    */
   ignoreFallback?: boolean;
+  size? : string;
 }
 
 export interface LImageProps
@@ -99,8 +100,8 @@ export const LImage = defineComponent({
       type: String as PropType<LImageProps['src']>,
       required: true,
     },
-    sizes: {
-      type: String as PropType<LImageProps['sizes']>,
+    size: {
+      type: String as PropType<LImageProps['size']>,
       required: false,
     },
     fallback: VueElement as PropType<LImageProps['fallback']>,
@@ -151,7 +152,7 @@ export const LImage = defineComponent({
       fallbackSrc,
       fallback,
       src,
-      sizes,
+      size,
       srcSet,
       align,
       fit,
@@ -180,9 +181,9 @@ export const LImage = defineComponent({
       ...(shouldIgnore ? rest : omit(rest, ['onError', 'onLoad'])),
     };
 
-    const vnodeProps = computed(() => ({
-      w: props.sizes,
-      h: props.sizes,
+    const BaseStyles = computed(() => ({
+      w: props.size,
+      h: props.size,
       htmlWidth: shared.htmlWidth.value,
       htmlHeight: shared.htmlHeight.value,
     }));
@@ -193,7 +194,7 @@ export const LImage = defineComponent({
 
         return h(luniand(LNativeImage, { label: 'image__placeholder' }), {
           src: fallbackSrc.value,
-          ...vnodeProps.value,
+          ...BaseStyles.value,
           ...attrs,
         });
       }
@@ -203,7 +204,7 @@ export const LImage = defineComponent({
         srcSet: srcSet.value,
         crossOrigin: crossOrigin.value,
         loading: loading.value,
-        ...vnodeProps.value,
+        ...BaseStyles.value,
         ...attrs,
       });
     };
