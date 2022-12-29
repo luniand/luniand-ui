@@ -40,7 +40,7 @@ import { vueThemingProps } from "@luniand-ui/prop-utils";
 import { filterUndefined, mergeWith } from "@luniand-ui/utils";
 import { SystemStyleObject } from "@luniand-ui/styled-system";
 import { LCollapse } from "../../motion";
-import { LIcon } from "@luniand-ui/icons";
+
 
 export type ExpandedValues = string | string[];
 
@@ -72,7 +72,7 @@ export interface LAccordionProps
 }
 
 export interface LAccordionContext {
-  api: ComputedRef<ReturnType<typeof accordion.connect>>;
+  api: ComputedRef<ReturnType<typeof allowToggle.connect>>;
   reduceMotion: ComputedRef<boolean>;
 }
 
@@ -143,7 +143,7 @@ export const LAccordion: ComponentWithProps<DeepPartial<LAccordionProps>> =
               "> div": styles.value.root,
             },
           },
-          () => h("div", { ...api.rootProps }, getValidChildren(slots))
+          () => [h("div", { ...api.rootProps }, getValidChildren(slots))]
         );
       };
     },
@@ -207,7 +207,7 @@ export const LAccordionItem: ComponentWithProps<LAccordionItemProps> =
             }),
             ...attrs,
           },
-          getValidChildren(slots)
+          () => getValidChildren(slots)
         );
     },
   });
@@ -269,9 +269,7 @@ export const LAccordionPanel: ComponentWithProps<LAccordionPanelProps> =
           value: id.value,
           disabled: props.disabled,
         });
-        return h(
-          LCollapse,
-          { isOpen: isOpen.value },
+        return h(LCollapse, { isOpen: isOpen.value }, () =>
           h(
             luniand.div,
             {
@@ -279,7 +277,7 @@ export const LAccordionPanel: ComponentWithProps<LAccordionPanelProps> =
               __css: styles.value.panel,
               ...attrs,
             },
-            getValidChildren(slots)
+            () => getValidChildren(slots)
           )
         );
       };
@@ -315,13 +313,14 @@ export const LAccordionIcon: ComponentWithProps<LAccordionIconProps> =
             h: "1em",
             ...attrs,
           },
-          h(
-            "g",
-            h("path", {
-              fill: "currentColor",
-              d: "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
-            })
-          )
+          () =>
+            h(
+              "g",
+              h("path", {
+                fill: "currentColor",
+                d: "M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z",
+              })
+            )
         );
     },
   });
