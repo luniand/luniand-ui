@@ -54,12 +54,12 @@ const TopAccentTemplate: StoryFn = (args: any) => ({
     pt="3"
     rounded="md">
     <LAlertIcon />
-    <luniand.div flex="1">
-      <AlertTitle display="block" mr="2">
+    <div flex="1">
+      <LAlertTitle display="block" mr="2">
         Holy Smokes
-      </AlertTitle>
-      <AlertDescription>Something just happened!</AlertDescription>
-    </luniand.div>
+      </LAlertTitle>
+      <LAlertDescription>Something just happened!</LAlertDescription>
+    </div>
   </LAlert>
   `,
 });

@@ -108,7 +108,6 @@ export const LAlertTitle = defineComponent({
   name: "LAlertTitle",
   setup(_, { attrs, slots }) {
     const styles = useStyles();
-    console.log("styles: ", styles.value);
 
     return () =>
       h(
