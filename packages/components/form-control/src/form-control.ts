@@ -15,7 +15,7 @@
  * @see Theming https://ui.luniand.com/docs/theming/component-style
  */
 
-import { h, defineComponent, computed, PropType, toRefs } from 'vue';
+import { h, defineComponent, computed, PropType, toRefs } from "vue";
 import {
   luniand,
   ComponentWithProps,
@@ -26,7 +26,7 @@ import {
   omitThemingProps,
   HTMLLuniandProps,
   useStyles,
-} from '@luniand-ui/system';
+} from "@luniand-ui/system";
 
 import {
   LFormControlProps,
@@ -34,7 +34,7 @@ import {
   useFormControlProvider,
   FormControlProvider,
   useFormControlContext,
-} from './use-form-control';
+} from "./use-form-control";
 
 /**
  * `CFormControl` provides context such as
@@ -45,12 +45,12 @@ import {
  */
 
 export const formControlProps = {
-  isRequired: Boolean as PropType<LFormControlProps['isRequired']>,
-  isDisabled: Boolean as PropType<LFormControlProps['isDisabled']>,
-  isInvalid: Boolean as PropType<LFormControlProps['isInvalid']>,
-  isReadOnly: Boolean as PropType<LFormControlProps['isReadOnly']>,
-  label: String as PropType<LFormControlProps['label']>,
-  id: String as PropType<LFormControlProps['id']>,
+  isRequired: Boolean as PropType<LFormControlProps["isRequired"]>,
+  isDisabled: Boolean as PropType<LFormControlProps["isDisabled"]>,
+  isInvalid: Boolean as PropType<LFormControlProps["isInvalid"]>,
+  isReadOnly: Boolean as PropType<LFormControlProps["isReadOnly"]>,
+  label: String as PropType<LFormControlProps["label"]>,
+  id: String as PropType<LFormControlProps["id"]>,
 };
 
 export const LFormControl: ComponentWithProps<DeepPartial<LFormControlProps>> =
@@ -58,14 +58,14 @@ export const LFormControl: ComponentWithProps<DeepPartial<LFormControlProps>> =
     props: {
       as: {
         type: [Object, String] as PropType<DOMElements>,
-        default: 'div',
+        default: "div",
       },
       ...formControlProps,
     },
     setup(_props, { slots, attrs }) {
       const { as, ...props } = toRefs(_props);
       const ownProps = computed(() => props);
-      const styles = useMultiStyleConfig('Form', props);
+      const styles = useMultiStyleConfig("Form", props);
       const { rootProps, ..._context } = useFormControlProvider(ownProps.value);
 
       const context: LFormControlProviderContext = computed(() => _context);
@@ -80,7 +80,7 @@ export const LFormControl: ComponentWithProps<DeepPartial<LFormControlProps>> =
             as: as.value,
             ...rootProps.value,
             __css: styles.value.container,
-            __label: 'form',
+            __label: "form",
             ...attrs,
           },
           slots
@@ -88,7 +88,7 @@ export const LFormControl: ComponentWithProps<DeepPartial<LFormControlProps>> =
     },
   });
 
-export interface LHelpTextProps extends HTMLLuniandProps<'div'> {}
+export interface LHelpTextProps extends HTMLLuniandProps<"div"> {}
 /**
  * LFormHelperText
  *
@@ -108,9 +108,10 @@ export const LFormHelperText: ComponentWithProps<DeepPartial<LHelpTextProps>> =
       h(
         luniand.div,
         {
-          __label: 'form__helper-text',
+          __label: "form__helper-text",
           onVnodeBeforeMount: handleVNodeMounted,
           ...field.value.helperTextProps.value,
+          // @ts-ignore
           __css: styles.value.helperText,
         },
         slots

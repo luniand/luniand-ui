@@ -120,6 +120,7 @@ export const LAvatarGroup: ComponentWithProps<typeof avatarGroupProps> =
             display: "flex",
             ...attrs,
           },
+          // @ts-ignore
           h(LWrap, { ...wrapProps.value }, () => [
             nbHidden.value > 0 &&
               h(

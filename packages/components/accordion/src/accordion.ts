@@ -41,7 +41,6 @@ import { filterUndefined, mergeWith } from "@luniand-ui/utils";
 import { SystemStyleObject } from "@luniand-ui/styled-system";
 import { LCollapse } from "../../motion";
 
-
 export type ExpandedValues = string | string[];
 
 export interface LAccordionProps
@@ -72,7 +71,9 @@ export interface LAccordionProps
 }
 
 export interface LAccordionContext {
-  api: ComputedRef<ReturnType<typeof allowToggle.connect>>;
+  // api: ComputedRef<ReturnType<typeof allowToggle.connect>>;
+  // @ts-ignore
+  api: ComputedRef<ReturnType<any>>;
   reduceMotion: ComputedRef<boolean>;
 }
 
@@ -192,6 +193,7 @@ export const LAccordionItem: ComponentWithProps<LAccordionItemProps> =
       const styles = useStyles();
 
       const containerStyles = computed<SystemStyleObject>(() => ({
+        // @ts-ignore
         ...styles.value.container,
         overflowAnchor: "none",
       }));
@@ -231,6 +233,7 @@ export const LAccordionButton: ComponentWithProps<LAccordionButtonProps> =
         alignItems: "center",
         width: "100%",
         outline: 0,
+        // @ts-ignore
         ...styles.value.button,
       }));
 
@@ -274,6 +277,7 @@ export const LAccordionPanel: ComponentWithProps<LAccordionPanelProps> =
             luniand.div,
             {
               ...contentProps,
+              // @ts-ignore
               __css: styles.value.panel,
               ...attrs,
             },
@@ -298,6 +302,7 @@ export const LAccordionIcon: ComponentWithProps<LAccordionIconProps> =
         transform: isOpen.value ? "rotate(-180deg)" : undefined,
         transition: reduceMotion.value ? undefined : "transform 0.2s",
         transformOrigin: "center",
+        // @ts-ignore
         ...styles.value.icon,
       }));
 

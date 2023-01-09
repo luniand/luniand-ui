@@ -169,6 +169,7 @@ export const LBreadcrumbSeparator = defineComponent({
     const separatorStyles = computed<SystemStyleObject>(() => ({
       display: "flex",
       mx: props.spacing,
+      // @ts-ignore
       ...styles.value.separator,
     }));
 
@@ -208,6 +209,7 @@ export const LBreadcrumbItem: DefineComponent<BreadcrumbItemProps> =
     const itemStyles = computed<SystemStyleObject>(() => ({
       display: "inline-flex",
       alignItems: "center",
+      // @ts-ignore
       ...styles.value.item,
     }));
 

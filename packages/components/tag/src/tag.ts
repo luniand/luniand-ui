@@ -18,7 +18,7 @@
 import { h, defineComponent, PropType, DefineComponent, computed } from "vue";
 import {
   luniand,
-  luniandProps,
+  LuniandProps,
   ComponentWithProps,
   SystemStyleObject,
   ThemingProps,
@@ -34,12 +34,12 @@ interface TagOptions {
 }
 
 export interface LTagProps
-  extends luniandProps,
+  extends LuniandProps,
     TagOptions,
     ThemingProps<"LTag"> {}
 
 export interface LTagLabelProps
-  extends luniandProps,
+  extends LuniandProps,
     ThemingProps<"LTagLabel"> {}
 
 export const LTagLabel: ComponentWithProps<LTagLabelProps> = defineComponent({
@@ -67,7 +67,7 @@ export const LTagLabel: ComponentWithProps<LTagLabelProps> = defineComponent({
 });
 
 export interface LTagCloseButtonProps
-  extends luniandProps,
+  extends LuniandProps,
     ThemingProps<"LTagCloseButton"> {
   isDisabled?: boolean;
 }

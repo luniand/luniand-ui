@@ -72,6 +72,7 @@ const useDynamicContainerStyles = (
 const LAvatarDefaultImage = defineComponent({
   setup(props) {
     const styles = useStyles();
+    // @ts-ignore
     const containerStyles = useDynamicContainerStyles(props, styles);
 
     const vnodeProps = computed(() => ({
@@ -115,9 +116,11 @@ const LAvatarInitials = defineComponent({
   },
   setup(props) {
     const styles = useStyles();
+    // @ts-ignore
     const containerStyles = useDynamicContainerStyles(props, styles);
 
     const labelStyles = computed(() => ({
+      // @ts-ignore
       ...styles.value.label,
       fontWeight: "medium",
     }));

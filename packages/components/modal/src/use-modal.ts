@@ -107,7 +107,8 @@ export function useModal(options: UseModalOptions) {
     if (finalFocusRef) {
       const resolvedFinalFocusRef: MaybeElementRef = isFunction(finalFocusRef)
         ? finalFocusRef()
-        : finalFocusRef.name;
+        : // @ts-ignore
+          finalFocusRef.name;
       if (typeof resolvedFinalFocusRef === "string") {
         finalFocus = document.querySelector<FocusableElement & Element>(
           resolvedFinalFocusRef

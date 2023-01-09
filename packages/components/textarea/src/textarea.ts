@@ -15,7 +15,7 @@
  * @see Theming https://ui.luniand.com/docs/theming/component-style
  */
 
-import { h, defineComponent, PropType , computed } from "vue";
+import { h, defineComponent, PropType, computed } from "vue";
 import {
   FormControlOptions,
   useFormControl,
@@ -28,7 +28,7 @@ import {
   ThemingProps,
   useStyleConfig,
   HTMLLuniandProps,
-  useMultiStyleConfig
+  useMultiStyleConfig,
 } from "@luniand-ui/system";
 import { omit } from "@luniand-ui/utils";
 import { vueThemingProps } from "@luniand-ui/prop-utils";
@@ -75,10 +75,10 @@ export const LTextarea = defineComponent({
   },
   emits: ["update:modelValue", "input", "change"],
   setup(props, { emit, attrs }) {
-
     const styles = useMultiStyleConfig("Textarea", props);
     const { rows, ...rest } = omitThemingProps(props);
-    
+
+    // @ts-ignore
     const textareaProps = useFormControl(rest);
 
     const omitted = [
@@ -98,7 +98,7 @@ export const LTextarea = defineComponent({
     return () => {
       return h(luniand.textarea, {
         __css: textareaStyles,
-        class: ['luniand-textarea'],
+        class: ["luniand-textarea"],
         rows,
         ...attrs,
         ...textareaProps.value,

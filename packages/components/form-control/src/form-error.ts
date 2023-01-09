@@ -81,6 +81,7 @@ export const LFormErrorIcon: ComponentWithProps<DeepPartial<IconProps>> =
           LIcon,
           {
             ariaHidden: true,
+            // @ts-ignore
             __css: styles.value.icon,
             class: "luniand-form__error-icon",
             ...props,

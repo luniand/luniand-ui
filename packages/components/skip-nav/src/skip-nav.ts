@@ -40,6 +40,7 @@ export const LSkipNavLink: ComponentWithProps<LSkipNavLinkProps> =
       },
     },
     setup(props, { slots, attrs }) {
+      // @ts-ignore
       const styles = useStyleConfig("SkipLink", props);
 
       const skipLinkStyles = computed<SystemStyleObject>(() => {

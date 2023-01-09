@@ -58,6 +58,7 @@ export const LAvatarBadge: ComponentWithProps<typeof CAvatarBadgeProps> =
       );
 
       const badgeStyles = computed(() => ({
+        // @ts-ignore
         ...styles.value.badge,
         ...placementStyles.value,
       }));

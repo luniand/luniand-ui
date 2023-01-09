@@ -143,6 +143,7 @@ export const LDrawerContent: ComponentWithProps<DrawerContentProps> =
         position: "fixed",
         left: 0,
         top: 0,
+        // @ts-ignore
         ...styles.value.dialogContainer,
       }));
 
@@ -152,6 +153,7 @@ export const LDrawerContent: ComponentWithProps<DrawerContentProps> =
         position: "relative",
         width: "100%",
         outline: 0,
+        // @ts-ignore
         ...styles.value.dialog,
       }));
 

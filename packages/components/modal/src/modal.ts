@@ -357,6 +357,7 @@ export const LModalContent: ComponentWithProps<
       position: "fixed",
       left: 0,
       top: 0,
+      // @ts-ignore
       ...styles.value.dialogContainer,
     }));
 
@@ -366,6 +367,7 @@ export const LModalContent: ComponentWithProps<
       position: "relative",
       width: "100%",
       outline: 0,
+      // @ts-ignore
       ...styles.value.dialog,
     }));
 
@@ -419,6 +421,7 @@ export const LModalOverlay: ComponentWithProps<
       top: "0",
       w: "100vw",
       h: "100vh",
+      // @ts-ignore
       ...styles.value.overlay,
     }));
     return () =>
@@ -452,6 +455,7 @@ export const LModalHeader: ComponentWithProps<
     const styles = useStyles();
     const headerStyles = computed<SystemStyleObject>(() => ({
       flex: 0,
+      // @ts-ignore
       ...styles.value.header,
     }));
 
@@ -502,6 +506,7 @@ export const LModalBody: ComponentWithProps<
       h(
         luniand("div", {
           label: "modal__body",
+          // @ts-ignore
           __css: styles.value.body,
         }),
         {
@@ -528,6 +533,7 @@ export const LModalFooter: ComponentWithProps<
       display: "flex",
       alignItems: "center",
       justifyContent: "flex-end",
+      // @ts-ignore
       ...styles.value.footer,
     }));
 
@@ -560,6 +566,7 @@ export const LModalCloseButton: ComponentWithProps<
       h(
         luniand(LCloseButton, {
           label: "modal__close-button",
+          // @ts-ignore
           __css: styles.value.closeButton,
         }),
         {

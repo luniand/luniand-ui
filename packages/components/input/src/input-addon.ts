@@ -1,33 +1,33 @@
-import { defineComponent, h, PropType, computed } from 'vue';
-import { luniand, HTMLLuniandProps, useStyles } from '@luniand-ui/system';
-import { warn } from '@luniand-ui/utils';
+import { defineComponent, h, PropType, computed } from "vue";
+import { luniand, HTMLLuniandProps, useStyles } from "@luniand-ui/system";
+import { warn } from "@luniand-ui/utils";
 
-type Placement = 'left' | 'right';
+type Placement = "left" | "right";
 
 const placements = {
   left: {
-    marginEnd: '-1px',
+    marginEnd: "-1px",
     borderEndRadius: 0,
-    borderEndColor: 'transparent',
+    borderEndColor: "transparent",
   },
   right: {
-    marginStart: '-1px',
+    marginStart: "-1px",
     borderStartRadius: 0,
-    borderStartColor: 'transparent',
+    borderStartColor: "transparent",
   },
 };
 
-const LStyledAddon = luniand('div', {
+const LStyledAddon = luniand("div", {
   baseStyle: {
-    flex: '0 0 auto',
-    width: 'auto',
-    display: 'flex',
-    alignItems: 'center',
-    whiteSpace: 'nowrap',
+    flex: "0 0 auto",
+    width: "auto",
+    display: "flex",
+    alignItems: "center",
+    whiteSpace: "nowrap",
   },
 });
 
-export interface LInputAddonProps extends HTMLLuniandProps<'div'> {
+export interface LInputAddonProps extends HTMLLuniandProps<"div"> {
   placement?: Placement;
 }
 
@@ -37,11 +37,11 @@ export interface LInputAddonProps extends HTMLLuniandProps<'div'> {
  * Element to append or prepend to an input
  */
 export const LInputAddon = defineComponent({
-  name: 'LInputAddon',
+  name: "LInputAddon",
   props: {
     placement: {
       type: String as PropType<Placement>,
-      default: 'left',
+      default: "left",
     },
   },
   setup(props, { slots, attrs }) {
@@ -53,6 +53,7 @@ export const LInputAddon = defineComponent({
           LStyledAddon,
           {
             __css: {
+              // @ts-ignore
               ...styles.value.addon,
               ...placementStyles.value,
             },
@@ -64,7 +65,7 @@ export const LInputAddon = defineComponent({
       warn({
         condition: !!error,
         message:
-          '`LInputAddon` can only be used inside the `LInputGroup` component.',
+          "`LInputAddon` can only be used inside the `LInputGroup` component.",
       });
       console.error(error);
       return () => null;
@@ -78,18 +79,18 @@ export const LInputAddon = defineComponent({
  * Element to prepend to the left of an input
  */
 export const LInputLeftAddon = defineComponent({
-  name: 'LInputLeftAddon',
+  name: "LInputLeftAddon",
   setup(_, { slots, attrs }) {
     return () =>
       h(
         LInputAddon,
-        { placement: 'left', __label: 'input__left-addon', ...attrs },
+        { placement: "left", __label: "input__left-addon", ...attrs },
         slots
       );
   },
 });
 
-LInputLeftAddon.id = 'LInputLeftAddon';
+LInputLeftAddon.id = "LInputLeftAddon";
 
 /**
  * LInputRightAddon
@@ -97,14 +98,14 @@ LInputLeftAddon.id = 'LInputLeftAddon';
  * Element to append to the right of an input
  */
 export const LInputRightAddon = defineComponent({
-  name: 'LInputRightAddon',
+  name: "LInputRightAddon",
   setup(_, { slots, attrs }) {
     return () =>
       h(
         LInputAddon,
         {
-          placement: 'right',
-          __label: 'input__right-addon',
+          placement: "right",
+          __label: "input__right-addon",
           ...attrs,
         },
         slots
@@ -112,4 +113,4 @@ export const LInputRightAddon = defineComponent({
   },
 });
 
-LInputRightAddon.id = 'LInputRightAddon';
+LInputRightAddon.id = "LInputRightAddon";

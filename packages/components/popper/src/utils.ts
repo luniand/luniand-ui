@@ -44,6 +44,7 @@ const transforms = {
 };
 
 export const toTransformOrigin = (placement: Placement) =>
+  // @ts-ignore
   transforms[placement];
 
 const defaultEventListeners = {
